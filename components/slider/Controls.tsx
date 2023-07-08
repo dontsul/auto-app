@@ -56,7 +56,7 @@ function Controls({
   };
 
   return (
-    <div className="flex items-center gap-3 px-0 py-3 md:px-1 md:py-5">
+      <div className="flex items-center gap-3 px-0 py-3 md:px-1 md:py-5" style={{bottom:0}}>
       <SliderButton handleClick={handlePrev}>
         <IoIosArrowBack className=" text-xl" />
       </SliderButton>

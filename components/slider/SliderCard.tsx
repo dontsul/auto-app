@@ -11,7 +11,7 @@ function SliderCard({ data }: Props) {
 
   return (
         <motion.div
-            className="relative h-52 min-w-[250px] rounded-2xl shadow-md md:h-52 md:min-w-[208px]"
+            className="relative h-32 min-w-[200px] rounded-2xl shadow-md md:h-32 md:min-w-[208px]"
             layout
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{
