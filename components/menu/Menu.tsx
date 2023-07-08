@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { Logo } from '../logo/Logo';
 import { CloseButton } from '../closeButton/CloseButton';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,28 +8,17 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 interface IMenuProps {
   openMenu: boolean;
   handleMenu: (status: boolean) => void;
+  openServices: boolean;
+  handleServices: () => void;
 }
-
-const menuList = [
-  { title: 'Home' },
-  { title: 'About' },
-  {
-    title: 'Services',
-    category: [{ title: 'Exhaust' }, { title: 'Brakes' }, { title: 'Tires' }],
-  },
-  { title: 'Brands' },
-  { title: 'Apex +' },
-  { title: 'Financing' },
-  { title: 'Contact Us' },
-];
-
-export const Menu: FC<IMenuProps> = ({ handleMenu, openMenu }) => {
-  const [openServices, setOpenServices] = useState<boolean>(false);
-
+export const Menu: FC<IMenuProps> = ({ handleMenu, openMenu, openServices, handleServices }) => {
   return (
-    <div className="absolute bg-black ">
+    <div className="absolute ">
       <div
-        onClick={() => handleMenu(false)}
+        onClick={() => {
+          handleMenu(false);
+          handleServices();
+        }}
         className={`transition duration-[800ms] ease-in-out ${
           openMenu ? 'translate-x-0' : 'translate-x-[-100%]'
         } fixed min-w-[80px] max-w-[400px] w-full h-[100vh] top-0 left-0 z-20 `}
@@ -70,7 +59,7 @@ export const Menu: FC<IMenuProps> = ({ handleMenu, openMenu }) => {
                   animate={{ rotate: openServices ? 180 : 0 }}
                   transition={{ type: 'spring', duration: 0.5 }}
                   className="cursor-pointer"
-                  onClick={() => setOpenServices(!openServices)}
+                  onClick={() => handleServices()}
                 >
                   <IoMdArrowDropdown color={'#f1f5f9'} size={25} />
                 </motion.div>
@@ -151,7 +140,12 @@ export const Menu: FC<IMenuProps> = ({ handleMenu, openMenu }) => {
               </Link>
             </li>
           </ul>
-          <CloseButton handleMenu={() => handleMenu(false)} />
+          <CloseButton
+            handleMenu={() => {
+              handleMenu(false);
+              handleServices();
+            }}
+          />
         </nav>
       </div>
       <AnimatePresence>
