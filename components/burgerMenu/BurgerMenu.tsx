@@ -1,12 +1,19 @@
-import { Divide as Hamburger } from 'hamburger-react';
-import { useState } from 'react';
+import { FC } from 'react';
 
-export const BurgerMenu = () => {
-  const [isOpen, setOpen] = useState<boolean>(false);
+import { HiMenu } from 'react-icons/hi';
 
+export interface IBurgerMenuProps {
+  openMenu: boolean;
+  handleMenu: (status: boolean) => void;
+}
+
+export const BurgerMenu: FC<IBurgerMenuProps> = ({ handleMenu, openMenu }) => {
   return (
-    <div>
-      <Hamburger duration={0.4} color="#ffffff" rounded />
+    <div
+      className="flex items-center justify-start cursor-pointer"
+      onClick={() => handleMenu(!openMenu)}
+    >
+      <HiMenu color="#ffffff" size={30} />
     </div>
   );
 };

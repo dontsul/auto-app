@@ -17,4 +17,10 @@
 }
 
 body {
+  background-color: rgb(226 232 240);
+}
+
+.itemMenu:hover a {
+  color: #a16207;
+  transition: all 0.1 easy;
 }

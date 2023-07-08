@@ -8,7 +8,7 @@ import { RxCross2 } from 'react-icons/rx';
 export const ButtonSearch = () => {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <AnimatePresence initial={false}>
+    <AnimatePresence initial={false} mode="wait">
       {open ? (
         <motion.div
           className="cursor-pointer flex items-center justify-end"
@@ -16,10 +16,10 @@ export const ButtonSearch = () => {
           onClick={() => setOpen(false)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <RxCross2 size={30} color="#ffffff" />
+          <RxCross2 size={25} color="#ffffff" />
         </motion.div>
       ) : (
         <motion.div
@@ -28,13 +28,12 @@ export const ButtonSearch = () => {
           onClick={() => setOpen(true)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <BsSearch size={30} color="#ffffff" />
+          <BsSearch size={25} color="#ffffff" />
         </motion.div>
       )}
-      hbhbh
     </AnimatePresence>
   );
 };
