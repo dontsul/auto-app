@@ -1,41 +1,22 @@
 import React from "react";
 import {AboutBg} from "@/components/aboutSection/AboutBg";
+import {Build} from "@/components/aboutSection/Build";
+import {ImagesAbout} from "@/components/aboutSection/ImagesAbout";
+import {TextAbout} from "@/components/aboutSection/TextAbout";
 
 export function AboutSection (){
 
     return(
-        <div className="fixet h-screen">
-            <div className="grid grid-cols-12 md:col-span-3 gap-3 relative">
-                <AboutBg />
-                <div className="col-span-12 flex md:col-span-6 flex-col items-center justify-center px-5 md:px-10 hover:scale-105 transition-transform duration-300">
-                    <h3 className="text-center relative z-20">
-                        <span className="text-1xl font-semibold md:my-3 md:text-4xl md:leading-[100px]" style={{ color: 'black' }}>Elevating Vehicles For </span>
-                        <span className="text-1xl font-semibold md:my-3 md:text-4xl md:leading-[100px]" style={{ color: '#ac9b79' }}>Max Performance</span>
-                        <span className=" text-[16px] text-center mb-2 h-1 w-5 rounded-full " style={{ display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                            At Elevated Motoring,
-                            we are dedicated to providing
-                            high-quality service for your
-                            vehicle needs. With 35+ years
-                            of combined experience in the
-                            automotive industry, our knowledgeable
-                            staff can assist you with OEM and aftermarket
-                            solutions tailored to your vehicle’s requirements.
-                            Trust us to deliver exceptional results and elevate
-                            your driving experience.
-                        </span>
-                        <button className="w-fit rounded-none border-[1px] border-[#000] px-6 py-3 text-sm font-thin transition duration-300 ease-in-out hover:bg-black hover:text-white mt-4">View More</button>
-
-                    </h3>
+        <div className="fixet ">
+            <AboutBg />
+            <div className="relative">
+                <div className="  grid grid-cols-10 md:col-span-3 gap-3 relative">
+                    <TextAbout />
+                    <ImagesAbout />
                 </div>
-                <div className="col-span-12 flex justify-center hover:scale-105 transition-transform duration-300">
-                    <img
-                        style={{ width: 500, height: 500, transform: 'translate(0%, 0%)' }}
-                        src={"2.png"}
-                        alt="Image"
-                        className="rounded-2xl object-cover brightness-75"
-                    />
-                </div>
+                <Build />
             </div>
+
         </div>
     );
 }

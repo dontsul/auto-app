@@ -38,7 +38,7 @@ function OtherInfo({ data }: Props) {
 
 export default OtherInfo;
 
-const AnimatedText = ({
+export const AnimatedText = ({
   data,
   className,
 }: {
