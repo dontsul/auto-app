@@ -44,7 +44,7 @@ export default function Home() {
                     transitionData={transitionData}
                     currentSlideData={currentSlideData}
                 />
-                <div className="  absolute z-20  h-full w-full">
+                <div className="  absolute z-10  h-full w-full">
                     <div className=" flex h-full w-full grid-cols-4 flex-col md:grid">
                         <div className=" col-span-4 mb-3 flex h-full flex-1 flex-col justify-end px-5 md:mb-0 md:justify-center md:px-10">
                             <SlideInfo
