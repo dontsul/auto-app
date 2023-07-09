@@ -7,7 +7,7 @@ import {TextAbout} from "@/components/aboutSection/TextAbout";
 export function AboutSection (){
 
     return(
-        <div className="fixet ">
+        <div className="z-0">
             <AboutBg />
             <div className="relative">
                 <div className="  grid grid-cols-10 md:col-span-3 gap-3 relative">
