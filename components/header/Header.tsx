@@ -38,16 +38,16 @@ export const Header = () => {
   }, [windowWidth]);
 
   return (
-    <header className="bg-zinc-800 py-6 px-8 sticky grid grid-cols-3">
-      <BurgerMenu openMenu={openMenu} handleMenu={handleMenu} />
-      <Logo />
-      <Menu
-        openMenu={openMenu}
-        handleMenu={handleMenu}
-        openServices={openServices}
-        handleServices={handleServices}
-      />
-      <ButtonSearch />
-    </header>
+      <header className=" z-30 bg-zinc-800 py-6 px-8 sticky grid grid-cols-3">
+        <BurgerMenu openMenu={openMenu} handleMenu={handleMenu} />
+        <Logo />
+        <Menu
+            openMenu={openMenu}
+            handleMenu={handleMenu}
+            openServices={openServices}
+            handleServices={handleServices}
+        />
+        <ButtonSearch />
+      </header>
   );
 };
