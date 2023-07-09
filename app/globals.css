@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .line {
+    @apply relative
+            after:bg-yellow-600
+            after:h-[1px] 
+            after:w-[0%] 
+            after:rounded-xl
+            after:left-0 
+            after:-bottom-[1px] 
+            after:absolute 
+            after:duration-300 
+            hover:after:w-full
+            after:content-[''];
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,4 +33,5 @@
 }
 
 body {
+  background-color: rgb(226 232 240);
 }
