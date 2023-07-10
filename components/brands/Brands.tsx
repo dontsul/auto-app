@@ -1,4 +1,5 @@
 import React from "react";
+import {TextBg} from "@/components/textBg/TextBg";
 
 export function Brands () {
     return(
@@ -10,6 +11,7 @@ export function Brands () {
                     <span className="text-1xl font-semibold md:my-3 md:text-4xl md:leading-[50px]" style={{ color: '#ac9b79' }}>
                         Max Performance
                     </span>
+
                 </h3>
             </div>
             <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
@@ -17,6 +19,7 @@ export function Brands () {
                     SELECT YOUR VEHICLE
                 </button>
             </div>
+
         </div>
 
 
