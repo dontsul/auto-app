@@ -1,17 +1,39 @@
-import React from "react";
+'use client';
+import React, {useEffect, useState} from "react";
 import {TextBg} from "@/components/textBg/TextBg";
 
 export function Brands () {
-    return(
-        <div className="z-10 relative bg-white">
+    const [showText, setShowText] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.pageYOffset;
+            const triggerPosition = 1230;
+
+            if (scrollPosition > triggerPosition) {
+                setShowText(true);
+            } else {
+                setShowText(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    return (
+        <div className="z-10 relative ">
             <div className="p-10 col-span-12 flex md:col-span-5 items-center justify-center px-10 md:px-10">
                 <h3 className="text-center">
-                    <span className="text-1xl font-semibold md:my-6 md:text-4xl md:leading-[50px]" style={{ color: 'black' }}>
-                        Elevating Vehicles For </span>
+          <span className="text-1xl font-semibold md:my-6 md:text-4xl md:leading-[50px]" style={{ color: 'black' }}>
+            Elevating Vehicles For
+          </span>
                     <span className="text-1xl font-semibold md:my-3 md:text-4xl md:leading-[50px]" style={{ color: '#ac9b79' }}>
-                        Max Performance
-                    </span>
-
+            Max Performance
+          </span>
                 </h3>
             </div>
             <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
@@ -19,10 +41,52 @@ export function Brands () {
                     SELECT YOUR VEHICLE
                 </button>
             </div>
-
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            <div className="p-4 col-span-12 flex md:col-span-5 items-center justify-center px-4 md:px-10">
+                <button className="w-96 font-bold justify-center py-3 text-sm border bg-black text-white border-black hover:bg-white hover:text-black">
+                    SELECT YOUR VEHICLE
+                </button>
+            </div>
+            {showText && <TextBg text={"TEST"} />}
         </div>
-
-
-
     );
 }
