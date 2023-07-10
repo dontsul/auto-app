@@ -7,10 +7,10 @@ import {TextAbout} from "@/components/aboutSection/TextAbout";
 export function AboutSection (){
 
     return(
-        <div className="z-0">
+        <div className="z-0 container ">
             <AboutBg />
             <div className="relative">
-                <div className="  grid grid-cols-10 md:col-span-3 gap-3 relative">
+                <div className=" grid grid-cols-1 lg:grid-cols-2  gap-6 relative">
                     <TextAbout />
                     <ImagesAbout />
                 </div>
