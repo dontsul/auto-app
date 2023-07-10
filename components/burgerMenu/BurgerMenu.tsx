@@ -10,7 +10,7 @@ export interface IBurgerMenuProps {
 export const BurgerMenu: FC<IBurgerMenuProps> = ({ handleMenu, openMenu }) => {
   return (
     <div
-      className="flex items-center justify-start cursor-pointer"
+      className="flex items-center justify-start cursor-pointer lg:hidden"
       onClick={() => handleMenu(!openMenu)}
     >
       <HiMenu color="#ffffff" size={30} />
