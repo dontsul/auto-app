@@ -4,6 +4,7 @@ import { CloseButton } from '../closeButton/CloseButton';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { IoMdArrowDropdown } from 'react-icons/io';
+import { RxCross2 } from 'react-icons/rx';
 
 interface IContactInfo {
   openContactInfo: boolean;
@@ -16,19 +17,59 @@ export const ContactInfo: FC<IContactInfo> = ({
   isDesktop,
 }) => {
   return (
-    <div className="absolute border-white lg:border-x-[1px] lg:w-full">
+    <div className="absolute">
       <div
-        className={` transition duration-[800ms] ease-in-out ${
-          openContactInfo ? 'translate-x-0 ' : 'translate-x-[100%]'
-        } fixed min-w-[80px] max-w-[400px] w-full h-[100vh] top-0 right-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0 lg:transition-none`}
+        className={` transition duration-[800ms] ease-in-out border-white border-x-[1px] ${
+          openContactInfo ? 'translate-x-0' : 'translate-x-[100%]'
+        } fixed min-w-[80px] max-w-[400px] w-full h-[100vh] top-0 right-0 z-20`}
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`relative bg-zinc-800 w-full z-20 h-screen py-4 px-8 border-r-[3px]  border-white lg:border-none lg:h-auto lg:py-0 lg:px-4`}
+          className={`relative bg-zinc-800 w-full z-20 h-screen border-r-[3px`}
         >
-          {!isDesktop && <Logo />}
+          <div className="flex items-center justify-end">
+            <div className="w-[80px] h-[80px] flex item-center justify-center bg-zinc-700">
+              <RxCross2
+                className="cursor-pointer"
+                size={25}
+                color="#ffffff"
+                onClick={() => handleContactInfo(false)}
+              />
+            </div>
+          </div>
+          <div className="py-8 px-8">
+            {' '}
+            <div className="flex items-center justify-center mb-4">
+              <Logo />
+            </div>
+            <div>
+              <a href="#!">2131 9th St, Sacramento, CA 95818, USA</a>
+            </div>
+            <div>
+              <a href="tel:123-456-7891">123-456-7891</a>
+            </div>
+            <div>
+              <a href="mailto:info@mailauto.com">info@mailauto.com</a>
+            </div>
+          </div>
         </div>
       </div>
+      <AnimatePresence>
+        {openContactInfo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.8,
+            }}
+            className={`fixed top-0 left-0 w-full h-full z-10 backdrop-blur-[4px]`}
+            onClick={() => {
+              handleContactInfo(false);
+            }}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

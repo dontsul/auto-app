@@ -20,7 +20,7 @@ export const Menu: FC<IMenuProps> = ({
   isDesktop,
 }) => {
   return (
-    <div className="absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full">
+    <div className="py-6 absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full">
       <div
         className={` transition duration-[800ms] ease-in-out ${
           openMenu ? 'translate-x-0 ' : 'translate-x-[-100%]'

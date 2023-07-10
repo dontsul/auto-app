@@ -10,11 +10,11 @@ import { ContactInfoBtn } from '../contactInfoBtn/ContactInfoBtn';
 
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [openContactInfo, setOpenContactInfo] = useState<boolean>(true);
+  const [openContactInfo, setOpenContactInfo] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(0);
   const [openServices, setOpenServices] = useState<boolean>(false);
   const [isDesktop, setIsDesktop] = useState<boolean>(
-    window.innerWidth && window.innerWidth > 1023 ? true : false
+    window?.innerWidth && window.innerWidth > 1023 ? true : false
   );
 
   const handleMenu = (status: boolean) => {
@@ -53,31 +53,27 @@ export const Header = () => {
   }, [windowWidth]);
 
   return (
-    <header className="bg-zinc-800  px-8 sticky  z-30">
-      <div className="py-8 grid grid-cols-3 lg:px-0 lg:grid-cols-[auto_1fr_auto]">
-        {!isDesktop && (
-          <BurgerMenu openMenu={openMenu} handleMenu={handleMenu} isDesktop={isDesktop} />
-        )}
-        <div className="lg:order-1 flex items-center justify-center">
-          <Logo />
-        </div>
-        <Menu
-          openMenu={openMenu}
-          handleMenu={handleMenu}
-          openServices={openServices}
-          handleServices={handleServices}
-          isDesktop={isDesktop}
-        />
-        <ButtonSearch isDesktop={isDesktop} />
-        {isDesktop && <ContactInfoBtn />}
-        {/* {isDesktop && (
-        <ContactInfo
-          handleContactInfo={handleContactInfo}
-          openContactInfo={openContactInfo}
-          isDesktop={isDesktop}
-        />
-      )} */}
+    <header className="px-8 lg:px-0 bg-zinc-800 sticky z-30 grid grid-cols-3 lg:grid-cols-[auto_1fr_auto]">
+      {!isDesktop && (
+        <BurgerMenu openMenu={openMenu} handleMenu={handleMenu} isDesktop={isDesktop} />
+      )}
+      <div className="lg:order-1 flex items-center justify-center py-6">
+        <Logo />
       </div>
+      <Menu
+        openMenu={openMenu}
+        handleMenu={handleMenu}
+        openServices={openServices}
+        handleServices={handleServices}
+        isDesktop={isDesktop}
+      />
+      <ButtonSearch isDesktop={isDesktop} />
+      {isDesktop && <ContactInfoBtn handleContactInfo={handleContactInfo} />}
+      <ContactInfo
+        handleContactInfo={handleContactInfo}
+        openContactInfo={openContactInfo}
+        isDesktop={isDesktop}
+      />
     </header>
   );
 };
