@@ -13,7 +13,7 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ handleMenu, openMenu, isDeskt
     <>
       {!isDesktop && (
         <div
-          className="flex items-center justify-start cursor-pointer"
+          className="flex items-center justify-start cursor-pointer "
           onClick={() => handleMenu(!openMenu)}
         >
           <HiMenu color="#ffffff" size={30} />
