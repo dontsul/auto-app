@@ -1,21 +1,16 @@
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import { Logo } from '../logo/Logo';
 import { CloseButton } from '../closeButton/CloseButton';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { IoMdArrowDropdown } from 'react-icons/io';
-import { RxCross2 } from 'react-icons/rx';
+import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs';
+import { SiGooglemaps } from 'react-icons/si';
+import { TbMailFilled } from 'react-icons/tb';
 
 interface IContactInfo {
   openContactInfo: boolean;
   handleContactInfo: (status: boolean) => void;
-  isDesktop: boolean;
 }
-export const ContactInfo: FC<IContactInfo> = ({
-  handleContactInfo,
-  openContactInfo,
-  isDesktop,
-}) => {
+export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactInfo }) => {
   return (
     <div className="absolute">
       <div
@@ -27,29 +22,76 @@ export const ContactInfo: FC<IContactInfo> = ({
           onClick={(e) => e.stopPropagation()}
           className={`relative bg-zinc-800 w-full z-20 h-screen border-r-[3px`}
         >
-          <div className="flex items-center justify-end">
-            <div className="w-[80px] h-[80px] flex item-center justify-center bg-zinc-700">
-              <RxCross2
-                className="cursor-pointer"
-                size={25}
-                color="#ffffff"
-                onClick={() => handleContactInfo(false)}
-              />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center justify-center ">
+              <Logo />
+            </div>
+            <div className="w-[80px] h-[80px] flex items-center justify-center bg-zinc-700">
+              <CloseButton handleMenu={() => handleContactInfo(false)} />
             </div>
           </div>
           <div className="py-8 px-8">
             {' '}
-            <div className="flex items-center justify-center mb-4">
-              <Logo />
+            <h4 className="uppercase text-[24px] text-start font-extrabold text-slate-300 mb-8">
+              Contact Info
+            </h4>
+            <div className="py-4">
+              <SiGooglemaps
+                size={20}
+                className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
+              />
+              <a
+                className="w-auto h-full text-base text-slate-100 hover:text-yellow-600 cursor-pointer line"
+                href="#!"
+              >
+                2131 9th St, Sacramento, CA 95818, USA
+              </a>
             </div>
-            <div>
-              <a href="#!">2131 9th St, Sacramento, CA 95818, USA</a>
+            <div className="py-4">
+              <BsFillTelephoneFill
+                size={20}
+                className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
+              />
+              <a
+                className="w-auto h-full text-base text-slate-100 hover:text-yellow-600 cursor-pointer line"
+                href="tel:123-456-7891"
+              >
+                123-456-7891
+              </a>
             </div>
-            <div>
-              <a href="tel:123-456-7891">123-456-7891</a>
+            <div className="py-4">
+              <TbMailFilled
+                size={20}
+                className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
+              />
+              <a
+                className="w-auto h-full text-base text-slate-100 hover:text-yellow-600 cursor-pointer line"
+                href="mailto:info@mailauto.com"
+              >
+                info@mailauto.com
+              </a>
             </div>
-            <div>
-              <a href="mailto:info@mailauto.com">info@mailauto.com</a>
+            <div className=" border-white border-b-[1px] w-full"></div>
+            <div className="flex items-center gap-4 py-4">
+              <a href="https://www.instagram.com/">
+                <BsInstagram
+                  size={17}
+                  className="text-slate-100 cursor-pointer hover:text-yellow-600 transition"
+                />
+              </a>
+              <a href="https://www.facebook.com/">
+                <BsFacebook
+                  size={17}
+                  className="text-slate-100 cursor-pointer hover:text-yellow-600 transition"
+                />
+              </a>
+              <a href="https://twitter.com/">
+                {' '}
+                <BsTwitter
+                  size={17}
+                  className="text-slate-100 cursor-pointer hover:text-yellow-600 transition"
+                />
+              </a>
             </div>
           </div>
         </div>

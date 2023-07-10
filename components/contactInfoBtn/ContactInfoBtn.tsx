@@ -8,7 +8,7 @@ interface IContactInfoBtn {
 export const ContactInfoBtn: FC<IContactInfoBtn> = ({ handleContactInfo }) => {
   return (
     <div
-      className="flex items-center justify-center order-3 w-[80px] h-full cursor-pointer "
+      className="hidden lg:flex items-center justify-center order-3 w-[80px] h-full cursor-pointer"
       onClick={() => handleContactInfo(true)}
     >
       <motion.div className=" w-full h-full flex items-center justify-center">

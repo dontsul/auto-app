@@ -30,7 +30,9 @@ export const Menu: FC<IMenuProps> = ({
           onClick={(e) => e.stopPropagation()}
           className={`relative bg-zinc-800 w-full z-20 h-screen py-4 px-8 border-r-[3px]  border-white lg:border-none lg:h-auto lg:py-0 lg:px-4`}
         >
-          {!isDesktop && <Logo />}
+          <div className="block lg:hidden">
+            <Logo />
+          </div>
           <ul className="py-8 lg:flex lg:items-center lg:justify-center lg:gap-4 lg:py-0">
             <li className=" w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
@@ -150,35 +152,33 @@ export const Menu: FC<IMenuProps> = ({
               </Link>
             </li>
           </ul>
-          {!isDesktop && (
+          <div className="absolute top-5 right-4 cursor-pointer z-20 lg:hidden">
             <CloseButton
               handleMenu={() => {
                 handleMenu(false);
                 handleServices(false);
               }}
             />
-          )}
+          </div>
         </nav>
       </div>
-      {!isDesktop && (
-        <AnimatePresence>
-          {openMenu && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                duration: 0.8,
-              }}
-              className={`fixed top-0 left-0 w-full h-full z-10 backdrop-blur-[4px]`}
-              onClick={() => {
-                handleMenu(false);
-                handleServices(false);
-              }}
-            />
-          )}
-        </AnimatePresence>
-      )}
+      <AnimatePresence>
+        {openMenu && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.8,
+            }}
+            className={`fixed top-0 left-0 w-full h-full z-10 backdrop-blur-[4px] lg:hidden`}
+            onClick={() => {
+              handleMenu(false);
+              handleServices(false);
+            }}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
