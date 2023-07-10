@@ -1,12 +1,12 @@
 
 import React from "react";
+import ElevatingText from "@/components/title/ElevatingText";
 
 export function TextAbout (){
     return (
         <div className=" z-10 p-10 flex order-2 lg:order-1   items-center justify-center px-10 md:px-10  transition-transform duration-300">
             <h3 className="text-center relative z-20">
-                <span className="text-3xl font-semibold md:my-3 md:text-4xl md:leading-[50px]" style={{ color: 'black' }}>Elevating Vehicles For </span>
-                <span className="text-3xl font-semibold md:my-3 md:text-4xl md:leading-[50px]" style={{ color: '#ac9b79' }}>Max Performance</span>
+                <ElevatingText mainText={"Elevating Vehicles For  "} subText={"Max Performance"} />
                 <span className=" p-10 text-[16px] text-center mb-2 h-1 w-5 rounded-full " style={{ display: 'inline-block', width: '100%', textAlign: 'center' }}>
                             At Elevated Motoring,
                             we are dedicated to providing

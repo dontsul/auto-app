@@ -38,7 +38,7 @@ export default function Home() {
 
     return (
         <div
-            className={` z-10 relative min-h-screen select-none overflow-hidden text-white `}>
+            className={` z-20 relative min-h-screen select-none overflow-hidden text-white `}>
             <AnimatePresence>
                 <BackgroundImage
                     transitionData={transitionData}
