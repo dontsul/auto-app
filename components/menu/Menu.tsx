@@ -47,7 +47,7 @@ export const Menu: FC<IMenuProps> = ({
               <Link
                 className="w-auto h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line
                 "
-                href={`/`}
+                href={`/about`}
               >
                 About
               </Link>
@@ -122,6 +122,7 @@ export const Menu: FC<IMenuProps> = ({
                         Tires
                       </Link>
                     </li>
+
                   </motion.ul>
                 )}
               </AnimatePresence>

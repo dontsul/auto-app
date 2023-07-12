@@ -6,10 +6,10 @@ interface AboutBgProps {
 
 export function TextBg({ text }: AboutBgProps) {
     return (
-        <div className="fixed h-screen inset-1 flex items-center justify-center">
-                <h1 className="relative  flex text-[80px] md:text-[110px] lg:text-[250px] text-center  opacity-50 font-bold bg-gradient-to-r from-red-500 to-blue-500 text-transparent bg-clip-text">
-                        {text}
-                </h1>
+        <div className=" -my-50 fixed h-screen inset-1 flex items-center justify-center">
+            <h1 className="relative  flex text-[80px] md:text-[100px] lg:text-[210px] text-center  opacity-30 font-bold bg-gradient-to-r from-red-500 to-blue-500 text-transparent bg-clip-text">
+                {text}
+            </h1>
         </div>
     );
 }
