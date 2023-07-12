@@ -1,6 +1,7 @@
 
 import React from "react";
 import ElevatingText from "@/components/title/ElevatingText";
+import Link from "next/link";
 
 export function TextAbout (){
     return (
@@ -18,8 +19,11 @@ export function TextAbout (){
                     and performance solutions that truly redefine automotive excellence.
                 </p>
 
-                <button className="w-fit font-bold rounded-none border-[1px] border-[#000] px-6 py-3 text-sm  transition duration-300 ease-in-out hover:bg-black hover:text-white mt-4">View More</button>
-
+                <Link href={`/about`}>
+                    <button className="w-fit font-bold rounded-none border-[1px] border-[#000] px-6 py-3 text-sm transition duration-300 ease-in-out hover:bg-black hover:text-white mt-4">
+                        View More
+                    </button>
+                </Link>
             </h3>
         </div>
     );

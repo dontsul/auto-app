@@ -49,17 +49,21 @@ export function AboutPages () {
                             <TextAboutPages />
                             <ImagesAbout />
                         </div>
+
+
                     </div>
                 </div>
+
                 <div className="z-0 container overflow-hidden">
                     <div className="relative">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
-                            <TextAbout />
+                            <WeWelcomeText />
                             <FormExample6 />
                         </div>
                     </div>
                 </div>
             </div>
+            <BottomConect />
 
         </div>
     );

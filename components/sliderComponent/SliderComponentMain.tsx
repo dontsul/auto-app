@@ -2,7 +2,7 @@
 export function SliderComponentMain (){
     return (
         <div>
-            dasfa
+            slider
         </div>
     );
 }
