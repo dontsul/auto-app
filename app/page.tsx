@@ -6,11 +6,14 @@ import {Contacts} from "@/components/contacts/Contacts";
 import {Reviews} from "@/components/revievs/Reviews";
 
 export default function Home() {
-  return <main>
-    <Sliders />
-    <AboutSection />
-    <Brands />
-    <Contacts />
-    <Reviews />
-    </main>;
+  return (
+    <div>
+      <Sliders />
+      <AboutSection />
+      <Brands />
+      <Contacts />
+      <Reviews/>
+    </div>
+  )
+
 }
