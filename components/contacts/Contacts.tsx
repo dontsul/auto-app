@@ -14,8 +14,8 @@ export function Contacts (){
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.pageYOffset;
-            const triggerPosition = 2000;
-            const triggerPositionBottom = 3000;
+            const triggerPosition = 1800;
+            const triggerPositionBottom = 2500;
 
 
             if (scrollPosition > triggerPosition && scrollPosition < triggerPositionBottom) {
@@ -40,7 +40,7 @@ export function Contacts (){
                         showText ? 'opacity-200 h-auto' : 'opacity-0 h-0'
                     }`}
                 >
-                    <TextBg text={"C O N T A C T"} />
+                    <TextBg text={"CONTACT"} />
                 </div>
             </div>
             <div className="z-0 container  text-center">
@@ -52,52 +52,17 @@ export function Contacts (){
                                 <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
                                     Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
                                 </p>
+                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
+                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
+                                </p>
+                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
+                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
+                                </p>
+                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
+                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
+                                </p>
                                 <BottomConect />
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
+
 
                             </div>
 

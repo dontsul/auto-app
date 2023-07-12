@@ -5,28 +5,15 @@ const FormExample6 = () => {
         <div className="brightness-75 order-1 lg:order-2 p-10  justify-center relative ">
             <div className =" p-6 m-auto  rounded-md shadow-xl shadow-rose-600/40  ring-2  ring-indigo-600 max-w-xl">
                 <form className="mt-6">
-                    <div className="flex mb-2">
-                        <label className="flex flex-col items-center">
-                            <span className="block w-full">Name</span>
+                    <div className="mb-2">
+                        <label>
+                            <span className ="text-gray-700">Name</span>
                             <input
-                                type="text"
-                                name="name"
-                                className ="p-10 block w-full mt-2 px-16  py-2  rounded-md shadow-sm border-indigo-300 ring ring-indigo-200 ring-opacity-50"
-                                placeholder="First Name"
-                            />
+                                name ="Name"
+                                type ="text"
+                                className ="block w-full mt-2 px-16  py-2  rounded-md shadow-sm border-indigo-300 ring ring-indigo-200 ring-opacity-50"
+                                placeholder ="Name" required/>
                         </label>
-
-                        <label className="flex flex-col items-center">
-                            <span className=" w-full">Last Name</span>
-
-                            <input
-                                type="text"
-                                name="last Name"
-                                className="m-1 p-10 px-16 py-2 mt-2 rounded-md shadow-sm ring ring-indigo-200 "
-                                placeholder="Last Name"
-                            />
-                        </label>
-
                     </div>
 
                     <div className="mb-2">
