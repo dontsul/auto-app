@@ -42,30 +42,8 @@ export function Reviews() {
                     <div className="relative">
                         <div className="p-5 md:col-span-5 items-center justify-center px-10 md:px-10">
                             <h1 className="text-center">
-                                <ElevatingText key="brands" mainText={"Our Past   "} subText={"Clients"} />
+                                <ElevatingText key="brands" mainText={"Our Past  "} subText={"Clients"} />
                             </h1>
-                            <p className="m-7 col-span-1 p-5">
-                                Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                            </p>
-                            <p className="m-7 col-span-1 p-5">
-                                Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                            </p>
-                            <p className="m-7 col-span-1 p-5">
-                                Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                            </p>
-                            <p className="m-7 col-span-1 p-5">
-                                Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                            </p>
-                            <p className="m-7 col-span-1 p-5">
-                                Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                            </p>
-                            <p className="m-7 col-span-1 p-5">
-                                Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                            </p>
-                            <p className="m-7 col-span-1 p-5">
-                                Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                            </p>
-
                         </div>
                     </div>
                 </div>
