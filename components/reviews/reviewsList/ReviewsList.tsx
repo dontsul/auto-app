@@ -114,9 +114,10 @@ export const ReviewsList = () => {
     ],
   };
 
+
   return (
     <div>
-      <Slider className="py-6" {...settings}>
+      <Slider  className="py-6" {...settings}>
         {reviews.map((rev) => (
           <ItemRewiews rev={rev} key={rev.position} />
         ))}

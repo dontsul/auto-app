@@ -24,7 +24,7 @@ function SlideInfo({ transitionData, currentSlideData }: Props) {
         {/*  <IoMdBookmark className=" text-xl" />*/}
         {/*</button>*/}
           <button
-              className="w-fit rounded-none border-[1px] border-[#ffffff8f] px-6 py-3 text-sm font-thin transition duration-300 ease-in-out hover:bg-white hover:text-black"
+              className="font-bold w-fit rounded-none border-[1px] border-[#ffffff8f] px-6 py-3 text-sm  transition duration-300 ease-in-out bg-black text-white border-black hover:bg-white hover:text-black"
           >
           View More
         </button>
