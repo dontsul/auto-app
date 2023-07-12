@@ -6,13 +6,13 @@
   .line {
     @apply relative
             after:bg-yellow-600
-            after:h-[1px] 
-            after:w-[0%] 
+            after:h-[1px]
+            after:w-[0%]
             after:rounded-xl
-            after:left-0 
-            after:-bottom-[1px] 
-            after:absolute 
-            after:duration-300 
+            after:left-0
+            after:-bottom-[1px]
+            after:absolute
+            after:duration-300
             hover:after:w-full
             after:content-[''];
   }
@@ -37,7 +37,7 @@ body {
 }
 
 .container{
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto; 
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
 }

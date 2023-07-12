@@ -1,17 +1,22 @@
 'use client';
 import React, {useEffect, useState} from "react";
-import {TextBg} from "@/components/textBg/TextBg";
-import {Build} from "@/components/aboutSection/Build";
-import {ImagesAbout} from "@/components/aboutSection/ImagesAbout";
-import {TextAbout} from "@/components/aboutSection/TextAbout";
 
-export function AboutSection (){
+import {ImagesAbout} from "@/components/aboutSection/ImagesAbout";
+import {TextBg} from "@/components/textBg/TextBg";
+import {TextAbout} from "@/components/aboutSection/TextAbout";
+import {Build} from "@/components/aboutSection/Build";
+import {TextAboutPages} from "@/pagese/abautPages/textAboutPages/TextAboutPages";
+import {WeWelcomeText} from "@/pagese/abautPages/textAboutPages/WeWelcomeText";
+import {BottomConect} from "@/pagese/abautPages/buttomConnect/BottomConect";
+import FormExample6 from "@/pagese/abautPages/forma/Forma";
+
+export function AboutPages () {
     const [showText, setShowText] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.pageYOffset;
-            const triggerPosition = 1450;
+            const triggerPosition = 1000;
 
             if (scrollPosition > triggerPosition) {
                 setShowText(false);
@@ -26,7 +31,8 @@ export function AboutSection (){
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-        return (
+    return(
+        <div className="relative container p-7">
             <div className="relative container py-16">
                 <div className="fixed bottom-0 inset-x-0">
                     <div
@@ -40,12 +46,25 @@ export function AboutSection (){
                 <div className="z-0 container overflow-hidden">
                     <div className="relative">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
-                            <TextAbout />
+                            <TextAboutPages />
                             <ImagesAbout />
                         </div>
-                        <Build />
+
+
+                    </div>
+                </div>
+
+                <div className="z-0 container overflow-hidden">
+                    <div className="relative">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
+                            <WeWelcomeText />
+                            <FormExample6 />
+                        </div>
                     </div>
                 </div>
             </div>
-        );
-    }
+            <BottomConect />
+
+        </div>
+    );
+}
