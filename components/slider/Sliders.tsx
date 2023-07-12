@@ -53,7 +53,7 @@ export default function Home() {
                             />
                         </div>
                         <div className=" col-span-6 flex h-full flex-1 flex-col justify-start p-4 md:justify-center md:p-10">
-                            <Slides data={data} />
+                            <Slides  data={data} />
                             <Controls
                                 currentSlideData={currentSlideData}
                                 data={data}
@@ -78,31 +78,25 @@ export default function Home() {
 const sliderData = [
     {
         img: "/1.png",
-        location: "Elevate Your Style",
+        location: " Style",
         description:
             "ere at Elevated Motoring we specialize in providing high-quality services to enhance the appearance and performance of your vehicle. We have the expertise and experience to take your vehicle to the next level.",
         title: "SAINT ANTÖNEN",
     },
     {
         img: "/2.png",
-        location: "TEST",
+        location: " FUNCTIONALITY",
         description:
-            "TEST",
-        title: "TEST",
+            "Elevate Your Functionality with our exceptional truck customization services. We understand that your truck is hot just a vehicle; it's a versatile tool that deserves to be tailoredto your specific needs. Whether yo prequire enhanced cargo capacity, off-road capabilities, or specialized equipment installations, weive got you covered.",
+        title: "ELEVATE YOUR-FUNCTIONALITY",
     },
     {
         img: "/3.png",
-        location: "TEST2",
+        location: " PERFORMANCE",
         description:
-            "TEST2",
-        title: "TEST2",
-    },
-    {
-        img: "/4.png",
-        location: "TEST3",
-        description:
-            "TEST3",
-        title: "TEST3",
+            "Our services are designed to optimize the performance of your vehicle with upgrades that are tailored to your driving needs\n" +
+            "rust us to take vour vehicle's berformance to he next level.",
+        title: "ELEVATE YOUR PERFORMANCE",
     },
 ];
 

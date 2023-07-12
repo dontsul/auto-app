@@ -8,15 +8,18 @@ import {TextAbout} from "@/components/aboutSection/TextAbout";
 export function AboutSection (){
     const [showText, setShowText] = useState(true);
 
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.pageYOffset;
-            const triggerPosition = 1450;
+            const triggerPosition = 700;
+            const triggerPositionBottom = 1600;
 
-            if (scrollPosition > triggerPosition) {
-                setShowText(false);
-            } else {
+
+            if (scrollPosition > triggerPosition && scrollPosition < triggerPositionBottom) {
                 setShowText(true);
+            } else {
+                setShowText(false);
             }
         };
 
