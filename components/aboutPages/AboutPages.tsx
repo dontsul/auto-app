@@ -3,20 +3,17 @@ import React, {useEffect, useState} from "react";
 
 import {ImagesAbout} from "@/components/aboutSection/ImagesAbout";
 import {TextBg} from "@/components/textBg/TextBg";
-import {TextAbout} from "@/components/aboutSection/TextAbout";
-import {Build} from "@/components/aboutSection/Build";
-import {TextAboutPages} from "@/pagese/abautPages/textAboutPages/TextAboutPages";
-import {WeWelcomeText} from "@/pagese/abautPages/textAboutPages/WeWelcomeText";
-import {BottomConect} from "@/pagese/abautPages/buttomConnect/BottomConect";
-import FormExample6 from "@/pagese/abautPages/forma/Forma";
-
+import {WeWelcomeText} from "@/components/aboutPages/textAboutPages/WeWelcomeText";
+import FormExample6 from "@/components/aboutPages/forma/Forma";
+import {BottomConect} from "@/components/aboutPages/buttomConnect/BottomConect";
+import {TextAboutPages} from "@/components/aboutPages/textAboutPages/TextAboutPages";
 export function AboutPages () {
     const [showText, setShowText] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.pageYOffset;
-            const triggerPosition = 1000;
+            const triggerPosition = 500;
 
             if (scrollPosition > triggerPosition) {
                 setShowText(false);
@@ -37,7 +34,7 @@ export function AboutPages () {
                 <div className="fixed bottom-0 inset-x-0">
                     <div
                         className={`fixed bottom-0 inset-x-0 transition-opacity transition-height duration-[600ms] ${
-                            showText ? 'opacity-200 h-auto' : 'opacity-0 h-0'
+                            showText ? 'opacity-50 h-auto' : 'opacity-0 h-0'
                         }`}
                     >
                         <TextBg text={"A B O U T"} />
@@ -54,7 +51,7 @@ export function AboutPages () {
                     </div>
                 </div>
 
-                <div className="z-0 container overflow-hidden">
+                <div className="z-20 container overflow-hidden">
                     <div className="relative">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
                             <WeWelcomeText />

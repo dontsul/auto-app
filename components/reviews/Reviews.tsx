@@ -10,8 +10,8 @@ export const Reviews = () => {
     // useEffect(() => {
     //     const handleScroll = () => {
     //         const scrollPosition = window.pageYOffset;
-    //         const triggerPosition = 2600;
-    //         const triggerPositionBottom = 4000;
+    //         const triggerPosition = 2800;
+    //         const triggerPositionBottom = 4000
     //
     //
     //         if (scrollPosition > triggerPosition && scrollPosition < triggerPositionBottom) {
@@ -33,7 +33,7 @@ export const Reviews = () => {
         {/*<div className="fixed bottom-0 inset-x-0">*/}
         {/*    <div*/}
         {/*        className={`fixed bottom-0 inset-x-0 transition-opacity transition-height duration-[600ms] ${*/}
-        {/*            showText ? 'opacity-200 h-auto' : 'opacity-0 h-0'*/}
+        {/*            showText ? 'opacity-300 h-auto' : 'opacity-0 h-0'*/}
         {/*        }`}*/}
         {/*    >*/}
         {/*        <TextBg text={"REVIEWS"} />*/}

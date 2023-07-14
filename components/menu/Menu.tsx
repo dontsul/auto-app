@@ -39,8 +39,7 @@ export const Menu: FC<IMenuProps> = ({
                 className="w-full h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line
                 "
                 href={`/`}
-              >
-                Home
+              >HOME
               </Link>
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
@@ -48,8 +47,7 @@ export const Menu: FC<IMenuProps> = ({
                 className="w-auto h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line
                 "
                 href={`/about`}
-              >
-                About
+              >ABOUT
               </Link>
             </li>
             <li
@@ -71,8 +69,7 @@ export const Menu: FC<IMenuProps> = ({
                 <Link
                   className="inline h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line"
                   href={`/`}
-                >
-                  Services
+                >OUR SERVICES
                 </Link>
                 <motion.div
                   animate={{ rotate: openServices ? 180 : 0 }}
@@ -102,24 +99,21 @@ export const Menu: FC<IMenuProps> = ({
                       <Link
                         className="inline h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line"
                         href={`/`}
-                      >
-                        Exhaust
+                      >Auto Styling
                       </Link>
                     </li>
                     <li className="inline px-4 py-1 transition">
                       <Link
                         className="w-auto h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line"
                         href={`/`}
-                      >
-                        Brakes
+                      >Brakes
                       </Link>
                     </li>
                     <li className="w-auto px-4 py-1 transition mb-0 lg:mb-4">
                       <Link
                         className="inline h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line"
                         href={`/`}
-                      >
-                        Tires
+                      >Preservation
                       </Link>
                     </li>
 
@@ -131,25 +125,22 @@ export const Menu: FC<IMenuProps> = ({
               <Link
                 className="w-full h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line"
                 href={`/`}
-              >
-                Brands
+              >FINANCING
               </Link>
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
                 className="w-full h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line"
                 href={`/`}
-              >
-                Apex +
+              >QUOTE REQUEST
               </Link>
             </li>
 
             <li className="w-auto px-4 py-1 transition duration-[100ms] ease lg:flex lg:justify-center">
               <Link
                 className="w-full h-full text-lg text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
-              >
-                Contact Us
+                href={`/contact`}
+              >CONTACT US
               </Link>
             </li>
           </ul>
