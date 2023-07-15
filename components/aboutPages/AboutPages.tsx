@@ -8,16 +8,17 @@ import ElevatingText from "@/components/title/ElevatingText";
 import {TextAboutLeft} from "@/components/aboutPages/textAboutPages/TextAboutLeft";
 import Image from "next/image";
 import images from "@/public/2.png";
-export function AboutPages () {
-    return(
+
+export function AboutPages() {
+    return (
         <div className="relative container p-7">
             <div className="relative container py-16">
                 <div className="z-0 container overflow-hidden">
                     <div className="relative">
-                            <ElevatingText mainText={"Elevating Vehicles For  "} subText={"Max Performance"} />
+                        <ElevatingText mainText={"Elevating Vehicles For  "} subText={"Max Performance"}/>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
-                            <TextAboutPages />
+                            <TextAboutPages/>
                             <div className=" container brightness-75 order-1 lg:order-2  justify-center relative">
                                 <Image
                                     className="rounded-2xl lg:rounded-2xl  brightness-75"
@@ -38,11 +39,10 @@ export function AboutPages () {
                                     alt="bg"
                                 />
                             </div>
-                            <TextAboutLeft />
+                            <TextAboutLeft/>
 
 
                         </div>
-
 
 
                     </div>
@@ -50,14 +50,14 @@ export function AboutPages () {
 
                 <div className="z-20 container overflow-hidden">
                     <div className="relative">
-                        <ElevatingText mainText={"Ready To Elevate Your Ride?  "} subText={""} />
+                        <ElevatingText mainText={"Ready To Elevate Your Ride?  "} subText={""}/>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
-                            <WeWelcomeText />
+                            <WeWelcomeText/>
                         </div>
                     </div>
                 </div>
             </div>
-            <BottomConect />
+            <BottomConect/>
 
         </div>
     );

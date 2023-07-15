@@ -1,5 +1,5 @@
 'use client'
-import { AnimatePresence } from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 import React from "react";
 import BackgroundImage from "@/components/slider/BackgroundImage";
 import SlideInfo from "@/components/slider/SlideInfo";
@@ -40,14 +40,16 @@ export default function Home() {
                 />
                 <div className="  absolute z-10  h-full w-full">
                     <div className=" flex h-full w-full grid-cols-4 flex-col md:grid">
-                        <div className=" col-span-4 mb-3 flex h-full flex-1 flex-col justify-end px-5 md:mb-0 md:justify-center md:px-10">
+                        <div
+                            className=" col-span-4 mb-3 flex h-full flex-1 flex-col justify-end px-5 md:mb-0 md:justify-center md:px-10">
                             <SlideInfo
                                 transitionData={transitionData}
                                 currentSlideData={currentSlideData}
                             />
                         </div>
-                        <div className=" col-span-6 flex h-full flex-1 flex-col justify-start p-4 md:justify-center md:p-10">
-                            <Slides  data={data} />
+                        <div
+                            className=" col-span-6 flex h-full flex-1 flex-col justify-start p-4 md:justify-center md:p-10">
+                            <Slides data={data}/>
                             <Controls
                                 currentSlideData={currentSlideData}
                                 data={data}

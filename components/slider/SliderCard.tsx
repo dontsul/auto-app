@@ -1,17 +1,17 @@
 import React from "react";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 type Props = {
-  data: any;
+    data: any;
 };
 
-function SliderCard({ data }: Props) {
+function SliderCard({data}: Props) {
 
-  return (
+    return (
         <motion.div
             className="relative h-32 min-w-[200px] rounded-2xl shadow-md md:h-32 md:min-w-[208px]"
             layout
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{scale: 0.8, opacity: 0}}
             animate={{
                 scale: 1,
                 opacity: 1,
@@ -19,7 +19,7 @@ function SliderCard({ data }: Props) {
                     duration: 0.4,
                 },
             }}
-            exit={{ scale: 0.8, opacity: 0 }}
+            exit={{scale: 0.8, opacity: 0}}
             transition={{
                 type: "spring",
                 damping: 20,
@@ -53,7 +53,7 @@ function SliderCard({ data }: Props) {
                 </motion.div>
             </motion.div>
         </motion.div>
-  );
+    );
 }
 
 export default SliderCard;

@@ -1,8 +1,7 @@
-
-export function SliderComponentMain (){
+export function SliderComponentMain() {
     return (
         <div>
             slider
         </div>
     );
-};
+}

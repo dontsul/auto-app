@@ -1,5 +1,5 @@
-export function Map (){
-    return(
+export function Map() {
+    return (
         <div>
             MAP
         </div>
