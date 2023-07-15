@@ -2,9 +2,8 @@ import React from "react";
 
 export function TextAboutLeft(){
     return(
-        <div className=" z-10 p-5 flex order-2 lg:order-1   items-center justify-center px-10 md:px-10  transition-transform duration-300">
+        <div className=" z-10 p-5 flex order-1 lg:order-2  items-center justify-center px-10 md:px-10  duration-300">
 
-            <div className=" relative z-20">
                 <p className="leading-6 py-7 text-[16px]  mb-2  rounded-full " style={{ color: '#616161', display: 'inline-block', width: '100%' }}>
                     We&apos;re not just about personal vehicles, our commitment to deliver exceptional
                     service spans across government, commercial, and residential projects. Every vehicle
@@ -18,6 +17,6 @@ export function TextAboutLeft(){
                 </p>
             </div>
 
-        </div>
+
     );
 }
