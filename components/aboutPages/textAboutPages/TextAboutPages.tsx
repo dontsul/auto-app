@@ -7,10 +7,6 @@ export function TextAboutPages() {
             <div className=" z-10 p-5 flex order-2 lg:order-1   items-center justify-center px-10 md:px-10  transition-transform duration-300">
 
                 <div className="text-center relative z-20">
-                    <h3 className="text-center relative z-20">
-                        <ElevatingText mainText={"Elevating Vehicles For  "} subText={"Max Performance"} />
-
-                    </h3>
                     <p className="leading-6 py-7 text-[16px]  mb-2  " style={{ color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
                         Welcome to <strong>Capital Upfitters</strong>, the family-owned epicenter of top-tier auto customization,
                         vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry,

@@ -10,8 +10,6 @@ export default function Home() {
     <div>
       <Sliders />
       <AboutSection />
-      <Brands />
-      <Contacts />
       <Reviews />
     </div>
   )

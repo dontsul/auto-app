@@ -1,11 +1,9 @@
 import React from "react";
 import ElevatingText from "@/components/title/ElevatingText";
-import {AiFillPhone} from "react-icons/ai"
 export function WeWelcomeText(){
     return(
-        <div className=" z-10 p-5 flex order-2 lg:order-1    justify-center px-10 md:px-10  transition-transform duration-300">
+        <div className="  p-5 flex order-2 lg:order-1 justify-center px-10 md:px-10  transition-transform duration-300">
             <div className=" relative z-20">
-                <h1 className=" relative z-20">
                 <ElevatingText mainText={"Ready To Elevate Your Ride?  "} subText={""} />
                 <p className="leading-5 py-7 text-[16px]  mb-2  " style={{ color: '#616161',display: 'inline-block', width: '100%' }}>
                     When it comes to accessorizing your vehicle there is no better place to do it than Elevated Motoring.
@@ -22,7 +20,7 @@ export function WeWelcomeText(){
                     Please fill out the form here and we will get in touch with
                     you right away with any further questions and your free estimate
                 </p>
-            </h1>
+
             </div>
         </div>
     );

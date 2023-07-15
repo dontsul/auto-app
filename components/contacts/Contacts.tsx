@@ -2,11 +2,8 @@
 import {TextBg} from "@/components/textBg/TextBg";
 import ElevatingText from "@/components/title/ElevatingText";
 import React, {useEffect, useState} from "react";
-import {SliderComponentMain} from "@/components/sliderComponent/SliderComponentMain";
-import {BottomConect} from "@/pagese/abautPages/buttomConnect/BottomConect";
-import {TextAbout} from "@/components/aboutSection/TextAbout";
-import {ImagesAbout} from "@/components/aboutSection/ImagesAbout";
-import {Build} from "@/components/aboutSection/Build";
+import {BottomConect} from "@/components/aboutPages/buttomConnect/BottomConect";
+
 
 export function Contacts (){
     const [showText, setShowText] = useState(false);
@@ -52,15 +49,7 @@ export function Contacts (){
                                 <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
                                     Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
                                 </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
-                                <p className="leading-9 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
-                                    Please fill out the required information below and we will reach out to help schedule your service. If you have any questions or would like to get started sooner, please call.
-                                </p>
+
                                 <BottomConect />
 
 
