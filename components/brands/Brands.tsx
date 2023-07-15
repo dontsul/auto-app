@@ -1,10 +1,7 @@
 'use client';
-import React, {useEffect, useState} from "react";
-import {TextBg} from "@/components/textBg/TextBg";
+import React from "react";
 import ElevatingText from "@/components/title/ElevatingText";
-import {TextAbout} from "@/components/aboutSection/TextAbout";
-import {ImagesAbout} from "@/components/aboutSection/ImagesAbout";
-import {Build} from "@/components/aboutSection/Build";
+
 import {SliderComponentMain} from "@/components/sliderComponent/SliderComponentMain";
 
 export function Brands () {

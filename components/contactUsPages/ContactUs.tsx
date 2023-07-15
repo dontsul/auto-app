@@ -1,6 +1,5 @@
 import React from "react";
 import {ContactUsText} from "@/components/contactUsPages/ContactUsText";
-import FormExample6 from "@/components/aboutPages/forma/Forma";
 import {BottomConect} from "@/components/aboutPages/buttomConnect/BottomConect";
 
 export function ContactUs(){
@@ -13,7 +12,6 @@ export function ContactUs(){
                     <div className="relative">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
                             <ContactUsText />
-                            <FormExample6 />
                         </div>
                     </div>
                 </div>

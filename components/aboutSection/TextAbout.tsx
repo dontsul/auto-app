@@ -1,14 +1,10 @@
-
 import React from "react";
-import ElevatingText from "@/components/title/ElevatingText";
-import Link from "next/link";
-import {Build} from "@/components/aboutSection/Build";
+
 
 export function TextAbout (){
     return (
         <div className=" z-10 p-5 flex order-2 lg:order-1   items-center justify-center px-10 md:px-10  transition-transform duration-300">
-            <div className="text-center relative z-20">
-                <p className="leading-6 py-7 text-[16px] text-center mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%', textAlign: 'center' }}>
+                <p className="leading-6 py-7 text-[16px]  mb-2  rounded-full " style={{color: '#616161',display: 'inline-block', width: '100%' }}>
                     Welcome to <strong>Capital Upfitters</strong>, the family-owned epicenter of top-tier auto customization,
                     vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry,
                     we proudly deliver unparalleled fleet customization services and robust protection coatings
@@ -17,9 +13,6 @@ export function TextAbout (){
                     to superior craftsmanship, delivering innovative auto customization
                     and performance solutions that truly redefine automotive excellence.
                 </p>
-
-
-            </div>
         </div>
     );
 }
