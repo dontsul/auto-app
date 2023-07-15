@@ -1,4 +1,3 @@
-import {AboutSection} from "@/components/aboutSection/AboutSection";
 import React from "react";
 import {AboutPages} from "@/components/aboutPages/AboutPages";
 

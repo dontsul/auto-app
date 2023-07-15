@@ -1,7 +1,7 @@
 
 export const Footer = () => {
   return(
-      <footer className="text-[#B3B3B3] bg-zinc-800 text-center  dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+      <footer className="relative text-[#B3B3B3] bg-zinc-800 text-center  dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
           <div
               className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
 
@@ -174,22 +174,22 @@ export const Footer = () => {
                           Location
                       </h6>
                       <p className="mb-4">
-                          <a href="#!" className=" dark:text-neutral-200"
+                          <a className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line"
                           >Pricing</a
                           >
                       </p>
                       <p className="mb-4">
-                          <a href="#!" className=" dark:text-neutral-200"
+                          <a  className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line"
                           >Settings</a
                           >
                       </p>
                       <p className="mb-4">
-                          <a href="#!" className=" dark:text-neutral-200"
+                          <a className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line"
                           >Orders</a
                           >
                       </p>
                       <p>
-                          <a href="#!" className=" dark:text-neutral-200"
+                          <a  className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line"
                           >Help</a
                           >
                       </p>

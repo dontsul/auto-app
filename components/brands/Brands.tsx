@@ -23,7 +23,6 @@ export function Brands () {
                     </div>
                     <div className="z-20 p-4 flex md:col-span-5 items-center justify-center px-4 md:px-10">
                         <SliderComponentMain />
-
                     </div>
                 </div>
             </div>
