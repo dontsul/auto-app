@@ -1,9 +1,9 @@
-'use client';
-import { useState, FC } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+import { useState, FC } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { BsSearch } from 'react-icons/bs';
-import { RxCross2 } from 'react-icons/rx';
+import { BsSearch } from "react-icons/bs";
+import { RxCross2 } from "react-icons/rx";
 
 interface IButtonSearch {
   isDesktop: boolean;
@@ -12,7 +12,7 @@ interface IButtonSearch {
 export const ButtonSearch: FC<IButtonSearch> = ({ isDesktop }) => {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <div className="block lg:hidden">
+    <div className="flex items-center justify-end lg:hidden">
       <AnimatePresence initial={false} mode="wait">
         {open ? (
           <motion.div

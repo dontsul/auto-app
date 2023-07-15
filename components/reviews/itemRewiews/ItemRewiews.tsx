@@ -1,6 +1,9 @@
-import { FC, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { AiFillStar } from 'react-icons/ai';
+"use client";
+
+import { FC, useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { AiFillStar } from "react-icons/ai";
+import { Google } from "../google/Google";
 
 interface IItemRewiews {
   profileName: string;
@@ -24,14 +27,12 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ rev }) => {
 
   const maxLength = 200;
   const variants = {
-    open: { height: 'auto' },
-    closed: { height: '120px' },
+    open: { height: "auto" },
+    closed: { height: "120px" },
   };
 
-  const displayText = !open ? text.slice(0, maxLength) : text;
-
   return (
-    <div className="py-4 mx-6 px-4 min-w-[100px] max-w-[260px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px]">
+    <div className="mx-auto my-2 py-2 px-4 min-w-[100px] max-w-[260px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px]">
       <h6 className="font-bold text-lg text-center text-black">
         {profileName}
       </h6>
@@ -40,17 +41,17 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ rev }) => {
       <motion.div
         ref={ref}
         initial="closed"
-        animate={open ? 'open' : 'closed'}
+        animate={open ? "open" : "closed"}
         variants={variants}
-        style={{ overflow: 'hidden' }}
+        style={{ overflow: "hidden" }}
         transition={{ duration: 0.5 }}
+        className="text-start mb-2"
       >
-        {displayText}
-        {text.length > maxLength && !open ? '...' : ''}
+        {text}
       </motion.div>
 
       {text.length > maxLength && (
-        <div>
+        <div className="flex items-center justify-start">
           <button
             onClick={() => setOpen(!open)}
             className="text-center text-xs text-slate-600"
@@ -63,6 +64,7 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ rev }) => {
           </button>
         </div>
       )}
+      <Google />
     </div>
   );
 };
