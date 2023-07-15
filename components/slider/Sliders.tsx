@@ -1,5 +1,4 @@
 'use client'
-import { Righteous } from "next/font/google";
 import { AnimatePresence } from "framer-motion";
 import React from "react";
 import BackgroundImage from "@/components/slider/BackgroundImage";
@@ -8,11 +7,6 @@ import Slides from "@/components/slider/Slides";
 import Controls from "@/components/slider/Controls";
 
 
-
-const inter = Righteous({
-    subsets: ["latin"],
-    weight: ["400"],
-});
 export type Data = {
     img: string;
     title: string;

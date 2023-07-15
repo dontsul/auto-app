@@ -3,8 +3,8 @@ import ElevatingText from "@/components/title/ElevatingText";
 export function WeWelcomeText(){
     return(
         <div className="  p-5 flex order-2 lg:order-1 justify-center px-10 md:px-10  transition-transform duration-300">
-            <div className=" relative z-20">
-                <ElevatingText mainText={"Ready To Elevate Your Ride?  "} subText={""} />
+
+            <div className=" relative ">
                 <p className="leading-5 py-7 text-[16px]  mb-2  " style={{ color: '#616161',display: 'inline-block', width: '100%' }}>
                     When it comes to accessorizing your vehicle there is no better place to do it than Elevated Motoring.
                     Our team has all the experience and knowledge to get you the best look within your budget at the service
