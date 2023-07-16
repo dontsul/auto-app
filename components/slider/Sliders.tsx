@@ -33,8 +33,9 @@ export default function Home() {
     <div
       className={`relative min-h-screen select-none overflow-hidden text-white`}
     >
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <BackgroundImage
+          key="background-image"
           transitionData={transitionData}
           currentSlideData={currentSlideData}
         />
@@ -42,6 +43,7 @@ export default function Home() {
           <div className=" flex h-full w-full grid-cols-4 flex-col md:grid">
             <div className=" col-span-4 mb-3 flex h-full flex-1 flex-col justify-end px-5 md:mb-0 md:justify-center md:px-10">
               <SlideInfo
+                key="slide-info"
                 transitionData={transitionData}
                 currentSlideData={currentSlideData}
               />
