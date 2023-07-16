@@ -19,11 +19,12 @@ export type CurrentSlideData = {
     index: number;
 };
 
-export default function Home() {
+export default function Sliders() {
     const [data, setData] = React.useState<Data[]>(sliderData.slice(1));
     const [transitionData, setTransitionData] = React.useState<Data>(
         sliderData[0]
     );
+
     const [currentSlideData, setCurrentSlideData] =
         React.useState<CurrentSlideData>({
             data: initData,
@@ -35,6 +36,8 @@ export default function Home() {
             className={` z-20 relative min-h-screen select-none overflow-hidden text-white `}>
             <AnimatePresence>
                 <BackgroundImage
+                    key={currentSlideData.index} // Наприклад, тут використовуємо index як ключ
+
                     transitionData={transitionData}
                     currentSlideData={currentSlideData}
                 />
@@ -80,6 +83,7 @@ const sliderData = [
         title: "SAINT ANTÖNEN",
     },
     {
+
         img: "/2.png",
         location: " FUNCTIONALITY",
         description:
@@ -87,6 +91,7 @@ const sliderData = [
         title: "ELEVATE YOUR-FUNCTIONALITY",
     },
     {
+
         img: "/3.png",
         location: " PERFORMANCE",
         description:

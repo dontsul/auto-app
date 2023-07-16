@@ -11,15 +11,13 @@ import images from "@/public/2.png";
 
 export function AboutPages() {
     return (
-        <div className="relative container p-7">
-            <div className="relative container py-16">
-                <div className="z-0 container overflow-hidden">
-                    <div className="relative">
+        <div className="relative  container lg:container p-7">
+            <div className="relative  py-16">
+                <div className="z-0  overflow-hidden">
                         <ElevatingText mainText={"Elevating Vehicles For  "} subText={"Max Performance"}/>
-
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
                             <TextAboutPages/>
-                            <div className=" container brightness-75 order-1 lg:order-2  justify-center relative">
+                            <div className="  brightness-75 order-1 lg:order-2  justify-center relative">
                                 <Image
                                     className="rounded-2xl lg:rounded-2xl  brightness-75"
                                     width={500}
@@ -30,7 +28,7 @@ export function AboutPages() {
                             </div>
                         </div>
                         <div className="py-20 grid grid-cols-1 lg:grid-cols-2  ">
-                            <div className=" container brightness-75 order-1 lg:order-2  justify-center ">
+                            <div className="brightness-75 order-1 lg:order-2  justify-center ">
                                 <Image
                                     className="rounded-2xl lg:rounded-2xl  brightness-75"
                                     width={500}
@@ -42,7 +40,6 @@ export function AboutPages() {
                             <TextAboutLeft/>
 
 
-                        </div>
 
 
                     </div>

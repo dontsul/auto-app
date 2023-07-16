@@ -1,3 +1,5 @@
+import Map from "@/components/googleMap/Map";
+
 export const Footer = () => {
     return (
         <footer
@@ -207,6 +209,7 @@ export const Footer = () => {
                             className=" mb-4 flex justify-center font-semibold uppercase md:justify-start">
                             Location Navigation
                         </h6>
+
                     </div>
                 </div>
             </div>
