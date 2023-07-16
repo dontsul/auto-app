@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Button } from "../button/Button";
 import { Input } from "../input/Input";
+import { motion } from "framer-motion";
 
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
 import { isPossiblePhoneNumber } from "react-phone-number-input";
@@ -37,6 +38,36 @@ const schema = yup
   .required();
 
 export const CustomForm = () => {
+  const formLeftAnimation = {
+    hidden: {
+      x: -300,
+      opacity: 0,
+    },
+    visible: (custom: any) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: custom * 0.4,
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    }),
+  };
+  const formRightAnimation = {
+    hidden: {
+      x: 300,
+      opacity: 0,
+    },
+    visible: (custom: any) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: custom * 0.4,
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    }),
+  };
   const {
     control,
     handleSubmit,
@@ -48,16 +79,27 @@ export const CustomForm = () => {
       name: "",
       phone: "",
       email: "",
-      contactMe: "select an option",
+      contactMe: "",
       comment: "",
     },
   });
   const onSubmit = handleSubmit((data: any) => console.log(data));
 
   return (
-    <form onSubmit={onSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <div className="mb-4 col-span-1">
-        <label>
+    <motion.form
+      initial="hidden"
+      whileInView="visible"
+      onSubmit={onSubmit}
+      className="grid grid-cols-1 md:grid-cols-2 gap-4"
+      viewport={{ once: true }}
+    >
+      <motion.div
+        viewport={{ once: true }}
+        custom={0}
+        variants={formLeftAnimation}
+        className="mb-4 "
+      >
+        <label className="text-sm">
           Name
           <Controller
             name="name"
@@ -68,9 +110,14 @@ export const CustomForm = () => {
           />
         </label>
         <p className="text-sm text-red-600">{errors.name?.message}</p>
-      </div>
-      <div className="mb-4 col-span-1">
-        <label>
+      </motion.div>
+      <motion.div
+        viewport={{ once: true }}
+        className="mb-4 "
+        custom={1}
+        variants={formRightAnimation}
+      >
+        <label className="text-sm">
           Phone
           <PhoneInputWithCountry
             className=" bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full p-2.5"
@@ -87,10 +134,15 @@ export const CustomForm = () => {
           />
         </label>
         <p className="text-sm text-red-600">{errors.phone?.message}</p>
-      </div>
+      </motion.div>
 
-      <div className="mb-4 col-span-1">
-        <label>
+      <motion.div
+        viewport={{ once: true }}
+        className="mb-4 "
+        custom={2}
+        variants={formLeftAnimation}
+      >
+        <label className="text-sm">
           Email
           <Controller
             name="email"
@@ -101,9 +153,14 @@ export const CustomForm = () => {
           />
         </label>
         <p className="text-sm text-red-600">{errors.email?.message}</p>
-      </div>
-      <div className="mb-4 col-span-1">
-        <label>
+      </motion.div>
+      <motion.div
+        viewport={{ once: true }}
+        className="mb-4  block"
+        custom={3}
+        variants={formRightAnimation}
+      >
+        <label className="text-sm">
           Contact Me
           <Controller
             name="contactMe"
@@ -114,9 +171,14 @@ export const CustomForm = () => {
           />
         </label>
         <p className="text-sm text-red-600">{errors.contactMe?.message}</p>
-      </div>
-      <div className="mb-4 col-span-1 lg:col-span-2 row-span-4">
-        <label>
+      </motion.div>
+      <motion.div
+        viewport={{ once: true }}
+        className="mb-4 col-span-1 md:col-span-2"
+        custom={4}
+        variants={formLeftAnimation}
+      >
+        <label className="text-sm">
           Comment
           <Controller
             name="comment"
@@ -127,18 +189,23 @@ export const CustomForm = () => {
           />
         </label>
         <p className="text-sm text-red-600">{errors.comment?.message}</p>
-      </div>
+      </motion.div>
 
-      <div className="flex items-center justify-center mb-4 col-span-2">
+      <motion.div
+        viewport={{ once: true }}
+        custom={5}
+        variants={formRightAnimation}
+        className="flex items-center justify-center mb-4 col-span1 md:col-span-2"
+      >
         <Button
           type="submit"
           handleClick={() => {}}
-          cn="w-full col-span-2"
+          cn="w-full"
           outline={false}
         >
           Submit
         </Button>
-      </div>
-    </form>
+      </motion.div>
+    </motion.form>
   );
 };

@@ -1,6 +1,7 @@
 "use client";
 
 import { ItemRewiews } from "../itemRewiews/ItemRewiews";
+import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -72,6 +73,20 @@ const reviews = [
 ];
 
 export const ReviewsList = () => {
+  const reviewsListAnimation = {
+    hidden: {
+      x: -200,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
   const settings = {
     centerMode: true,
     infinite: true,
@@ -112,12 +127,18 @@ export const ReviewsList = () => {
   };
 
   return (
-    <div className="py-4 z-30">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={reviewsListAnimation}
+      viewport={{ once: true }}
+      className="py-4 z-30"
+    >
       <Slider className="py-6" {...settings}>
         {reviews.map((rev) => (
           <ItemRewiews rev={rev} key={rev.position} />
         ))}
       </Slider>
-    </div>
+    </motion.div>
   );
 };
