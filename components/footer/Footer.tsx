@@ -63,7 +63,7 @@ export const Footer = () => {
               </svg>
               CAPITAL UPFITTERS
             </h6>
-            <p>
+            <p className="text-sm">
               Based in Leander, Texas, our team of skilled technicians are
               dedicated to providing amazing service for all your truck
               customization needs
