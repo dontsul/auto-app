@@ -1,16 +1,15 @@
-'use client';
-import {ReviewsList} from './reviewsList/ReviewsList';
-import React from "react";
-import ElevatingText from "@/components/title/ElevatingText";
+import { ReviewsList } from "./reviewsList/ReviewsList";
+import { Title } from "../title/Title";
+import { TitleBg } from "../titleBg/TitleBg";
 
 export const Reviews = () => {
-
-
-    return (
-        <section className="container text-center">
-
-            <ElevatingText key="brands" mainText={"Our Past  "} subText={"Clients"}/>
-            <ReviewsList/>
-        </section>
-    );
+  return (
+    <section className="container py-16 relative h-full ">
+      <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[112px] lg:mt-[198px]">
+        Our Past <span className="text-yellow-700">Clients</span>
+      </Title>
+      <ReviewsList />
+      <TitleBg>Reviews</TitleBg>
+    </section>
+  );
 };
