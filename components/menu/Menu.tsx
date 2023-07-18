@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC } from "react";
 import { Logo } from "../logo/Logo";
 import { CloseButton } from "../closeButton/CloseButton";
 import { motion, AnimatePresence } from "framer-motion";

@@ -111,7 +111,7 @@ export const Styling: FC<IStylingProps> = ({
             <li className="w-auto px-4 py-1 mb-0 lg:mb-4">
               <Link
                 className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                href={`/services/auto-styling/window-tint`}
               >
                 Window Tint
               </Link>
