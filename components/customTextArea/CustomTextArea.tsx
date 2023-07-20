@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  FC,
-  InputHTMLAttributes,
-  forwardRef,
-  TextareaHTMLAttributes,
-} from "react";
+import { FC, forwardRef, TextareaHTMLAttributes } from "react";
 
 interface CustomTextAreaProps
   extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
@@ -16,13 +11,14 @@ export const CustomTextArea: FC<CustomTextAreaProps> = forwardRef<
 >(function TextArea({ name, ...props }, ref) {
   return (
     <textarea
-      rows={7}
       style={{ resize: "none" }}
       {...props}
       name={name}
       ref={ref}
-      className="focus:outline-none bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full p-2.5"
-    />
+      rows={7}
+      className="focus:outline-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-zinc-800 focus:border-zinc-800"
+      placeholder="Leave a comment..."
+    ></textarea>
   );
 });
 

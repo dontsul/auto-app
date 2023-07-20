@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+import { IconType } from "react-icons";
 import {
   FaFacebookSquare,
   FaInstagram,
@@ -5,35 +7,37 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
-export const Footer = () => {
+const socialList = [
+  {
+    icon: FaFacebookSquare,
+  },
+  {
+    icon: FaInstagram,
+  },
+  {
+    icon: FaTwitter,
+  },
+  {
+    icon: FaLinkedinIn,
+  },
+];
+
+export const Footer: React.FC = () => {
   return (
     <footer className="relative text-[#B3B3B3] bg-zinc-800 text-center  dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="flex justify-center">
-          <a
-            href="#!"
-            className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
-          >
-            <FaFacebookSquare />
-          </a>
-          <a
-            href="#!"
-            className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="#!"
-            className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="#!"
-            className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
-          >
-            <FaLinkedinIn />
-          </a>
+          {socialList.map(({ icon: Item }: { icon: IconType }, i) => {
+            return (
+              <a
+                key={i}
+                href="#!"
+                className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
+              >
+                <Item />
+              </a>
+            );
+          })}
         </div>
       </div>
 

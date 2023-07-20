@@ -57,7 +57,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="px-8 lg:px-0 bg-zinc-800 sticky top-0 z-30 lg:z-10 grid grid-cols-3 lg:grid-cols-[auto_1fr_auto]">
+    <header className="px-8 lg:px-0 bg-[#111827] sticky top-0 z-30 lg:z-10 grid grid-cols-3 lg:grid-cols-[auto_1fr_auto]">
       <BurgerMenu openMenu={openMenu} handleMenu={handleMenu} />
       <div className="lg:order-1 flex items-center justify-center py-2">
         <Link href={`/`}>

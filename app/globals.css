@@ -41,3 +41,13 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #a16207;
 }
+
+.phoneInputCustom input {
+  border: none;
+  outline: none;
+  background-color: #f9fafb;
+}
+.phoneInputCustom input:focus {
+  border: none;
+  outline: none;
+}

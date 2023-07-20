@@ -1,30 +1,30 @@
 "use client";
 
 import { FC, forwardRef, SelectHTMLAttributes } from "react";
-import { IContactMe } from "@/interfaces/form";
+import { ISelectProps } from "@/interfaces/form";
 
 interface CustomSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  contactMeVariants: IContactMe[];
+  datas: ISelectProps[];
 }
 
 export const CustomSelect: FC<CustomSelectProps> = forwardRef<
   HTMLSelectElement,
   CustomSelectProps
->(function CustomSelectComponent({ name, contactMeVariants, ...props }, ref) {
+>(function CustomSelectComponent({ name, datas, ...props }, ref) {
   return (
     <select
-      // defaultValue={contactMeVariants[0].value}
       {...props}
       name={name}
       ref={ref}
-      className="focus:outline-none bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full py-2.5 px-1"
+      className="focus:outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-zinc-800 focus:border-zinc-800 block w-full p-3 hite "
     >
-      {contactMeVariants.map((item) => {
+      {datas.map((item) => {
         return (
           <option
-            // selected={item.selected ? true : false}
+            value={item.value}
             hidden={item.hidden ? true : false}
-            disabled={item.disabled ? true : false}
+            // disabled={item.disabled ? true : false}
+            // selected={item.selected ? true : false}
             key={item.value}
           >
             {item.text}

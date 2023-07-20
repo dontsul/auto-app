@@ -38,7 +38,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           initial="hidden"
           whileInView="visible"
           variants={titleAnimation}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           className={`font-extrabold text-slate-900 uppercase text-4xl lg:text-6xl text-center  ${
             cn ? cn : ""
           }`}

@@ -42,7 +42,7 @@ export const Menu: FC<IMenuProps> = ({
       >
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={` bg-zinc-800 w-full z-20 h-screen py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:py-0 lg:px-4`}
+          className={` bg-[#111827] w-full z-20 h-screen py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:py-0 lg:px-4`}
         >
           <div className="block lg:hidden">
             <Logo />
