@@ -185,12 +185,12 @@ export const Footer: React.FC = () => {
       </div>
 
       <div className="bg-zinc-800 p-6 text-center dark:bg-neutral-700">
-        <span>© 2023 Copyright: </span>
+        <span>© {new Date().getFullYear()}  Copyright: </span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
           href="/"
         >
-          Tailwind Elements
+          All rights reserved
         </a>
       </div>
     </footer>
