@@ -29,13 +29,13 @@ export const ContactInfo: FC<IContactInfo> = ({
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`relative bg-zinc-800 w-full z-20 h-screen border-r-[3px`}
+          className={`relative bg-[#111827] w-full z-20 h-screen border-r-[3px`}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-center ">
               <Logo />
             </div>
-            <div className="w-[80px] h-[80px] flex items-center justify-center bg-neutral-600">
+            <div className="w-[80px] h-[80px] flex items-center justify-center bg-[#111827]">
               <CloseButton handleMenu={() => handleContactInfo(false)} />
             </div>
           </div>
