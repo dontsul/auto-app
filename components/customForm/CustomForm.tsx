@@ -50,41 +50,26 @@ const schema = yup.object({
   state: yup.string(),
   services: yup
     .array()
-    .required("At least one checkbox must be selected")
-    .min(1, "At least one checkbox must be selected"),
+    .required("At least one service must be selected")
+    .min(1, "At least one service must be selected"),
 });
 
 export const CustomForm = () => {
-  const formLeftAnimation = {
+  const formAnimation = {
     hidden: {
-      x: -100,
+      y: -100,
       opacity: 0,
     },
-    visible: (custom: any) => ({
-      x: 0,
+    visible: {
+      y: 0,
       opacity: 1,
       transition: {
-        delay: custom * 0.4,
-        duration: 0.8,
+        duration: 1,
         ease: "easeOut",
       },
-    }),
-  };
-  const formRightAnimation = {
-    hidden: {
-      x: 100,
-      opacity: 0,
     },
-    visible: (custom: any) => ({
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: custom * 0.4,
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    }),
   };
+
   const {
     watch,
     control,
@@ -114,17 +99,6 @@ export const CustomForm = () => {
   const onSubmit = handleSubmit((data: any) => console.log(data));
   const selectedPhotos = watch("file") as File[];
 
-  // const selectedMake = watch("make");
-  // const [selectedModels, setSelectedModels] = useState<IModel[]>([]);
-
-  // useEffect(() => {
-  //   if (selectedMake) {
-  //     setSelectedModels(models[selectedMake] || []);
-  //   } else {
-  //     setSelectedModels([]);
-  //   }
-  // }, [selectedMake]);
-
   const handleDeletePhoto = (photo: File) => {
     const updatedPhotos = arrayImages.filter((item) => item !== photo);
     setArrayImages(updatedPhotos);
@@ -149,11 +123,10 @@ export const CustomForm = () => {
       {/* first name */}
       <motion.div
         viewport={{ once: true }}
-        custom={0}
-        variants={formLeftAnimation}
+        variants={formAnimation}
         className="mb-4 "
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           First Name*
           <Controller
             name="firstName"
@@ -169,11 +142,10 @@ export const CustomForm = () => {
       {/* last name */}
       <motion.div
         viewport={{ once: true }}
-        custom={0}
-        variants={formLeftAnimation}
-        className="mb-4 "
+        variants={formAnimation}
+        className=""
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           Last Name*
           <Controller
             name="lastName"
@@ -189,11 +161,10 @@ export const CustomForm = () => {
       {/* Phone*/}
       <motion.div
         viewport={{ once: true }}
-        className="mb-4 "
-        custom={1}
-        variants={formRightAnimation}
+        className=""
+        variants={formAnimation}
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           Phone*
           <PhoneInputWithCountry
             className="phoneInputCustom focus:outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-zinc-800 focus:border-zinc-800 block w-full p-2.5 "
@@ -215,11 +186,10 @@ export const CustomForm = () => {
       {/* Email*/}
       <motion.div
         viewport={{ once: true }}
-        className="mb-4 "
-        custom={2}
-        variants={formLeftAnimation}
+        className=""
+        variants={formAnimation}
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           Email*
           <Controller
             name="email"
@@ -239,11 +209,10 @@ export const CustomForm = () => {
       {/* year */}
       <motion.div
         viewport={{ once: true }}
-        custom={0}
-        variants={formLeftAnimation}
-        className="mb-4 "
+        variants={formAnimation}
+        className=""
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           Year*
           <Controller
             name="year"
@@ -264,11 +233,10 @@ export const CustomForm = () => {
       {/* make */}
       <motion.div
         viewport={{ once: true }}
-        custom={0}
-        variants={formLeftAnimation}
+        variants={formAnimation}
         className="mb-4 "
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           Make*
           <Controller
             name="make"
@@ -288,11 +256,10 @@ export const CustomForm = () => {
       {/* model */}
       <motion.div
         viewport={{ once: true }}
-        custom={0}
-        variants={formLeftAnimation}
+        variants={formAnimation}
         className="mb-4 "
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           Model*
           <Controller
             name="model"
@@ -306,17 +273,16 @@ export const CustomForm = () => {
             )}
           />
         </label>
-        <p className="text-sm text-red-600">{errors.make?.message}</p>
+        <p className="text-sm text-red-600">{errors.model?.message}</p>
       </motion.div>
       {/*----------------------- license plate----------------- /> */}
       <motion.div
         viewport={{ once: true }}
-        custom={0}
-        variants={formLeftAnimation}
-        className="grid grid-cols-[70%_auto] gap-4"
+        variants={formAnimation}
+        className="grid grid-cols-[65%_auto] gap-4"
       >
         <div className="mb-4 ">
-          <label className="block mb-2 text-sm font-medium text-gray-900">
+          <label className="block text-sm font-medium text-gray-900">
             License Plate
             <Controller
               name="licensePlate"
@@ -329,7 +295,7 @@ export const CustomForm = () => {
           <p className="text-sm text-red-600">{errors.licensePlate?.message}</p>
         </div>
         <div className="mb-4 ">
-          <label className="block mb-2 text-sm font-medium text-gray-900">
+          <label className="block text-sm font-medium text-gray-900">
             State
             <Controller
               name="state"
@@ -352,11 +318,10 @@ export const CustomForm = () => {
       {/* -------------------------------services------------------------- */}
       <motion.div
         viewport={{ once: true }}
-        custom={0}
-        variants={formLeftAnimation}
+        variants={formAnimation}
         className="mb-4 col-span-1 md:col-span-3"
       >
-        <div className="block mb-2 text-sm font-medium text-gray-900">
+        <div className="block text-sm font-medium text-gray-900">
           Services*
           <ul className="grid w-full gap-6 grid-cols-1 md:grid-cols-4">
             {services.map((service: IService) => {
@@ -374,8 +339,10 @@ export const CustomForm = () => {
                     htmlFor={service.value}
                     className="inline-flex items-center justify-between w-full p-2.5 shadow-lg text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer   peer-checked:border-[#111827] hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50 "
                   >
-                    <div className="block p-2">
-                      <div className="w-full font-semibold">{service.text}</div>
+                    <div className="block p-1">
+                      <div className="w-full font-semibold text-sm">
+                        {service.text}
+                      </div>
                     </div>
                   </label>
                 </li>
@@ -390,10 +357,9 @@ export const CustomForm = () => {
       <motion.div
         viewport={{ once: true }}
         className="mb-4 col-span-1 md:col-span-3"
-        custom={4}
-        variants={formLeftAnimation}
+        variants={formAnimation}
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           Your message
           <Controller
             name="comment"
@@ -410,11 +376,10 @@ export const CustomForm = () => {
       {/* --------------images----------------- */}
       <motion.div
         viewport={{ once: true }}
-        className="mb-4 block col-span-1 md:col-span-1"
-        custom={1}
-        variants={formLeftAnimation}
+        className="block col-span-1 md:col-span-1"
+        variants={formAnimation}
       >
-        <label className="block mb-2 text-sm font-medium text-gray-900">
+        <label className="block text-sm font-medium text-gray-900">
           Upload File
           <div className="overflow-hidden flex focus:outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-zinc-800 focus:border-zinc-800 w-full">
             <input
@@ -440,7 +405,7 @@ export const CustomForm = () => {
         </label>
 
         {arrayImages !== undefined && arrayImages.length > 0 && (
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-2 flex-wrap mt-2">
             {arrayImages.map((photo: File, index: number) => (
               <div
                 className="relative h-[80px] w-[80px] rounded-md"
@@ -469,8 +434,7 @@ export const CustomForm = () => {
       {/* --------------images----------------- */}
       <motion.div
         viewport={{ once: true }}
-        custom={5}
-        variants={formRightAnimation}
+        variants={formAnimation}
         className="flex items-center justify-center mb-4 col-span1 md:col-span-3"
       >
         <Button

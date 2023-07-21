@@ -137,13 +137,17 @@ export const models: ICarModels = {
   default: [
     {
       value: "make",
-      text: "Choose your model",
+      text: "First, choose a car make. ",
       disabled: true,
-      // selected: true,
       hidden: true,
     },
   ],
   acura: [
+    {
+      value: "make",
+      text: "Choose model",
+      hidden: true,
+    },
     { value: "cl", text: "CL" },
     { value: "ilx", text: "ILX" },
     { value: "integra", text: "Integra" },
@@ -162,6 +166,11 @@ export const models: ICarModels = {
     { value: "zdx", text: "ZDX" },
   ],
   alfaRomeo: [
+    {
+      value: "make",
+      text: "Choose model",
+      hidden: true,
+    },
     { value: "4c", text: "4C" },
     { value: "giulia", text: "Giulia" },
     { value: "giulietta", text: "Giulietta" },
@@ -177,6 +186,11 @@ export const models: ICarModels = {
     { value: "mito", text: "MiTo" },
   ],
   astonMartin: [
+    {
+      value: "make",
+      text: "Choose model",
+      hidden: true,
+    },
     { value: "db11", text: "DB11" },
     { value: "db9", text: "DB9" },
     { value: "dbs", text: "DBS" },
@@ -189,6 +203,11 @@ export const models: ICarModels = {
     { value: "cygnet", text: "Cygnet" },
   ],
   audi: [
+    {
+      value: "make",
+      text: "Choose model",
+      hidden: true,
+    },
     { value: "a1", text: "A1" },
     { value: "a2", text: "A2" },
     { value: "a3", text: "A3" },
@@ -232,6 +251,11 @@ export const services: IService[] = [
 ];
 
 export const states = [
+  {
+    value: "state",
+    text: "State",
+    hidden: true,
+  },
   { value: "AL", text: "AL" },
   { value: "AK", text: "AK" },
   { value: "AZ", text: "AZ" },
