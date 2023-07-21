@@ -3,11 +3,11 @@ import { CustomForm } from "@/components/customForm/CustomForm";
 import Image from "next/image";
 import imageAuto from "@/public/1.png";
 
-export default function PatriotLiner() {
+export default function AutoStyling() {
   return (
     <div className="py-16 container">
       <Title tag="h2" cn="mb-16">
-        Patriot <span className="text-yellow-500">Liner</span>
+        Auto <span className="text-yellow-500">Styling</span>
       </Title>
       <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 mb-16">
         <div>

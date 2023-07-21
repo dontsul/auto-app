@@ -383,13 +383,13 @@ export const CustomForm = () => {
               className="absolute opacity-0 w-[164px] left-0"
               multiple
             ></input>
-            <div className="cursor-pointer relative box-border h-full font-normal text-sm text-center border-r-[1px] border-zinc-800 text-slate-50 bg-zinc-800 w-[240px] p-2.5 mr-4">
+            <div className="cursor-pointer relative box-border h-full font-normal text-sm text-center border-r-[1px] border-[#111827] text-slate-50 bg-[#111827] w-[240px] p-2.5 mr-4">
               Upload File{" "}
             </div>
             <div className="flex items-center w-full">
               {" "}
               {arrayImages.length > 0 ? (
-                <span className="text-zinc-800">
+                <span className="text-[#111827]">
                   You download {arrayImages.length} image
                 </span>
               ) : (

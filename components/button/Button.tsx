@@ -25,7 +25,7 @@ export const Button: FC<IButtonProps> = ({
         color: outline ? "#ffffff" : "#000000",
       }}
       className={`font-medium py-2 px-8 border-[1px] border-black border-solid rounded-md
-      ${outline ? "bg-inherit text-black" : "bg-black text-white"}`}
+      ${outline ? "bg-inherit text-[#111827]" : "bg-[#111827] text-white"}`}
       onClick={handleClick}
       type={type ? type : "button"}
     >

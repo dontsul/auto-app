@@ -1,11 +1,10 @@
-import { FC, useState, useEffect } from "react";
+import { FC } from "react";
+import { usePathname } from "next/navigation";
 import { Logo } from "../logo/Logo";
 import { CloseButton } from "../closeButton/CloseButton";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { IoMdArrowDropdown } from "react-icons/io";
 import { OurServices } from "./ourServices/OurServices";
-import { usePathname } from "next/navigation";
 
 interface IMenuProps {
   openMenu: boolean;
