@@ -50,7 +50,7 @@ export const ContactInfo: FC<IContactInfo> = ({
                 className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
               />
               <a
-                className="w-auto h-full text-base text-slate-100 hover:text-yellow-600 cursor-pointer line"
+                className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
                 href="#!"
               >
                 2131 9th St, Sacramento, CA 95818, USA
@@ -62,7 +62,7 @@ export const ContactInfo: FC<IContactInfo> = ({
                 className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
               />
               <a
-                className="w-auto h-full text-base text-slate-100 hover:text-yellow-600 cursor-pointer line"
+                className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
                 href="tel:123-456-7891"
               >
                 123-456-7891
@@ -74,7 +74,7 @@ export const ContactInfo: FC<IContactInfo> = ({
                 className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
               />
               <a
-                className="w-auto h-full text-base text-slate-100 hover:text-yellow-600 cursor-pointer line"
+                className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
                 href="mailto:info@mailauto.com"
               >
                 info@mailauto.com
@@ -85,20 +85,20 @@ export const ContactInfo: FC<IContactInfo> = ({
               <a href="https://www.instagram.com/">
                 <BsInstagram
                   size={17}
-                  className="text-slate-100 cursor-pointer hover:text-yellow-600 transition"
+                  className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
                 />
               </a>
               <a href="https://www.facebook.com/">
                 <BsFacebook
                   size={17}
-                  className="text-slate-100 cursor-pointer hover:text-yellow-600 transition"
+                  className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
                 />
               </a>
               <a href="https://twitter.com/">
                 {" "}
                 <BsTwitter
                   size={17}
-                  className="text-slate-100 cursor-pointer hover:text-yellow-600 transition"
+                  className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
                 />
               </a>
             </div>

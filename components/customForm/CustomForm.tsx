@@ -11,18 +11,13 @@ import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
 import { v4 as uuidv4 } from "uuid";
 import { years, carBrands, models, services, states } from "./datas";
-import { ICarModels, IService } from "@/interfaces/form";
-
+import { IService } from "@/interfaces/form";
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
 import { isPossiblePhoneNumber } from "react-phone-number-input";
-import "react-phone-number-input/style.css";
 import { CustomTextArea } from "../customTextArea/CustomTextArea";
 import { CustomSelect } from "../customSelect/CustomSelect";
-import { CustomUploadFile } from "../customUploadFile/CustomUploadFile";
-import { IModel } from "@/interfaces/form";
-
 import metadata from "libphonenumber-js/metadata.min.json";
-import { CustomCheckbox } from "../customCheckbox/CustomCheckbox";
+import "react-phone-number-input/style.css";
 
 const FILE_SIZE = 5 * 1024 * 1024;
 const schema = yup.object({

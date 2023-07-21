@@ -32,8 +32,8 @@ export const Styling: FC<IStylingProps> = ({
     >
       <div className="flex items-center justify-between  w-full">
         <Link
-          className="inline h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line"
-          href={`/`}
+          className="inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+          href={`/auto-styling`}
         >
           Auto Styling
         </Link>
@@ -66,52 +66,52 @@ export const Styling: FC<IStylingProps> = ({
             }
             exit={!isDesktop ? { height: 0 } : { opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className={`overflow-hidden pl-4 lg:px-4 static top-14  lg:shadow-xl lg:absolute lg:left-[192px] lg:bg-zinc-800 lg:w-full min-w-auto lg:min-w-[220px] lg:overflow-visible`}
+            className={`overflow-hidden pl-4 lg:px-4 static top-14  lg:shadow-xl lg:absolute lg:left-[192px] lg:bg-[#111827] lg:w-full min-w-auto lg:min-w-[220px] lg:overflow-visible`}
           >
             <li className="mt-0 pt-2 w-auto px-4 py-1 lg:mt-4">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/auto-styling/wheels-tires`}
               >
                 Wheels & Tires
               </Link>
             </li>
             <li className="inline px-4 py-1 transition">
               <Link
-                className="text-sm w-auto h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/auto-styling/suspension`}
               >
                 Suspension
               </Link>
             </li>
             <li className="w-auto px-4 py-1 transition">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/auto-styling/exhaust`}
               >
                 Exhaust
               </Link>
             </li>
             <li className="w-auto px-4 py-1 transition">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/auto-styling/accessories`}
               >
                 Accessories
               </Link>
             </li>
             <li className="w-auto px-4 py-1 transition">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/auto-styling/vinyl-wraps`}
               >
                 Vinyl Wraps
               </Link>
             </li>
             <li className="w-auto px-4 py-1 mb-0 lg:mb-4">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/auto-styling/window-tint`}
               >
                 Window Tint
               </Link>

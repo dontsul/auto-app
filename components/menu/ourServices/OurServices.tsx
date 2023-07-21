@@ -48,8 +48,8 @@ export const OurServices: FC<IOurServicesProps> = ({
     >
       <div className="flex items-center justify-between  w-full">
         <Link
-          className="inline h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line flex items-center justify-between "
-          href={`/`}
+          className=" h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line flex items-center justify-between "
+          href={`/our-services`}
         >
           Our Services
         </Link>
@@ -87,12 +87,12 @@ export const OurServices: FC<IOurServicesProps> = ({
             }
             exit={!isDesktop ? { height: 0 } : { opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className={`overflow-hidden lg:overflow-visible pl-2 lg:absolute lg:bg-zinc-800 top-9 lg:shadow-xl lg:px-2`}
+            className={`overflow-hidden lg:overflow-visible pl-2 lg:absolute lg:bg-[#111827] top-9 lg:shadow-xl lg:px-2 lg:py-4`}
           >
             <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:mt-6">
               <Link
-                className="inline h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/patriot-liner`}
               >
                 Patriot Liner
               </Link>

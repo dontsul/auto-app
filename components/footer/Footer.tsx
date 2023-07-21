@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
                 <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line"
+                className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
                 href="#!"
               >
                 2131 9th St, Sacramento, CA 95818, USA
@@ -105,7 +105,7 @@ export const Footer: React.FC = () => {
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line"
+                className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
                 href="mailto:info@mailauto.com"
               >
                 info@mailauto.com
@@ -124,7 +124,7 @@ export const Footer: React.FC = () => {
                 />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line"
+                className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
                 href="tel:123-456-7891"
               >
                 123-456-7891
@@ -143,7 +143,7 @@ export const Footer: React.FC = () => {
                 />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line"
+                className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
                 href="tel:123-456-7891"
               >
                 123-456-7891
@@ -155,22 +155,22 @@ export const Footer: React.FC = () => {
               Location
             </h6>
             <p className="mb-4">
-              <a className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line">
+              <a className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
                 Pricing
               </a>
             </p>
             <p className="mb-4">
-              <a className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line">
+              <a className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
                 Settings
               </a>
             </p>
             <p className="mb-4">
-              <a className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line">
+              <a className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
                 Orders
               </a>
             </p>
             <p>
-              <a className="w-auto h-full text-base  hover:text-yellow-600 cursor-pointer line">
+              <a className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
                 Help
               </a>
             </p>
@@ -185,7 +185,7 @@ export const Footer: React.FC = () => {
       </div>
 
       <div className="bg-zinc-800 p-6 text-center dark:bg-neutral-700">
-        <span>© {new Date().getFullYear()}  Copyright: </span>
+        <span>© {new Date().getFullYear()} Copyright: </span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
           href="/"

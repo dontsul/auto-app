@@ -50,7 +50,7 @@ export const Menu: FC<IMenuProps> = ({
           <ul className="py-8 lg:flex lg:items-center lg:justify-center lg:gap-4 lg:py-0">
             <li className=" w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className="w-full h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line
+                className="w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line
                 "
                 href={`/`}
               >
@@ -59,7 +59,7 @@ export const Menu: FC<IMenuProps> = ({
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className="w-auto h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line
+                className="w-auto h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line
                 "
                 href={`/about`}
               >
@@ -81,16 +81,16 @@ export const Menu: FC<IMenuProps> = ({
 
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className="w-full h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/financing`}
               >
                 Financing
               </Link>
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className="w-full h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/quote-equest`}
               >
                 Quote Request
               </Link>

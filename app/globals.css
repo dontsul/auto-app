@@ -5,7 +5,7 @@
 @layer components {
   .line {
     @apply relative
-            after:bg-yellow-600
+            after:bg-yellow-500
             after:h-[1px]
             after:w-[0%]
             after:rounded-xl

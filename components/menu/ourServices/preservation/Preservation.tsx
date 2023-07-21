@@ -33,8 +33,8 @@ export const Preservation: FC<IPreservationProps> = ({
     >
       <div className="flex items-center justify-between  w-full relative">
         <Link
-          className="inline h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line"
-          href={`/`}
+          className="inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+          href={`/our-services/vehicle-preservation`}
         >
           Vehicle Preservation
         </Link>
@@ -68,36 +68,36 @@ export const Preservation: FC<IPreservationProps> = ({
             }
             exit={!isDesktop ? { height: 0 } : { opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className={`overflow-hidden pl-4 lg:px-4 static top-14  lg:shadow-xl lg:absolute lg:left-[192px] lg:bg-zinc-800 lg:w-full min-w-auto lg:min-w-[220px] lg:overflow-visible`}
+            className={`overflow-hidden pl-4 lg:px-4 static top-14  lg:shadow-xl lg:absolute lg:left-[192px] lg:bg-[#111827] lg:w-full min-w-auto lg:min-w-[220px] lg:overflow-visible`}
           >
             <li className="mt-0 pt-2 lg:pt-0 w-auto px-4 py-1 lg:mt-6">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/vehicle-preservation/paint-protection-film`}
               >
                 Paint Protection Film
               </Link>
             </li>
             <li className="inline px-4 py-1 transition">
               <Link
-                className="text-sm w-auto h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/vehicle-preservation/detailing-paint`}
               >
                 Detailing and Paint
               </Link>
             </li>
             <li className="w-auto px-4 py-1 transition">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/vehicle-preservation/ceramic-coatings`}
               >
                 Ceramic Coatings
               </Link>
             </li>
             <li className="w-auto px-4 py-1 mb-0 lg:mb-4">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                href={`/`}
+                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href={`/our-services/vehicle-preservation/rust-prevention`}
               >
                 Rust Prevention
               </Link>
