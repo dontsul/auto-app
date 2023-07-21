@@ -16,15 +16,15 @@ export const CustomSelect: FC<CustomSelectProps> = forwardRef<
       {...props}
       name={name}
       ref={ref}
-      className="focus:outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-zinc-800 focus:border-zinc-800 block w-full p-3 hite "
+      className={`text-sm focus:outline-none bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-zinc-800 focus:border-zinc-800 block w-full p-2.5 hite ${
+        datas[0].disabled ? "pointer-events-none appearance-none" : ""
+      } `}
     >
       {datas.map((item) => {
         return (
           <option
             value={item.value}
             hidden={item.hidden ? true : false}
-            // disabled={item.disabled ? true : false}
-            // selected={item.selected ? true : false}
             key={item.value}
           >
             {item.text}
