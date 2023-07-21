@@ -34,7 +34,7 @@ export const Menu: FC<IMenuProps> = ({
   isDesktop,
 }) => {
   return (
-    <div className="py-6 absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full lg:flex lg:items-center">
+    <div className="py-6 absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full lg:flex lg:items-center overflow-y-auto">
       <div
         className={` transition duration-[800ms] ease-in-out ${
           openMenu ? "translate-x-0 " : "translate-x-[-100%]"
@@ -42,7 +42,7 @@ export const Menu: FC<IMenuProps> = ({
       >
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={` bg-[#111827] w-full z-20 h-screen py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:py-0 lg:px-4`}
+          className={`overflow-y-auto bg-[#111827] w-full z-20 min-h-screen h-full py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:min-h-full lg:py-0 lg:px-4`}
         >
           <div className="block lg:hidden">
             <Logo />
