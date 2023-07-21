@@ -5,6 +5,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { Preservation } from "./preservation/Preservation";
 import { Fleet } from "./fleet/Fleet";
 import { Styling } from "./styling/Styling";
+import { usePathname } from "next/navigation";
 
 interface IOurServicesProps {
   openServices: boolean;
@@ -29,7 +30,8 @@ export const OurServices: FC<IOurServicesProps> = ({
   handleStyling,
   isDesktop,
 }) => {
-  const ref = useRef<HTMLUListElement | null>(null);
+  const pathname = usePathname();
+  // const ref = useRef<HTMLUListElement | null>(null);
   return (
     <li
       className="w-auto px-4  lg:flex lg:justify-center py-2"
@@ -48,7 +50,9 @@ export const OurServices: FC<IOurServicesProps> = ({
     >
       <div className="flex items-center justify-between  w-full">
         <Link
-          className=" h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line flex items-center justify-between "
+          className={` h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line flex items-center justify-between ${
+            pathname === "/our-services" ? "text-yellow-500 active-line" : ""
+          }`}
           href={`/our-services`}
         >
           Our Services
@@ -91,7 +95,11 @@ export const OurServices: FC<IOurServicesProps> = ({
           >
             <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:mt-6">
               <Link
-                className="inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/patriot-liner"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/patriot-liner`}
               >
                 Patriot Liner

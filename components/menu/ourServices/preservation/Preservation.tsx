@@ -2,6 +2,7 @@ import { FC, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { usePathname } from "next/navigation";
 
 interface IPreservationProps {
   openPreservation: boolean;
@@ -14,6 +15,7 @@ export const Preservation: FC<IPreservationProps> = ({
   handlePreservation,
   isDesktop,
 }) => {
+  const pathname = usePathname();
   const ref = useRef<HTMLUListElement | null>(null);
   return (
     <li
@@ -33,7 +35,11 @@ export const Preservation: FC<IPreservationProps> = ({
     >
       <div className="flex items-center justify-between  w-full relative">
         <Link
-          className="inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+          className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+            pathname === "/our-services/vehicle-preservation"
+              ? "text-yellow-500 active-line"
+              : ""
+          }`}
           href={`/our-services/vehicle-preservation`}
         >
           Vehicle Preservation
@@ -72,7 +78,12 @@ export const Preservation: FC<IPreservationProps> = ({
           >
             <li className="mt-0 pt-2 lg:pt-0 w-auto px-4 py-1 lg:mt-6">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname ===
+                  "/our-services/vehicle-preservation/paint-protection-film"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/vehicle-preservation/paint-protection-film`}
               >
                 Paint Protection Film
@@ -80,7 +91,12 @@ export const Preservation: FC<IPreservationProps> = ({
             </li>
             <li className="inline px-4 py-1 transition">
               <Link
-                className="text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname ===
+                  "/our-services/vehicle-preservation/detailing-paint"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/vehicle-preservation/detailing-paint`}
               >
                 Detailing and Paint
@@ -88,7 +104,12 @@ export const Preservation: FC<IPreservationProps> = ({
             </li>
             <li className="w-auto px-4 py-1 transition">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname ===
+                  "/our-services/vehicle-preservation/ceramic-coatings"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/vehicle-preservation/ceramic-coatings`}
               >
                 Ceramic Coatings
@@ -96,7 +117,12 @@ export const Preservation: FC<IPreservationProps> = ({
             </li>
             <li className="w-auto px-4 py-1 mb-0 lg:mb-4">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname ===
+                  "/our-services/vehicle-preservation/rust-prevention"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/vehicle-preservation/rust-prevention`}
               >
                 Rust Prevention

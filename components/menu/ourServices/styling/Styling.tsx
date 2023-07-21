@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowDropdown } from "react-icons/io";
-
+import { usePathname } from "next/navigation";
 interface IStylingProps {
   openStyling: boolean;
   handleStyling: (Styling: boolean) => void;
@@ -14,6 +14,7 @@ export const Styling: FC<IStylingProps> = ({
   handleStyling,
   isDesktop,
 }) => {
+  const pathname = usePathname();
   return (
     <li
       className="w-auto pl-4 py-1 lg:flex lg:justify-center"
@@ -32,8 +33,12 @@ export const Styling: FC<IStylingProps> = ({
     >
       <div className="flex items-center justify-between  w-full">
         <Link
-          className="inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
-          href={`/auto-styling`}
+          className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+            pathname === "/our-services/auto-styling"
+              ? "text-yellow-500 active-line"
+              : ""
+          }`}
+          href={`/our-services/auto-styling`}
         >
           Auto Styling
         </Link>
@@ -70,7 +75,11 @@ export const Styling: FC<IStylingProps> = ({
           >
             <li className="mt-0 pt-2 w-auto px-4 py-1 lg:mt-4">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/auto-styling/wheels-tires"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/auto-styling/wheels-tires`}
               >
                 Wheels & Tires
@@ -78,7 +87,11 @@ export const Styling: FC<IStylingProps> = ({
             </li>
             <li className="inline px-4 py-1 transition">
               <Link
-                className="text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/auto-styling/suspension"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/auto-styling/suspension`}
               >
                 Suspension
@@ -86,7 +99,11 @@ export const Styling: FC<IStylingProps> = ({
             </li>
             <li className="w-auto px-4 py-1 transition">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/auto-styling/exhaust"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/auto-styling/exhaust`}
               >
                 Exhaust
@@ -94,15 +111,23 @@ export const Styling: FC<IStylingProps> = ({
             </li>
             <li className="w-auto px-4 py-1 transition">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/auto-styling/accessories"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/auto-styling/accessories`}
               >
                 Accessories
               </Link>
             </li>
-            <li className="w-auto px-4 py-1 transition">
+            <li className="w-auto px-4 py-1 transition ">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/auto-styling/vinyl-wraps"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/auto-styling/vinyl-wraps`}
               >
                 Vinyl Wraps
@@ -110,7 +135,11 @@ export const Styling: FC<IStylingProps> = ({
             </li>
             <li className="w-auto px-4 py-1 mb-0 lg:mb-4">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/auto-styling/window-tint"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/auto-styling/window-tint`}
               >
                 Window Tint

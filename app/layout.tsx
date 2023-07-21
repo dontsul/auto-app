@@ -24,7 +24,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Header />
-
         <main>{children}</main>
         <Footer />
       </body>

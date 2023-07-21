@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { OurServices } from "./ourServices/OurServices";
+import { usePathname } from "next/navigation";
 
 interface IMenuProps {
   openMenu: boolean;
@@ -33,8 +34,10 @@ export const Menu: FC<IMenuProps> = ({
   handleStyling,
   isDesktop,
 }) => {
+  const pathname = usePathname();
+
   return (
-    <div className="py-6 absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full lg:flex lg:items-center overflow-y-auto">
+    <div className="py-6 absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full lg:flex lg:items-center">
       <div
         className={` transition duration-[800ms] ease-in-out ${
           openMenu ? "translate-x-0 " : "translate-x-[-100%]"
@@ -42,7 +45,7 @@ export const Menu: FC<IMenuProps> = ({
       >
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={`overflow-y-auto bg-[#111827] w-full z-20 min-h-screen h-full py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:min-h-full lg:py-0 lg:px-4`}
+          className={` bg-[#111827] w-full z-20 min-h-screen h-full py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:min-h-full lg:py-0 lg:px-4`}
         >
           <div className="block lg:hidden">
             <Logo />
@@ -50,8 +53,9 @@ export const Menu: FC<IMenuProps> = ({
           <ul className="py-8 lg:flex lg:items-center lg:justify-center lg:gap-4 lg:py-0">
             <li className=" w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className="w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line
-                "
+                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/" ? "text-yellow-500 active-line" : ""
+                }`}
                 href={`/`}
               >
                 Home
@@ -59,8 +63,10 @@ export const Menu: FC<IMenuProps> = ({
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className="w-auto h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line
-                "
+                className={`w-auto h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/about" ? "text-yellow-500 active-line" : ""
+                }
+                `}
                 href={`/about`}
               >
                 About
@@ -81,7 +87,9 @@ export const Menu: FC<IMenuProps> = ({
 
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className="w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line  ${
+                  pathname === "/financing" ? "text-yellow-500 active-line" : ""
+                }`}
                 href={`/financing`}
               >
                 Financing
@@ -89,7 +97,11 @@ export const Menu: FC<IMenuProps> = ({
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className="w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/quote-equest"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/quote-equest`}
               >
                 Quote Request

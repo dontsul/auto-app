@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowDropdown } from "react-icons/io";
-
+import { usePathname } from "next/navigation";
 interface IFleetProps {
   openFleet: boolean;
   handleFleet: (statusFleet: boolean) => void;
@@ -14,6 +14,7 @@ export const Fleet: FC<IFleetProps> = ({
   handleFleet,
   isDesktop,
 }) => {
+  const pathname = usePathname();
   return (
     <li
       className="w-auto pl-4 py-1 lg:flex lg:justify-center"
@@ -32,7 +33,11 @@ export const Fleet: FC<IFleetProps> = ({
     >
       <div className="flex items-center justify-between  w-full">
         <Link
-          className="inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line"
+          className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+            pathname === "/our-services/fleet-management"
+              ? "text-yellow-500 active-line"
+              : ""
+          }`}
           href={`/our-services/fleet-management`}
         >
           Fleet Management
@@ -70,23 +75,35 @@ export const Fleet: FC<IFleetProps> = ({
           >
             <li className="mt-0 pt-2  w-auto px-4 py-1 lg:mt-4">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/fleet-management/goverment"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/fleet-management/goverment`}
               >
                 Goverment
               </Link>
             </li>
-            <li className="inline px-4 py-1 transition">
+            <li className="inline px-4 py-1">
               <Link
-                className="text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/fleet-management/commercial"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/fleet-management/commercial`}
               >
                 Commercial
               </Link>
             </li>
-            <li className="w-auto px-4 py-1 mb-0 lg:mb-4">
+            <li className="px-4 py-1 mb-0 lg:mb-4">
               <Link
-                className="text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/fleet-management/dealerships"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
                 href={`/our-services/fleet-management/dealerships`}
               >
                 Dealerships
