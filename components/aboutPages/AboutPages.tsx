@@ -37,17 +37,14 @@ export function AboutPages() {
         </div>
         <div className=" overflow-hidden">
           <div className="relative">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
               <WeWelcomeText />
-              <div className=" order-1 lg:order-2 ">
-                <CustomForm />
 
-              </div>
-            </div>
           </div>
         </div>
       {/*</div>*/}
-      <CustomForm />
+      <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg shadow-[#111827]">
+        <CustomForm />
+      </div>
 
       <BottomConect />
 

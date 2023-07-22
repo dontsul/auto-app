@@ -1,12 +1,16 @@
 "use client";
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Title } from '@/components/title/Title';
 import images from "@/public/CARBON-Car.webp";
 import images2 from "@/public/Ceramic-Windshield.webp";
+import images3 from "@/public/CERAMIC-Plus-Car.webp"
 import {CustomForm} from "@/components/customForm/CustomForm";
 import Image from "next/image";
-import {Reviews} from "@/components/reviews/Reviews";
 import {ReviewsList} from "@/components/reviews/reviewsList/ReviewsList";
+import {ListTintPages} from "@/components/windowTintPages/ListTintPages";
+import {ListTintPagesTwo} from "@/components/windowTintPages/ListTintPagesTwo";
+import {ListTintPagesThree} from "@/components/windowTintPages/ListTintPagesThree";
+import {motion} from "framer-motion";
 
 export function WindowTintPages() {
     const [currentText, setCurrentText] = useState('PRIME CS');
@@ -16,72 +20,109 @@ export function WindowTintPages() {
         setCurrentText(text);
         setCurrentImage(image);
     };
+    const imageAbout = {
+        hidden: {
+            x: 100,
+            opacity: 0,
+        },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut",
+            },
+        },
+    };
 
     return (
         <div className="container">
             <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
                 Window <span className="text-yellow-500">Tinting</span>
             </Title>
-
             <h1 className="font-bold text-5xl mt-24 sm:mt-[6px] md:mt-[112px] lg:mt-[198px] mb-14">Select Your Window Film</h1>
             <div className=" pb-20 grid lg:grid-cols-[100px_auto_140px] gap-4  justify-center">
-                <div className=" rounded-md shadow-sm" role="group">
+                <div className=" m-5 rounded-md shadow-sm" role="group">
                     <button
                         type="button"
-                        className={`px-10 py-8 text-sm font-medium ${
+                        className={`py-2 px-8 text-sm font-medium ${
                             currentText === 'PRIME CS' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('PRIME CS', 'path-to-prime-cs-image.jpg')}
                     >
-                        PRIME CS
+                        CERAMIC
                     </button>
                     <button
                         type="button"
-                        className={`px-10 py-8 text-sm font-medium ${
+                        className={`py-2 px-8 text-sm font-medium ${
                             currentText === 'PRIME XR' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('PRIME XR', 'path-to-prime-xr-image.jpg')}
                     >
-                        PRIME XR
+                        CERAMIC
                     </button>
                     <button
                         type="button"
-                        className={`px-10 py-8 text-sm font-medium ${
+                        className={`py-2 px-8 text-sm font-medium ${
                             currentText === 'PRIME SD' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
-                        onClick={() => handleButtonClick('PRIME SD', 'cd-image.jpg')}
+                        onClick={() => handleButtonClick('PRIME SD', 'path-to-prime-xr-image.jpg')}
                     >
-                        PRIME SD
+                        CERAMIC
                     </button>
 
                 </div>
                 <div className="flex ">
                     {currentText === 'PRIME CS' && (
-                        <Image
-                            className="  brightness-90"
-                            width={600}
-                            height={500}
-                            src={images}
-                            alt="bg"
-                        />
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={imageAbout}
+                            viewport={{ once: true }}
+                            className=" flex justify-center brightness-75 order-1 lg:order-2"
+                        >
+                            <Image
+                                className="rounded-2xl lg:rounded-2xl  brightness-75"
+                                width={500}
+                                height={500}
+                                src={images}
+                                alt="bg"
+                            />
+                        </motion.div>
                     )}
                     {currentText === 'PRIME XR' && (
-                        <Image
-                            className="  brightness-75"
-                            width={600}
-                            height={500}
-                            src={images2}
-                            alt="bg"
-                        />
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={imageAbout}
+                            viewport={{ once: true }}
+                            className=" flex justify-center brightness-75 order-1 lg:order-2"
+                        >
+                            <Image
+                                className="rounded-2xl lg:rounded-2xl  brightness-75"
+                                width={500}
+                                height={500}
+                                src={images2}
+                                alt="bg"
+                            />
+                        </motion.div>
                     )}
                     {currentText ==='PRIME SD' && (
-                        <Image
-                            className="  brightness-75"
-                            width={600}
-                            height={500}
-                            src={images}
-                            alt="bg"
-                        />
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={imageAbout}
+                            viewport={{ once: true }}
+                            className=" flex justify-center brightness-75 order-1 lg:order-2"
+                        >
+                            <Image
+                                className="rounded-2xl lg:rounded-2xl  brightness-75"
+                                width={500}
+                                height={500}
+                                src={images3}
+                                alt="bg"
+                            />
+                        </motion.div>
                     )}
 
                 </div>
@@ -100,182 +141,17 @@ export function WindowTintPages() {
                             <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                                 {currentText === 'PRIME CS' && (
                                     <>
-                                        <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">CARBON</h2>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            UV Protection
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Improved Privacy
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Reduced Glare
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Added Style
-                                        </li>
-                                        {/*<li className="flex items-center">*/}
-                                        {/*    <svg className="w-3.5 h-3.5 mr-2 text-gray-500 dark:text-gray-400 flex-shrink-0"*/}
-                                        {/*         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"*/}
-                                        {/*         viewBox="0 0 20 20">*/}
-                                        {/*        <path*/}
-                                        {/*            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>*/}
-                                        {/*    </svg>*/}
-                                        {/*    Added Style*/}
-                                        {/*</li>*/}
+                                      <ListTintPages />
                                     </>
                                 )}
                                 {currentText === 'PRIME XR' && (
                                     <>
-                                        <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">CERAMIC</h2>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            70% Heat Rejection
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            UV Protection
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Improved Privacy
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Reduced Glare
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Improved Comfort
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Added Style
-                                        </li>
-
+                                      <ListTintPagesTwo />
                                     </>
                                 )}
                                 {currentText === 'PRIME SD' && (
                                     <>
-                                        <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">CERAMIC</h2>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            96% Heat Rejection
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            UV Protection
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Improved Privacy
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-
-                                            Reduced Glare
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Non-Metallized
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-
-                                            Nano-Ceramic
-                                        </li>
-                                        <li className="flex items-center">
-                                            <svg className="w-3.5 h-3.5 mr-2 text-gray-500 dark:text-gray-400 flex-shrink-0"
-                                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                 viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                            </svg>
-                                            Added Style
-                                        </li>
+                                        <ListTintPagesThree />
                                     </>
                                 )}
                             </ul>
@@ -285,7 +161,9 @@ export function WindowTintPages() {
                 </div>
             </div>
             <div>
-                <CustomForm />
+                <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg shadow-[#111827]">
+                    <CustomForm />
+                </div>
             </div>
             <div>
                 <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
