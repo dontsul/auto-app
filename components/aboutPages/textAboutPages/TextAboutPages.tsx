@@ -2,7 +2,7 @@ import React from "react";
 
 export function TextAboutPages() {
   return (
-    <div className=" z-10  flex order-2 lg:order-1   items-center justify-center px-10 md:px-10  transition-transform duration-300">
+    <div className="flex order-2 lg:order-1   items-center justify-center px-10 md:px-10  transition-transform duration-300">
       <p
         className="leading-5 py-7 text-[16px]  mb-2  rounded-full "
         style={{ color: "#616161", display: "inline-block", width: "100%" }}
