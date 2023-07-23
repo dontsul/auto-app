@@ -3,6 +3,13 @@ import { CustomForm } from "@/components/customForm/CustomForm";
 import imageAuto from "@/public/1.png";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Patriot Liner",
+  description:
+    "Auto & Truck Accessories, our dedication to superior quality and customer satisfaction has been our guiding principle. For many years, we have been recognized for our impeccable installations of the Bullet Liner brand in the DMV Area. Yet, since 2022, we have turned a new leaf, aligning ourselves with Patriot Liner, the newest and most promising product in the sprayed-on application sector.",
+};
 
 export default function PatriotLiner() {
   return (

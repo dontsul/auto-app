@@ -1,8 +1,15 @@
+import { Metadata } from "next";
 import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import smmax from "@/public/SX-Max.png";
+
+export const metadata: Metadata = {
+  title: "Ceramic Coatings",
+  description:
+    "Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.",
+};
 
 export default function CeramicCoatings() {
   return (

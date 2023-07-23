@@ -4,6 +4,12 @@ import imageAuto from "@/public/1.png";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 
+export const metadata = {
+  title: "Paint Protection Film",
+  description:
+    "Paint Protection Film also known as clear bra, is an ultra-thin, nearly invisible urethane layer skillfully designed to adhere to your vehicle's exterior, delivering extensive protection against potential damage. This strong and long-lasting material is professionally applied to the painted surfaces of your car, serving as a shield to keep your vehicle safe from unsightly scratches, chips, and scuffs.",
+};
+
 export default function PaintProtectionFilm() {
   return (
     <div className="py-16 container">
