@@ -106,6 +106,16 @@ export const Menu: FC<IMenuProps> = ({
                 Quote Request
               </Link>
             </li>
+            <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
+              <Link
+                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/portfolio" ? "text-yellow-500 active-line" : ""
+                }`}
+                href={`/portfolio`}
+              >
+                Portfolio
+              </Link>
+            </li>
           </ul>
           <div className="absolute top-5 right-4 cursor-pointer z-20 lg:hidden">
             <CloseButton

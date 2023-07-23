@@ -24,7 +24,7 @@ const socialList = [
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative text-[#B3B3B3] bg-zinc-800 text-center  dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+    <footer className="relative text-[#B3B3B3] bg-[#111827] text-center  dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="flex justify-center">
           {socialList.map(({ icon: Item }: { icon: IconType }, i) => {
@@ -184,7 +184,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-zinc-800 p-6 text-center dark:bg-neutral-700">
+      <div className="bg-[#111827] p-6 text-center dark:bg-neutral-700">
         <span>© {new Date().getFullYear()} Copyright: </span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
