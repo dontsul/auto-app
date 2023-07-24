@@ -7,49 +7,47 @@ import { TextAboutPages } from "@/components/aboutPages/textAboutPages/TextAbout
 import { TextAboutLeft } from "@/components/aboutPages/textAboutPages/TextAboutLeft";
 import Image from "next/image";
 import images from "@/public/2.png";
+import {CustomForm} from "@/components/customForm/CustomForm";
+import {Title} from "@/components/title/Title";
+import {ImageAboutSection} from "@/components/aboutSection/ImageAbotSection";
 
 export function AboutPages() {
   return (
-    <div className="relative container p-7">
-      <div className="relative container py-16">
-        <div className="z-0 container overflow-hidden">
-          <div className="relative">
+    <div className=" container p-7">
+      <div className="">
+        <div className="">
+          {/*<div className="relative">*/}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
               <TextAboutPages />
-              <div className=" container brightness-75 order-1 lg:order-2  justify-center relative">
-                <Image
-                  className="rounded-2xl lg:rounded-2xl  brightness-75"
-                  width={500}
-                  height={500}
-                  src={images}
-                  alt="bg"
-                />
-              </div>
-            </div>
-            <div className="py-20 grid grid-cols-1 lg:grid-cols-2  ">
-              <div className=" container brightness-75 order-1 lg:order-2  justify-center ">
-                <Image
-                  className="rounded-2xl lg:rounded-2xl  brightness-75"
-                  width={500}
-                  height={500}
-                  src={images}
-                  alt="bg"
-                />
-              </div>
-              <TextAboutLeft />
-            </div>
-          </div>
-        </div>
+              <div className="  brightness-75 order-1 lg:order-2  justify-center relative">
+                <ImageAboutSection />
 
-        <div className="z-20 container overflow-hidden">
-          <div className="relative">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
-              <WeWelcomeText />
+              </div>
+            </div>
+          <TextAboutLeft />
+            <div className="py-20 grid grid-cols-1 lg:grid-cols-2  ">
+
+
+
             </div>
           </div>
+        <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[20px] mb-14">
+          Contact  <span className="text-yellow-500">Us</span>
+        </Title>
         </div>
+        <div className=" overflow-hidden">
+          <div className="relative">
+              <WeWelcomeText />
+
+          </div>
+        </div>
+      {/*</div>*/}
+      <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg shadow-[#111827]">
+        <CustomForm />
       </div>
+
       <BottomConect />
+
     </div>
   );
 }

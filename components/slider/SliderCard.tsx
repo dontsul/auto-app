@@ -51,5 +51,4 @@ function SliderCard({ data }: Props) {
     </motion.div>
   );
 }
-
 export default SliderCard;

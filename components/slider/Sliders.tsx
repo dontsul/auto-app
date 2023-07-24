@@ -1,10 +1,11 @@
-"use client";
-import { AnimatePresence } from "framer-motion";
+'use client'
+import {AnimatePresence} from "framer-motion";
 import React from "react";
 import BackgroundImage from "@/components/slider/BackgroundImage";
 import SlideInfo from "@/components/slider/SlideInfo";
 import Slides from "@/components/slider/Slides";
 import Controls from "@/components/slider/Controls";
+
 
 export type Data = {
   img: string;
@@ -18,7 +19,7 @@ export type CurrentSlideData = {
   index: number;
 };
 
-export default function Home() {
+export default function Sliders() {
   const [data, setData] = React.useState<Data[]>(sliderData.slice(1));
   const [transitionData, setTransitionData] = React.useState<Data>(
     sliderData[0]
@@ -73,23 +74,24 @@ const sliderData = [
     img: "/1.png",
     location: " Style",
     description:
-      "ere at Elevated Motoring we specialize in providing high-quality services to enhance the appearance and performance of your vehicle. We have the expertise and experience to take your vehicle to the next level.",
-    title: "SAINT ANTÖNEN",
-  },
-  {
-    img: "/2.png",
-    location: " FUNCTIONALITY",
-    description:
       "Elevate Your Functionality with our exceptional truck customization services. We understand that your truck is hot just a vehicle; it's a versatile tool that deserves to be tailoredto your specific needs. Whether yo prequire enhanced cargo capacity, off-road capabilities, or specialized equipment installations, weive got you covered.",
     title: "ELEVATE YOUR-FUNCTIONALITY",
   },
   {
+
+    img: "/2.png",
+    location: " FUNCTIONALITY",
+    description:
+        "Elevate Your Functionality with our exceptional truck customization services. We understand that your truck is hot just a vehicle; it's a versatile tool that deserves to be tailoredto your specific needs. Whether yo prequire enhanced cargo capacity, off-road capabilities, or specialized equipment installations, weive got you covered.",
+    title: "ELEVATE YOUR-FUNCTIONALITY",
+  },
+  {
+
     img: "/3.png",
     location: " PERFORMANCE",
     description:
-      "Our services are designed to optimize the performance of your vehicle with upgrades that are tailored to your driving needs\n" +
-      "rust us to take vour vehicle's berformance to he next level.",
-    title: "ELEVATE YOUR PERFORMANCE",
+        "Elevate Your Functionality with our exceptional truck customization services. We understand that your truck is hot just a vehicle; it's a versatile tool that deserves to be tailoredto your specific needs. Whether yo prequire enhanced cargo capacity, off-road capabilities, or specialized equipment installations, weive got you covered.",
+    title: "ELEVATE YOUR-FUNCTIONALITY",
   },
 ];
 
