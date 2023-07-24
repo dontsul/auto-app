@@ -45,18 +45,7 @@ export const ContactInfo: FC<IContactInfo> = ({
             <h4 className="uppercase text-[24px] text-start font-extrabold text-slate-300 mb-8">
               Contact Info
             </h4>
-            <div className="py-4">
-              <SiGooglemaps
-                size={20}
-                className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
-              />
-              <a
-                className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
-                href="#!"
-              >
-                2131 9th St, Sacramento, CA 95818, USA
-              </a>
-            </div>
+
             <div className="py-4">
               <BsFillTelephoneFill
                 size={20}
@@ -81,7 +70,20 @@ export const ContactInfo: FC<IContactInfo> = ({
                 info@mailauto.com
               </a>
             </div>
+            <div className="py-4">
+              <SiGooglemaps
+                  size={20}
+                  className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
+              />
+              <a
+                  className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                  href="#!"
+              >
+                2131 9th St, Sacramento, CA 95818, USA
+              </a>
+            </div>
             <div className=" border-white border-b-[1px] w-full"></div>
+            <MyMapPage />
             <div className="flex items-center gap-4 py-4">
               <a href="https://www.instagram.com/">
                 <BsInstagram
@@ -104,7 +106,7 @@ export const ContactInfo: FC<IContactInfo> = ({
               </a>
             </div>
           </div>
-          <MyMapPage />
+
 
         </div>
 
