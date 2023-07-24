@@ -40,12 +40,11 @@ export function WindowTintPages() {
             <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
                 Window <span className="text-yellow-500">Tinting</span>
             </Title>
-            <h1 className="font-bold text-5xl mt-24 sm:mt-[6px] md:mt-[112px] lg:mt-[198px] mb-14">Select Your Window Film</h1>
             <div className=" pb-20 grid lg:grid-cols-[100px_auto_140px] gap-4  justify-center">
-                <div className=" m-5 rounded-md shadow-sm" role="group">
+                <div className=" m-5 rounded-md " role="group">
                     <button
                         type="button"
-                        className={`py-2 px-8 text-sm font-medium ${
+                        className={`py-5 px-8 text-sm font-medium ${
                             currentText === 'PRIME CS' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('PRIME CS', 'path-to-prime-cs-image.jpg')}
@@ -54,7 +53,7 @@ export function WindowTintPages() {
                     </button>
                     <button
                         type="button"
-                        className={`py-2 px-8 text-sm font-medium ${
+                        className={`py-5 px-8 text-sm font-medium ${
                             currentText === 'PRIME XR' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('PRIME XR', 'path-to-prime-xr-image.jpg')}
@@ -63,7 +62,7 @@ export function WindowTintPages() {
                     </button>
                     <button
                         type="button"
-                        className={`py-2 px-8 text-sm font-medium ${
+                        className={`py-5 px-8 text-sm font-medium ${
                             currentText === 'PRIME SD' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('PRIME SD', 'path-to-prime-xr-image.jpg')}
@@ -160,16 +159,11 @@ export function WindowTintPages() {
                     </div>
                 </div>
             </div>
-            <div>
-                <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg shadow-[#111827]">
-                    <CustomForm />
-                </div>
-            </div>
-            <div>
-                <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
-                    Check Out Some Of Our Work<span className="text-yellow-500"></span>
+            <div className="pb-20">
+                <Title tag="h4" cn="mb-10">
+                    Contact us
                 </Title>
-                <ReviewsList />
+                <CustomForm />
             </div>
 
         </div>
