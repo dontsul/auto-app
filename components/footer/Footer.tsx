@@ -7,6 +7,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import MyMapPage from "@/components/googleMaps/MyMap";
 
 const socialList = [
   {
@@ -181,6 +182,7 @@ export const Footer: React.FC = () => {
             <h6 className=" mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Location Navigation
             </h6>
+            <MyMapPage />
           </div>
         </div>
       </div>
