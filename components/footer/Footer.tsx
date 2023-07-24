@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+"use client";
+import React from "react";
 import { IconType } from "react-icons";
 import {
   FaFacebookSquare,
