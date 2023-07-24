@@ -41,10 +41,9 @@ export function AboutPages() {
 
           </div>
         </div>
-      {/*</div>*/}
-      <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg shadow-[#111827]">
+
         <CustomForm />
-      </div>
+
 
       <BottomConect />
 

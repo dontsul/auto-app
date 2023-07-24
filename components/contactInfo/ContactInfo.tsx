@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { Logo } from "../logo/Logo";
 import { CloseButton } from "../closeButton/CloseButton";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,6 +10,7 @@ import {
 } from "react-icons/bs";
 import { SiGooglemaps } from "react-icons/si";
 import { TbMailFilled } from "react-icons/tb";
+import MyMapPage from "@/components/googleMaps/MyMap";
 
 interface IContactInfo {
   openContactInfo: boolean;
@@ -103,7 +104,10 @@ export const ContactInfo: FC<IContactInfo> = ({
               </a>
             </div>
           </div>
+          <MyMapPage />
+
         </div>
+
       </div>
       <AnimatePresence>
         {openContactInfo && (
