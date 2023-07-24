@@ -108,10 +108,12 @@ export const Menu: FC<IMenuProps> = ({
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                  className="w-full h-full text-sm text-slate-100 hover:text-yellow-600 cursor-pointer line"
-                  href={`/gallery`}
+                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/portfolio" ? "text-yellow-500 active-line" : ""
+                }`}
+                href={`/portfolio`}
               >
-                gallery
+                Portfolio
               </Link>
             </li>
           </ul>

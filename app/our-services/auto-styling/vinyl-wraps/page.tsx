@@ -31,9 +31,7 @@ export default function VinylWraps() {
       <Title tag="h4" cn="mb-10">
         Form
       </Title>
-      <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg shadow-[#111827]">
-        <CustomForm />
-      </div>
+      <CustomForm />
     </div>
   );
 }
