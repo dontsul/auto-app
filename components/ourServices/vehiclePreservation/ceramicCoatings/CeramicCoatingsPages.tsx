@@ -10,18 +10,16 @@ import images4 from "@/public/Ceramic3.png"
 import images5 from "@/public/Ceramic4.png"
 
 import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
-import {ListTintPagesTwo} from "@/components/ourServices/windowTintPages/ListTintPagesTwo";
-import {ListTintPagesThree} from "@/components/ourServices/windowTintPages/ListTintPagesThree";
-import {CustomForm} from "@/components/customForm/CustomForm";
-import {Reviews} from "@/components/reviews/Reviews";
-import {
-    CeramicCoatingsListFour
-} from "@/components/ourServices/vehiclePreservation/ceramicCoatings/listInfo/CeramicCoatingsListFour";
+export const text1 = ["Gloss Enhancement","Grime Resistance","Grime Resistance","Grime Resistance"," Easy Cleaning","Minor Scratch Protection","1 Year Warranty" ];
+export const text2 = ["Superior Gloss Boost","Dirt Repellant","Enhanced Durability","Environmental Damage Protection"," 4 Year Warranty" ];
+export const text3 = ["Matte Enhancement","Non-Glossy Protection","Environmental Defense","Uniform Finish Maintenance"," Maximum Durability","4 Year Warranty" ];
+export const text4 = ["Superior Hydrophobic Properties","Ultimate Gloss Enhancement","Long-Lasting Protection","Superior Scratch Defense"," 8 year Warranty" ];
+
+
 
 export function CeramicCoatingsPages (){
     const [currentText, setCurrentText] = useState('FULL FRONT');
     const [currentImage, setCurrentImage] = useState('path-to-prime-cs-image');
-
     const handleButtonClick = (text: string, image: string) => {
         setCurrentText(text);
         setCurrentImage(image);
@@ -210,25 +208,31 @@ export function CeramicCoatingsPages (){
                             <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                                 {currentText === 'FULL FRONT' && (
                                     <>
-                                        <ListTintPages />
+                                        <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">1-YEAR</h2>
+
+                                        <ListTintPages  text={text1}/>
                                     </>
                                 )}
                                 {currentText === 'TRACK PACK' && (
                                     <>
-                                        <ListTintPagesTwo />
+                                        <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">4-YEAR</h2>
+
+                                        <ListTintPages  text={text2}/>
                                     </>
                                 )}
                                 {currentText === 'FULL BODY' && (
 
                                     <>
-                                        <ListTintPagesThree />
+                                        <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">4-YEAR</h2>
+
+                                        <ListTintPages  text={text3}/>
                                     </>
                                 )}
                                 {currentText === 'FORT KNOX' && (
-
-
                                     <>
-                                        <CeramicCoatingsListFour />
+                                        <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">8-YEAR</h2>
+                                        <ListTintPages  text={text4}/>
+
                                     </>
                                 )}
                             </ul>
@@ -244,8 +248,7 @@ export function CeramicCoatingsPages (){
             </div>
             <div className="pb-10 container">
                 {currentText === 'FULL FRONT' && (
-
-                        <p>Welcome to the pinnacle of vehicle protection with our Full Front Package. Designed for those who demand comprehensive, state-of-the-art protection for their vehicle’s most vulnerable areas, this package is a high-quality solution that ensures your vehicle stays pristine, regardless of the road conditions. The Full Front Package meticulously covers the full front bumper, headlights, fog lights, full hood, full front fenders, and mirror caps. Our paint protection film seamlessly merges with your vehicle, preserving its aesthetic appeal while guarding against road debris, scratches, and the harsh effects of weather. Choose our Full Front Package today and feel confident knowing your vehicle’s front-end is protected by the best.</p>
+                    <p>Welcome to the pinnacle of vehicle protection with our Full Front Package. Designed for those who demand comprehensive, state-of-the-art protection for their vehicle’s most vulnerable areas, this package is a high-quality solution that ensures your vehicle stays pristine, regardless of the road conditions. The Full Front Package meticulously covers the full front bumper, headlights, fog lights, full hood, full front fenders, and mirror caps. Our paint protection film seamlessly merges with your vehicle, preserving its aesthetic appeal while guarding against road debris, scratches, and the harsh effects of weather. Choose our Full Front Package today and feel confident knowing your vehicle’s front-end is protected by the best.</p>
 
                 )}
                 {currentText === 'TRACK PACK' && (

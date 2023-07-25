@@ -10,9 +10,10 @@ import Image from "next/image";
 import {motion} from "framer-motion";
 import {Reviews} from "@/components/reviews/Reviews";
 import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
-import {ListTintPagesTwo} from "@/components/ourServices/windowTintPages/ListTintPagesTwo";
-import {ListTintPagesThree} from "@/components/ourServices/windowTintPages/ListTintPagesThree";
 
+export const text1 = ["Gloss Enhancement","Grime Resistance","Grime Resistance","Grime Resistance"," Easy Cleaning","Minor Scratch Protection","1 Year Warranty" ];
+export const text2 = ["UV Protection","Improved Privacy","Reduced Glare","Added Style" ];
+export const text3 = ["Gloss Enhancement","Grime Resistance","Grime Resistance","Grime Resistance"," Easy Cleaning","Minor Scratch Protection","1 Year Warranty" ];
 export function WindowTintPages() {
     const [currentText, setCurrentText] = useState('PRIME CS');
     const [currentImage, setCurrentImage] = useState('path-to-prime-cs-image');
@@ -141,17 +142,17 @@ export function WindowTintPages() {
                             <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                                 {currentText === 'PRIME CS' && (
                                     <>
-                                      <ListTintPages />
+                                        <ListTintPages text={text1}/>
                                     </>
                                 )}
                                 {currentText === 'PRIME XR' && (
                                     <>
-                                      <ListTintPagesTwo />
+                                        <ListTintPages text={text2}/>
                                     </>
                                 )}
                                 {currentText === 'PRIME SD' && (
                                     <>
-                                        <ListTintPagesThree />
+                                        <ListTintPages text={text1}/>
                                     </>
                                 )}
                             </ul>
