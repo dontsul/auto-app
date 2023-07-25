@@ -45,7 +45,7 @@ export function WindowTintPages() {
                 <div className=" m-5 rounded-md " role="group">
                     <button
                         type="button"
-                        className={`py-5 px-8 text-sm font-medium ${
+                        className={`w-full py-5 text-sm font-medium ${
                             currentText === 'PRIME CS' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('PRIME CS', 'path-to-prime-cs-image.jpg')}
@@ -54,7 +54,7 @@ export function WindowTintPages() {
                     </button>
                     <button
                         type="button"
-                        className={`py-5 px-8 text-sm font-medium ${
+                        className={`w-full py-5 text-sm font-medium ${
                             currentText === 'PRIME XR' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('PRIME XR', 'path-to-prime-xr-image.jpg')}
@@ -63,7 +63,7 @@ export function WindowTintPages() {
                     </button>
                     <button
                         type="button"
-                        className={`py-5 px-8 text-sm font-medium ${
+                        className={`w-full py-5 text-sm font-medium ${
                             currentText === 'PRIME SD' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('PRIME SD', 'path-to-prime-xr-image.jpg')}
