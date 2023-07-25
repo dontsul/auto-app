@@ -1,4 +1,4 @@
-import {WindowTintPages} from "@/components/windowTintPages/WindowTintPages";
+import {WindowTintPages} from "@/components/ourServices/windowTintPages/WindowTintPages";
 
 export default function WindowTint() {
   return (

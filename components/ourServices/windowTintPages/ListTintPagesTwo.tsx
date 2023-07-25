@@ -1,9 +1,9 @@
 import React from "react";
 
-export function ListTintPagesThree (){
+export function ListTintPagesTwo(){
     return(
       <div>
-          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">CERAMIC</h2>
+          <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">4-YEAR</h2>
           <li className="flex items-center">
               <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -11,35 +11,8 @@ export function ListTintPagesThree (){
                   <path
                       d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
               </svg>
-              96% Heat Rejection
-          </li>
-          <li className="flex items-center">
-              <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                   aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                   viewBox="0 0 20 20">
-                  <path
-                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-              </svg>
-              UV Protection
-          </li>
-          <li className="flex items-center">
-              <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                   aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                   viewBox="0 0 20 20">
-                  <path
-                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-              </svg>
-              Improved Privacy
-          </li>
-          <li className="flex items-center">
-              <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                   aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                   viewBox="0 0 20 20">
-                  <path
-                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-              </svg>
+              Superior Gloss Boost
 
-              Reduced Glare
           </li>
           <li className="flex items-center">
               <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
@@ -48,7 +21,7 @@ export function ListTintPagesThree (){
                   <path
                       d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
               </svg>
-              Non-Metallized
+              Dirt Repellant
           </li>
           <li className="flex items-center">
               <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
@@ -57,17 +30,25 @@ export function ListTintPagesThree (){
                   <path
                       d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
               </svg>
-
-              Nano-Ceramic
+              Enhanced Durability
           </li>
           <li className="flex items-center">
-              <svg className="w-3.5 h-3.5 mr-2 text-gray-500 dark:text-gray-400 flex-shrink-0"
+              <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                    viewBox="0 0 20 20">
                   <path
                       d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
               </svg>
-              Added Style
+              Environmental Damage Protection
+          </li>
+          <li className="flex items-center">
+              <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                   aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                   viewBox="0 0 20 20">
+                  <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+              </svg>
+              4 Year Warranty
           </li>
       </div>
     );

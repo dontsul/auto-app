@@ -4,6 +4,7 @@ import { CustomForm } from "@/components/customForm/CustomForm";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import smmax from "@/public/SX-Max.png";
+import {CeramicCoatingsPages} from "@/components/ourServices/vehiclePreservation/ceramicCoatings/CeramicCoatingsPages";
 
 export const metadata: Metadata = {
   title: "Ceramic Coatings",
@@ -55,6 +56,7 @@ export default function CeramicCoatings() {
 
         <ImagePage img={smmax} />
       </div>
+      <CeramicCoatingsPages />
       <div className="flex items-center justify-center ">
         <iframe
           width="1000"

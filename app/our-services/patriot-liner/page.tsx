@@ -1,6 +1,6 @@
 import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
-import imageAuto from "@/public/1.png";
+import imageAuto from "@/public/TestLi.jpeg";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import { Metadata } from "next";

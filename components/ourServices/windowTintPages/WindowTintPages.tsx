@@ -6,11 +6,12 @@ import images2 from "@/public/Ceramic-Windshield.webp";
 import images3 from "@/public/CERAMIC-Plus-Car.webp"
 import {CustomForm} from "@/components/customForm/CustomForm";
 import Image from "next/image";
-import {ReviewsList} from "@/components/reviews/reviewsList/ReviewsList";
-import {ListTintPages} from "@/components/windowTintPages/ListTintPages";
-import {ListTintPagesTwo} from "@/components/windowTintPages/ListTintPagesTwo";
-import {ListTintPagesThree} from "@/components/windowTintPages/ListTintPagesThree";
+
 import {motion} from "framer-motion";
+import {Reviews} from "@/components/reviews/Reviews";
+import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
+import {ListTintPagesTwo} from "@/components/ourServices/windowTintPages/ListTintPagesTwo";
+import {ListTintPagesThree} from "@/components/ourServices/windowTintPages/ListTintPagesThree";
 
 export function WindowTintPages() {
     const [currentText, setCurrentText] = useState('PRIME CS');
@@ -40,7 +41,7 @@ export function WindowTintPages() {
             <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
                 Window <span className="text-yellow-500">Tinting</span>
             </Title>
-            <div className=" pb-20 grid lg:grid-cols-[100px_auto_140px] gap-4  justify-center">
+            <div className=" pb-20 grid lg:grid-cols-[140px_auto_240px] gap-12  justify-center">
                 <div className=" m-5 rounded-md " role="group">
                     <button
                         type="button"
@@ -78,10 +79,10 @@ export function WindowTintPages() {
                             whileInView="visible"
                             variants={imageAbout}
                             viewport={{ once: true }}
-                            className=" flex justify-center brightness-75 order-1 lg:order-2"
+                            className=" flex justify-center brightness-75 order-1 lg:order-2 max-w-full"
                         >
                             <Image
-                                className="rounded-2xl lg:rounded-2xl  brightness-75"
+                                className="rounded-2xl lg:rounded-2xl  brightness-75 max-w-full"
                                 width={500}
                                 height={500}
                                 src={images}
@@ -164,6 +165,7 @@ export function WindowTintPages() {
                     Contact us
                 </Title>
                 <CustomForm />
+                <Reviews />
             </div>
 
         </div>
