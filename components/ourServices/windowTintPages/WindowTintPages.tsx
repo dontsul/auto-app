@@ -10,10 +10,10 @@ import Image from "next/image";
 import {motion} from "framer-motion";
 import {Reviews} from "@/components/reviews/Reviews";
 import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
+export const text1 = ["UV Protection","Improved Privacy","Reduced Glare","Added Style" ];
+export const text2 = ["70% Heat Rejection","UV Protection","Improved Privacy","Reduced Glare"," Improved Comfort","Added Style" ];
+export const text3 = ["96% Heat Rejection","UV Protection","Improved Privacy","Reduced Glare","Non-Metallized","Nano-Ceramic","Added Style" ];
 
-export const text1 = ["Gloss Enhancement","Grime Resistance","Grime Resistance","Grime Resistance"," Easy Cleaning","Minor Scratch Protection","1 Year Warranty" ];
-export const text2 = ["UV Protection","Improved Privacy","Reduced Glare","Added Style" ];
-export const text3 = ["Gloss Enhancement","Grime Resistance","Grime Resistance","Grime Resistance"," Easy Cleaning","Minor Scratch Protection","1 Year Warranty" ];
 export function WindowTintPages() {
     const [currentText, setCurrentText] = useState('PRIME CS');
     const [currentImage, setCurrentImage] = useState('path-to-prime-cs-image');
@@ -43,6 +43,7 @@ export function WindowTintPages() {
                 Window <span className="text-yellow-500">Tinting</span>
             </Title>
             <div className=" pb-20 grid lg:grid-cols-[140px_auto_240px] gap-12  justify-center">
+
                 <div className=" m-5 rounded-md " role="group">
                     <button
                         type="button"
@@ -73,6 +74,8 @@ export function WindowTintPages() {
                     </button>
 
                 </div>
+
+
                 <div className="flex ">
                     {currentText === 'PRIME CS' && (
                         <motion.div
@@ -152,7 +155,7 @@ export function WindowTintPages() {
                                 )}
                                 {currentText === 'PRIME SD' && (
                                     <>
-                                        <ListTintPages text={text1}/>
+                                        <ListTintPages text={text3}/>
                                     </>
                                 )}
                             </ul>
