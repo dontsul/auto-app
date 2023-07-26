@@ -9,11 +9,14 @@ import {
     ceramicCoatingsPagesImages,
     ceramicCoatingsPagesText, text1, text2, text3, text4
 } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/ceramicCoatingsData/CeramicCoatingsData";
+import {
+    paintProtectionFilmData, paintProtectionFilmText
+} from "@/components/ourServices/vehiclePreservation/paintProtectionFilm/paintProtectionFilmData/PaintProtectionFilmDatas";
 
 
 
 
-export function CeramicCoatingsPages (){
+export function PaintProtectionFilmPages (){
     const [currentText, setCurrentText] = useState('FULL FRONT');
     const [currentImage, setCurrentImage] = useState('path-to-prime-cs-image');
     const handleButtonClick = (text: string, image: string) => {
@@ -38,14 +41,14 @@ export function CeramicCoatingsPages (){
     return (
         <div className="py-10">
             <Title tag="h4" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
-                CERAMIC COATING <span className="text-yellow-500">PACKAGES</span>
+                PAINT PROTECTION<span className="text-yellow-500"> FILM PACKAGES</span>
             </Title>
             <div className=" pb-20 grid lg:grid-cols-[240px_auto_340px] gap-12  justify-center">
                 <div className="m-5 rounded-md" role="group">
                     <button
                         type="button"
                         className={`w-full py-5 text-sm font-medium ${
-                            currentText === 'FULL FRONT' 
+                            currentText === 'FULL FRONT'
                                 ? 'text-white bg-gray-900'
                                 : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
@@ -89,30 +92,30 @@ export function CeramicCoatingsPages (){
                 </div>
                 <div className=" ">
 
-                    {ceramicCoatingsPagesImages.map(item =>{
-                        return(
-                            <>
-                                {currentText === item.title && (
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        variants={imageAbout}
-                                        viewport={{ once: true }}
-                                        className="  flex justify-center brightness-75 order-1 lg:order-2 max-w-full"
-                                    >
-                                        <Image
-                                            className=" rounded-2xl lg:rounded-2xl  brightness-75 max-w-full"
-                                            width={500}
-                                            height={500}
-                                            src={item.image}
-                                            alt="bg"
-                                        />
+                    {paintProtectionFilmData.map(item =>{
+                            return(
+                                <>
+                                    {currentText === item.title && (
+                                        <motion.div
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            variants={imageAbout}
+                                            viewport={{ once: true }}
+                                            className="  flex justify-center brightness-75 order-1 lg:order-2 max-w-full"
+                                        >
+                                            <Image
+                                                className=" rounded-2xl lg:rounded-2xl  brightness-75 max-w-full"
+                                                width={500}
+                                                height={500}
+                                                src={item.image}
+                                                alt="bg"
+                                            />
 
-                                    </motion.div>
-                                )}
-                            </>
+                                        </motion.div>
+                                    )}
+                                </>
 
-                        );
+                            );
                         }
                     )}
 
@@ -121,7 +124,7 @@ export function CeramicCoatingsPages (){
                 <div className="flex justify-between ">
                     <div className="flex flex-col">
 
-                        {ceramicCoatingsPagesText.map(item=>{
+                        {paintProtectionFilmText.map(item=>{
                             return(
                                 <>
                                     {currentText === item.title && (
@@ -174,7 +177,7 @@ export function CeramicCoatingsPages (){
                 </div>
             </div>
             <div className=" container">
-                {ceramicCoatingsPagesText.map(item=>{
+                {paintProtectionFilmText.map(item=>{
                     return(
                         <>
                             {currentText === item.value && (

@@ -1,7 +1,6 @@
 import React, {FC} from "react";
-interface IListTintPagesProps {
-    text: string[];
-}
+import {IListTintPagesProps} from "@/interfaces/ourServicesPages";
+
 
 export const ListTintPages:FC<IListTintPagesProps> = ({text})=> {
     console.log(text)

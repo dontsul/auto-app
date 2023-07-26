@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from 'react';
 import { Title } from '@/components/title/Title';
-import images from "@/public/CARBON-Car.webp";
-import images2 from "@/public/Ceramic-Windshield.webp";
-import images3 from "@/public/CERAMIC-Plus-Car.webp"
+import imagesTest from "@/public/CARBON-Car.webp";
+import imagesTest2 from "@/public/Ceramic-Windshield.webp";
+import imagesTest3 from "@/public/CERAMIC-Plus-Car.webp"
 import {CustomForm} from "@/components/customForm/CustomForm";
 import Image from "next/image";
 
@@ -89,7 +89,7 @@ export function WindowTintPages() {
                                 className="rounded-2xl lg:rounded-2xl  brightness-75 max-w-full"
                                 width={500}
                                 height={500}
-                                src={images}
+                                src={imagesTest}
                                 alt="bg"
                             />
                         </motion.div>
@@ -106,7 +106,7 @@ export function WindowTintPages() {
                                 className="rounded-2xl lg:rounded-2xl  brightness-75"
                                 width={500}
                                 height={500}
-                                src={images2}
+                                src={imagesTest2}
                                 alt="bg"
                             />
                         </motion.div>
@@ -123,7 +123,7 @@ export function WindowTintPages() {
                                 className="rounded-2xl lg:rounded-2xl  brightness-75"
                                 width={500}
                                 height={500}
-                                src={images3}
+                                src={imagesTest3}
                                 alt="bg"
                             />
                         </motion.div>

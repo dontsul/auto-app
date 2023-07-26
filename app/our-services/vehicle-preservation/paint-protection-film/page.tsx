@@ -3,6 +3,9 @@ import { CustomForm } from "@/components/customForm/CustomForm";
 import imageAuto from "@/public/1.png";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
+import {
+  PaintProtectionFilmPages
+} from "@/components/ourServices/vehiclePreservation/paintProtectionFilm/PaintProtectionFilmPages";
 
 export const metadata = {
   title: "Paint Protection Film",
@@ -56,6 +59,8 @@ export default function PaintProtectionFilm() {
         there. Our commitment to delivering top-quality results has made us a
         preferred vendor for numerous dealerships in the DC Metro Area.
       </TextPage>
+
+      <PaintProtectionFilmPages />
       <Title tag="h4" cn="mb-10">
         Contact us
       </Title>
