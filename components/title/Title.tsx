@@ -28,9 +28,16 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
   switch (tag) {
     case "h1":
       return (
-        <h1 className="font-extrabold text-slate-900 uppercase text-center">
+        <motion.h1
+          initial="hidden"
+          whileInView="visible"
+          variants={titleAnimation}
+          className={`font-extrabold text-[#111827] uppercase text-6xl lg:text-7xl text-center  ${
+            cn ? cn : ""
+          }`}
+        >
           {children}
-        </h1>
+        </motion.h1>
       );
     case "h2":
       return (
@@ -39,7 +46,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           whileInView="visible"
           variants={titleAnimation}
           // viewport={{ once: true }}
-          className={`font-extrabold text-[#111827] uppercase text-4xl lg:text-6xl text-center  ${
+          className={`font-extrabold text-[#111827] uppercase text-6xl lg:text-7xl text-center  ${
             cn ? cn : ""
           }`}
         >
@@ -54,6 +61,20 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           variants={titleAnimation}
           // viewport={{ once: true }}
           className={`font-extrabold text-[#111827] uppercase text-5xl lg:text-5xl text-center  ${
+            cn ? cn : ""
+          }`}
+        >
+          {children}
+        </motion.h4>
+      );
+    case "h6":
+      return (
+        <motion.h4
+          initial="hidden"
+          whileInView="visible"
+          variants={titleAnimation}
+          // viewport={{ once: true }}
+          className={`font-extrabold text-[#111827] uppercase text-xl lg:text-2xl text-center  ${
             cn ? cn : ""
           }`}
         >

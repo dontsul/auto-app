@@ -16,7 +16,7 @@ export default function PaintProtectionFilm() {
       <Title tag="h2" cn="mb-16">
         Paint Protection <span className="text-yellow-500">Film</span>
       </Title>
-      <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 mb-16  auto-rows-auto;">
+      <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 mb-16 auto-rows-auto">
         <div>
           <h6 className="text-start text-[#111827] leading-7 mb-4 font-semibold">
             PRESERVE YOUR CAR WITH THE FINEST PROTECTION FILM AROUND
