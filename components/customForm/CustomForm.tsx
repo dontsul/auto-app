@@ -10,7 +10,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
 import { v4 as uuidv4 } from "uuid";
-import { years, carBrands, models, services, states } from "./datas";
+import { services, states } from "./datas";
+import { models } from "./models";
+import { makes } from "./makes";
+import { years } from "./years";
 import { IService } from "@/interfaces/form";
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
 import { isPossiblePhoneNumber } from "react-phone-number-input";
@@ -147,8 +150,8 @@ export const CustomForm = () => {
   }, [selectedPhotos]);
 
   return (
-    <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg hover:shadow-2xl transition duration-200 shadow-slate-600 hover:shadow-[#111827] bg-gradient-to-r from-slate-300 to-slate-400">
-      {/* <div className="bg-slate-50 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg hover:shadow-2xl transition duration-200  "> */}
+    // <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg hover:shadow-2xl transition duration-200 shadow-slate-600 hover:shadow-[#111827] bg-gradient-to-r from-slate-300 to-slate-400">
+    <div className="bg-slate-50 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg hover:shadow-2xl transition duration-200  ">
       <motion.form
         initial="hidden"
         whileInView="visible"
@@ -279,7 +282,7 @@ export const CustomForm = () => {
               control={control}
               render={({ field }) => (
                 <CustomSelect
-                  datas={carBrands}
+                  datas={makes}
                   {...field}
                   placeholder="Choose your make"
                 />
@@ -361,7 +364,7 @@ export const CustomForm = () => {
         >
           <div className="block text-sm font-medium text-gray-900">
             Services*
-            <ul className="grid w-full gap-6 grid-cols-1 md:grid-cols-4">
+            <ul className="grid w-full gap-6 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
               {services.map((service: IService) => {
                 return (
                   <li key={service.value}>

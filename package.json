@@ -24,6 +24,7 @@
     "hamburger-react": "^2.5.0",
     "libphonenumber-js": "^1.10.37",
     "next": "13.4.8",
+    "popmotion": "^11.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.1",
