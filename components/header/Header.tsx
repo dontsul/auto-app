@@ -57,7 +57,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="px-8 lg:px-0 bg-[#111827] sticky top-0 z-30 lg:z-10 grid grid-cols-3 lg:grid-cols-[auto_1fr_auto] shadow-yellow-200 shadow-md hover:shadow-lg hover:shadow-yellow-300 transition">
+    <header className="px-8 pr-0 lg:px-0 bg-[#111827] sticky top-0 z-30 lg:z-10 grid grid-cols-3 justify-between lg:grid-cols-[auto_1fr_auto] shadow-yellow-200 shadow-md hover:shadow-lg hover:shadow-yellow-300 transition">
       <BurgerMenu openMenu={openMenu} handleMenu={handleMenu} />
       <div className="lg:order-1 flex items-center justify-center py-2">
         <Link href={`/`}>
@@ -78,7 +78,7 @@ export const Header = () => {
         handleStyling={handleStyling}
         isDesktop={isDesktop}
       />
-      <ButtonSearch isDesktop={isDesktop} />
+      {/* <ButtonSearch isDesktop={isDesktop} /> */}
       <ContactInfoBtn handleContactInfo={handleContactInfo} />
       <ContactInfo
         openContactInfo={openContactInfo}
