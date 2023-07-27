@@ -42,7 +42,7 @@ export function CeramicCoatingsPages() {
       <Title tag="h4" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
         CERAMIC COATING <span className="text-yellow-500">PACKAGES</span>
       </Title>
-      <div className=" pb-20 grid lg:grid-cols-[240px_auto_340px] gap-12  justify-center">
+      <div className="grid lg:grid-cols-[240px_auto_340px] gap-12  justify-center">
         <div className="m-5 rounded-md" role="group">
           <button
             type="button"
@@ -180,7 +180,7 @@ export function CeramicCoatingsPages() {
 
         <div></div>
       </div>
-      <div className="">
+      <div className="mb-16">
         {ceramicCoatingsPagesText.map((item) => {
           return (
             <React.Fragment key={uuidv4()}>

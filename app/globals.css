@@ -69,3 +69,21 @@ body {
   border: none;
   outline: none;
 }
+
+.card {
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+}
+.back {
+  transform: rotateY(180deg);
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:hover .back {
+  transform: rotateY(360deg);
+}

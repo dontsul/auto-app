@@ -4,7 +4,8 @@ import { CustomForm } from "@/components/customForm/CustomForm";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import smmax from "@/public/SX-Max.png";
-import {CeramicCoatingsPages} from "@/components/ourServices/vehiclePreservation/ceramicCoatings/CeramicCoatingsPages";
+import { CeramicCoatingsPages } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/CeramicCoatingsPages";
+import { XpelCoatings } from "@/components/xpelCoatings/XpelCoatings";
 
 export const metadata: Metadata = {
   title: "Ceramic Coatings",
@@ -57,6 +58,7 @@ export default function CeramicCoatings() {
         <ImagePage img={smmax} />
       </div>
       <CeramicCoatingsPages />
+      <XpelCoatings />
       <div className="flex items-center justify-center ">
         <iframe
           width="1000"
@@ -83,6 +85,7 @@ export default function CeramicCoatings() {
         of vehicles, starting from 1-year options to 5-year and even lifetime
         coatings.
       </TextPage>
+
       <Title tag="h4" cn="mb-10">
         Contact us
       </Title>
