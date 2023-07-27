@@ -1,9 +1,9 @@
 "use client";
 import { FC, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import { IPortfolioList, ISliderPortfolio } from "@/interfaces/portfolio";
+import { ItemSliderPortfolio } from "./itemSliderPortfolio/ItemSliderPortfolio";
 
 const variants = {
   enter: (direction: number) => {
@@ -70,7 +70,7 @@ export const SliderPortfolio: FC<ISliderPortfolio> = ({ portfolioList }) => {
     <div className="relative flex items-center justify-center mb-32 overflow-x-hidden">
       <AnimatePresence initial={false} custom={direction} mode="wait">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-[auto_auto] gap-2 justify-center max-w-full"
+          className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center max-w-full"
           key={page}
           custom={direction}
           variants={variants}
@@ -96,17 +96,7 @@ export const SliderPortfolio: FC<ISliderPortfolio> = ({ portfolioList }) => {
         >
           {portfolioChunks[page] &&
             portfolioChunks[page].map((item) => {
-              return (
-                <div key={uuidv4()} className="max-w-[400px] w-full">
-                  <Image
-                    className="max-w-full w-full transition-all duration-500 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-                    src={item.image}
-                    alt={item.title}
-                    width={400}
-                    height={400}
-                  />
-                </div>
-              );
+              return <ItemSliderPortfolio item={item} key={uuidv4()} />;
             })}
         </motion.div>
       </AnimatePresence>

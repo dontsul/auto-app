@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export interface IPortfolioList {
-  link: string;
+  link?: string;
   image: StaticImageData;
   title: string;
 }

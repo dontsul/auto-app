@@ -14,15 +14,16 @@ export default function About() {
       <AboutImage />
       <div className="grid grid-cols-1 gap-14 md:gap-32 justify-between lg:justify-center lg:grid-cols-2 auto-rows-auto mb-16 pt-24">
         <TextPage>
-          Welcome to <strong>Capital Upfitters</strong>, the family-owned
-          epicenter of top-tier auto customization, vehicle preservation, and
-          performance enhancements. With a heritage of over 35 years in the
-          industry, we proudly deliver unparalleled fleet customization services
-          and robust protection coatings to a diverse range of clients, from
-          municipal to retail sectors. Our reputation as a trailblazer stems
-          from our continuous commitment to superior craftsmanship, delivering
-          innovative auto customization and performance solutions that truly
-          redefine automotive excellence.
+          Welcome to{" "}
+          <strong className="text-yellow-500">Capital Upfitters</strong>, the
+          family-owned epicenter of top-tier auto customization, vehicle
+          preservation, and performance enhancements. With a heritage of over 35
+          years in the industry, we proudly deliver unparalleled fleet
+          customization services and robust protection coatings to a diverse
+          range of clients, from municipal to retail sectors. Our reputation as
+          a trailblazer stems from our continuous commitment to superior
+          craftsmanship, delivering innovative auto customization and
+          performance solutions that truly redefine automotive excellence.
         </TextPage>
         <AboutIcons />
       </div>

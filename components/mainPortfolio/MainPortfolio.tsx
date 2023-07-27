@@ -1,42 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
-import one from "@/public/1.png";
-import two from "@/public/2.png";
-import three from "@/public/3.png";
-import four from "@/public/2.png";
-import five from "@/public/1.png";
-import six from "@/public/2.png";
+import patriotLiner from "@/public/portfolio/patriot-liner/main.jpg";
+import wheelsTires from "@/public/portfolio/wheels-tires/wt1.jpg";
+import ceramicCoatings from "@/public/portfolio/ceramic-coatings/cc7.jpg";
+import fleet from "@/public/portfolio/fleet/f1.jpg";
+import hitches from "@/public/portfolio/hitches/h1.jpg";
+import undercoating from "@/public/portfolio/undercoating/u4.jpg";
+
 import { v4 as uuidv4 } from "uuid";
+
 const portfolioList = [
   {
-    link: "/portfolio/one",
-    image: one,
-    title: "Some title one",
+    link: "/portfolio/patriot-liner",
+    image: patriotLiner,
+    title: "Patriot Liner",
   },
   {
-    link: "/",
-    image: two,
-    title: "Some title",
+    link: "/portfolio/wheels-tires",
+    image: wheelsTires,
+    title: "Wheels & tires",
   },
   {
-    link: "/",
-    image: three,
-    title: "Some title",
+    link: "/portfolio/ceramic-coatings",
+    image: ceramicCoatings,
+    title: "Ceramic Coatings",
   },
   {
-    link: "/",
-    image: four,
-    title: "Some title",
+    link: "/portfolio/fleet",
+    image: fleet,
+    title: "Fleet",
   },
   {
-    link: "/",
-    image: five,
-    title: "Some title",
+    link: "/portfolio/hitches",
+    image: hitches,
+    title: "Hitches",
   },
   {
-    link: "/",
-    image: six,
-    title: "Some title",
+    link: "/portfolio/undercoating",
+    image: undercoating,
+    title: "Undercoating",
   },
 ];
 
