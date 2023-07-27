@@ -40,6 +40,7 @@ function Controls({
         handleTransitionData(data[data.length - 1]);
     };
 
+
     const handleNext = () => {
         handleData((prev) => prev.slice(1));
         handleCurrentSlideData({
@@ -70,10 +71,7 @@ function Controls({
 
 export default Controls;
 
-const SliderButton = ({
-                          children,
-                          handleClick,
-                      }: {
+const SliderButton = ({children, handleClick,}: {
     children: React.ReactNode;
     handleClick: () => void;
 }) => {

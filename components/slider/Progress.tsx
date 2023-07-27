@@ -1,12 +1,13 @@
 import React from "react";
 import {motion} from "framer-motion";
 
+
 type Props = {
     curIndex: number;
     length: number;
 };
 
-function Progress({curIndex, length}: Props) {
+function Progress({ curIndex, length }: Props) {
     return (
         <>
             <div className=" flex h-[1px] flex-1 items-center rounded-full bg-white bg-opacity-50">
