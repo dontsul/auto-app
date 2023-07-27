@@ -41,13 +41,13 @@ export const paintProtectionFilmText: ITitleTintPagesProps[] = [
 
     },
     {
-        value:  "TRACK PACK",
+        value: "TRACK PACK",
         title: "COATING INFO",
         paragraph:"Indulge in our most luxurious, all-encompassing protective offering with the Full Body Package. This top-tier solution ensures complete protection for every inch of your vehicle, safeguarding it from everyday wear and tear, environmental factors, and unexpected road debris. Offering full coverage, this package envelops your vehicle in a virtually invisible shield, maintaining its pristine appearance and resplendent shine. Our high-quality paint protection film, professionally installed, guards against damage, ensuring the longevity of your vehicle’s appearance and resale value. With our Full Body Package, you’re investing in not just comprehensive protection, but also peace of mind, knowing your entire vehicle is protected. Trust in our Full Body Package for the ultimate protection solution."
 
     },
     {
-        value: "FORT KNOX",
+        value:"FORT KNOX",
         title: "COATING INFO",
         paragraph:" Full body Xpel Ultimate plus 10 mil film, topped with Xpel Fusion Premium 8 year ceramic coating. You’d have better luck getting into Fort Knox, than into this paint. Say goodbye to rock chips, scratches, swirl marks, etchings, water spots and more with the strongest package of all time."
 

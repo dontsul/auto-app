@@ -5,19 +5,17 @@ import {motion} from "framer-motion";
 import Image from "next/image";
 import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
 
-import {
-    ceramicCoatingsPagesImages,
-    ceramicCoatingsPagesText, text1, text2, text3, text4
+import {text1, text2, text3, text4
 } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/ceramicCoatingsData/CeramicCoatingsData";
 import {
     paintProtectionFilmData, paintProtectionFilmText
 } from "@/components/ourServices/vehiclePreservation/paintProtectionFilm/paintProtectionFilmData/PaintProtectionFilmDatas";
-
+import { v4 as uuidv4 } from "uuid";
 
 
 
 export function PaintProtectionFilmPages (){
-    const [currentText, setCurrentText] = useState('FULL FRONT');
+    const [currentText, setCurrentText] = useState('FULL BODY');
     const [currentImage, setCurrentImage] = useState('path-to-prime-cs-image');
     const handleButtonClick = (text: string, image: string) => {
         setCurrentText(text);
@@ -48,13 +46,24 @@ export function PaintProtectionFilmPages (){
                     <button
                         type="button"
                         className={`w-full py-5 text-sm font-medium ${
+                            currentText === 'FULL BODY'
+                                ? 'text-white bg-gray-900'
+                                : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
+                        }`}
+                        onClick={() => handleButtonClick('FULL BODY', 'path-to-prime-cs-image.jpg')}
+                    >
+                        Fusion Lite
+                    </button>
+                    <button
+                        type="button"
+                        className={`w-full py-5 text-sm font-medium ${
                             currentText === 'FULL FRONT'
                                 ? 'text-white bg-gray-900'
                                 : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
-                        onClick={() => handleButtonClick('FULL FRONT', 'path-to-prime-cs-image.jpg')}
+                        onClick={() => handleButtonClick('FULL FRONT', 'path-to-prime-xr-image.jpg')}
                     >
-                        Fusion Lite
+                        Fusion Plus
                     </button>
                     <button
                         type="button"
@@ -64,17 +73,6 @@ export function PaintProtectionFilmPages (){
                                 : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                         }`}
                         onClick={() => handleButtonClick('TRACK PACK', 'path-to-prime-xr-image.jpg')}
-                    >
-                        Fusion Plus
-                    </button>
-                    <button
-                        type="button"
-                        className={`w-full py-5 text-sm font-medium ${
-                            currentText === 'FULL BODY'
-                                ? 'text-white bg-gray-900'
-                                : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
-                        }`}
-                        onClick={() => handleButtonClick('FULL BODY', 'path-to-prime-xr-image.jpg')}
                     >
                         Fusion Satin
                     </button>
@@ -94,7 +92,8 @@ export function PaintProtectionFilmPages (){
 
                     {paintProtectionFilmData.map(item =>{
                             return(
-                                <>
+
+                                <React.Fragment key={uuidv4()}>
                                     {currentText === item.title && (
                                         <motion.div
                                             initial="hidden"
@@ -113,7 +112,7 @@ export function PaintProtectionFilmPages (){
 
                                         </motion.div>
                                     )}
-                                </>
+                                </React.Fragment>
 
                             );
                         }
@@ -126,44 +125,44 @@ export function PaintProtectionFilmPages (){
 
                         {paintProtectionFilmText.map(item=>{
                             return(
-                                <>
+                                <React.Fragment key={uuidv4()} >
                                     {currentText === item.title && (
                                         <h1 className="text-[13px] text-yellow-500 font-semibold">{item.title}</h1>
                                     )}
-                                </>
+                                </React.Fragment>
                             );
                         })}
 
                         <div>
                             <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
-                                {currentText === 'FULL FRONT' && (
-                                    <>
+                                {currentText === 'FULL BODY' && (
+                                    <React.Fragment key={uuidv4()}>
                                         <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">1-YEAR</h2>
 
                                         <ListTintPages  text={text1}/>
-                                    </>
+                                    </React.Fragment>
                                 )}
-                                {currentText === 'TRACK PACK' && (
-                                    <>
+                                {currentText === 'FULL FRONT' && (
+                                    <React.Fragment key={uuidv4()}>
                                         <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">4-YEAR</h2>
 
                                         <ListTintPages  text={text2}/>
-                                    </>
+                                    </React.Fragment>
                                 )}
-                                {currentText === 'FULL BODY' && (
+                                {currentText === 'TRACK PACK' && (
 
-                                    <>
+                                    <React.Fragment key={uuidv4()}>
                                         <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">4-YEAR</h2>
 
                                         <ListTintPages  text={text3}/>
-                                    </>
+                                    </React.Fragment>
                                 )}
                                 {currentText === 'FORT KNOX' && (
-                                    <>
+                                    <React.Fragment key={uuidv4()}>
                                         <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">8-YEAR</h2>
                                         <ListTintPages  text={text4}/>
 
-                                    </>
+                                    </React.Fragment>
                                 )}
                             </ul>
 
@@ -179,11 +178,11 @@ export function PaintProtectionFilmPages (){
             <div className=" container">
                 {paintProtectionFilmText.map(item=>{
                     return(
-                        <>
+                        <React.Fragment key={uuidv4()}>
                             {currentText === item.value && (
                                 <p>{item.paragraph}</p>
                             )}
-                        </>
+                        </React.Fragment>
 
                     );
                 })}

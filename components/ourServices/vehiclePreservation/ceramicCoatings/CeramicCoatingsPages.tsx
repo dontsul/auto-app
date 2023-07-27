@@ -9,6 +9,7 @@ import {
     ceramicCoatingsPagesImages,
     ceramicCoatingsPagesText, text1, text2, text3, text4
 } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/ceramicCoatingsData/CeramicCoatingsData";
+import {v4 as uuidv4} from "uuid";
 
 
 
@@ -91,7 +92,7 @@ export function CeramicCoatingsPages (){
 
                     {ceramicCoatingsPagesImages.map(item =>{
                         return(
-                            <>
+                            <React.Fragment key={uuidv4()}>
                                 {currentText === item.title && (
                                     <motion.div
                                         initial="hidden"
@@ -110,7 +111,7 @@ export function CeramicCoatingsPages (){
 
                                     </motion.div>
                                 )}
-                            </>
+                            </React.Fragment>
 
                         );
                         }
@@ -123,11 +124,11 @@ export function CeramicCoatingsPages (){
 
                         {ceramicCoatingsPagesText.map(item=>{
                             return(
-                                <>
+                                <React.Fragment key={uuidv4()}>
                                     {currentText === item.title && (
                                         <h1 className="text-[13px] text-yellow-500 font-semibold">{item.title}</h1>
                                     )}
-                                </>
+                                </React.Fragment>
                             );
                         })}
 
@@ -176,11 +177,11 @@ export function CeramicCoatingsPages (){
             <div className=" container">
                 {ceramicCoatingsPagesText.map(item=>{
                     return(
-                        <>
+                        <React.Fragment key={uuidv4()}>
                             {currentText === item.value && (
                                 <p>{item.paragraph}</p>
                             )}
-                        </>
+                        </React.Fragment>
 
                     );
                 })}
