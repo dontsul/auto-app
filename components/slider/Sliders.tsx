@@ -71,19 +71,19 @@ export default function Sliders() {
 
 const sliderData = [
   {
-    img: "/Slider1.jpeg",
+    img: "/Slider/Slider1.jpeg",
     location: " Style",
     description:"App",
     title: "ELEVATE",
   },
   {
-    img: "/Slider2.jpeg",
+    img: "/Slider/Slider2.jpeg",
     location: " Style",
     description:"testes",
     title: " YOUR-FUNCTIONALITY",
   },
   {
-    img: "/Slider3.jpeg",
+    img: "/Slider/Slider3.jpeg",
     location: " Style",
     description:"lorem",
     title: " YOUR",
