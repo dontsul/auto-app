@@ -12,7 +12,6 @@ export default function QuoteRequest() {
         Contact us
       </Title>
       <CustomForm />
-      {/* <TextPage></TextPage> */}
     </main>
   );
 }
