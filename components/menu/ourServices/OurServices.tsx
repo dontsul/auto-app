@@ -31,7 +31,6 @@ export const OurServices: FC<IOurServicesProps> = ({
   isDesktop,
 }) => {
   const pathname = usePathname();
-  // const ref = useRef<HTMLUListElement | null>(null);
   return (
     <li
       className="w-auto px-4  lg:flex lg:justify-center py-2"

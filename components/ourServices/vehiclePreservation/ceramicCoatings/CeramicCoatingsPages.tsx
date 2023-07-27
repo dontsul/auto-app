@@ -180,7 +180,7 @@ export function CeramicCoatingsPages() {
 
         <div></div>
       </div>
-      <div className=" container">
+      <div className="">
         {ceramicCoatingsPagesText.map((item) => {
           return (
             <React.Fragment key={uuidv4()}>

@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import "./globals.css";
-import {Wrapper} from "@googlemaps/react-wrapper";
+import { Wrapper } from "@googlemaps/react-wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 

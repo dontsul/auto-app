@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "../logo/Logo";
 import { CloseButton } from "../closeButton/CloseButton";
@@ -34,6 +34,19 @@ export const Menu: FC<IMenuProps> = ({
   isDesktop,
 }) => {
   const pathname = usePathname();
+  const [statusResize, setStatusResize] = useState<boolean>(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleSize = () => {};
+
+    window.addEventListener("resize", handleSize);
+
+    return () => {
+      window.removeEventListener("resize", handleSize);
+    };
+  }, []);
+
   useEffect(() => {
     if (openMenu) {
       document.body.style.overflow = "hidden";
@@ -45,12 +58,16 @@ export const Menu: FC<IMenuProps> = ({
       document.body.style.overflow = "auto";
     };
   }, [openMenu]);
+
   return (
     <div className="py-6 absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full lg:flex lg:items-center">
-      <div
-        className={`overflow-y-auto transition duration-[800ms] ease-in-out ${
-          openMenu ? "translate-x-0 " : "translate-x-[-100%]"
-        } fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 left-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0 lg:transition-none`}
+      <motion.div
+        ref={ref}
+        className={` overflow-y-auto transition duration-[800ms] ease-in-out ${
+          isDesktop ? "duration-0" : ""
+        } ${
+          openMenu ? "translate-x-0 " : "translate-x-[-100%] opacity-0"
+        } lg:opacity-100  fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 left-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0 lg:transition-none`}
       >
         <nav
           onClick={(e) => e.stopPropagation()}
@@ -136,7 +153,7 @@ export const Menu: FC<IMenuProps> = ({
             />
           </div>
         </nav>
-      </div>
+      </motion.div>
       <AnimatePresence>
         {openMenu && (
           <motion.div
@@ -157,3 +174,13 @@ export const Menu: FC<IMenuProps> = ({
     </div>
   );
 };
+
+{
+  /* <motion.div
+        animate={!isDesktop ? { translateX: openMenu ? 0 : "-100%" } : ""}
+        transition={{ duration: 0.8 }}
+        className={` overflow-y-auto 
+       
+        fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 left-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0`}
+      > */
+}
