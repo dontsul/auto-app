@@ -8,6 +8,7 @@ import { Styling } from "./styling/Styling";
 import { usePathname } from "next/navigation";
 
 interface IOurServicesProps {
+  handleMenu: (status: boolean) => void;
   openServices: boolean;
   handleServices: (statusServices: boolean) => void;
   openPreservation: boolean;
@@ -20,6 +21,7 @@ interface IOurServicesProps {
 }
 
 export const OurServices: FC<IOurServicesProps> = ({
+  handleMenu,
   openServices,
   handleServices,
   openPreservation,
@@ -53,6 +55,9 @@ export const OurServices: FC<IOurServicesProps> = ({
             pathname === "/our-services" ? "text-yellow-500 active-line" : ""
           }`}
           href={`/our-services`}
+          onClick={() => {
+            handleMenu(false);
+          }}
         >
           Our Services
         </Link>
@@ -100,23 +105,29 @@ export const OurServices: FC<IOurServicesProps> = ({
                     : ""
                 }`}
                 href={`/our-services/patriot-liner`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Patriot Liner
               </Link>
             </li>
 
             <Preservation
+              handleMenu={handleMenu}
               openPreservation={openPreservation}
               handlePreservation={handlePreservation}
               isDesktop={isDesktop}
             />
 
             <Fleet
+              handleMenu={handleMenu}
               openFleet={openFleet}
               handleFleet={handleFleet}
               isDesktop={isDesktop}
             />
             <Styling
+              handleMenu={handleMenu}
               openStyling={openStyling}
               handleStyling={handleStyling}
               isDesktop={isDesktop}

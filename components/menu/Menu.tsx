@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "../logo/Logo";
 import { CloseButton } from "../closeButton/CloseButton";
@@ -34,8 +34,6 @@ export const Menu: FC<IMenuProps> = ({
   isDesktop,
 }) => {
   const pathname = usePathname();
-  const [statusResize, setStatusResize] = useState<boolean>(false);
-  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleSize = () => {};
@@ -62,11 +60,8 @@ export const Menu: FC<IMenuProps> = ({
   return (
     <div className="py-6 absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full lg:flex lg:items-center">
       <motion.div
-        ref={ref}
-        className={` overflow-y-auto transition duration-[800ms] ease-in-out ${
-          isDesktop ? "duration-0" : ""
-        } ${
-          openMenu ? "translate-x-0 " : "translate-x-[-100%] opacity-0"
+        className={` overflow-y-auto ease-in-out ${
+          openMenu ? "translate-x-0 duration-[800ms]" : "translate-x-[-100%]"
         } lg:opacity-100  fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 left-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0 lg:transition-none`}
       >
         <nav
@@ -83,6 +78,9 @@ export const Menu: FC<IMenuProps> = ({
                   pathname === "/" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Home
               </Link>
@@ -94,12 +92,16 @@ export const Menu: FC<IMenuProps> = ({
                 }
                 `}
                 href={`/about`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 About
               </Link>
             </li>
 
             <OurServices
+              handleMenu={handleMenu}
               openServices={openServices}
               handleServices={handleServices}
               openPreservation={openPreservation}
@@ -117,6 +119,9 @@ export const Menu: FC<IMenuProps> = ({
                   pathname === "/financing" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/financing`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Financing
               </Link>
@@ -129,6 +134,9 @@ export const Menu: FC<IMenuProps> = ({
                     : ""
                 }`}
                 href={`/quote-equest`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Quote Request
               </Link>
@@ -139,6 +147,9 @@ export const Menu: FC<IMenuProps> = ({
                   pathname === "/portfolio" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/portfolio`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Portfolio
               </Link>
@@ -174,13 +185,3 @@ export const Menu: FC<IMenuProps> = ({
     </div>
   );
 };
-
-{
-  /* <motion.div
-        animate={!isDesktop ? { translateX: openMenu ? 0 : "-100%" } : ""}
-        transition={{ duration: 0.8 }}
-        className={` overflow-y-auto 
-       
-        fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 left-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0`}
-      > */
-}

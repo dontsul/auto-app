@@ -5,12 +5,14 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { usePathname } from "next/navigation";
 
 interface IPreservationProps {
+  handleMenu: (status: boolean) => void;
   openPreservation: boolean;
   handlePreservation: (statusPreservation: boolean) => void;
   isDesktop: boolean;
 }
 
 export const Preservation: FC<IPreservationProps> = ({
+  handleMenu,
   openPreservation,
   handlePreservation,
   isDesktop,
@@ -41,6 +43,9 @@ export const Preservation: FC<IPreservationProps> = ({
               : ""
           }`}
           href={`/our-services/vehicle-preservation`}
+          onClick={() => {
+            handleMenu(false);
+          }}
         >
           Vehicle Preservation
         </Link>
@@ -85,6 +90,9 @@ export const Preservation: FC<IPreservationProps> = ({
                     : ""
                 }`}
                 href={`/our-services/vehicle-preservation/paint-protection-film`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Paint Protection Film
               </Link>
@@ -98,6 +106,9 @@ export const Preservation: FC<IPreservationProps> = ({
                     : ""
                 }`}
                 href={`/our-services/vehicle-preservation/detailing-paint`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Detailing and Paint
               </Link>
@@ -111,6 +122,9 @@ export const Preservation: FC<IPreservationProps> = ({
                     : ""
                 }`}
                 href={`/our-services/vehicle-preservation/ceramic-coatings`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Ceramic Coatings
               </Link>
@@ -124,6 +138,9 @@ export const Preservation: FC<IPreservationProps> = ({
                     : ""
                 }`}
                 href={`/our-services/vehicle-preservation/rust-prevention`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Rust Prevention
               </Link>

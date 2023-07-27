@@ -4,12 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { usePathname } from "next/navigation";
 interface IStylingProps {
+  handleMenu: (status: boolean) => void;
   openStyling: boolean;
   handleStyling: (Styling: boolean) => void;
   isDesktop: boolean;
 }
 
 export const Styling: FC<IStylingProps> = ({
+  handleMenu,
   openStyling,
   handleStyling,
   isDesktop,
@@ -39,6 +41,9 @@ export const Styling: FC<IStylingProps> = ({
               : ""
           }`}
           href={`/our-services/auto-styling`}
+          onClick={() => {
+            handleMenu(false);
+          }}
         >
           Auto Styling
         </Link>
@@ -81,6 +86,9 @@ export const Styling: FC<IStylingProps> = ({
                     : ""
                 }`}
                 href={`/our-services/auto-styling/wheels-tires`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Wheels & Tires
               </Link>
@@ -93,6 +101,9 @@ export const Styling: FC<IStylingProps> = ({
                     : ""
                 }`}
                 href={`/our-services/auto-styling/suspension`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Suspension
               </Link>
@@ -105,6 +116,9 @@ export const Styling: FC<IStylingProps> = ({
                     : ""
                 }`}
                 href={`/our-services/auto-styling/exhaust`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Exhaust
               </Link>
@@ -117,6 +131,9 @@ export const Styling: FC<IStylingProps> = ({
                     : ""
                 }`}
                 href={`/our-services/auto-styling/accessories`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Accessories
               </Link>
@@ -129,6 +146,9 @@ export const Styling: FC<IStylingProps> = ({
                     : ""
                 }`}
                 href={`/our-services/auto-styling/vinyl-wraps`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Vinyl Wraps
               </Link>
@@ -141,6 +161,9 @@ export const Styling: FC<IStylingProps> = ({
                     : ""
                 }`}
                 href={`/our-services/auto-styling/window-tint`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Window Tint
               </Link>

@@ -4,12 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { usePathname } from "next/navigation";
 interface IFleetProps {
+  handleMenu: (status: boolean) => void;
   openFleet: boolean;
   handleFleet: (statusFleet: boolean) => void;
   isDesktop: boolean;
 }
 
 export const Fleet: FC<IFleetProps> = ({
+  handleMenu,
   openFleet,
   handleFleet,
   isDesktop,
@@ -39,6 +41,9 @@ export const Fleet: FC<IFleetProps> = ({
               : ""
           }`}
           href={`/our-services/fleet-management`}
+          onClick={() => {
+            handleMenu(false);
+          }}
         >
           Fleet Management
         </Link>
@@ -81,6 +86,9 @@ export const Fleet: FC<IFleetProps> = ({
                     : ""
                 }`}
                 href={`/our-services/fleet-management/goverment`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Goverment
               </Link>
@@ -93,6 +101,9 @@ export const Fleet: FC<IFleetProps> = ({
                     : ""
                 }`}
                 href={`/our-services/fleet-management/commercial`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Commercial
               </Link>
@@ -105,6 +116,9 @@ export const Fleet: FC<IFleetProps> = ({
                     : ""
                 }`}
                 href={`/our-services/fleet-management/dealerships`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
               >
                 Dealerships
               </Link>
