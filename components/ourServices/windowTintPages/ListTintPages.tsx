@@ -1,15 +1,15 @@
 import React, {FC} from "react";
-interface IListTintPagesProps {
-    text: string[];
-}
+import {IListTintPagesProps} from "@/interfaces/ourServicesPages";
+import {v4 as uuidv4} from "uuid";
+
 
 export const ListTintPages:FC<IListTintPagesProps> = ({text})=> {
-    console.log(text)
+
     return(
         <div>
             {text.map(item=>{
                 return(
-                    <li className="flex items-center">
+                    <li className="flex items-center" key={uuidv4()}>
                     <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
                          aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                          viewBox="0 0 20 20">

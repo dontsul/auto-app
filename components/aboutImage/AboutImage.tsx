@@ -1,5 +1,5 @@
 import Image from "next/image";
-import team from "@/public/1.png";
+import team from "@/public/aboutPageImg/IMG_6641.png";
 
 export const AboutImage = () => {
   return (

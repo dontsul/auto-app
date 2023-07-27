@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
 import Progress from "./Progress";
 import {CurrentSlideData, Data} from "@/components/slider/Sliders";
@@ -40,6 +40,7 @@ function Controls({
         handleTransitionData(data[data.length - 1]);
     };
 
+
     const handleNext = () => {
         handleData((prev) => prev.slice(1));
         handleCurrentSlideData({
@@ -52,8 +53,10 @@ function Controls({
                 ...newData,
                 transitionData ? transitionData : initData,
             ]);
-        }, 500);
+        }, 500); // Set the delay to 500 milliseconds (0.5 seconds) or more
     };
+
+
 
     return (
         <div className="flex items-center gap-3 px-0 py-3 md:px-1 md:py-5" style={{bottom: 0}}>
@@ -70,10 +73,7 @@ function Controls({
 
 export default Controls;
 
-const SliderButton = ({
-                          children,
-                          handleClick,
-                      }: {
+const SliderButton = ({children, handleClick,}: {
     children: React.ReactNode;
     handleClick: () => void;
 }) => {

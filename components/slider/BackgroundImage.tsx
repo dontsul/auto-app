@@ -21,12 +21,14 @@ function BackgroundImage({ transitionData, currentSlideData }: Props) {
           }}
           className=" absolute left-0 top-0 h-full w-full object-cover brightness-50"
         >
-          <Image
-            src={transitionData.img}
-            alt="Transition Image"
-            width={1400}
-            height={1000}
-          />
+            <Image
+                alt="Current Image"
+                key={currentSlideData.data.img + "transition"}
+                src={currentSlideData.data.img}
+                className=" absolute left-0 top-0 h-full w-full object-cover brightness-50"
+                width={1400}
+                height={1000}
+            />
         </motion.div>
       )}
       <Image
