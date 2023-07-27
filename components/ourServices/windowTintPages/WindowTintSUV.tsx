@@ -48,7 +48,7 @@ export function WindowTintSUV(){
                     className={`w-full py-5 text-sm font-medium ${
                         currentText === 'XR' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
-                    onClick={() => handleButtonClick('PRIME XR', 'path-to-prime-xr-image.jpg')}
+                    onClick={() => handleButtonClick('XR', 'path-to-prime-xr-image.jpg')}
                 >
                     CERAMIC
                 </button>
