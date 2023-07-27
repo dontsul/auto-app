@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { Logo } from "../logo/Logo";
 import { CloseButton } from "../closeButton/CloseButton";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,16 +21,28 @@ export const ContactInfo: FC<IContactInfo> = ({
   handleContactInfo,
   openContactInfo,
 }) => {
+  useEffect(() => {
+    if (openContactInfo) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [openContactInfo]);
+
   return (
     <div className="absolute">
       <div
-        className={`z-30 transition duration-[800ms] ease-in-out border-white border-x-[1px] ${
+        className={`overflow-y-auto z-30 transition duration-[800ms] ease-in-out border-white border-x-[1px] ${
           openContactInfo ? "translate-x-0" : "translate-x-[100%]"
-        } fixed min-w-[80px] max-w-[400px] w-full h-[100vh] top-0 right-0 z-20`}
+        } fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 right-0 z-20`}
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`relative bg-[#111827] w-full z-20 h-screen border-r-[3px`}
+          className={`relative bg-[#111827] w-full z-20 h-screen border-l-[3px] overflow-y-auto`}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-center ">
@@ -45,7 +57,6 @@ export const ContactInfo: FC<IContactInfo> = ({
             <h4 className="uppercase text-[24px] text-start font-extrabold text-slate-300 mb-8">
               Contact Info
             </h4>
-
             <div className="py-4">
               <BsFillTelephoneFill
                 size={20}
@@ -72,12 +83,12 @@ export const ContactInfo: FC<IContactInfo> = ({
             </div>
             <div className="py-4">
               <SiGooglemaps
-                  size={20}
-                  className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
+                size={20}
+                className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
               />
               <a
-                  className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
-                  href="#!"
+                className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                href="#!"
               >
                 2131 9th St, Sacramento, CA 95818, USA
               </a>
@@ -106,10 +117,7 @@ export const ContactInfo: FC<IContactInfo> = ({
               </a>
             </div>
           </div>
-
-
         </div>
-
       </div>
       <AnimatePresence>
         {openContactInfo && (
