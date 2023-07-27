@@ -59,14 +59,14 @@ export const Menu: FC<IMenuProps> = ({
 
   return (
     <div className="py-6 absolute lg:static lg:order-2 border-white lg:border-x-[1px] lg:w-full lg:flex lg:items-center">
-      <motion.div
-        className={` overflow-y-auto ease-in-out ${
+      <div
+        className={`overflow-y-auto lg:overflow-visible ease-in-out ${
           openMenu ? "translate-x-0 duration-[800ms]" : "translate-x-[-100%]"
         } lg:opacity-100  fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 left-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0 lg:transition-none`}
       >
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={`overflow-y-auto bg-[#111827] w-full z-20 h-screen py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:min-h-full lg:py-0 lg:px-4`}
+          className={`overflow-y-auto lg:overflow-visible bg-[#111827] w-full z-20 h-screen py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:min-h-full lg:py-0 lg:px-4`}
         >
           <div className="block lg:hidden">
             <Logo />
@@ -164,7 +164,7 @@ export const Menu: FC<IMenuProps> = ({
             />
           </div>
         </nav>
-      </motion.div>
+      </div>
       <AnimatePresence>
         {openMenu && (
           <motion.div
