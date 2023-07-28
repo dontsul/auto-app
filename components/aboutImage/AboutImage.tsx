@@ -3,7 +3,7 @@ import team from "@/public/aboutPageImg/IMG_6641.png";
 
 export const AboutImage = () => {
   return (
-    <div className="relative max-w-full max-h-[600px] w-auto flex items-center justify-center rounded-[20px] overflow-hidden shadow-lg shadow-slate-700 hover:shadow-xl hover:shadow-yellow-500 transition duration-00 rounded-tr-[80px] rounded-bl-[80px]">
+    <div className="mx-auto relative max-w-[95%] max-h-[600px] w-auto flex items-center justify-center rounded-[20px] overflow-hidden shadow-lg shadow-slate-700 hover:shadow-xl hover:shadow-yellow-500 transition duration-00 rounded-tr-[80px] rounded-bl-[80px]">
       <Image
         src={team}
         alt="our team"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { TextPage } from "../textPage/TextPage";
 
 export function TextAbout() {
   const textAnimation = {
@@ -25,29 +26,33 @@ export function TextAbout() {
       viewport={{ once: true }}
       className="flex order-2 lg:order-1 flex-col px-10 md:px-10"
     >
-      <motion.p
+      <motion.div
         custom={0}
         variants={textAnimation}
         viewport={{ once: true }}
         className="leading-6 text-[16px] mb-6 w-full"
       >
-        Welcome to <strong>Capital Upfitters</strong>, the family-owned
-        epicenter of top-tier auto customization, vehicle preservation, and
-        performance enhancements. With a heritage of over 35 years in the
-        industry, we proudly deliver unparalleled fleet customization services
-        and robust protection coatings to a diverse range of clients, from
-        municipal to retail sectors.
-      </motion.p>
-      <motion.p
+        <TextPage>
+          Welcome to <strong>Capital Upfitters</strong>, the family-owned
+          epicenter of top-tier auto customization, vehicle preservation, and
+          performance enhancements. With a heritage of over 35 years in the
+          industry, we proudly deliver unparalleled fleet customization services
+          and robust protection coatings to a diverse range of clients, from
+          municipal to retail sectors.
+        </TextPage>
+      </motion.div>
+      <motion.div
         custom={1}
         variants={textAnimation}
         viewport={{ once: true }}
         className="leading-6 text-[16px]  mb-2 w-full"
       >
-        Our reputation as a trailblazer stems from our continuous commitment to
-        superior craftsmanship, delivering innovative auto customization and
-        performance solutions that truly redefine automotive excellence.
-      </motion.p>
+        <TextPage>
+          Our reputation as a trailblazer stems from our continuous commitment
+          to superior craftsmanship, delivering innovative auto customization
+          and performance solutions that truly redefine automotive excellence.
+        </TextPage>
+      </motion.div>
     </motion.div>
   );
 }

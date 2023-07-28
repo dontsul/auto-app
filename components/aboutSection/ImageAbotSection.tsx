@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import images from "@/public/2.png";
 import { motion } from "framer-motion";
+import { ImagePage } from "../imagePage/ImagePage";
+import aboutSection from "@/public/images/aboutSection.png";
 
 export const ImageAboutSection = () => {
   const imageAbout = {
@@ -26,15 +26,9 @@ export const ImageAboutSection = () => {
       whileInView="visible"
       variants={imageAbout}
       viewport={{ once: true }}
-      className=" flex justify-center brightness-75 order-1 lg:order-2"
+      className=" flex justify-center brightness-75 order-1 lg:order-2 mb-8 lg:mb-0"
     >
-      <Image
-        className="rounded-2xl lg:rounded-2xl  brightness-75"
-        width={500}
-        height={500}
-        src={images}
-        alt="bg"
-      />
+      <ImagePage img={aboutSection} />
     </motion.div>
   );
 };
