@@ -1,10 +1,11 @@
 import React from "react";
+import "./globals.css";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
-import "./globals.css";
-import { Wrapper } from "@googlemaps/react-wrapper";
+import { Toaster } from "react-hot-toast";
+import { ButtonUpScroll } from "@/components/buttonUpScroll/ButtonUpScroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,9 +42,11 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} relative`}>
         <Header />
         <main>{children}</main>
+        <Toaster position="top-center" reverseOrder={false} />
+        <ButtonUpScroll />
         <Footer />
       </body>
     </html>
