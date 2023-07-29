@@ -87,9 +87,11 @@ export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
       className="py-4 z-30 sm:px-8 lg:px-0"
     >
       <Slider className="py-6" {...settings}>
-        {reviews.map((review) => (
-          <ItemRewiews review={review} key={uuidv4()} />
-        ))}
+        {reviews !== undefined
+          ? reviews.map((review) => (
+              <ItemRewiews review={review} key={uuidv4()} />
+            ))
+          : null}
       </Slider>
     </motion.div>
   );
