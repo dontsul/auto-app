@@ -112,7 +112,7 @@ export function PaintProtectionFilmPages() {
                     className="  flex justify-center brightness-75 order-1 lg:order-2 max-w-full"
                   >
                     <Image
-                      className=" rounded-2xl lg:rounded-2xl  brightness-75 max-w-full"
+                      className=" rounded-2xl lg:rounded-2xl  max-w-full"
                       width={500}
                       height={500}
                       src={item.image}
