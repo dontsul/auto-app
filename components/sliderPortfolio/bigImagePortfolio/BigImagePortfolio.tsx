@@ -1,7 +1,6 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
-import { IItemSliderPortfolio } from "../itemSliderPortfolio/ItemSliderPortfolio";
+import Image from "next/image";
 import { IPortfolioList } from "@/interfaces/portfolio";
 import { CgClose } from "react-icons/cg";
 interface IBigImagePortfolioProps {
