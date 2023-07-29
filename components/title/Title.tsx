@@ -32,6 +32,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           initial="hidden"
           whileInView="visible"
           variants={titleAnimation}
+          viewport={{ once: true }}
           className={`font-extrabold text-[#111827] uppercase text-3xl lg:text-7xl text-center  ${
             cn ? cn : ""
           }`}
@@ -45,7 +46,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           initial="hidden"
           whileInView="visible"
           variants={titleAnimation}
-          // viewport={{ once: true }}
+          viewport={{ once: true }}
           className={`font-extrabold text-[#111827] uppercase text-3xl lg:text-7xl text-center  ${
             cn ? cn : ""
           }`}
@@ -59,7 +60,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           initial="hidden"
           whileInView="visible"
           variants={titleAnimation}
-          // viewport={{ once: true }}
+          viewport={{ once: true }}
           className={`font-extrabold text-[#111827] uppercase text-xl lg:text-5xl text-center  ${
             cn ? cn : ""
           }`}
@@ -69,17 +70,17 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
       );
     case "h6":
       return (
-        <motion.h4
+        <motion.h6
           initial="hidden"
           whileInView="visible"
           variants={titleAnimation}
-          // viewport={{ once: true }}
+          viewport={{ once: true }}
           className={`font-extrabold text-[#111827] uppercase text-xl lg:text-2xl text-center  ${
             cn ? cn : ""
           }`}
         >
           {children}
-        </motion.h4>
+        </motion.h6>
       );
     default:
       return null;

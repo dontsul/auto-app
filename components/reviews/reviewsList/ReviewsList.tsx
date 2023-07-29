@@ -132,7 +132,7 @@ export const ReviewsList = () => {
       whileInView="visible"
       variants={reviewsListAnimation}
       viewport={{ once: true }}
-      className="py-4 z-30"
+      className="py-4 z-30 sm:px-8 lg:px-0"
     >
       <Slider className="py-6" {...settings}>
         {reviews.map((rev) => (

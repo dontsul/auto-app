@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" sizes="180x180" href="favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -40,7 +41,6 @@ export default function RootLayout({
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${inter.className} relative`}>
         <Header />

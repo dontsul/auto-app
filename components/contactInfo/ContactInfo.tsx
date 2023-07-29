@@ -36,7 +36,7 @@ export const ContactInfo: FC<IContactInfo> = ({
   return (
     <div className="absolute">
       <div
-        className={`overflow-y-auto z-30 transition duration-[800ms] ease-in-out border-white border-x-[1px] ${
+        className={`overflow-y-auto z-30 transition duration-[800ms] ease-in-out border-white border-l-[1px] ${
           openContactInfo ? "translate-x-0" : "translate-x-[100%]"
         } fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 right-0 z-20`}
       >

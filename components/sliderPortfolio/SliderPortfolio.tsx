@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
 import { IPortfolioList, ISliderPortfolio } from "@/interfaces/portfolio";
 import { ItemSliderPortfolio } from "./itemSliderPortfolio/ItemSliderPortfolio";
+import { BigImagePortfolio } from "./bigImagePortfolio/BigImagePortfolio";
 
 const variants = {
   enter: (direction: number) => {
@@ -34,6 +35,10 @@ const swipePower = (offset: number, velocity: number) => {
 export const SliderPortfolio: FC<ISliderPortfolio> = ({ portfolioList }) => {
   const [itemsPerPage, setItemsPerPage] = useState<number>(2);
   const [[page, direction], setPage] = useState([0, 0]);
+  const [openImage, setOpenImage] = useState<boolean>(false);
+  const [activeImage, setActiveImage] = useState<IPortfolioList>(
+    {} as IPortfolioList
+  );
 
   const portfolioChunks: IPortfolioList[][] = [];
   for (let i = 0; i < portfolioList.length; i += itemsPerPage) {
@@ -49,6 +54,12 @@ export const SliderPortfolio: FC<ISliderPortfolio> = ({ portfolioList }) => {
       const wrappedPage = nextPage < 0 ? portfolioChunks.length - 1 : 0;
       setPage([wrappedPage, newDirection]);
     }
+  };
+  const handleActiveImage = (image: IPortfolioList) => {
+    setActiveImage(image);
+  };
+  const handleOpenImage = (statusImage: boolean) => {
+    setOpenImage(statusImage);
   };
 
   useEffect(() => {
@@ -67,7 +78,7 @@ export const SliderPortfolio: FC<ISliderPortfolio> = ({ portfolioList }) => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center mb-32 overflow-x-hidden">
+    <div className="relative flex items-center justify-center mb-32 overflow-x-hidden ">
       <AnimatePresence initial={false} custom={direction} mode="wait">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center max-w-full"
@@ -96,12 +107,20 @@ export const SliderPortfolio: FC<ISliderPortfolio> = ({ portfolioList }) => {
         >
           {portfolioChunks[page] &&
             portfolioChunks[page].map((item) => {
-              return <ItemSliderPortfolio item={item} key={uuidv4()} />;
+              return (
+                <ItemSliderPortfolio
+                  handleActiveImage={handleActiveImage}
+                  openImage={openImage}
+                  handleOpenImage={handleOpenImage}
+                  item={item}
+                  key={uuidv4()}
+                />
+              );
             })}
         </motion.div>
       </AnimatePresence>
       <div
-        className="right-5 top-[calc(50%_-_20px)] absolute bg-[white] w-10 h-10 flex justify-center items-center select-none cursor-pointer font-[bold] text-lg z-[2] rounded-[30px]"
+        className="right-5 top-[calc(50%_-_20px)] absolute bg-[white] w-10 h-10 flex justify-center items-center select-none cursor-pointer font-[bold] text-lg z-10  rounded-[30px]"
         onClick={() => {
           paginate(1);
         }}
@@ -109,13 +128,20 @@ export const SliderPortfolio: FC<ISliderPortfolio> = ({ portfolioList }) => {
         {"‣"}
       </div>
       <div
-        className="-scale-100 left-5 top-[calc(50%_-_20px)] absolute bg-[white] w-10 h-10 flex justify-center items-center select-none cursor-pointer font-[bold] text-lg z-[2] rounded-[30px]"
+        className="-scale-100 left-5 top-[calc(50%_-_20px)] absolute bg-[white] w-10 h-10 flex justify-center items-center select-none cursor-pointer font-[bold] text-lg z-10 rounded-[30px]"
         onClick={() => {
           paginate(-1);
         }}
       >
         {"‣"}
       </div>
+      {openImage ? (
+        <BigImagePortfolio
+          item={activeImage}
+          openImage={openImage}
+          handleOpenImage={handleOpenImage}
+        />
+      ) : null}
     </div>
   );
 };

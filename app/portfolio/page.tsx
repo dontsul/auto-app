@@ -11,7 +11,7 @@ export default function Portfolio() {
       <MainPortfolio />
 
       <Title tag="h4" cn="mb-10 mt-16">
-        Form
+        CONTACT US
       </Title>
       <CustomForm />
       <TextPage>
