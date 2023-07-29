@@ -19,14 +19,12 @@ import wt17 from "@/public/portfolio/wheels-tires/wt17.jpg";
 import wt18 from "@/public/portfolio/wheels-tires/wt18.jpg";
 import wt19 from "@/public/portfolio/wheels-tires/wt19.jpg";
 import wt20 from "@/public/portfolio/wheels-tires/wt20.jpg";
-import wt21 from "@/public/portfolio/wheels-tires/wt21.jpg";
 import wt22 from "@/public/portfolio/wheels-tires/wt22.jpg";
 import wt23 from "@/public/portfolio/wheels-tires/wt23.jpg";
 import wt24 from "@/public/portfolio/wheels-tires/wt24.jpg";
 import wt25 from "@/public/portfolio/wheels-tires/wt25.jpg";
 import wt26 from "@/public/portfolio/wheels-tires/wt26.jpg";
 import wt27 from "@/public/portfolio/wheels-tires/wt27.jpg";
-import wt28 from "@/public/portfolio/wheels-tires/wt28.jpg";
 import wt29 from "@/public/portfolio/wheels-tires/wt29.jpg";
 import wt30 from "@/public/portfolio/wheels-tires/wt30.jpg";
 import wt31 from "@/public/portfolio/wheels-tires/wt31.jpg";
@@ -156,10 +154,6 @@ export const portfolioList: IPortfolioList[] = [
     title: "Patriot Liner example",
   },
   {
-    image: wt21,
-    title: "Patriot Liner example",
-  },
-  {
     image: wt22,
     title: "Patriot Liner example",
   },
@@ -182,10 +176,6 @@ export const portfolioList: IPortfolioList[] = [
   },
   {
     image: wt27,
-    title: "Patriot Liner example",
-  },
-  {
-    image: wt28,
     title: "Patriot Liner example",
   },
   {
