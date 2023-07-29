@@ -1,9 +1,5 @@
 import React, {useState} from "react";
-import {allowedDisplayValues} from "next/dist/compiled/@next/font/dist/constants";
 import {WindowTintCar} from "@/components/ourServices/windowTintPages/WindowTintCar";
-import {motion} from "framer-motion";
-import Image from "next/image";
-import imagesTest from "@/public/CARBON-Car.webp";
 import {WindowTintTruck} from "@/components/ourServices/windowTintPages/WindowTintTruck";
 import {WindowTintSUV} from "@/components/ourServices/windowTintPages/WindowTintSUV";
 import {WindowTintFront} from "@/components/ourServices/windowTintPages/WindowTintFront";

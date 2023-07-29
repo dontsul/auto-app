@@ -1,24 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import { Title } from "@/components/title/Title";
-import imagesTest from "@/public/CARBON-Car.webp";
-import imagesTest2 from "@/public/Ceramic-Windshield.webp";
-import imagesTest3 from "@/public/CERAMIC-Plus-Car.webp";
 import { CustomForm } from "@/components/customForm/CustomForm";
-import Image from "next/image";
 
-import { motion } from "framer-motion";
 import { Reviews } from "@/components/reviews/Reviews";
-import { ListTintPages } from "@/components/ourServices/windowTintPages/ListTintPages";
 import { WindowTintItem } from "@/components/ourServices/windowTintPages/WindowTintItem";
-import { WindowTintCar } from "@/components/ourServices/windowTintPages/WindowTintCar";
-export const text1 = [
+export const textList = [
   "UV Protection",
   "Improved Privacy",
   "Reduced Glare",
   "Added Style",
 ];
-export const text2 = [
+export const textList2 = [
   "70% Heat Rejection",
   "UV Protection",
   "Improved Privacy",
@@ -26,7 +19,7 @@ export const text2 = [
   " Improved Comfort",
   "Added Style",
 ];
-export const text3 = [
+export const textList3 = [
   "96% Heat Rejection",
   "UV Protection",
   "Improved Privacy",
@@ -60,7 +53,7 @@ export function WindowTintPages() {
   };
 
   return (
-    <div className="">
+    <div className="container">
       <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
         Window <span className="text-yellow-500">Tinting</span>
       </Title>

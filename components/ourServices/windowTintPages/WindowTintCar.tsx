@@ -5,7 +5,7 @@ import imagesTest2 from "@/public/Ceramic-Windshield.webp";
 import imagesTest3 from "@/public/CERAMIC-Plus-Car.webp";
 import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
 import React, {useState} from "react";
-import {text1, text2, text3} from "@/components/ourServices/windowTintPages/WindowTintPages";
+import {textList, textList2, textList3} from "@/components/ourServices/windowTintPages/WindowTintPages";
 
 export function WindowTintCar(){
     const [currentText, setCurrentText] = useState('PRIME CS');
@@ -75,7 +75,7 @@ export function WindowTintCar(){
                         className=" flex justify-center brightness-75 order-1 lg:order-2 max-w-full"
                     >
                         <Image
-                            className="rounded-2xl lg:rounded-2xl  brightness-75 max-w-full"
+                            className="rounded-2xl lg:rounded-2xl max-w-full"
                             width={500}
                             height={500}
                             src={imagesTest}
@@ -92,7 +92,7 @@ export function WindowTintCar(){
                         className=" flex justify-center brightness-75 order-1 lg:order-2"
                     >
                         <Image
-                            className="rounded-2xl lg:rounded-2xl  brightness-75"
+                            className="rounded-2xl lg:rounded-2xl"
                             width={500}
                             height={500}
                             src={imagesTest2}
@@ -109,7 +109,7 @@ export function WindowTintCar(){
                         className=" flex justify-center brightness-75 order-1 lg:order-2"
                     >
                         <Image
-                            className="rounded-2xl lg:rounded-2xl  brightness-75"
+                            className="rounded-2xl lg:rounded-2xl"
                             width={500}
                             height={500}
                             src={imagesTest3}
@@ -134,17 +134,17 @@ export function WindowTintCar(){
                         <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                             {currentText === 'PRIME CS' && (
                                 <>
-                                    <ListTintPages text={text1}/>
+                                    <ListTintPages text={textList}/>
                                 </>
                             )}
                             {currentText === 'PRIME XR' && (
                                 <>
-                                    <ListTintPages text={text2}/>
+                                    <ListTintPages text={textList2}/>
                                 </>
                             )}
                             {currentText === 'PRIME SD' && (
                                 <>
-                                    <ListTintPages text={text3}/>
+                                    <ListTintPages text={textList3}/>
                                 </>
                             )}
                         </ul>

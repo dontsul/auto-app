@@ -33,7 +33,7 @@ function SliderCard({ data }: Props) {
                 src={data.img}
                 className=" absolute h-full w-full  rounded-2xl  object-cover brightness-75 "
             />
-            <motion.div className=" absolute z-10 flex h-full items-end p-4">
+            <motion.div className=" absolute  flex h-full items-end p-4">
                 <motion.div>
                     <motion.div
                         layout
