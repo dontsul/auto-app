@@ -5,21 +5,17 @@ import { motion } from "framer-motion";
 import { AiFillStar } from "react-icons/ai";
 import { Google } from "../google/Google";
 
-interface IItemRewiews {
-  profileName: string;
-  reviewedAt: string;
-  text: string;
-  rating: number;
-}
+import { IReview } from "../reviewsList/ReviewsList";
+import { convertUnixTimestampToDate } from "@/utils/dateFormat";
 
 interface IItemRewiewsProps {
-  rev: IItemRewiews;
+  review: IReview;
 }
 
-export const ItemRewiews: FC<IItemRewiewsProps> = ({ rev }) => {
+export const ItemRewiews: FC<IItemRewiewsProps> = ({ review }) => {
   const [open, setOpen] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement | null>(null);
-  const { profileName, reviewedAt, text, rating } = rev;
+  const { author_name, time, text, rating } = review;
 
   const starIcons = Array.from({ length: rating }, (_, index) => (
     <AiFillStar size={20} color="#FBBC04" key={index} />
@@ -34,9 +30,11 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ rev }) => {
   return (
     <div className="mx-auto my-2 py-2 px-4 min-w-[100px] max-w-[260px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px]">
       <h6 className="font-bold text-lg text-center text-black">
-        {profileName}
+        {author_name}
       </h6>
-      <p className="text-center text-xs text-slate-600 mb-2">{reviewedAt}</p>
+      <p className="text-center text-xs text-slate-600 mb-2">
+        {convertUnixTimestampToDate(time)}
+      </p>
       <div className="flex items-center justify-center mb-2">{starIcons}</div>
       <motion.div
         ref={ref}
@@ -50,7 +48,7 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ rev }) => {
         {text}
       </motion.div>
 
-      {text.length > maxLength && (
+      {text.length > maxLength ? (
         <div className="flex items-center justify-start">
           <button
             onClick={() => setOpen(!open)}
@@ -63,6 +61,8 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ rev }) => {
             )}
           </button>
         </div>
+      ) : (
+        <div className="text-center text-xs">&nbsp;</div>
       )}
       <Google />
     </div>
