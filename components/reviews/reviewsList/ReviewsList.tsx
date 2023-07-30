@@ -25,6 +25,8 @@ interface IReviewsListProps {
 }
 
 export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
+  console.log(reviews);
+
   const reviewsListAnimation = {
     hidden: {
       x: -100,
