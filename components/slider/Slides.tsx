@@ -1,20 +1,19 @@
-
 import React from "react";
 import SliderCard from "./SliderCard";
 import {Data} from "@/components/slider/Sliders";
 
 type Props = {
-    data: Data[];
+  data: Data[];
 };
 
 function Slides({ data }: Props) {
-    return (
-        <div className=" flex w-full gap-6">
-            {data.map((data) => {
-                return <SliderCard key={data.img} data={data} />;
-            })}
-        </div>
-    );
+  return (
+    <div className=" flex w-full gap-6">
+      {data.map((data) => {
+        return <SliderCard key={data.img} data={data} />;
+      })}
+    </div>
+  );
 }
 
 export default Slides;
