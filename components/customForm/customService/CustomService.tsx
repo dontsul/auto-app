@@ -30,18 +30,18 @@ export const CustomService: FC<CustomServiceProps> = forwardRef<
       />
       <label
         htmlFor={service.value}
-        className="inline-flex items-center justify-between w-full p-2.5 shadow-lg text-gray-500 bg-slate-50 border-2 border-gray-200 rounded-lg cursor-pointer   peer-checked:border-[#111827] peer-checked:text-[#111827] peer-checked:bg-slate-400 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50 "
+        className="inline-flex items-center justify-between w-full p-2.5 shadow-lg text-gray-500 bg-slate-50 border-2 border-gray-200 rounded-lg cursor-pointer   peer-checked:border-[#111827] peer-checked:text-[#111827] peer-checked:bg-slate-400 hover:text-gray-600 hover:bg-gray-50 "
       >
         <div className="block p-1">
           <div className="w-full font-semibold text-sm">{service.text}</div>
         </div>
       </label>
       <div
-        className="absolute top-[30%] right-2 inline cursor-pointer"
+        className="absolute top-[25%] right-2 inline cursor-pointer bg-white rounded-md"
         onMouseEnter={handleStatusInfo}
         onMouseLeave={handleStatusInfo}
       >
-        <TbInfoSquareFilled size={23} color="#111827" />
+        <TbInfoSquareFilled size={26} color="#111827" />
       </div>
       <AnimatePresence>
         {statusInfo && <InfoServices info={service.info} />}
