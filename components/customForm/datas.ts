@@ -1,17 +1,99 @@
 import { IService } from "@/interfaces/form";
 
 export const services: IService[] = [
-  { value: "trailerHitch", text: "Trailer Hitch" },
-  { value: "bedCover", text: "Bed Cover" },
-  { value: "patriotLiner", text: "Patriot Liner" },
-  { value: "suspension", text: "Suspension" },
-  { value: "rustPrevention", text: "Rust Prevention" },
-  { value: "ceramicCoating", text: "Ceramic Coating" },
-  { value: "ppf", text: "PPF (Clear Bra)" },
-  { value: "detailing", text: "Detailing" },
-  { value: "vanPackages", text: "Van Packages" },
-  { value: "fleetManagement", text: "Fleet Management" },
-  { value: "otherService", text: "Other Service" },
+  {
+    value: "trailerHitch",
+    text: "Trailer Hitch",
+    info: {
+      titleInfo: "Title info",
+      textInfo:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    },
+  },
+  {
+    value: "bedCover",
+    text: "Bed Cover",
+    info: {
+      titleInfo: "Title info",
+      textInfo:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+  },
+  {
+    value: "patriotLiner",
+    text: "Patriot Liner",
+    info: {
+      titleInfo: "Title info",
+      textInfo: "text info ",
+    },
+  },
+  {
+    value: "suspension",
+    text: "Suspension",
+    info: {
+      titleInfo: "Title info",
+      textInfo:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+  },
+  {
+    value: "rustPrevention",
+    text: "Rust Prevention",
+    info: {
+      titleInfo: "Title info",
+      textInfo: "text info ",
+    },
+  },
+  {
+    value: "ceramicCoating",
+    text: "Ceramic Coating",
+    info: {
+      titleInfo: "Title info",
+      textInfo:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+  },
+  {
+    value: "ppf",
+    text: "PPF (Clear Bra)",
+    info: {
+      titleInfo: "Title info",
+      textInfo: "text info ",
+    },
+  },
+  {
+    value: "detailing",
+    text: "Detailing",
+    info: {
+      titleInfo: "Title info",
+      textInfo:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    },
+  },
+  {
+    value: "vanPackages",
+    text: "Van Packages",
+    info: {
+      titleInfo: "Title info",
+      textInfo: "text info ",
+    },
+  },
+  {
+    value: "fleetManagement",
+    text: "Fleet Management",
+    info: {
+      titleInfo: "Title info",
+      textInfo: "text info ",
+    },
+  },
+  {
+    value: "otherService",
+    text: "Other Service",
+    info: {
+      titleInfo: "Title info",
+      textInfo: "text info ",
+    },
+  },
 ];
 
 export const states = [

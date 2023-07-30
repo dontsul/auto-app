@@ -24,5 +24,8 @@ export interface IModel {
 export interface IService {
   value: string;
   text: string;
+  info: {
+    titleInfo: string;
+    textInfo: string;
+  };
 }
-

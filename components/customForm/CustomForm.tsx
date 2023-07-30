@@ -22,6 +22,9 @@ import { CustomSelect } from "../customSelect/CustomSelect";
 import metadata from "libphonenumber-js/metadata.min.json";
 import "react-phone-number-input/style.css";
 import toast from "react-hot-toast";
+import { InfoServices } from "./infoServices/InfoServices";
+import { TbInfoSquareFilled } from "react-icons/tb";
+import { CustomService } from "./customService/CustomService";
 
 const URL_SERVER = "http://localhost:4000/";
 const FILE_SIZE = 5 * 1024 * 1024;
@@ -97,6 +100,7 @@ export const CustomForm = () => {
     },
   });
   const [arrayImages, setArrayImages] = useState<File[]>([] as File[]);
+  const [statusInfo, setStatusInfo] = useState<boolean>(false);
   const onSubmit = handleSubmit((data: any) => {
     const formData = new FormData();
     formData.append("firstName", data.firstName);
@@ -116,6 +120,7 @@ export const CustomForm = () => {
     Object.values(data.file).forEach((f, i) => {
       formData.append(`file`, data.file[i]);
     });
+    console.log(data);
 
     fetch(`${URL_SERVER}api/form`, {
       method: "POST",
@@ -135,6 +140,10 @@ export const CustomForm = () => {
       });
   });
   const selectedPhotos = watch("file") as File[];
+
+  // const handleStatusInfo = () => {
+  //   setStatusInfo(!statusInfo);
+  // };
 
   const handleDeletePhoto = (photo: File) => {
     const updatedPhotos = arrayImages.filter((item) => item !== photo);
@@ -367,26 +376,18 @@ export const CustomForm = () => {
             <ul className="grid w-full gap-6 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
               {services.map((service: IService) => {
                 return (
-                  <li key={service.value}>
-                    <input
-                      {...register("services")}
-                      name="services"
-                      type="checkbox"
-                      value={service.value}
-                      className="hidden peer"
-                      id={service.value}
-                    />
-                    <label
-                      htmlFor={service.value}
-                      className="inline-flex items-center justify-between w-full p-2.5 shadow-lg text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer   peer-checked:border-[#111827] hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50 "
-                    >
-                      <div className="block p-1">
-                        <div className="w-full font-semibold text-sm">
-                          {service.text}
-                        </div>
-                      </div>
-                    </label>
-                  </li>
+                  <Controller
+                    key={service.value}
+                    name="services"
+                    control={control}
+                    render={({ field }) => (
+                      <CustomService
+                        {...field}
+                        service={service}
+                        register={register}
+                      />
+                    )}
+                  />
                 );
               })}
             </ul>
