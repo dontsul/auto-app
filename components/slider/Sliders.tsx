@@ -6,28 +6,29 @@ import SlideInfo from "@/components/slider/SlideInfo";
 import Slides from "@/components/slider/Slides";
 import Controls from "@/components/slider/Controls";
 
+
 export type Data = {
-  img: string;
-  title: string;
-  description: string;
-  location: string;
+    img: string;
+    title: string;
+    description: string;
+    location: string;
 };
 
 export type CurrentSlideData = {
-  data: Data;
-  index: number;
+    data: Data;
+    index: number;
 };
 
-export default function Sliders() {
-  const [data, setData] = React.useState<Data[]>(sliderData.slice(1));
-  const [transitionData, setTransitionData] = React.useState<Data>(
-      sliderData[0]
-  );
-  const [currentSlideData, setCurrentSlideData] =
-      React.useState<CurrentSlideData>({
-        data: initData,
-        index: 0,
-      });
+export default function Home() {
+    const [data, setData] = React.useState<Data[]>(sliderData.slice(1));
+    const [transitionData, setTransitionData] = React.useState<Data>(
+        sliderData[0]
+    );
+    const [currentSlideData, setCurrentSlideData] =
+        React.useState<CurrentSlideData>({
+            data: initData,
+            index: 0,
+        });
 
   return (
     <div
@@ -39,7 +40,7 @@ export default function Sliders() {
           transitionData={transitionData}
           currentSlideData={currentSlideData}
         />
-        <div className="  absolute h-full w-full">
+          <div className="  absolute z-20  h-full w-full">
           <div className=" flex h-full w-full grid-cols-4 flex-col md:grid">
             <div className=" col-span-4 mb-3 flex h-full flex-1 flex-col justify-end px-5 md:mb-0 md:justify-center md:px-10">
               <SlideInfo
@@ -68,26 +69,42 @@ export default function Sliders() {
   );
 }
 
-
 const sliderData = [
-  {
-    img: "/Slider/Slider1.jpeg",
-    location: " Style",
-    description:"App",
-    title: "ELEVATE",
-  },
-  {
-    img: "/Slider/Slider2.jpeg",
-    location: " Style",
-    description:"testes",
-    title: " YOUR-FUNCTIONALITY",
-  },
-  {
-    img: "/Slider/Slider3.jpeg",
-    location: " Style",
-    description:"lorem",
-    title: " YOUR",
-  },
+    {
+        img: "/1.png",
+        location: "TEST4",
+        description:
+            "TEST4",
+        title: "TEST4",
+    },
+    {
+        img: "/2.png",
+        title: "TEST3",
+        description:
+            "TEST3",
+        location: "TEST3",
+    },
+    {
+        img: "/3.png",
+        title: "TEST2",
+        description:
+            "TEST2",
+        location: "TEST2",
+    },
+    {
+        img: "/4.png",
+        title: "TEST1",
+        description:
+            "TEST1",
+        location: "TEST1",
+    },
+    {
+        img: "/Slider1.png",
+        title: "TEST",
+        description:
+            "TEST",
+        location: "TEST",
+    },
 ];
 
 const initData = sliderData[0];
