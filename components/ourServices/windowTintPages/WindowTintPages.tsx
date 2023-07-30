@@ -66,7 +66,6 @@ export function WindowTintPages() {
           Contact us
         </Title>
         <CustomForm />
-        <Reviews />
       </div>
     </div>
   );
