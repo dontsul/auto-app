@@ -27,7 +27,7 @@ export const BigImagePortfolio: FC<IBigImagePortfolioProps> = ({
   }, [openImage]);
   return (
     <div className="relative">
-      <div className=" z-30 w-[95%] lg:w-[70%] h-auto lg:h-[80%] fixed mx-auto -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 inline rounded-lg ">
+      <div className=" z-50 w-[95%] lg:w-[70%] h-auto lg:h-[80%] fixed mx-auto -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 inline rounded-lg ">
         <Image
           src={item.image}
           alt={item.title}
@@ -51,7 +51,7 @@ export const BigImagePortfolio: FC<IBigImagePortfolioProps> = ({
             transition={{
               duration: 0.8,
             }}
-            className={`fixed top-0 left-0 w-full  backdrop-blur-[8px] bg-[rgba(0,0,0,0.6)] overflow-y-hidden max-h-screen h-screen z-[10]`}
+            className={`fixed top-0 left-0 w-full  backdrop-blur-[2px] bg-[rgba(0,0,0,0.6)] overflow-y-hidden max-h-screen h-screen z-40`}
             onClick={() => {
               handleOpenImage(false);
             }}
