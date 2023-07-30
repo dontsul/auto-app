@@ -2,8 +2,8 @@ import { ReviewsList } from "./reviewsList/ReviewsList";
 import { Title } from "../title/Title";
 import { TitleBg } from "../titleBg/TitleBg";
 
-const apiKey = process.env.API_KEY;
-const placeId = process.env.PLACE_ID;
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+const placeId = process.env.NEXT_PUBLIC_PLACE_ID;
 
 const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`;
 
