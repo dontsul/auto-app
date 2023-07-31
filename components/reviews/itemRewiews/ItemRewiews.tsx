@@ -15,9 +15,11 @@ interface IItemRewiewsProps {
 export const ItemRewiews: FC<IItemRewiewsProps> = ({ review }) => {
   const [open, setOpen] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement | null>(null);
-  const { author_name, time, text, rating } = review;
+  const { author_title, review_timestamp, review_text, rating } = review;
 
-  const starIcons = Array.from({ length: rating }, (_, index) => (
+  const ratingToNumber = Math.ceil(Number(rating));
+
+  const starIcons = Array.from({ length: ratingToNumber }, (_, index) => (
     <AiFillStar size={20} color="#FBBC04" key={index} />
   ));
 
@@ -30,10 +32,10 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ review }) => {
   return (
     <div className="mx-auto my-2 py-2 px-4 min-w-[100px] max-w-[260px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px]">
       <h6 className="font-bold text-lg text-center text-black">
-        {author_name}
+        {author_title}
       </h6>
       <p className="text-center text-xs text-slate-600 mb-2">
-        {convertUnixTimestampToDate(time)}
+        {convertUnixTimestampToDate(Number(review_timestamp))}
       </p>
       <div className="flex items-center justify-center mb-2">{starIcons}</div>
       <motion.div
@@ -45,10 +47,10 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ review }) => {
         transition={{ duration: 0.5 }}
         className="text-start mb-2"
       >
-        {text}
+        {review_text}
       </motion.div>
 
-      {text.length > maxLength ? (
+      {review_text.length > maxLength ? (
         <div className="flex items-center justify-start">
           <button
             onClick={() => setOpen(!open)}

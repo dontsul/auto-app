@@ -8,16 +8,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export interface IReview {
-  author_name: string;
-  author_url: string;
-  language: string;
-  original_language: string;
-  profile_photo_url: string;
-  rating: number;
-  relative_time_description: string;
-  text: string;
-  time: number;
-  translated: boolean;
+  query: string;
+  name: string;
+  google_id: string;
+  place_id: string;
+  location_link: string;
+  reviews_link: string;
+  reviews_per_score: string;
+  reviews: string;
+  rating: string;
+  review_id: string;
+  author_link: string;
+  author_title: string;
+  author_id: string;
+  author_image: string;
+  review_text: string;
+  review_img_url: string;
+  review_img_urls: string;
+  owner_answer: string;
+  owner_answer_timestamp: string;
+  owner_answer_timestamp_datetime_utc: string;
+  review_link: string;
+  review_rating: string;
+  review_timestamp: string;
+  review_datetime_utc: string;
+  review_likes: string;
+  reviews_id: string;
 }
 
 interface IReviewsListProps {
@@ -45,7 +61,7 @@ export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
     centerPadding: "0px",
     slidesToShow: 4,
     speed: 500,
-    dots: true,
+    dots: false,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
