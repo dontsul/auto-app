@@ -78,14 +78,14 @@ const CommercialSliderData = [
         title: "TEST4",
     },
     {
-        img: "/Slider/Slider1.png",
+        img: "/Slider/Slider2.png",
         location: "TEST4",
         description:
             "TEST4",
         title: "TEST4",
     },
     {
-        img: "/Slider/Slider1.png",
+        img: "/Slider/Slider3.png",
         location: "TEST4",
         description:
             "TEST4",
