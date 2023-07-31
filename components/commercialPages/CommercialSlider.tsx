@@ -71,21 +71,21 @@ export default function CommercialSlider() {
 
 const CommercialSliderData = [
     {
-        img: "/Slider1.png",
+        img: "/Slider/Slider1.png",
         location: "TEST4",
         description:
             "TEST4",
         title: "TEST4",
     },
     {
-        img: "/Slider2.png",
+        img: "/Slider/Slider1.png",
         location: "TEST4",
         description:
             "TEST4",
         title: "TEST4",
     },
     {
-        img: "/Slider3.png",
+        img: "/Slider/Slider1.png",
         location: "TEST4",
         description:
             "TEST4",
