@@ -71,40 +71,27 @@ export default function Home() {
 
 const sliderData = [
     {
-        img: "/1.png",
-        location: "TEST4",
+        img: "/Slider/Slider1.png",
+        location: "Patriot Liner",
         description:
-            "TEST4",
-        title: "TEST4",
+            "Patriot Liner",
+        title: "Patriot Liner",
     },
     {
-        img: "/2.png",
-        title: "TEST3",
+        img: "/Slider/Slider2.png",
+        location: "Patriot Liner",
         description:
-            "TEST3",
-        location: "TEST3",
+            "We are thrilled to present PATRIOT LINER , our innovative new protective coating brand. Crafted by veterans and proudly made in America, Patriot Liner carries more than 30 years of industry experience.",
+        title: "Patriot Liner",
     },
     {
-        img: "/3.png",
-        title: "TEST2",
+        img: "/Slider/Slider3.png",
+        location: "ABOUT US",
         description:
-            "TEST2",
-        location: "TEST2",
+            "Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. ",
+        title: "ABOUT US",
     },
-    {
-        img: "/4.png",
-        title: "TEST1",
-        description:
-            "TEST1",
-        location: "TEST1",
-    },
-    {
-        img: "/Slider1.png",
-        title: "TEST",
-        description:
-            "TEST",
-        location: "TEST",
-    },
+
 ];
 
 const initData = sliderData[0];

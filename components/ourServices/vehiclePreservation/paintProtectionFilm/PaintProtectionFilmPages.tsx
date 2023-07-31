@@ -12,6 +12,7 @@ import {
   text4,
 } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/ceramicCoatingsData/CeramicCoatingsData";
 import {
+  PaintProtectionFilm, PaintProtectionFilm2, PaintProtectionFilm3, PaintProtectionFilm4,
   paintProtectionFilmData,
   paintProtectionFilmText,
 } from "@/components/ourServices/vehiclePreservation/paintProtectionFilm/paintProtectionFilmData/PaintProtectionFilmDatas";
@@ -48,7 +49,7 @@ export function PaintProtectionFilmPages() {
         <div className="m-5 rounded-md" role="group">
           <button
             type="button"
-            className={`w-full py-5 text-sm font-medium ${
+            className={`w-full py-5 rounded text-sm font-medium ${
               currentText === "FULL BODY"
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
@@ -61,7 +62,7 @@ export function PaintProtectionFilmPages() {
           </button>
           <button
             type="button"
-            className={`w-full py-5 text-sm font-medium ${
+            className={`w-full py-5 rounded text-sm font-medium ${
               currentText === "FULL FRONT"
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
@@ -74,7 +75,7 @@ export function PaintProtectionFilmPages() {
           </button>
           <button
             type="button"
-            className={`w-full py-5 text-sm font-medium ${
+            className={`w-full py-5 rounded text-sm font-medium ${
               currentText === "TRACK PACK"
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
@@ -87,7 +88,7 @@ export function PaintProtectionFilmPages() {
           </button>
           <button
             type="button"
-            className={`w-full py-5 text-sm font-medium ${
+            className={`w-full py-5 rounded text-sm font-medium ${
               currentText === "FORT KNOX"
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
@@ -129,7 +130,8 @@ export function PaintProtectionFilmPages() {
             {paintProtectionFilmText.map((item) => {
               return (
                 <React.Fragment key={uuidv4()}>
-                  {currentText === item.title && (
+                  {currentText === item.value && (
+
                     <h1 className="text-[13px] text-yellow-500 font-semibold">
                       {item.title}
                     </h1>
@@ -139,40 +141,42 @@ export function PaintProtectionFilmPages() {
             })}
 
             <div>
+
               <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                 {currentText === "FULL BODY" && (
                   <React.Fragment key={uuidv4()}>
                     <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                      1-YEAR
+                       FULL FRONT
+
                     </h2>
 
-                    <ListTintPages text={text1} />
+                    <ListTintPages text={PaintProtectionFilm} />
                   </React.Fragment>
                 )}
                 {currentText === "FULL FRONT" && (
                   <React.Fragment key={uuidv4()}>
                     <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                      4-YEAR
+                      TRACK PACK
                     </h2>
 
-                    <ListTintPages text={text2} />
+                    <ListTintPages text={PaintProtectionFilm2} />
                   </React.Fragment>
                 )}
                 {currentText === "TRACK PACK" && (
                   <React.Fragment key={uuidv4()}>
                     <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                      4-YEAR
+                      FULL BODY
                     </h2>
 
-                    <ListTintPages text={text3} />
+                    <ListTintPages text={PaintProtectionFilm3} />
                   </React.Fragment>
                 )}
                 {currentText === "FORT KNOX" && (
                   <React.Fragment key={uuidv4()}>
                     <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                      8-YEAR
+                      FORT KNOX
                     </h2>
-                    <ListTintPages text={text4} />
+                    <ListTintPages text={PaintProtectionFilm4} />
                   </React.Fragment>
                 )}
               </ul>

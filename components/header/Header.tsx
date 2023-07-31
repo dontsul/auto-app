@@ -57,7 +57,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="overflow-x-hidden lg:overflow-visible px-8 pr-0 lg:px-0 bg-[#111827] sticky top-0 z-10 lg:z-30 grid grid-cols-3 justify-between lg:grid-cols-[auto_1fr_auto] shadow-yellow-200 shadow-md hover:shadow-lg hover:shadow-yellow-300 transition">
+    <header className="z-30 overflow-x-hidden lg:overflow-visible px-8 pr-0 lg:px-0 bg-[#111827] sticky top-0 z-10 lg:z-30 grid grid-cols-3 justify-between lg:grid-cols-[auto_1fr_auto] shadow-yellow-200 shadow-md hover:shadow-lg hover:shadow-yellow-300 transition">
       <BurgerMenu openMenu={openMenu} handleMenu={handleMenu} />
       <div className="lg:order-1 flex items-center justify-center py-2">
         <Link href={`/`}>

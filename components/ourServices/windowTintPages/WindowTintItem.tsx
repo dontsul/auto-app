@@ -17,10 +17,10 @@ export function WindowTintItem (){
 
     return(
         <div >
-            <div className="flex ">
+            <div className="flex justify-center ">
                 <button
                     type="button"
-                    className={`w-full py-2 text-sm font-medium ${
+                    className={` py-2 px-4 font-medium rounded ${
                         currentText === 'CS' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('CS', 'path-to-prime-cs-image.jpg')}
@@ -29,7 +29,7 @@ export function WindowTintItem (){
                 </button>
                 <button
                     type="button"
-                    className={`w-full py-2 text-sm font-medium ${
+                    className={`py-2 px-4 font-medium rounded ${
                         currentText === 'XR' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('XR', 'path-to-prime-xr-image.jpg')}
@@ -38,7 +38,7 @@ export function WindowTintItem (){
                 </button>
                 <button
                     type="button"
-                    className={`w-full py-2 text-sm font-medium ${
+                    className={`py-2 px-4 font-medium rounded ${
                         currentText === 'SD' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('SD', 'path-to-prime-xr-image.jpg')}
@@ -47,7 +47,7 @@ export function WindowTintItem (){
                 </button>
                 <button
                     type="button"
-                    className={`w-full py-2 text-sm font-medium ${
+                    className={`py-2 px-4 font-medium rounded ${
                         currentText === 'CSS' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('CSS', 'path-to-prime-cs-image.jpg')}
@@ -56,7 +56,7 @@ export function WindowTintItem (){
                 </button>
                 <button
                     type="button"
-                    className={`w-full py-2 text-sm font-medium ${
+                    className={`py-2 px-4 font-medium rounded ${
                         currentText === 'XRR' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('XRR', 'path-to-prime-xr-image.jpg')}
@@ -66,23 +66,14 @@ export function WindowTintItem (){
             </div>
 
             <div>
-                {currentText === 'CS' && (
-                    <WindowTintCar/>
-                )}
-                {currentText === 'XR' && (
-                    <WindowTintTruck/>
-                )}
-                {currentText === 'SD' && (
-                    <WindowTintSUV/>
-                )}
-                {currentText === 'CSS' && (
-                    <WindowTintFront/>
-                )}
-                {currentText === 'XRR' && (
-                    <WindowTintWindshield/>
-                )}
+                {currentText === 'CS' && <WindowTintCar />}
+                {currentText === 'XR' && <WindowTintTruck />}
+                {currentText === 'SD' && <WindowTintSUV />}
+                {currentText === 'CSS' && <WindowTintFront />}
+                {currentText === 'XRR' && <WindowTintWindshield />}
             </div>
         </div>
+
 
     );
 }

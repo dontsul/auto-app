@@ -1,8 +1,8 @@
 import {motion} from "framer-motion";
 import Image from "next/image";
-import imagesTest from "@/public/CARBON-Car.webp";
-import imagesTest2 from "@/public/Ceramic-Windshield.webp";
-import imagesTest3 from "@/public/CERAMIC-Plus-Car.webp";
+import imagesTest from "@/public/Ceramic/CARBON-Car.webp";
+import imagesTest2 from "@/public/Ceramic/Ceramic-Windshield.webp";
+import imagesTest3 from "@/public/Ceramic/CERAMIC-Plus-Car.webp";
 import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
 import React, {useState} from "react";
 import {textList, textList2, textList3} from "@/components/ourServices/windowTintPages/WindowTintPages";
@@ -33,10 +33,11 @@ export function WindowTintCar(){
     return(
         <div className=" pb-20 grid lg:grid-cols-[140px_auto_240px] gap-12  justify-center">
 
-            <div className=" m-5 rounded-md " role="group">
+            <div className="m-5 rounded-md" role="group">
                 <button
+
                     type="button"
-                    className={`w-full py-5 text-sm font-medium ${
+                    className={`w-full py-5 rounded text-sm font-medium ${
                         currentText === 'PRIME CS' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('PRIME CS', 'path-to-prime-cs-image.jpg')}
@@ -45,7 +46,7 @@ export function WindowTintCar(){
                 </button>
                 <button
                     type="button"
-                    className={`w-full py-5 text-sm font-medium ${
+                    className={`w-full py-5 text-sm rounded font-medium ${
                         currentText === 'PRIME XR' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('PRIME XR', 'path-to-prime-xr-image.jpg')}
@@ -54,7 +55,7 @@ export function WindowTintCar(){
                 </button>
                 <button
                     type="button"
-                    className={`w-full py-5 text-sm font-medium ${
+                    className={`w-full py-5 text-sm rounded font-medium ${
                         currentText === 'PRIME SD' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('PRIME SD', 'path-to-prime-xr-image.jpg')}

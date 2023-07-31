@@ -46,7 +46,7 @@ export function CeramicCoatingsPages() {
         <div className="m-5 rounded-md" role="group">
           <button
             type="button"
-            className={`w-full py-5 text-sm font-medium ${
+            className={`w-full py-5 rounded text-sm font-medium ${
               currentText === "FULL FRONT"
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
@@ -59,7 +59,7 @@ export function CeramicCoatingsPages() {
           </button>
           <button
             type="button"
-            className={`w-full py-5 text-sm font-medium ${
+            className={`w-full py-5 rounded text-sm font-medium ${
               currentText === "TRACK PACK"
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
@@ -72,7 +72,7 @@ export function CeramicCoatingsPages() {
           </button>
           <button
             type="button"
-            className={`w-full py-5 text-sm font-medium ${
+            className={`w-full py-5 rounded text-sm font-medium ${
               currentText === "FULL BODY"
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
@@ -85,7 +85,7 @@ export function CeramicCoatingsPages() {
           </button>
           <button
             type="button"
-            className={`w-full py-5 text-sm font-medium ${
+            className={`w-full py-5 rounded text-sm font-medium ${
               currentText === "FORT KNOX"
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
@@ -127,7 +127,7 @@ export function CeramicCoatingsPages() {
             {ceramicCoatingsPagesText.map((item) => {
               return (
                 <React.Fragment key={uuidv4()}>
-                  {currentText === item.title && (
+                  {currentText === item.value && (
                     <h1 className="text-[13px] text-yellow-500 font-semibold">
                       {item.title}
                     </h1>
@@ -145,6 +145,7 @@ export function CeramicCoatingsPages() {
                     </h2>
 
                     <ListTintPages text={text1} />
+
                   </>
                 )}
                 {currentText === "TRACK PACK" && (

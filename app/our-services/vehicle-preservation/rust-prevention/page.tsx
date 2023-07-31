@@ -1,7 +1,7 @@
 import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
 import Image from "next/image";
-import imageAuto from "@/public/1.png";
+import imageAuto from "@/public/images/aboutSection.png";
 
 export default function RustPrevention() {
   return (

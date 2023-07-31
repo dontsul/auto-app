@@ -116,14 +116,14 @@ export const Menu: FC<IMenuProps> = ({
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
                 className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line  ${
-                  pathname === "/financing" ? "text-yellow-500 active-line" : ""
+                  pathname === "/commercial" ? "text-yellow-500 active-line" : ""
                 }`}
-                href={`/financing`}
+                href={`/commercial`}
                 onClick={() => {
                   handleMenu(false);
                 }}
               >
-                Financing
+                Commercial
               </Link>
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">

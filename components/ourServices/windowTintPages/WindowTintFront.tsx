@@ -34,9 +34,10 @@ export function WindowTintFront(){
         <div className=" pb-20 grid lg:grid-cols-[140px_auto_240px] gap-12  justify-center">
 
             <div className=" m-5 rounded-md " role="group">
+
                 <button
                     type="button"
-                    className={`w-full py-5 text-sm font-medium ${
+                    className={`w-full py-5 text-sm rounded font-medium ${
                         currentText === 'CS' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('CS', 'path-to-prime-cs-image.jpg')}
@@ -45,7 +46,7 @@ export function WindowTintFront(){
                 </button>
                 <button
                     type="button"
-                    className={`w-full py-5 text-sm font-medium ${
+                    className={`w-full py-5 text-sm rounded font-medium ${
                         currentText === 'XR' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('XR', 'path-to-prime-xr-image.jpg')}
@@ -54,7 +55,7 @@ export function WindowTintFront(){
                 </button>
                 <button
                     type="button"
-                    className={`w-full py-5 text-sm font-medium ${
+                    className={`w-full py-5 text-sm rounded font-medium ${
                         currentText === 'SD' ? 'text-white bg-gray-900' : 'text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white'
                     }`}
                     onClick={() => handleButtonClick('SD', 'path-to-prime-xr-image.jpg')}
