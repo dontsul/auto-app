@@ -1,8 +1,10 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { IPortfolioList } from "@/interfaces/portfolio";
 import { CgClose } from "react-icons/cg";
+import { Spinner } from "@/components/spinner/Spinner";
+
 interface IBigImagePortfolioProps {
   item: IPortfolioList;
   openImage: boolean;
@@ -25,21 +27,24 @@ export const BigImagePortfolio: FC<IBigImagePortfolioProps> = ({
       document.body.style.overflowY = "auto";
     };
   }, [openImage]);
+
+  const [loading, setLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
   return (
-    <div className="relative">
-      <div className=" z-50 w-[95%] lg:w-[70%] h-auto lg:h-[80%] fixed mx-auto -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 inline rounded-lg  ">
+    <div className="absolute top-0 left-0 w-full h-full">
+      {loading && <Spinner />}
+      <div className=" z-50 w-[95%] lg:w-[70%] h-auto lg:h-[80%] fixed mx-auto -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 inline rounded-lg">
         <Image
+          onLoad={handleImageLoad}
           src={item.image}
           alt={item.title}
           width={1000}
           height={600}
-          className="max-w-full w-auto max-h-full h-full  rounded-lg z-[100] lg:-translate-x-2/4 lg:-translate-y-2/4 lg:left-2/4 lg:top-2/4 lg:absolute"
-        />
-        <CgClose
-          color="white"
-          size={40}
-          className="absolute top-4 right-4 lg:top-[-10%] lg:right-[-20%] cursor-pointer z-[100]"
-          onClick={() => handleOpenImage(false)}
+          className="max-w-full w-auto max-h-[500px] lg:max-h-full h-full  rounded-lg z-[100] lg:-translate-x-2/4 lg:-translate-y-2/4 lg:left-2/4 lg:top-2/4 lg:absolute mx-auto"
         />
       </div>
       <AnimatePresence>
@@ -56,7 +61,12 @@ export const BigImagePortfolio: FC<IBigImagePortfolioProps> = ({
               handleOpenImage(false);
             }}
           >
-            {" "}
+            <CgClose
+              color="white"
+              size={40}
+              className="absolute top-4 right-4  cursor-pointer z-[100]"
+              onClick={() => handleOpenImage(false)}
+            />{" "}
           </motion.div>
         )}
       </AnimatePresence>
