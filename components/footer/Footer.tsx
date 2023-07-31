@@ -8,6 +8,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import MyMapPage from "@/components/googleMaps/MyMap";
+import Link from "next/link";
 
 const socialList = [
   {
@@ -108,9 +109,9 @@ export const Footer: React.FC = () => {
               </svg>
               <a
                 className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
-                href="mailto:info@mailauto.com"
+                href="mailto:CapitalUpfitters@gmail.com"
               >
-                info@mailauto.com
+                CapitalUpfitters@gmail.com
               </a>
             </p>
             <p className="mb-4 flex items-center justify-center md:justify-start">
@@ -127,9 +128,9 @@ export const Footer: React.FC = () => {
               </svg>
               <a
                 className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
-                href="tel:123-456-7891"
+                href="tel:301-304-141"
               >
-                123-456-7891
+                301-304-1419
               </a>
             </p>
             <p className="flex items-center justify-center md:justify-start">
@@ -146,9 +147,9 @@ export const Footer: React.FC = () => {
               </svg>
               <a
                 className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
-                href="tel:123-456-7891"
+                href="tel:301-304-1419"
               >
-                123-456-7891
+                301-304-1419
               </a>
             </p>
           </div>
@@ -157,24 +158,24 @@ export const Footer: React.FC = () => {
               Location
             </h6>
             <p className="mb-4">
-              <a className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
-                Pricing
-              </a>
+              <Link      href={`/`} className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
+                Home
+              </Link>
             </p>
             <p className="mb-4">
-              <a className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
-                Settings
-              </a>
+              <Link href={`/about`} className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line" >
+                About
+              </Link>
             </p>
             <p className="mb-4">
-              <a className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
-                Orders
-              </a>
+              <Link  href={`/our-services/patriot-liner`} className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
+                Our Services
+              </Link>
             </p>
             <p>
-              <a className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
-                Help
-              </a>
+              <Link href={`/portfolio`} className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
+                Portfolio
+              </Link>
             </p>
           </div>
 
