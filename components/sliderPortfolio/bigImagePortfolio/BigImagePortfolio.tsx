@@ -33,7 +33,7 @@ export const BigImagePortfolio: FC<IBigImagePortfolioProps> = ({
           alt={item.title}
           width={1000}
           height={600}
-          className="max-w-full w-auto max-h-full h-full  rounded-lg z-[100] lg:-translate-x-2/4 lg:-translate-y-2/4 lg:left-2/4 lg:top-2/4 lg:absolute border-slate-50 border-[2px]"
+          className="max-w-full w-auto max-h-full h-full  rounded-lg z-[100] lg:-translate-x-2/4 lg:-translate-y-2/4 lg:left-2/4 lg:top-2/4 lg:absolute"
         />
         <CgClose
           color="white"
