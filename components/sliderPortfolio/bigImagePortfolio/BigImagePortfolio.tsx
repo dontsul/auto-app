@@ -27,13 +27,13 @@ export const BigImagePortfolio: FC<IBigImagePortfolioProps> = ({
   }, [openImage]);
   return (
     <div className="relative">
-      <div className=" z-50 w-[95%] lg:w-[70%] h-auto lg:h-[80%] fixed mx-auto -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 inline rounded-lg ">
+      <div className=" z-50 w-[95%] lg:w-[70%] h-auto lg:h-[80%] fixed mx-auto -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 inline rounded-lg  ">
         <Image
           src={item.image}
           alt={item.title}
           width={1000}
           height={600}
-          className="max-w-full w-auto max-h-full h-full  rounded-lg z-[100] lg:-translate-x-2/4 lg:-translate-y-2/4 lg:left-2/4 lg:top-2/4 lg:absolute"
+          className="max-w-full w-auto max-h-full h-full  rounded-lg z-[100] lg:-translate-x-2/4 lg:-translate-y-2/4 lg:left-2/4 lg:top-2/4 lg:absolute border-slate-50 border-[2px]"
         />
         <CgClose
           color="white"

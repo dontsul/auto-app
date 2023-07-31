@@ -54,7 +54,7 @@ export const MainPortfolio = () => {
             <Link href={link} className="z-30">
               <figure className="relative h-72 w-full brightness-[.4] hover:brightness-75 transition duration-500 hover:scale-110 rounded-xl">
                 <Image
-                  className="h-full w-full rounded-xl "
+                  className="h-full w-full rounded-xl object-cover"
                   src={image}
                   alt={title}
                   width={500}
