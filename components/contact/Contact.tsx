@@ -4,7 +4,7 @@ import { CustomForm } from "../customForm/CustomForm";
 
 export const Contact = () => {
   return (
-    <section className="container py-16 relative h-full">
+    <section className="container py-16 relative h-full" id="form">
       <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[112px] lg:mt-[198px] mb-14">
         Start Your Service <span className="text-yellow-500">Today</span>
       </Title>
