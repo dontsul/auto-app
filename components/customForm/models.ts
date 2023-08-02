@@ -1859,31 +1859,7 @@ export const models: ICarModels = {
     { value: "tasmin", text: "Tasmin" },
     { value: "tuscan", text: "Tuscan" },
   ],
-  uaz: [
-    {
-      value: "make",
-      text: "Choose model",
-      hidden: true,
-    },
-    { value: "3151", text: "3151" },
-    { value: "31512", text: "31512" },
-    { value: "3153", text: "3153" },
-    { value: "3159", text: "3159" },
-    { value: "3160", text: "3160" },
-    { value: "3162", text: "3162" },
-    { value: "3303", text: "3303" },
-    { value: "3741", text: "3741" },
-    { value: "3909", text: "3909" },
-    { value: "3962", text: "3962" },
-    { value: "39094", text: "39094" },
-    { value: "39099", text: "39099" },
-    { value: "452", text: "452" },
-    { value: "469", text: "469" },
-    { value: "hunter", text: "Hunter" },
-    { value: "patriot", text: "Patriot" },
-    { value: "pickup", text: "Pickup" },
-    { value: "simbir", text: "Simbir" },
-  ],
+
   vauxhall: [
     {
       value: "make",
@@ -2051,5 +2027,13 @@ export const models: ICarModels = {
     { value: "xc60", text: "XC60" },
     { value: "xc70", text: "XC70" },
     { value: "xc90", text: "XC90" },
+  ],
+  other: [
+    {
+      value: "make",
+      text: "Choose model",
+      hidden: true,
+    },
+    { value: "other", text: "Other" },
   ],
 };

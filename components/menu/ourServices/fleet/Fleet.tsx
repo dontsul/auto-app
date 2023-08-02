@@ -76,7 +76,7 @@ export const Fleet: FC<IFleetProps> = ({
             }
             exit={!isDesktop ? { height: 0 } : { opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className={`overflow-hidden pl-4 lg:px-4 static top-14  lg:shadow-xl lg:absolute lg:left-[192px] lg:bg-[#111827] lg:w-full min-w-auto lg:min-w-[220px] lg:overflow-visible`}
+            className={`overflow-hidden pl-4 lg:px-4 static lg:shadow-xl lg:absolute lg:left-[212px] lg:bg-[#111827] lg:w-full min-w-auto lg:min-w-[220px] lg:overflow-visible`}
           >
             <li className="mt-0 pt-2  w-auto px-4 py-1 lg:mt-4">
               <Link

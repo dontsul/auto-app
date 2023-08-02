@@ -73,10 +73,10 @@ export const makes = [
   { value: "trabant", text: "Trabant" },
   { value: "triumph", text: "Triumph" },
   { value: "tvr", text: "Tvr" },
-  { value: "uaz", text: "Uaz" },
   { value: "vauxhall", text: "Vauxhall" },
   { value: "vector", text: "Vector" },
   { value: "venturi", text: "Venturi" },
   { value: "volkswagen", text: "Volkswagen" },
   { value: "volvo", text: "Volvo" },
+  { value: "other", text: "Other" },
 ];
