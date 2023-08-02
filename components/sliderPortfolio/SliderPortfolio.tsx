@@ -78,7 +78,7 @@ export const SliderPortfolio: FC<ISliderPortfolio> = ({ portfolioList }) => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center mb-32 overflow-x-hidden ">
+    <div className="relative flex items-center justify-center mb-32 overflow-x-hidden">
       <AnimatePresence initial={false} custom={direction} mode="wait">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center max-w-full"

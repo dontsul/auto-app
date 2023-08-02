@@ -95,9 +95,101 @@ export const OurServices: FC<IOurServicesProps> = ({
             }
             exit={!isDesktop ? { height: 0 } : { opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className={`overflow-hidden lg:overflow-visible pl-2 lg:absolute lg:bg-[#111827] top-9 lg:shadow-xl lg:px-2 lg:py-4`}
+            className={`overflow-hidden lg:overflow-visible pl-2 lg:absolute lg:bg-[#111827] top-9 lg:shadow-xl lg:px-4 lg:py-4 space-y-0 lg:space-y-2`}
           >
-            <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:mt-6">
+            <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
+              <Link
+                className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/hitches"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
+                href={`/our-services/hitches`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
+              >
+                Hitches
+              </Link>
+            </li>
+            <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
+              <Link
+                className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/rust-prevention"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
+                href={`/our-services/rust-prevention`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
+              >
+                Rust Prevention
+              </Link>
+            </li>
+            <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
+              <Link
+                className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/patriot-liner"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
+                href={`/our-services/patriot-liner`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
+              >
+                Spray in Bedliner
+              </Link>
+            </li>
+            <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
+              <Link
+                className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/ppf"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
+                href={`/our-services/ppf`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
+              >
+                PPF / Clear Bra
+              </Link>
+            </li>
+            <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
+              <Link
+                className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/ceramic-coatings"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
+                href={`/our-services/ceramic-coatings`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
+              >
+                Ceramic Coatings
+              </Link>
+            </li>
+            <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
+              <Link
+                className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
+                  pathname === "/our-services/accessories"
+                    ? "text-yellow-500 active-line"
+                    : ""
+                }`}
+                href={`/our-services/accessories`}
+                onClick={() => {
+                  handleMenu(false);
+                }}
+              >
+                Accessories
+              </Link>
+            </li>
+            {/* --- */}
+
+            {/* <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:mt-6">
               <Link
                 className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
                   pathname === "/our-services/patriot-liner"
@@ -111,25 +203,25 @@ export const OurServices: FC<IOurServicesProps> = ({
               >
                 Patriot Liner
               </Link>
-            </li>
+            </li> */}
 
-            <Preservation
+            {/* <Preservation
               handleMenu={handleMenu}
               openPreservation={openPreservation}
               handlePreservation={handlePreservation}
               isDesktop={isDesktop}
-            />
+            /> */}
 
-            <Fleet
-              handleMenu={handleMenu}
-              openFleet={openFleet}
-              handleFleet={handleFleet}
-              isDesktop={isDesktop}
-            />
             <Styling
               handleMenu={handleMenu}
               openStyling={openStyling}
               handleStyling={handleStyling}
+              isDesktop={isDesktop}
+            />
+            <Fleet
+              handleMenu={handleMenu}
+              openFleet={openFleet}
+              handleFleet={handleFleet}
               isDesktop={isDesktop}
             />
           </motion.ul>
