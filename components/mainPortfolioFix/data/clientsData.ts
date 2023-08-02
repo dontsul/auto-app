@@ -21,44 +21,44 @@ export const clientsHeading: string = 'Some of the brands I worked with';
 export const clientsData: ClientDataItem[] = [
 	{
 		id: uuidv4(),
-		title: 'TEST',
+		title: 'patriot Liner',
 		img: patriotLiner,
 	},
-	{
-		id: uuidv4(),
-		title: 'TEST1',
-		img: wheelsTires,
-	},
-	{
-		id: uuidv4(),
-		title: 'TEST2',
-		img: ceramicCoatings,
-	},
-	{
-		id: uuidv4(),
-		title: 'TEST3',
-
-		img: fleet,
-	},
-	{
-		id: uuidv4(),
-		title: 'TEST4',
-		img: hitches,
-	},
-	{
-		id: uuidv4(),
-		title: 'TEST5',
-		img: undercoating,
-	},
-	{
-		id: uuidv4(),
-		title: 'TEST6',
-
-		img: CanonImage,
-	},
-	{
-		id: uuidv4(),
-		title: 'TEST7',
-		img: PumaImage,
-	},
+	// {
+	// 	id: uuidv4(),
+	// 	title: 'wheels Tires',
+	// 	img: wheelsTires,
+	// },
+	// {
+	// 	id: uuidv4(),
+	// 	title: 'ceramic Coatings',
+	// 	img: ceramicCoatings,
+	// },
+	// {
+	// 	id: uuidv4(),
+	// 	title: 'fleet',
+	//
+	// 	img: fleet,
+	// },
+	// {
+	// 	id: uuidv4(),
+	// 	title: 'hitches',
+	// 	img: hitches,
+	// },
+	// {
+	// 	id: uuidv4(),
+	// 	title: 'undercoating',
+	// 	img: undercoating,
+	// },
+	// {
+	// 	id: uuidv4(),
+	// 	title: 'Canon Image',
+	//
+	// 	img: CanonImage,
+	// },
+	// {
+	// 	id: uuidv4(),
+	// 	title: 'Puma Image',
+	// 	img: PumaImage,
+	// },
 ];

@@ -4,10 +4,10 @@ import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
 
 const selectOptions = [
-	'TEST1',
-	'TEST2',
-	'TEST3',
-	'TEST4',
+	'PAT',
+	'TAE',
+	'HFD',
+	'DKS',
 ];
 
 interface HireMeModalProps {

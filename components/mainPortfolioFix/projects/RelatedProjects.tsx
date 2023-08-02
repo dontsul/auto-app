@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
-
+import patriotLiner from "@/public/portfolio/patriot-liner/main.jpg";
+import wheelsTires from "@/public/portfolio/wheels-tires/wt1.jpg";
+import ceramicCoatings from "@/public/portfolio/ceramic-coatings/cc7.jpg";
+import fleet from "@/public/portfolio/fleet/f1.jpg";
+import hitches from "@/public/portfolio/hitches/h1.jpg";
+import undercoating from "@/public/portfolio/undercoating/u4.jpg";
 interface Project {
 	id: string;
 	title: string;
@@ -17,23 +22,23 @@ const RelatedProject: RelatedProjectData = {
 	Projects: [
 		{
 			id: uuidv4(),
-			title: 'TEST1',
-			img: '/public/Ceramic/Carbon-2-front-1.webp',
+			title: 'liner',
+			img: '/portfolio/patriot-liner/main.jpg',
 		},
 		{
 			id: uuidv4(),
-			title: 'TEST2',
-			img: '/public/Ceramic/Carbon-2-front-1.webp',
+			title: 'liner',
+			img: '/portfolio/patriot-liner/main.jpg',
 		},
 		{
 			id: uuidv4(),
-			title: 'TEST3',
-			img: '/public/Ceramic/Carbon-2-front-1.webp',
+			title: 'liner',
+			img: '/portfolio/patriot-liner/main.jpg',
 		},
 		{
 			id: uuidv4(),
-			title: 'TEST4',
-			img: '/public/Ceramic/Carbon-2-front-1.webp',
+			title: 'liner',
+			img: '/portfolio/patriot-liner/main.jpg',
 		},
 	],
 };

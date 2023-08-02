@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, {FC} from "react";
+import React, { FC } from 'react';
 
 interface ProjectProps {
 	id: number;
@@ -23,7 +23,6 @@ const ProjectSingle: FC<ProjectProps> = (props) => {
 				delay: 0.15,
 			}}
 		>
-
 			<Link href={`portfolio/${props.id}`} passHref>
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
 					<div>
@@ -41,8 +40,9 @@ const ProjectSingle: FC<ProjectProps> = (props) => {
 							{props.title}
 						</p>
 						<span className="text-lg text-ternary-dark dark:text-ternary-light">
-                            {props.category}
-                        </span>
+							{props.category}
+						</span>
+
 					</div>
 				</div>
 			</Link>
