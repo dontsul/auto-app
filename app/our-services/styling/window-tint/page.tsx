@@ -1,10 +1,12 @@
-import {WindowTintPages} from "@/components/ourServices/windowTintPages/WindowTintPages";
+import { WindowTintPages } from "@/components/ourServices/windowTintPages/WindowTintPages";
+import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
+import { listXpel } from "@/data/xpelData";
 
 export default function WindowTint() {
   return (
-      <div>
-        <WindowTintPages />
-      </div>
-
+    <div>
+      <WindowTintPages />
+      <DoubleSidedCard list={listXpel} />
+    </div>
   );
 }

@@ -4,6 +4,8 @@ import imageAuto from "@/public/1.png";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import { PaintProtectionFilmPages } from "@/components/ourServices/vehiclePreservation/paintProtectionFilm/PaintProtectionFilmPages";
+import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
+import { listXpel } from "@/data/xpelData";
 
 export const metadata = {
   title: "Paint Protection Film",
@@ -59,6 +61,7 @@ export default function Ppf() {
       </TextPage>
 
       <PaintProtectionFilmPages />
+      <DoubleSidedCard list={listXpel} />
       <Title tag="h4" cn="mb-10">
         Contact us
       </Title>

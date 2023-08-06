@@ -2,6 +2,8 @@ import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
 import Image from "next/image";
 import imageAuto from "@/public/images/aboutSection.png";
+import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
+import { listXpel } from "@/data/xpelData";
 
 export default function Commercial() {
   return (
@@ -28,6 +30,7 @@ export default function Commercial() {
           />
         </div>
       </div>
+      <DoubleSidedCard list={listXpel} />
       <Title tag="h4" cn="mb-10">
         Form
       </Title>

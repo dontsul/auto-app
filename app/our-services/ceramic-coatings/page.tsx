@@ -5,8 +5,8 @@ import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import smmax from "@/public/SX-Max.png";
 import { CeramicCoatingsPages } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/CeramicCoatingsPages";
-import { XpelCoatings } from "@/components/xpelCoatings/XpelCoatings";
-
+import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
+import { listXpel } from "@/data/xpelData";
 export const metadata: Metadata = {
   title: "Ceramic Coatings",
   description:
@@ -58,7 +58,7 @@ export default function CeramicCoatings() {
         <ImagePage img={smmax} />
       </div>
       <CeramicCoatingsPages />
-      <XpelCoatings />
+      <DoubleSidedCard list={listXpel} />
       <div className="flex items-center justify-center ">
         <iframe
           width="1000"

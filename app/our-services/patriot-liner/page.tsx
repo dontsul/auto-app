@@ -4,6 +4,8 @@ import imageAuto from "@/public/TestLi.jpeg";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import { Metadata } from "next";
+import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
+import { listXpel } from "@/data/xpelData";
 
 export const metadata: Metadata = {
   title: "Patriot Liner",
@@ -50,6 +52,7 @@ export default function PatriotLiner() {
 
         <ImagePage img={imageAuto} />
       </div>
+      <DoubleSidedCard list={listXpel} />
       <Title tag="h4" cn="mb-10">
         Contact us
       </Title>
