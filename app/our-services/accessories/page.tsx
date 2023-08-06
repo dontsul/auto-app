@@ -29,12 +29,14 @@ export default function Accessories() {
             className="rounded-md"
           />
         </div>
-      <PartnersSlider />
-      <Title tag="h4" cn="mb-10">
-        Form
-      </Title>
+      </div>
+
+        <PartnersSlider />
+          <Title tag="h4" cn="mb-10">
+              Form
+          </Title>
       <CustomForm />
     </div>
-    </div>
+
   );
 }
