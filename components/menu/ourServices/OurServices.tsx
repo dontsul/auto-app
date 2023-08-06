@@ -187,30 +187,6 @@ export const OurServices: FC<IOurServicesProps> = ({
                 Accessories
               </Link>
             </li>
-            {/* --- */}
-
-            {/* <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:mt-6">
-              <Link
-                className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/patriot-liner"
-                    ? "text-yellow-500 active-line"
-                    : ""
-                }`}
-                href={`/our-services/patriot-liner`}
-                onClick={() => {
-                  handleMenu(false);
-                }}
-              >
-                Patriot Liner
-              </Link>
-            </li> */}
-
-            {/* <Preservation
-              handleMenu={handleMenu}
-              openPreservation={openPreservation}
-              handlePreservation={handlePreservation}
-              isDesktop={isDesktop}
-            /> */}
 
             <Styling
               handleMenu={handleMenu}

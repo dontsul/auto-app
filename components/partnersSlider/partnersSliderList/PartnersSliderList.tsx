@@ -1,47 +1,19 @@
 "use client";
 import { FC } from "react";
-import { ItemRewiews } from "../itemRewiews/ItemRewiews";
+import { ItemPartnersSlider } from "../itemPartnersSlider/ItemPartnersSlider";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import { v4 as uuidv4 } from "uuid";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { IPartner } from "@/interfaces/partners";
 
-export interface IReview {
-  query: string;
-  name: string;
-  google_id: string;
-  place_id: string;
-  location_link: string;
-  reviews_link: string;
-  reviews_per_score: string;
-  reviews: string;
-  rating: string;
-  review_id: string;
-  author_link: string;
-  author_title: string;
-  author_id: string;
-  author_image: string;
-  review_text: string;
-  review_img_url: string;
-  review_img_urls: string;
-  owner_answer: string;
-  owner_answer_timestamp: string;
-  owner_answer_timestamp_datetime_utc: string;
-  review_link: string;
-  review_rating: string;
-  review_timestamp: string;
-  review_datetime_utc: string;
-  review_likes: string;
-  reviews_id: string;
+interface IPartnersListProps {
+  partners: IPartner[];
 }
 
-interface IReviewsListProps {
-  reviews: IReview[];
-}
-
-export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
-  const reviewsListAnimation = {
+export const PartnersSliderList: FC<IPartnersListProps> = ({ partners }) => {
+  const partnersSliderListAnimation = {
     hidden: {
       x: -100,
       opacity: 0,
@@ -98,14 +70,14 @@ export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      variants={reviewsListAnimation}
+      variants={partnersSliderListAnimation}
       viewport={{ once: true }}
       className="py-4 z-30 sm:px-8 lg:px-0"
     >
       <Slider className="py-6" {...settings}>
-        {reviews !== undefined
-          ? reviews.map((review) => (
-              <ItemRewiews review={review} key={uuidv4()} />
+        {partners !== undefined
+          ? partners.map((partner) => (
+              <ItemPartnersSlider partner={partner} key={uuidv4()} />
             ))
           : null}
       </Slider>
