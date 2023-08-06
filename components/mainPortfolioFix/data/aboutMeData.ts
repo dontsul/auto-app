@@ -8,11 +8,11 @@ interface AboutMeItem {
 export const aboutMeData: AboutMeItem[] = [
 	{
 		id: uuidv4(),
-		bio: 'TES',
+		bio: 'ceramic-coatings',
 
 	},
 	{
 		id: uuidv4(),
-		bio: 'TEST',
+		bio: 'ceramic-coatings',
 	},
 ];

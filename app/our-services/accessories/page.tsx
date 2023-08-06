@@ -2,7 +2,6 @@ import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
 import Image from "next/image";
 import imageAuto from "@/public/1.png";
-
 import { PartnersSlider } from "@/components/partnersSlider/PartnersSlider";
 
 
@@ -35,6 +34,7 @@ export default function Accessories() {
         Form
       </Title>
       <CustomForm />
+    </div>
     </div>
   );
 }

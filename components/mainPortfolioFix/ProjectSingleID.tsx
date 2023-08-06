@@ -6,7 +6,6 @@ import RelatedProjects from "@/components/mainPortfolioFix/projects/RelatedProje
 import Link from "next/link";
 
 
-
 interface IProjectSingleIdProps{
  idProject: number,
 }

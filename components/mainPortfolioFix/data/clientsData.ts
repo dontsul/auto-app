@@ -24,41 +24,41 @@ export const clientsData: ClientDataItem[] = [
 		title: 'patriot Liner',
 		img: patriotLiner,
 	},
-	// {
-	// 	id: uuidv4(),
-	// 	title: 'wheels Tires',
-	// 	img: wheelsTires,
-	// },
-	// {
-	// 	id: uuidv4(),
-	// 	title: 'ceramic Coatings',
-	// 	img: ceramicCoatings,
-	// },
-	// {
-	// 	id: uuidv4(),
-	// 	title: 'fleet',
-	//
-	// 	img: fleet,
-	// },
-	// {
-	// 	id: uuidv4(),
-	// 	title: 'hitches',
-	// 	img: hitches,
-	// },
-	// {
-	// 	id: uuidv4(),
-	// 	title: 'undercoating',
-	// 	img: undercoating,
-	// },
-	// {
-	// 	id: uuidv4(),
-	// 	title: 'Canon Image',
-	//
-	// 	img: CanonImage,
-	// },
-	// {
-	// 	id: uuidv4(),
-	// 	title: 'Puma Image',
-	// 	img: PumaImage,
-	// },
+	{
+		id: uuidv4(),
+		title: 'wheels Tires',
+		img: wheelsTires,
+	},
+	{
+		id: uuidv4(),
+		title: 'ceramic Coatings',
+		img: ceramicCoatings,
+	},
+	{
+		id: uuidv4(),
+		title: 'fleet',
+
+		img: fleet,
+	},
+	{
+		id: uuidv4(),
+		title: 'hitches',
+		img: hitches,
+	},
+	{
+		id: uuidv4(),
+		title: 'undercoating',
+		img: undercoating,
+	},
+	{
+		id: uuidv4(),
+		title: 'Canon Image',
+
+		img: CanonImage,
+	},
+	{
+		id: uuidv4(),
+		title: 'Puma Image',
+		img: PumaImage,
+	},
 ];

@@ -60,11 +60,11 @@ export const projectsData = [
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'Capital Upfitters',
+			ClientHeading: 'ceramic-coatings',
 			CompanyInfo: [
 				{
 					id: uuidv4(),
-					title: ' Capital Upfitters',
+					title: 'ceramic-coatings',
 					details: 'Company Ltd',
 				},
 				{
@@ -78,15 +78,15 @@ export const projectsData = [
 					details: '555 8888 888',
 				},
 			],
-			ObjectivesHeading: 'Objective',
+			ObjectivesHeading:'ceramic-coatings',
 			ObjectivesDetails:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
 					techs: [
-						'TEST',
-						'TEST',
+						'ceramic-coatings',
+						'ceramic-coatings',
 					],
 				},
 			],
