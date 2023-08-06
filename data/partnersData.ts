@@ -2,7 +2,7 @@ import adbe from "@/public/partners/ADBE.svg";
 import amzn from "@/public/partners/AMZN.svg";
 import ba from "@/public/partners/BA.svg";
 import brkb from "@/public/partners/BRK-B.svg";
-import cat from "@/public/partners/cat.svg";
+import cat from "@/public/partners/CAT.svg";
 import dis from "@/public/partners/DIS.svg";
 import msft from "@/public/partners/MSFT.svg";
 import nvda from "@/public/partners/NVDA.svg";
