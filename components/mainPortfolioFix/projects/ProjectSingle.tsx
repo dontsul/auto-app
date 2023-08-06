@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 
 interface ProjectProps {
 	id: number;
-	img: string;
+	img: string; // Змініть це на тип 'string'
 	title: string;
 	category: string;
 }

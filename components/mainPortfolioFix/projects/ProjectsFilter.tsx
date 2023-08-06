@@ -1,10 +1,7 @@
 import React, { ChangeEvent } from 'react';
 
 const selectOptions: string[] = [
-    'patriot Liner',
-    // 'patriot Liner',
-    // 'patriot Liner',
-    // 'patriot Liner',
+    'TEST',
 ];
 
 interface ProjectsFilterProps {

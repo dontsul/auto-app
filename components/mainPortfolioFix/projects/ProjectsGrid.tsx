@@ -56,11 +56,11 @@ function ProjectsGrid() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
-                {filteredProjects.map((project, index) => (
-                    <ProjectSingle key={index} {...project} />
-                ))}
-            </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
+                    {filteredProjects.map((project, index) => (
+                        <ProjectSingle  key={index} {...project} img={project.img.src} />
+                    ))}
+                </div>
         </section>
     );
 }

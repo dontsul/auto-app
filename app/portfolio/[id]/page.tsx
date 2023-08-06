@@ -1,13 +1,16 @@
 import {projectsData} from "@/components/mainPortfolioFix/data/projectsData";
 import React from "react";
 import ProjectSingleId from "@/components/mainPortfolioFix/ProjectSingleID";
-
-export default function ProjectSingle () {
+interface IProjectSingleID {
+    params: {
+        id: number;
+    };
+}
+export default function ProjectSingle ({ params: { id }}: IProjectSingleID) {
     return (
         <div>
 
-                <ProjectSingleId />
-
+               <ProjectSingleId idProject={id} />
         </div>
     );
 };

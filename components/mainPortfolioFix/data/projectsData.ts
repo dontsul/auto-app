@@ -17,12 +17,11 @@ export const projectsData = [
 	{
 		id: 1,
 		title: 'ceramic-coatings',
-		url: 'google-health-platform',
 		category: 'ceramic-coatings',
 		img: ceramicCoatings,
 		ProjectHeader: {
 			title: 'ceramic-coatings',
-			publishDate: 'Jul 26, 2023',
+
 			tags: 'ceramic-coatings',
 		},
 		ProjectImages: [
@@ -33,78 +32,65 @@ export const projectsData = [
 			},
 			{
 				id: uuidv4(),
-				title:'ceramic-coatings',
+				title: 'ceramic-coatings',
 				img: ceramicCoatings1,
 			},
 			{
 				id: uuidv4(),
-				title:'ceramic-coatings',
+				title: 'ceramic-coatings',
 				img: ceramicCoatings2,
 			},
+
 			{
 				id: uuidv4(),
-				title:'ceramic-coatings',
+				title: 'ceramic-coatings',
 				img: ceramicCoatings3,
 			},
+
 			{
 				id: uuidv4(),
-				title:'ceramic-coatings',
-				img: ceramicCoatings4,
-			},
-			{
-				id: uuidv4(),
-				title:'ceramic-coatings',
-				img: ceramicCoatings5,
-			},
-			{
-				id: uuidv4(),
-				title:'ceramic-coatings',
+				title: 'ceramic-coatings',
 				img: ceramicCoatings6,
 			},
+
 			{
 				id: uuidv4(),
-				title:'ceramic-coatings',
+				title: 'ceramic-coatings',
 				img: ceramicCoatings7,
 			},
-
 		],
 		ProjectInfo: {
-			ClientHeading: 'ceramic-coatings',
+			ClientHeading: 'Capital Upfitters',
 			CompanyInfo: [
 				{
 					id: uuidv4(),
-					title: 'ceramic-coatings',
-					details: 'details',
+					title: ' Capital Upfitters',
+					details: 'Company Ltd',
 				},
 				{
 					id: uuidv4(),
-					title:  'ceramic-coatings',
-					details: 'details',
+					title: 'Services',
+					details: 'ceramic-coatings',
 				},
 				{
 					id: uuidv4(),
-					title:  'ceramic-coatings',
-					details: 'details',
-				},
-				{
-					id: uuidv4(),
-					title:  'ceramic-coatings',
-					details: 'details',
+					title: 'Phone',
+					details: '555 8888 888',
 				},
 			],
-			ObjectivesHeading:  'ceramic-coatings',
+			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 			Technologies: [
 				{
-					title:'ceramic-coatings',
+					title: 'Tools & Technologies',
 					techs: [
-						'ceramic-coatings',
-
+						'TEST',
+						'TEST',
 					],
 				},
 			],
-			ProjectDetailsHeading:'ceramic-coatings',
+			ProjectDetailsHeading: 'Why us',
 			ProjectDetails: [
 				{
 					id: uuidv4(),
@@ -127,79 +113,86 @@ export const projectsData = [
 						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
 				},
 			],
-			SocialSharingHeading: 'ceramic-coatings',
 
 		},
 	},
 	{
 		id: 2,
-		title: 'wheels Tires',
-		url: 'google-health-platform',
-		category: 'wheels Tires',
-		img: wheelsTires,
+		title: 'ceramic-coatings',
+		category: 'ceramic-coatings',
+		img: ceramicCoatings,
 		ProjectHeader: {
-			title: 'title',
-			publishDate: 'Jul 26, 2021',
-			tags: 'wheels Tires',
+			title: 'ceramic-coatings',
+
+			tags: 'ceramic-coatings',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'wheels Tires',
-				img: wheelsTires,
+				title: 'ceramic-coatings',
+				img: ceramicCoatings,
 			},
 			{
 				id: uuidv4(),
-				title: 'wheels Tires',
-				img: wheelsTires,
+				title: 'ceramic-coatings',
+				img: ceramicCoatings1,
 			},
 			{
 				id: uuidv4(),
-				title: 'wheels Tires',
-				img: wheelsTires,
+				title: 'ceramic-coatings',
+				img: ceramicCoatings2,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings3,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings6,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings7,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'ClientHeading',
+			ClientHeading: 'Capital Upfitters',
 			CompanyInfo: [
 				{
 					id: uuidv4(),
-					title: 'wheels Tires',
-					details: 'details',
+					title: ' Capital Upfitters',
+					details: 'Company Ltd',
 				},
 				{
 					id: uuidv4(),
-					title: 'wheels Tires',
-					details: 'details',
+					title: 'Services',
+					details: 'ceramic-coatings',
 				},
 				{
 					id: uuidv4(),
-					title: 'wheels Tires',
-					details: 'details',
-				},
-				{
-					id: uuidv4(),
-					title: 'wheels Tires',
-					details: 'details',
+					title: 'Phone',
+					details: '555 8888 888',
 				},
 			],
-			ObjectivesHeading: 'ObjectivesHeading',
+			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 			Technologies: [
 				{
-					title: 'wheels Tires',
+					title: 'Tools & Technologies',
 					techs: [
-						'wheelsTires',
-						'wheelsTires',
-						'wheelsTires',
-						'wheelsTires',
-						'wheelsTires',
-						'wheelsTires',
+						'TEST',
+						'TEST',
 					],
 				},
 			],
-			ProjectDetailsHeading: 'TEST',
+			ProjectDetailsHeading: 'Why us',
 			ProjectDetails: [
 				{
 					id: uuidv4(),
@@ -222,79 +215,86 @@ export const projectsData = [
 						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
 				},
 			],
-			SocialSharingHeading: 'TEST',
 
 		},
 	},
 	{
 		id: 3,
-		title: 'title',
-		url: 'google-health-platform',
-		category: 'category',
+		title: 'ceramic-coatings',
+		category: 'ceramic-coatings',
 		img: ceramicCoatings,
 		ProjectHeader: {
-			title: 'title',
-			publishDate: 'Jul 26, 2021',
-			tags: 'tags',
+			title: 'ceramic-coatings',
+
+			tags: 'ceramic-coatings',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'title',
+				title: 'ceramic-coatings',
 				img: ceramicCoatings,
 			},
 			{
 				id: uuidv4(),
-				title: 'title',
-				img: ceramicCoatings,
+				title: 'ceramic-coatings',
+				img: ceramicCoatings1,
 			},
 			{
 				id: uuidv4(),
-				title: 'title',
-				img: ceramicCoatings,
+				title: 'ceramic-coatings',
+				img: ceramicCoatings2,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings3,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings6,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings7,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'ClientHeading',
+			ClientHeading: 'Capital Upfitters',
 			CompanyInfo: [
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: ' Capital Upfitters',
+					details: 'Company Ltd',
 				},
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: 'Services',
+					details: 'ceramic-coatings',
 				},
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
-				},
-				{
-					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: 'Phone',
+					details: '555 8888 888',
 				},
 			],
-			ObjectivesHeading: 'ObjectivesHeading',
+			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 			Technologies: [
 				{
-					title: 'TEST',
+					title: 'Tools & Technologies',
 					techs: [
-						'TEST',
-						'TEST',
-						'TEST',
-						'TEST',
 						'TEST',
 						'TEST',
 					],
 				},
 			],
-			ProjectDetailsHeading: 'TEST',
+			ProjectDetailsHeading: 'Why us',
 			ProjectDetails: [
 				{
 					id: uuidv4(),
@@ -317,79 +317,86 @@ export const projectsData = [
 						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
 				},
 			],
-			SocialSharingHeading: 'Share This',
 
 		},
 	},
 	{
 		id: 4,
-		title: 'title',
-		url: 'google-health-platform',
-		category: 'category',
-		img: fleet,
+		title: 'ceramic-coatings',
+		category: 'ceramic-coatings',
+		img: ceramicCoatings,
 		ProjectHeader: {
-			title: 'title',
-			publishDate: 'Jul 26, 2021',
-			tags: 'tags',
+			title: 'ceramic-coatings',
+
+			tags: 'ceramic-coatings',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'title',
-				img: '/images/aboutSection.png',
+				title: 'ceramic-coatings',
+				img: ceramicCoatings,
 			},
 			{
 				id: uuidv4(),
-				title: 'title',
-				img: '/images/aboutSection.png',
+				title: 'ceramic-coatings',
+				img: ceramicCoatings1,
 			},
 			{
 				id: uuidv4(),
-				title: 'title',
-				img: '/images/aboutSection.png',
+				title: 'ceramic-coatings',
+				img: ceramicCoatings2,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings3,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings6,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings7,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'ClientHeading',
+			ClientHeading: 'Capital Upfitters',
 			CompanyInfo: [
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: ' Capital Upfitters',
+					details: 'Company Ltd',
 				},
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: 'Services',
+					details: 'ceramic-coatings',
 				},
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
-				},
-				{
-					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: 'Phone',
+					details: '555 8888 888',
 				},
 			],
-			ObjectivesHeading: 'ObjectivesHeading',
+			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 			Technologies: [
 				{
-					title: 'TEST',
+					title: 'Tools & Technologies',
 					techs: [
-						'TEST',
-						'TEST',
-						'TEST',
-						'TEST',
 						'TEST',
 						'TEST',
 					],
 				},
 			],
-			ProjectDetailsHeading: 'TEST',
+			ProjectDetailsHeading: 'Why us',
 			ProjectDetails: [
 				{
 					id: uuidv4(),
@@ -412,79 +419,86 @@ export const projectsData = [
 						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
 				},
 			],
-			SocialSharingHeading: 'Share This',
 
 		},
 	},
 	{
 		id: 5,
-		title: 'title',
-		url: 'google-health-platform',
-		category: 'category',
-		img: hitches,
+		title: 'ceramic-coatings',
+		category: 'ceramic-coatings',
+		img: ceramicCoatings,
 		ProjectHeader: {
-			title: 'title',
-			publishDate: 'Jul 26, 2021',
-			tags: 'hitches',
+			title: 'ceramic-coatings',
+
+			tags: 'ceramic-coatings',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'hitches',
-				img: hitches,
+				title: 'ceramic-coatings',
+				img: ceramicCoatings,
 			},
 			{
 				id: uuidv4(),
-				title: 'hitches',
-				img: hitches,
+				title: 'ceramic-coatings',
+				img: ceramicCoatings1,
 			},
 			{
 				id: uuidv4(),
-				title: 'hitches',
-				img: hitches,
+				title: 'ceramic-coatings',
+				img: ceramicCoatings2,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings3,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings6,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings7,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'ClientHeading',
+			ClientHeading: 'Capital Upfitters',
 			CompanyInfo: [
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: ' Capital Upfitters',
+					details: 'Company Ltd',
 				},
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: 'Services',
+					details: 'ceramic-coatings',
 				},
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
-				},
-				{
-					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: 'Phone',
+					details: '555 8888 888',
 				},
 			],
-			ObjectivesHeading: 'ObjectivesHeading',
+			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 			Technologies: [
 				{
-					title: 'TEST',
+					title: 'Tools & Technologies',
 					techs: [
-						'TEST',
-						'TEST',
-						'TEST',
-						'TEST',
 						'TEST',
 						'TEST',
 					],
 				},
 			],
-			ProjectDetailsHeading: 'TEST',
+			ProjectDetailsHeading: 'Why us',
 			ProjectDetails: [
 				{
 					id: uuidv4(),
@@ -507,79 +521,86 @@ export const projectsData = [
 						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
 				},
 			],
-			SocialSharingHeading: 'Share This',
 
 		},
 	},
 	{
 		id: 6,
-		title: 'title',
-		url: 'google-health-platform',
-		category: 'category',
-		img: undercoating,
+		title: 'ceramic-coatings',
+		category: 'ceramic-coatings',
+		img: ceramicCoatings,
 		ProjectHeader: {
-			title: 'title',
-			publishDate: 'Jul 26, 2021',
-			tags: 'tags',
+			title: 'ceramic-coatings',
+
+			tags: 'ceramic-coatings',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'title',
-				img: '/images/aboutSection.png',
+				title: 'ceramic-coatings',
+				img: ceramicCoatings,
 			},
 			{
 				id: uuidv4(),
-				title: 'title',
-				img: '/images/aboutSection.png',
+				title: 'ceramic-coatings',
+				img: ceramicCoatings1,
 			},
 			{
 				id: uuidv4(),
-				title: 'title',
-				img: '/images/aboutSection.png',
+				title: 'ceramic-coatings',
+				img: ceramicCoatings2,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings3,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings6,
+			},
+
+			{
+				id: uuidv4(),
+				title: 'ceramic-coatings',
+				img: ceramicCoatings7,
 			},
 		],
 		ProjectInfo: {
-			ClientHeading: 'ClientHeading',
+			ClientHeading: 'Capital Upfitters',
 			CompanyInfo: [
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: ' Capital Upfitters',
+					details: 'Company Ltd',
 				},
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: 'Services',
+					details: 'ceramic-coatings',
 				},
 				{
 					id: uuidv4(),
-					title: 'title',
-					details: 'details',
-				},
-				{
-					id: uuidv4(),
-					title: 'title',
-					details: 'details',
+					title: 'Phone',
+					details: '555 8888 888',
 				},
 			],
-			ObjectivesHeading: 'ObjectivesHeading',
+			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 			Technologies: [
 				{
-					title: 'TEST',
+					title: 'Tools & Technologies',
 					techs: [
-						'TEST',
-						'TEST',
-						'TEST',
-						'TEST',
 						'TEST',
 						'TEST',
 					],
 				},
 			],
-			ProjectDetailsHeading: 'TEST',
+			ProjectDetailsHeading: 'Why us',
 			ProjectDetails: [
 				{
 					id: uuidv4(),
@@ -602,8 +623,8 @@ export const projectsData = [
 						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
 				},
 			],
-			SocialSharingHeading: 'Share This',
 
 		},
 	},
+
 ];
