@@ -1,11 +1,17 @@
 import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
 import Image from "next/image";
-import imageAuto from "@/public/1.png";
+import { Metadata } from "next";
 import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
 import { listWaxol } from "@/data/waxoyl";
 import { TextPage } from "@/components/textPage/TextPage";
 import rp from "@/public/images/rust-prevention/rp.png";
+
+export const metadata: Metadata = {
+  title: "RUST PREVENTION",
+  description:
+    "Here at Capital Upfitters we specialized in preventative methods against Rust and Corrosion. We always strive to provide our client with the best and most innovative solutions for their needs.",
+};
 
 export default function RustPrevention() {
   return (
