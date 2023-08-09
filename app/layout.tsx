@@ -51,6 +51,7 @@ export default function RootLayout({
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
+        <title></title>
       </head>
       <body className={`${jok.className} relative`}>
         <Header />

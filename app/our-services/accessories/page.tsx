@@ -4,6 +4,7 @@ import Image from "next/image";
 import imageAuto from "@/public/1.png";
 import { PartnersSlider } from "@/components/partnersSlider/PartnersSlider";
 
+
 export default function Accessories() {
   return (
     <div className="py-16 container">
@@ -29,11 +30,13 @@ export default function Accessories() {
           />
         </div>
       </div>
-      <PartnersSlider />
-      <Title tag="h4" cn="mb-10">
-        Form
-      </Title>
+
+        <PartnersSlider />
+          <Title tag="h4" cn="mb-10">
+              Form
+          </Title>
       <CustomForm />
     </div>
+
   );
 }
