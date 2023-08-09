@@ -61,7 +61,7 @@ export default function Ppf() {
       </TextPage>
 
       <PaintProtectionFilmPages />
-      <DoubleSidedCard list={listXpel} />
+      <DoubleSidedCard title="title" list={listXpel} />
       <Title tag="h4" cn="mb-10">
         Contact us
       </Title>

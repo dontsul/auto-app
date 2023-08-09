@@ -6,7 +6,7 @@ export default function WindowTint() {
   return (
     <div>
       <WindowTintPages />
-      <DoubleSidedCard list={listXpel} />
+      <DoubleSidedCard title="title" list={listXpel} />
     </div>
   );
 }

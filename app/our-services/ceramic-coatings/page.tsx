@@ -58,7 +58,7 @@ export default function CeramicCoatings() {
         <ImagePage img={smmax} />
       </div>
       <CeramicCoatingsPages />
-      <DoubleSidedCard list={listXpel} />
+      <DoubleSidedCard title="title" list={listXpel} />
       <div className="flex items-center justify-center ">
         <iframe
           width="1000"

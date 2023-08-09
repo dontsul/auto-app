@@ -15,13 +15,13 @@ export const DoubleSidedCardItem: FC<IDoubleSidedCardItemProps> = ({
   item,
 }) => {
   return (
-    <div className="card h-[300px] relative m-6 cursor-pointer ">
-      <div className="front bg-slate-300 absolute w-full h-full left-0 top-0 flex justify-center items-center trnsition duration-1000 rounded-md py-1 shadow-md shadow-slate-400">
+    <div className="card h-[320px] relative m-2 cursor-pointer ">
+      <div className="bg-[#111827] front absolute w-full h-full left-0 top-0 flex justify-center items-center trnsition duration-1000 rounded-md py-1 shadow-md shadow-slate-400">
         <Image
           src={item.image}
           alt={item.title}
-          width={500}
-          height={500}
+          width={700}
+          height={700}
           className="max-h-full max-w-full w-auto h-full"
         />
       </div>

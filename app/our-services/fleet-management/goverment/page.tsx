@@ -30,7 +30,7 @@ export default function Goverment() {
           />
         </div>
       </div>
-      <DoubleSidedCard list={listXpel} />
+      <DoubleSidedCard title="title" list={listXpel} />
       <Title tag="h4" cn="mb-10">
         Form
       </Title>

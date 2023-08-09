@@ -1,13 +1,23 @@
 import React from "react";
 import "./globals.css";
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { Jockey_One } from "next/font/google";
+import { Bungee_Inline } from "next/font/google";
+import { Rowdies } from "next/font/google";
+import { Rubik_Wet_Paint } from "next/font/google";
+import { Baskervville } from "next/font/google";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import { Toaster } from "react-hot-toast";
 import { ButtonUpScroll } from "@/components/buttonUpScroll/ButtonUpScroll";
 
-const inter = Inter({ subsets: ["latin"] });
+const jok = Jockey_One({ weight: "400", subsets: ["latin"] });
+// const bun = Bungee_Inline({ weight: "400", subsets: ["latin"] });
+// const rubik = Rubik_Wet_Paint({ weight: "400", subsets: ["latin"] });
+// const baskervville = Baskervville({ weight: "400", subsets: ["latin"] });
+// const rowdies = Rowdies({ weight: "400", subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Capital Upfitters",
@@ -42,7 +52,7 @@ export default function RootLayout({
           href="/favicon/favicon-16x16.png"
         />
       </head>
-      <body className={`${inter.className} relative`}>
+      <body className={`${jok.className} relative`}>
         <Header />
         <main>{children}</main>
         <Toaster position="top-center" reverseOrder={false} />
