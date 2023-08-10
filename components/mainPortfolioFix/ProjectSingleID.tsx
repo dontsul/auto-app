@@ -68,7 +68,7 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = ({idProject}) => {
                                             >
                                                 <span>{info.title}: </span>
                                                 <a
-                                                    href="https://stoman.me"
+
                                                     className={
                                                         info.title === 'Website' ||
                                                         info.title === 'Phone'
@@ -100,11 +100,12 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = ({idProject}) => {
                             <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
                                 {project?.ProjectInfo.Technologies[0].title}
                             </p>
-                            <p className="font-general-regular text-primary-dark dark:text-ternary-light">
+                            <p className=" font-general-regular text-primary-dark dark:text-ternary-light">
                                 {project?.ProjectInfo.Technologies[0].techs.join(
-                                    ', '
+                                    '  '
                                 )}
                             </p>
+
                         </div>
                     </div>
                     {/*  Single project right section details */}

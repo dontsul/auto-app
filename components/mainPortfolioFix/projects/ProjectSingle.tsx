@@ -40,6 +40,7 @@ const ProjectSingle: FC<ProjectProps> = (props) => {
 							{props.title}
 						</p>
 						<span className="text-lg text-ternary-dark dark:text-ternary-light">
+
 							{props.category}
 						</span>
 

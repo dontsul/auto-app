@@ -4,7 +4,7 @@ import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
 
 const selectOptions = [
-	'PAT',
+	'Patriot Liner',
 	'TAE',
 	'HFD',
 	'DKS',
