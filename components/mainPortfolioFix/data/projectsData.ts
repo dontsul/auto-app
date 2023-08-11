@@ -62,7 +62,7 @@ export const projectsData = [
 	{
 		id: 1,
 		title: 'Ceramic Coatings',
-		category: 'ceramic-coatings',
+		category: 'CERAMIC-COATINGS',
 		img: ceramicCoatings,
 		ProjectHeader: {
 			title: 'Ceramic Coatings',
@@ -159,7 +159,7 @@ export const projectsData = [
 	{
 		id: 2,
 		title: 'Fleet',
-		category: 'fleet',
+		category: 'FLEET',
 		img: fleet4,
 		ProjectHeader: {
 			title:  'fleet',
@@ -262,7 +262,7 @@ export const projectsData = [
 	{
 		id: 3,
 		title: 'Hitches',
-		category: 'hitches',
+		category: 'HITCHES',
 		img: hitches1,
 		ProjectHeader: {
 			title: 'hitches',
@@ -372,7 +372,7 @@ export const projectsData = [
 	{
 		id: 4,
 		title: 'Patriot Liner',
-		category: 'Patriot liner',
+		category: 'PATRIOT LINER',
 		img: patriotLiner4,
 		ProjectHeader: {
 			title: 'Patriot liner',
@@ -493,7 +493,7 @@ export const projectsData = [
 	{
 		id: 5,
 		title: 'Undercoating',
-		category: 'Undercoating',
+		category: 'UNDERCOATING',
 		img: undercoating3,
 		ProjectHeader: {
 			title: 'Undercoating',
@@ -569,7 +569,7 @@ export const projectsData = [
 	{
 		id: 6,
 		title: 'Wheels Tires',
-		category: 'Wheels Tires',
+		category: 'WHEELS TIRES',
 		img: wheelsTires1,
 		ProjectHeader: {
 			title: 'Wheels Tires',

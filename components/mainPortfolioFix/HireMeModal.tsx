@@ -4,10 +4,12 @@ import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
 
 const selectOptions = [
-	'Patriot Liner',
-	'TAE',
-	'HFD',
-	'DKS',
+	'CERAMIC-COATINGS',
+	'FLEET',
+	'HITCHES',
+	'PATRIOT LINER',
+	'UNDERCOATING',
+	'WHEELS TIRES',
 ];
 
 interface HireMeModalProps {

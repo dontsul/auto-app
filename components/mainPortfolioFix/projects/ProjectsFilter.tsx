@@ -1,7 +1,12 @@
 import React, { ChangeEvent } from 'react';
 
 const selectOptions: string[] = [
-    'Patriot Liner',
+    'CERAMIC-COATINGS',
+    'FLEET',
+    'HITCHES',
+    'PATRIOT LINER',
+    'UNDERCOATING',
+    'WHEELS TIRES',
 ];
 
 interface ProjectsFilterProps {
