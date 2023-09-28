@@ -112,60 +112,54 @@ export const CustomForm = () => {
 
   const onSubmit = handleSubmit(async (data: any) => {
     try {
-      // Construct the message
       const message = `
-        *Contact Details:*
-        First Name: ${data.firstName}
-        Last Name: ${data.lastName}
-        Phone: ${data.phone}
-        Email: ${data.email}
+            Contact Details:
+        
+        -First Name: ${data.firstName}
+        -Last Name: ${data.lastName}
+        -Phone: ${data.phone}
+        -Email: ${data.email}
 
-        *Vehicle Information:*
-        Year: ${data.year}
-        Make: ${data.make}
-        Model: ${data.model}
-        License Plate: ${data.licensePlate}
-        State: ${data.state}
+           Vehicle Information:
+        
+        -Year: ${data.year}
+        -Make: ${data.make}
+        -Model: ${data.model}
+        -License Plate: ${data.licensePlate}
+        -State: ${data.state}
+        
+            Services:
+        
+        ${data.services.map((service: string) => `- ${service}`).join('\n')}
 
-        *Services:*
-        ${data.services.join(', ')}
 
-        *Comments:*
-        ${data.comment}
+            Comments:
+        (${data.comment})
       `;
 
-      // Create FormData for text message
+
+
       const textFormData = new FormData();
       textFormData.append('chat_id', chatId);
       textFormData.append('text', message);
       textFormData.append('parse_mode', 'markdown');
 
-      // Send text message to Telegram
-      const textResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: 'POST',
-        body: textFormData,
-      });
-
-      if (!textResponse.ok) {
-        console.error('Telegram API returned an error for text message:', textResponse.statusText);
-        return;
-      }
-
-      const photoArray: File[] = Array.from(data.file);
+      const photoArray = Array.from(data.file) as File[];
       const photoFormData = new FormData();
       photoFormData.append('chat_id', chatId);
+      photoFormData.append('caption', message);
 
       photoArray.forEach((photo: File, index: number) => {
-        photoFormData.append(`photo`, photo);
+        photoFormData.append('photo', photo, `photo_${index}`);
       });
 
-      const photoResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
+      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
         method: 'POST',
         body: photoFormData,
       });
 
-      if (!photoResponse.ok) {
-        console.error('Telegram API returned an error for sending photos:', photoResponse.statusText);
+      if (!response.ok) {
+        console.error('Telegram API returned an error for sending photos:', response.statusText);
       } else {
         console.log('Telegram message with text and photos sent successfully');
       }
@@ -173,10 +167,12 @@ export const CustomForm = () => {
       console.error('Error sending Telegram message with text and photos:', error);
     }
   });
+
+
+
+
+
   const selectedPhotos = watch("file") as File[];
-
-
-
   const handleDeletePhoto = (photo: File) => {
     const updatedPhotos = arrayImages.filter((item) => item !== photo);
     setArrayImages(updatedPhotos);
