@@ -40,14 +40,19 @@ const schema = yup.object({
       .mixed()
       .test("fileSize", "File size is too large", (value: any) => {
         if (value?.length === 0) return true;
-        const v = Object.values(value as File);
+        const v = Array.from(value as FileList);
         return v && v[0]?.size <= FILE_SIZE;
       })
       .test("fileCount", "Maximum 5 files allowed", (value) => {
         if (!value) return true;
-        const fileCount = Object.values(value) ? Object.values(value).length : 0;
+
+        const fileArray = Array.isArray(value) ? value : [value];
+        const fileCount = fileArray.length;
+
         return fileCount <= 5;
       }),
+
+
   year: yup.string().required("Year is a required field"),
   make: yup.string().required("Make is a required field"),
   model: yup.string().required("Model is a required field"),
@@ -107,63 +112,75 @@ export const CustomForm = () => {
 
   const onSubmit = handleSubmit(async (data: any) => {
     try {
-      const formData = new FormData();
-
-      // Append text data
-      formData.append('chat_id', chatId);
-      formData.append('parse_mode', 'markdown');
-
-      // Construct the message string with form data
+      // Construct the message
       const message = `
-      *Contact Details:*
-      First Name: ${data.firstName}
-      Last Name: ${data.lastName}
-      Phone: ${data.phone}
-      Email: ${data.email}
+        *Contact Details:*
+        First Name: ${data.firstName}
+        Last Name: ${data.lastName}
+        Phone: ${data.phone}
+        Email: ${data.email}
 
-      *Vehicle Information:*
-      Year: ${data.year}
-      Make: ${data.make}
-      Model: ${data.model}
-      License Plate: ${data.licensePlate}
-      State: ${data.state}
+        *Vehicle Information:*
+        Year: ${data.year}
+        Make: ${data.make}
+        Model: ${data.model}
+        License Plate: ${data.licensePlate}
+        State: ${data.state}
 
-      *Services:*
-      ${data.services.join(', ')}
+        *Services:*
+        ${data.services.join(', ')}
 
-      *Comments:*
-      ${data.comment}
-    `;
+        *Comments:*
+        ${data.comment}
+      `;
 
-      // Append text message to form data
-      formData.append('text', message);
+      // Create FormData for text message
+      const textFormData = new FormData();
+      textFormData.append('chat_id', chatId);
+      textFormData.append('text', message);
+      textFormData.append('parse_mode', 'markdown');
 
-      // Append photos to form data
-      data.file.forEach((photo: File) => {
-        formData.append('photo', photo);
-      });
-
-      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
+      // Send text message to Telegram
+      const textResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
-        body: formData,
+        body: textFormData,
       });
 
-      if (!response.ok) {
-        console.error('Telegram API returned an error:', response.statusText);
+      if (!textResponse.ok) {
+        console.error('Telegram API returned an error for text message:', textResponse.statusText);
+        return;
+      }
+
+      const photoArray: File[] = Array.from(data.file);
+      const photoFormData = new FormData();
+      photoFormData.append('chat_id', chatId);
+
+      photoArray.forEach((photo: File, index: number) => {
+        photoFormData.append(`photo`, photo);
+      });
+
+      const photoResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
+        method: 'POST',
+        body: photoFormData,
+      });
+
+      if (!photoResponse.ok) {
+        console.error('Telegram API returned an error for sending photos:', photoResponse.statusText);
       } else {
-        console.log('Telegram message with photo sent successfully');
+        console.log('Telegram message with text and photos sent successfully');
       }
     } catch (error) {
-      console.error('Error sending Telegram message with photo:', error);
+      console.error('Error sending Telegram message with text and photos:', error);
     }
   });
-
   const selectedPhotos = watch("file") as File[];
+
+
 
   const handleDeletePhoto = (photo: File) => {
     const updatedPhotos = arrayImages.filter((item) => item !== photo);
     setArrayImages(updatedPhotos);
-    setValue("file", updatedPhotos);
+    setValue('file', updatedPhotos);
   };
 
   useEffect(() => {
@@ -171,6 +188,26 @@ export const CustomForm = () => {
       setArrayImages([...selectedPhotos]);
     }
   }, [selectedPhotos]);
+  useEffect(() => {
+    const checkPermissions = async () => {
+      try {
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/getChatMember?chat_id=${chatId}&user_id=${botToken}`);
+        const result = await response.json();
+
+        if (result.ok) {
+          const status = result.result.status;
+          const canSendMedia = status === 'administrator' || status === 'creator';
+          console.log(`Бот має дозвіл на відправлення фотографій: ${canSendMedia}`);
+        } else {
+          console.error('Помилка отримання інформації про користувача бота:', result.description);
+        }
+      } catch (error) {
+        console.error('Помилка зв:');
+      }
+    };
+
+    checkPermissions();
+  }, [botToken, chatId]);
 
   return (
     // <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg hover:shadow-2xl transition duration-200 shadow-slate-600 hover:shadow-[#111827] bg-gradient-to-r from-slate-300 to-slate-400">
@@ -485,31 +522,29 @@ export const CustomForm = () => {
               </div>
             </label>
 
-            {arrayImages !== undefined && arrayImages.length > 0 && (
-              <div className="flex items-center gap-2 flex-wrap mt-2">
-                {arrayImages.map((photo: File, index: number) => (
-                  <div
-                    className="relative h-[80px] w-[80px] rounded-md"
-                    key={uuidv4()}
-                  >
-                    <Image
-                      key={index}
-                      src={URL.createObjectURL(photo)}
-                      alt={`Фото ${index}`}
-                      width={80}
-                      height={80}
-                      className="h-[80px] w-[80px] rounded-md shadow-md"
-                    />
-                    <div
-                      className="absolute top-1 right-1 p-1 backdrop-blur-[4px] rounded-md cursor-pointer"
-                      // onClick={() => handleDeletePhoto(photo)}
-                    >
-                      <AiOutlineClose color="white" />
-                    </div>
-                  </div>
-                ))}
-              </div>
+            {arrayImages.length > 0 && (
+                <div className="flex items-center gap-2 flex-wrap mt-2">
+                  {arrayImages.map((photo: File, index: number) => (
+                      <div className="relative h-[80px] w-[80px] rounded-md" key={uuidv4()}>
+                        <Image
+                            src={URL.createObjectURL(photo)}
+                            alt={`Фото ${index}`}
+                            width={80}
+                            height={80}
+                            className="h-[80px] w-[80px] rounded-md shadow-md"
+                        />
+                        <div
+                            className="absolute top-1 right-1 p-1 backdrop-blur-[4px] rounded-md cursor-pointer"
+                            onClick={() => handleDeletePhoto(photo)}
+                        >
+                          <AiOutlineClose color="white" />
+                        </div>
+                      </div>
+                  ))}
+                </div>
             )}
+
+
             <p className="text-sm text-red-600">{errors.file?.message}</p>
           </motion.div>
           {/* --------------images----------------- */}
