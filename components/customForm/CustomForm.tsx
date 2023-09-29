@@ -40,19 +40,14 @@ const schema = yup.object({
       .mixed()
       .test("fileSize", "File size is too large", (value: any) => {
         if (value?.length === 0) return true;
-        const v = Array.from(value as FileList);
+        const v = Object.values(value as File);
         return v && v[0]?.size <= FILE_SIZE;
       })
       .test("fileCount", "Maximum 5 files allowed", (value) => {
         if (!value) return true;
-
-        const fileArray = Array.isArray(value) ? value : [value];
-        const fileCount = fileArray.length;
-
+        const fileCount = Object.values(value) ? Object.values(value).length : 0;
         return fileCount <= 5;
       }),
-
-
   year: yup.string().required("Year is a required field"),
   make: yup.string().required("Make is a required field"),
   model: yup.string().required("Model is a required field"),
@@ -63,7 +58,6 @@ const schema = yup.object({
       .required("At least one service must be selected")
       .min(1, "At least one service must be selected"),
 });
-
 export const CustomForm = () => {
   const formAnimation = {
     hidden: {
@@ -109,6 +103,7 @@ export const CustomForm = () => {
 
   const botToken = TELEGRAM_BOT_TOKEN;
   const chatId = "-1001806613572"; // Replace with the actual channel username
+
   const onSubmit = handleSubmit(async (data: any) => {
     try {
       const message = `
@@ -134,49 +129,52 @@ export const CustomForm = () => {
       Comments:
       (${data.comment})
     `;
+      const photoArray = Array.from(data.file) as File[];
 
+      const mediaGroup = photoArray.map((photo: File, index: number) => ({
+        type: 'photo',
+        media: `attach://photo_${index}`,
+      }));
       const textFormData = new FormData();
       textFormData.append('chat_id', chatId);
       textFormData.append('text', message);
-      textFormData.append('parse_mode', 'markdown');
 
-      if (data.file && data.file.length > 0) {
-        const photoArray = Array.from(data.file) as File[];
-        const photoFormData = new FormData();
-        photoFormData.append('chat_id', chatId);
-        photoFormData.append('caption', message);
+      const textResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        body: textFormData,
+      });
 
-        photoArray.forEach((photo: File, index: number) => {
-          photoFormData.append('photo', photo, `photo_${index}`);
-        });
+      if (!textResponse.ok) {
+        console.error('Telegram API returned an error for sending text:', textResponse.statusText);
+        return; // Зупинити виконання, якщо відправлення тексту не вдалося
+      }
+      const formData = new FormData();
+      formData.append('chat_id', chatId);
+      formData.append('media', JSON.stringify(mediaGroup));
 
-        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
-          method: 'POST',
-          body: photoFormData,
-        });
+      photoArray.forEach((photo: File, index: number) => {
+        formData.append(`photo_${index}`, photo);
+      });
 
-        if (!response.ok) {
-          console.error('Telegram API returned an error for sending photos:', response.statusText);
-        } else {
-          console.log('Telegram message with text and photos sent successfully');
-        }
+
+      formData.append('media', JSON.stringify(mediaGroup));
+      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMediaGroup`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        console.error('Telegram API returned an error for sending photos:', response.statusText);
       } else {
-        // If no photos, only send the text
-        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-          method: 'POST',
-          body: textFormData,
-        });
-
-        if (!response.ok) {
-          console.error('Telegram API returned an error for sending text:', response.statusText);
-        } else {
-          console.log('Telegram message with text sent successfully');
-        }
+        console.log('Telegram message with photos sent successfully');
       }
     } catch (error) {
       console.error('Error sending Telegram message:', error);
     }
   });
+
+
+
 
 
 
@@ -528,23 +526,31 @@ export const CustomForm = () => {
               </div>
             </label>
 
-            {arrayImages.map((photo: File, index: number) => (
-                <div className="relative h-[80px] w-[80px] rounded-md" key={index}>
-                  <Image
-                      src={URL.createObjectURL(photo)}
-                      alt={`Фото ${index}`}
-                      width={80}
-                      height={80}
-                      className="h-[80px] w-[80px] rounded-md shadow-md"
-                  />
-                  <div
-                      className="absolute top-1 right-1 p-1 backdrop-blur-[4px] rounded-md cursor-pointer"
-                      onClick={() => handleDeletePhoto(photo)}
-                  >
-                    <AiOutlineClose color="white" />
-                  </div>
+            {arrayImages !== undefined && arrayImages.length > 0 && (
+                <div className="flex items-center gap-2 flex-wrap mt-2">
+                  {arrayImages.map((photo: File, index: number) => (
+                      <div
+                          className="relative h-[80px] w-[80px] rounded-md"
+                          key={uuidv4()}
+                      >
+                        <Image
+                            key={index}
+                            src={URL.createObjectURL(photo)}
+                            alt={`Фото ${index}`}
+                            width={80}
+                            height={80}
+                            className="h-[80px] w-[80px] rounded-md shadow-md"
+                        />
+                        <div
+                            className="absolute top-1 right-1 p-1 backdrop-blur-[4px] rounded-md cursor-pointer"
+                            onClick={() => handleDeletePhoto(photo)}
+                        >
+                          <AiOutlineClose color="white" />
+                        </div>
+                      </div>
+                  ))}
                 </div>
-            ))}
+            )}
 
             <p className="text-sm text-red-600">{errors.file?.message}</p>
           </motion.div>
