@@ -109,62 +109,72 @@ export const CustomForm = () => {
 
   const botToken = TELEGRAM_BOT_TOKEN;
   const chatId = "-1001806613572"; // Replace with the actual channel username
-
   const onSubmit = handleSubmit(async (data: any) => {
     try {
       const message = `
-            Contact Details:
-        
-        -First Name: ${data.firstName}
-        -Last Name: ${data.lastName}
-        -Phone: ${data.phone}
-        -Email: ${data.email}
+      Contact Details:
+  
+      -First Name: ${data.firstName}
+      -Last Name: ${data.lastName}
+      -Phone: ${data.phone}
+      -Email: ${data.email}
 
-           Vehicle Information:
-        
-        -Year: ${data.year}
-        -Make: ${data.make}
-        -Model: ${data.model}
-        -License Plate: ${data.licensePlate}
-        -State: ${data.state}
-        
-            Services:
-        
-        ${data.services.map((service: string) => `- ${service}`).join('\n')}
+      Vehicle Information:
+  
+      -Year: ${data.year}
+      -Make: ${data.make}
+      -Model: ${data.model}
+      -License Plate: ${data.licensePlate}
+      -State: ${data.state}
+  
+      Services:
+  
+      ${data.services.map((service: string) => `- ${service}`).join('\n')}
 
-
-            Comments:
-        (${data.comment})
-      `;
-
-
+      Comments:
+      (${data.comment})
+    `;
 
       const textFormData = new FormData();
       textFormData.append('chat_id', chatId);
       textFormData.append('text', message);
       textFormData.append('parse_mode', 'markdown');
 
-      const photoArray = Array.from(data.file) as File[];
-      const photoFormData = new FormData();
-      photoFormData.append('chat_id', chatId);
-      photoFormData.append('caption', message);
+      if (data.file && data.file.length > 0) {
+        const photoArray = Array.from(data.file) as File[];
+        const photoFormData = new FormData();
+        photoFormData.append('chat_id', chatId);
+        photoFormData.append('caption', message);
 
-      photoArray.forEach((photo: File, index: number) => {
-        photoFormData.append('photo', photo, `photo_${index}`);
-      });
+        photoArray.forEach((photo: File, index: number) => {
+          photoFormData.append('photo', photo, `photo_${index}`);
+        });
 
-      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
-        method: 'POST',
-        body: photoFormData,
-      });
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
+          method: 'POST',
+          body: photoFormData,
+        });
 
-      if (!response.ok) {
-        console.error('Telegram API returned an error for sending photos:', response.statusText);
+        if (!response.ok) {
+          console.error('Telegram API returned an error for sending photos:', response.statusText);
+        } else {
+          console.log('Telegram message with text and photos sent successfully');
+        }
       } else {
-        console.log('Telegram message with text and photos sent successfully');
+        // If no photos, only send the text
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: 'POST',
+          body: textFormData,
+        });
+
+        if (!response.ok) {
+          console.error('Telegram API returned an error for sending text:', response.statusText);
+        } else {
+          console.log('Telegram message with text sent successfully');
+        }
       }
     } catch (error) {
-      console.error('Error sending Telegram message with text and photos:', error);
+      console.error('Error sending Telegram message:', error);
     }
   });
 
@@ -518,28 +528,23 @@ export const CustomForm = () => {
               </div>
             </label>
 
-            {arrayImages.length > 0 && (
-                <div className="flex items-center gap-2 flex-wrap mt-2">
-                  {arrayImages.map((photo: File, index: number) => (
-                      <div className="relative h-[80px] w-[80px] rounded-md" key={uuidv4()}>
-                        <Image
-                            src={URL.createObjectURL(photo)}
-                            alt={`Фото ${index}`}
-                            width={80}
-                            height={80}
-                            className="h-[80px] w-[80px] rounded-md shadow-md"
-                        />
-                        <div
-                            className="absolute top-1 right-1 p-1 backdrop-blur-[4px] rounded-md cursor-pointer"
-                            onClick={() => handleDeletePhoto(photo)}
-                        >
-                          <AiOutlineClose color="white" />
-                        </div>
-                      </div>
-                  ))}
+            {arrayImages.map((photo: File, index: number) => (
+                <div className="relative h-[80px] w-[80px] rounded-md" key={index}>
+                  <Image
+                      src={URL.createObjectURL(photo)}
+                      alt={`Фото ${index}`}
+                      width={80}
+                      height={80}
+                      className="h-[80px] w-[80px] rounded-md shadow-md"
+                  />
+                  <div
+                      className="absolute top-1 right-1 p-1 backdrop-blur-[4px] rounded-md cursor-pointer"
+                      onClick={() => handleDeletePhoto(photo)}
+                  >
+                    <AiOutlineClose color="white" />
+                  </div>
                 </div>
-            )}
-
+            ))}
 
             <p className="text-sm text-red-600">{errors.file?.message}</p>
           </motion.div>
