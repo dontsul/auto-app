@@ -99,10 +99,11 @@ export const CustomForm = () => {
       services: [],
     },
   });
-  const [arrayImages, setArrayImages] = useState<File[]>([] as File[]);
+  const [arrayImages, setArrayImages] = useState<File[]>([]);
 
   const botToken = TELEGRAM_BOT_TOKEN;
-  const chatId = "-1001806613572"; // Replace with the actual channel username
+  const chatId = "-1001806613572"; // Замініть на реальний ідентифікатор каналу
+
 
   const onSubmit = handleSubmit(async (data: any) => {
     try {
@@ -127,50 +128,61 @@ export const CustomForm = () => {
       (${data.comment})
     `;
 
-      const photoArray = Array.from(data.file) as File[];
-
-      const mediaGroup = photoArray.map((photo: File, index: number) => ({
-        type: 'photo',
-        media: `attach://photo_${index}`,
-        caption: message,
-      }));
-
-      const formData = new FormData();
-      formData.append('chat_id', chatId);
-
-      // Додаємо текстове повідомлення
-      formData.append('text', message);
-
-      // Додаємо медіа для кожної фотографії
-      photoArray.forEach((photo: File, index: number) => {
-        formData.append(`photo_${index}`, photo);
-      });
-
-      // Додаємо інформацію про медіагрупу
-      formData.append('media', JSON.stringify(mediaGroup));
-
-      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMediaGroup`, {
+      const textResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
-        body: formData,
+        body: new URLSearchParams({
+          'chat_id': chatId,
+          'text': message,
+          'parse_mode': 'markdown',
+        }),
       });
 
-      if (!response.ok) {
-        console.error('Telegram API returned an error for sending photos:', response.statusText);
-      } else {
-        console.log('Telegram message with text and photos sent successfully');
+      if (!textResponse.ok) {
+        console.error('Telegram API returned an error for sending text:', textResponse.statusText);
+        return;
       }
+
+      if (data.file && data.file.length > 0) {
+        const separatorMessage = '----------------------\n';
+        const photoArray = Array.from(data.file) as File[];
+        const formData = new FormData();
+
+        formData.append('chat_id', chatId);
+
+        const mediaGroup = photoArray.map((_, index: number) => ({
+          type: 'photo',
+          media: `attach://photo_${index}`,
+          caption: separatorMessage + message, // Додайте роздільник перед текстовим повідомленням
+        }));
+
+        photoArray.forEach((photo: File, index: number) => {
+          formData.append(`photo_${index}`, photo, `photo_${index}`);
+        });
+
+        formData.append('media', JSON.stringify(mediaGroup));
+
+        const photoResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMediaGroup`, {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (!photoResponse.ok) {
+          console.error('Telegram API returned an error for sending photos:', photoResponse.statusText);
+        } else {
+          console.log('Telegram message with text and photos sent successfully');
+          setArrayImages([]);
+          setValue('file', []);
+        }
+      } else {
+        console.log('Telegram message with text sent successfully');
+      }
+      reset();
+      toast.success("Form submitted successfully");
     } catch (error) {
       console.error('Error sending Telegram message:', error);
+      toast.error("Error submitting form");
     }
   });
-
-
-
-
-
-
-
-
 
   const selectedPhotos = watch("file") as File[];
   const handleDeletePhoto = (photo: File) => {
@@ -184,26 +196,6 @@ export const CustomForm = () => {
       setArrayImages([...selectedPhotos]);
     }
   }, [selectedPhotos]);
-  useEffect(() => {
-    const checkPermissions = async () => {
-      try {
-        const response = await fetch(`https://api.telegram.org/bot${botToken}/getChatMember?chat_id=${chatId}&user_id=${botToken}`);
-        const result = await response.json();
-
-        if (result.ok) {
-          const status = result.result.status;
-          const canSendMedia = status === 'administrator' || status === 'creator';
-          console.log(`Бот має дозвіл на відправлення фотографій: ${canSendMedia}`);
-        } else {
-          console.error('Помилка отримання інформації про користувача бота:', result.description);
-        }
-      } catch (error) {
-        console.error('Помилка зв:');
-      }
-    };
-
-    checkPermissions();
-  }, [botToken, chatId]);
 
   return (
     // <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg hover:shadow-2xl transition duration-200 shadow-slate-600 hover:shadow-[#111827] bg-gradient-to-r from-slate-300 to-slate-400">
