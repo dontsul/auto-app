@@ -6,7 +6,7 @@ export const sliderData = [
         description:
             "Patriot Liner",
         title: "Patriot Liner",
-        link: "/our-services/hitches"
+        link: "/our-services/patriot-liner"
 
     },
     {
