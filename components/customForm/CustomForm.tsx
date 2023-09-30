@@ -22,13 +22,10 @@ import { CustomSelect } from "../customSelect/CustomSelect";
 import metadata from "libphonenumber-js/metadata.min.json";
 import "react-phone-number-input/style.css";
 import toast from "react-hot-toast";
-import { InfoServices } from "./infoServices/InfoServices";
-import { TbInfoSquareFilled } from "react-icons/tb";
 import { CustomService } from "./customService/CustomService";
+import {submitFormToTelegram, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID} from "@/utils/onSubmitTelegram";
 
-const URL_SERVER = "http://localhost:4000/";
 const FILE_SIZE = 5 * 1024 * 1024;
-const TELEGRAM_BOT_TOKEN = "6325976760:AAGBh9bAHF1Ee5kM3dKgaOCSbeagHJFNCRM";
 
 const schema = yup.object({
   firstName: yup.string().required("Name is a required field"),
@@ -59,6 +56,10 @@ const schema = yup.object({
       .min(1, "At least one service must be selected"),
 });
 export const CustomForm = () => {
+  const botToken = TELEGRAM_BOT_TOKEN;
+  const chatId = TELEGRAM_CHAT_ID
+  const [charCount, setCharCount] = useState(0);
+
   const formAnimation = {
     hidden: {
       y: -100,
@@ -101,88 +102,25 @@ export const CustomForm = () => {
   });
   const [arrayImages, setArrayImages] = useState<File[]>([]);
 
-  const botToken = TELEGRAM_BOT_TOKEN;
-  const chatId = "-1001806613572"; // Замініть на реальний ідентифікатор каналу
   const onSubmit = handleSubmit(async (data: any) => {
     try {
-      const separatorMessage = '----------------------\n';
+      const response = await submitFormToTelegram(data, chatId, botToken);
 
-      const message = `
-<b>Контактні дані:</b>
-- <b>Ім'я:</b> ${data.firstName}
-- <b>Прізвище:</b> ${data.lastName}
-- <b>Телефон:</b> ${data.phone}
-- <b>Електронна пошта:</b> ${data.email}
-
-<b>Інформація про автомобіль:</b>
-- <b>Рік:</b> ${data.year}
-- <b>Марка:</b> ${data.make}
-- <b>Модель:</b> ${data.model}
-- <b>Номерний знак:</b> ${data.licensePlate}
-- <b>Штат:</b> ${data.state}
-
-<b>Сервіси:</b>
-${data.services.map((service: string) => `- <b>${service}</b>`).join('\n')}
-
-<b>Коментарі:</b>
-(${data.comment})
-`;
-
-      const formattedMessage = `<pre>${message}</pre>`;
-
-      if (data.file && data.file.length > 0) {
-        const photoArray = Array.from(data.file) as File[];
-
-        const mediaGroup = photoArray.map((_, index: number) => ({
-          type: 'photo',
-          media: `attach://photo_${index}`,
-          caption: index > 0 ? undefined : formattedMessage,
-        }));
-
-        const formData = new FormData();
-        formData.append('chat_id', chatId);
-        formData.append('media', JSON.stringify(mediaGroup));
-
-        photoArray.forEach((photo: File, index: number) => {
-          formData.append(`photo_${index}`, photo, `photo_${index}`);
-        });
-
-        const photoResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMediaGroup`, {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (!photoResponse.ok) {
-          console.error('Telegram API повернув помилку при відправці фотографій:', photoResponse.statusText);
-        } else {
-          console.log('Telegram повідомлення з текстом та фотографіями успішно відправлено');
-          setArrayImages([]);
-          setValue('file', []);
-        }
+      if (response.success) {
+        setArrayImages([]);
+        setValue('file', []);
+        reset();
+        toast.success("Form successfully submitted");
       } else {
-        const textResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-          method: 'POST',
-          body: new URLSearchParams({
-            'chat_id': chatId,
-            'text': formattedMessage,
-            'parse_mode': 'html',
-          }),
-        });
-
-        if (!textResponse.ok) {
-          console.error('Telegram API повернув помилку при відправці тексту:', textResponse.statusText);
-        } else {
-          console.log('Telegram повідомлення з текстом успішно відправлено');
-        }
+        console.error(`Error submitting the form: ${response.error}`);
+        toast.error("Error submitting the form");
       }
-
-      reset();
-      toast.success("Форма успішно відправлена");
     } catch (error) {
-      console.error('Помилка відправки повідомлення в Telegram:', error);
-      toast.error("Помилка відправки форми");
+      console.error('Error submitting the form:', error);
+      toast.error("Error submitting the form");
     }
   });
+
 
 
   const selectedPhotos = watch("file") as File[];
@@ -460,23 +398,40 @@ ${data.services.map((service: string) => `- <b>${service}</b>`).join('\n')}
           {/* -------------------------------services------------------------- */}
           {/* -------------------------------comment-------------------------- */}
           <motion.div
-            viewport={{ once: true }}
-            className="mb-4 col-span-1 md:col-span-3"
-            variants={formAnimation}
+              viewport={{ once: true }}
+              className="mb-4 col-span-1 md:col-span-3"
+              variants={formAnimation}
           >
             <label className="block text-sm font-medium text-gray-900">
               Your message
               <Controller
-                name="comment"
-                control={control}
-                render={({ field }) => (
-                  <CustomTextArea {...field} placeholder="Write your comment" />
-                )}
+                  name="comment"
+                  control={control}
+                  render={({ field }) => (
+                      <>
+                        <CustomTextArea
+                            {...field}
+                            placeholder="Write your comment"
+                            maxLength={700}
+                            onChange={(e) => {
+                              const inputValue = e.target.value;
+                              if (inputValue.length <= 700) {
+                                field.onChange(inputValue);
+                              }
+                            }}
+                        />
+                        <p className="text-sm text-gray-500">
+                          {field.value.length}/700
+                        </p>
+                      </>
+                  )}
               />
             </label>
 
             <p className="text-sm text-red-600">{errors.comment?.message}</p>
           </motion.div>
+
+
           {/* -------------------------------comment-------------------------- */}
           {/* --------------images----------------- */}
           <motion.div
