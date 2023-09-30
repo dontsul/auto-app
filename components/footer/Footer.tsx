@@ -7,8 +7,8 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
-import MyMapPage from "@/components/googleMaps/MyMap";
 import Link from "next/link";
+import MyMapPage from "@/components/googleMaps/MyMap";
 
 const socialList = [
   {
