@@ -1,6 +1,6 @@
 import React from "react";
 import SliderCard from "./SliderCard";
-import {DataSlider} from "@/data/sliderDataHome";
+import {DataSlider} from "@/data/dataSliderHome/DataTepe";
 
 type Props = {
   data: DataSlider[];

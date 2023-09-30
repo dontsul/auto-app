@@ -5,7 +5,8 @@ import BackgroundImage from "@/components/slider/BackgroundImage";
 import SlideInfo from "@/components/slider/SlideInfo";
 import Slides from "@/components/slider/Slides";
 import Controls from "@/components/slider/Controls";
-import {CurrentSlideData, DataSlider, sliderData} from "@/data/sliderDataHome";
+import { sliderData} from "@/data/dataSliderHome/EditSliderDataHome";
+import {CurrentSlideData, DataSlider} from "@/data/dataSliderHome/DataTepe";
 
 
 

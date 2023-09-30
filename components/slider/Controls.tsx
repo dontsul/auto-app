@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
 import Progress from "./Progress";
-import {CurrentSlideData, DataSlider} from "@/data/sliderDataHome";
+import {CurrentSlideData, DataSlider} from "@/data/dataSliderHome/DataTepe";
 
 type Props = {
     currentSlideData: CurrentSlideData;
