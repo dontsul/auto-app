@@ -9,9 +9,7 @@ export default function Financing() {
       <div>
           <CommercialSlider />
           <AboutSection />
-
           <Contact />
-          {/*<Reviews />*/}
       </div>
   );
 }

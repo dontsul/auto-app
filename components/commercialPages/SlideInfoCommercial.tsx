@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
-import { CurrentSlideData, DataSlider } from "@/data/dataSliderHome/EditSliderDataHome";
 import OtherInfo from "@/components/slider/OtherInfo";
+import {CurrentSlideDataC, DataSliderC} from "@/data/dataSliderCommercial/DataTepe";
 
 type Props = {
-    transitionData: DataSlider;
-    currentSlideData: CurrentSlideData;
+    transitionData: DataSliderC;
+    currentSlideData: CurrentSlideDataC;
 };
 
 function SlideInfoCommercial({ transitionData, currentSlideData }: Props) {

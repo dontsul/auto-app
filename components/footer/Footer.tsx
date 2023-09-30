@@ -92,9 +92,11 @@ export const Footer: React.FC = () => {
               </svg>
               <a
                 className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
-                href="#!"
+                href="https://www.google.com/maps?ll=39.051219,-77.108649&z=20&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=5362875643083497393"
               >
-                2131 9th St, Sacramento, CA 95818, USA
+                Capital Upfitters Auto & Truck Accessories
+                12019 Nebel St
+                Rockville, MD 20852
               </a>
             </p>
             <p className="mb-4 flex items-center justify-center md:justify-start">
