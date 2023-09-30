@@ -108,39 +108,27 @@ export const CustomForm = () => {
       const separatorMessage = '----------------------\n';
 
       const message = `
-      <b>Контактні дані:</b>
-      -<b>Ім'я:</b> ${data.firstName}
-      -<b>Прізвище:</b> ${data.lastName}
-      -<b>Телефон:</b> ${data.phone}
-      -<b>Електронна пошта:</b> ${data.email}
+<b>Контактні дані:</b>
+- <b>Ім'я:</b> ${data.firstName}
+- <b>Прізвище:</b> ${data.lastName}
+- <b>Телефон:</b> ${data.phone}
+- <b>Електронна пошта:</b> ${data.email}
 
-      <b>Інформація про автомобіль:</b>
-      -<b>Рік:</b> ${data.year}
-      -<b>Марка:</b> ${data.make}
-      -<b>Модель:</b> ${data.model}
-      -<b>Номерний знак:</b> ${data.licensePlate}
-      -<b>Штат:</b> ${data.state}
+<b>Інформація про автомобіль:</b>
+- <b>Рік:</b> ${data.year}
+- <b>Марка:</b> ${data.make}
+- <b>Модель:</b> ${data.model}
+- <b>Номерний знак:</b> ${data.licensePlate}
+- <b>Штат:</b> ${data.state}
 
-      <b>Сервіси:</b>
-      ${data.services.map((service: string) => `- ${service}`).join('\n')}
+<b>Сервіси:</b>
+${data.services.map((service: string) => `- <b>${service}</b>`).join('\n')}
 
-      <b>Коментарі:</b>
-      (${data.comment})
-    `;
+<b>Коментарі:</b>
+(${data.comment})
+`;
 
-      const textResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: 'POST',
-        body: new URLSearchParams({
-          'chat_id': chatId,
-          'text': message,
-          'parse_mode': 'html',
-        }),
-      });
-
-      if (!textResponse.ok) {
-        console.error('Telegram API повернув помилку при відправці тексту:', textResponse.statusText);
-        return;
-      }
+      const formattedMessage = `<pre>${message}</pre>`;
 
       if (data.file && data.file.length > 0) {
         const photoArray = Array.from(data.file) as File[];
@@ -148,9 +136,8 @@ export const CustomForm = () => {
         const mediaGroup = photoArray.map((_, index: number) => ({
           type: 'photo',
           media: `attach://photo_${index}`,
-          caption: index > 0 ? undefined : separatorMessage + message,
+          caption: index > 0 ? undefined : formattedMessage,
         }));
-
 
         const formData = new FormData();
         formData.append('chat_id', chatId);
@@ -173,7 +160,20 @@ export const CustomForm = () => {
           setValue('file', []);
         }
       } else {
-        console.log('Telegram повідомлення з текстом успішно відправлено');
+        const textResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: 'POST',
+          body: new URLSearchParams({
+            'chat_id': chatId,
+            'text': formattedMessage,
+            'parse_mode': 'html',
+          }),
+        });
+
+        if (!textResponse.ok) {
+          console.error('Telegram API повернув помилку при відправці тексту:', textResponse.statusText);
+        } else {
+          console.log('Telegram повідомлення з текстом успішно відправлено');
+        }
       }
 
       reset();
