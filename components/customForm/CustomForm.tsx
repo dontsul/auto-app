@@ -103,28 +103,28 @@ export const CustomForm = () => {
 
   const botToken = TELEGRAM_BOT_TOKEN;
   const chatId = "-1001806613572"; // Замініть на реальний ідентифікатор каналу
-
-
   const onSubmit = handleSubmit(async (data: any) => {
     try {
+      const separatorMessage = '----------------------\n';
+
       const message = `
-      Contact Details:
-      -First Name: ${data.firstName}
-      -Last Name: ${data.lastName}
-      -Phone: ${data.phone}
-      -Email: ${data.email}
+      <b>Контактні дані:</b>
+      -<b>Ім'я:</b> ${data.firstName}
+      -<b>Прізвище:</b> ${data.lastName}
+      -<b>Телефон:</b> ${data.phone}
+      -<b>Електронна пошта:</b> ${data.email}
 
-      Vehicle Information:
-      -Year: ${data.year}
-      -Make: ${data.make}
-      -Model: ${data.model}
-      -License Plate: ${data.licensePlate}
-      -State: ${data.state}
+      <b>Інформація про автомобіль:</b>
+      -<b>Рік:</b> ${data.year}
+      -<b>Марка:</b> ${data.make}
+      -<b>Модель:</b> ${data.model}
+      -<b>Номерний знак:</b> ${data.licensePlate}
+      -<b>Штат:</b> ${data.state}
 
-      Services:
+      <b>Сервіси:</b>
       ${data.services.map((service: string) => `- ${service}`).join('\n')}
 
-      Comments:
+      <b>Коментарі:</b>
       (${data.comment})
     `;
 
@@ -133,33 +133,32 @@ export const CustomForm = () => {
         body: new URLSearchParams({
           'chat_id': chatId,
           'text': message,
-          'parse_mode': 'markdown',
+          'parse_mode': 'html',
         }),
       });
 
       if (!textResponse.ok) {
-        console.error('Telegram API returned an error for sending text:', textResponse.statusText);
+        console.error('Telegram API повернув помилку при відправці тексту:', textResponse.statusText);
         return;
       }
 
       if (data.file && data.file.length > 0) {
-        const separatorMessage = '----------------------\n';
         const photoArray = Array.from(data.file) as File[];
-        const formData = new FormData();
-
-        formData.append('chat_id', chatId);
 
         const mediaGroup = photoArray.map((_, index: number) => ({
           type: 'photo',
           media: `attach://photo_${index}`,
-          caption: separatorMessage + message, // Додайте роздільник перед текстовим повідомленням
+          caption: index > 0 ? undefined : separatorMessage + message,
         }));
+
+
+        const formData = new FormData();
+        formData.append('chat_id', chatId);
+        formData.append('media', JSON.stringify(mediaGroup));
 
         photoArray.forEach((photo: File, index: number) => {
           formData.append(`photo_${index}`, photo, `photo_${index}`);
         });
-
-        formData.append('media', JSON.stringify(mediaGroup));
 
         const photoResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMediaGroup`, {
           method: 'POST',
@@ -167,22 +166,24 @@ export const CustomForm = () => {
         });
 
         if (!photoResponse.ok) {
-          console.error('Telegram API returned an error for sending photos:', photoResponse.statusText);
+          console.error('Telegram API повернув помилку при відправці фотографій:', photoResponse.statusText);
         } else {
-          console.log('Telegram message with text and photos sent successfully');
+          console.log('Telegram повідомлення з текстом та фотографіями успішно відправлено');
           setArrayImages([]);
           setValue('file', []);
         }
       } else {
-        console.log('Telegram message with text sent successfully');
+        console.log('Telegram повідомлення з текстом успішно відправлено');
       }
+
       reset();
-      toast.success("Form submitted successfully");
+      toast.success("Форма успішно відправлена");
     } catch (error) {
-      console.error('Error sending Telegram message:', error);
-      toast.error("Error submitting form");
+      console.error('Помилка відправки повідомлення в Telegram:', error);
+      toast.error("Помилка відправки форми");
     }
   });
+
 
   const selectedPhotos = watch("file") as File[];
   const handleDeletePhoto = (photo: File) => {
