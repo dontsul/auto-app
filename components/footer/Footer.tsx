@@ -94,9 +94,7 @@ export const Footer: React.FC = () => {
                 className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
                 href="https://www.google.com/maps?ll=39.051219,-77.108649&z=20&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=5362875643083497393"
               >
-                Capital Upfitters Auto & Truck Accessories
-                12019 Nebel St
-                Rockville, MD 20852
+                12019 Nebel St, Rockville, MD 20852
               </a>
             </p>
             <p className="mb-4 flex items-center justify-center md:justify-start">

@@ -88,9 +88,9 @@ export const ContactInfo: FC<IContactInfo> = ({
               />
               <a
                 className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
-                href="#!"
+                href="https://www.google.com/maps/place/Capital+Upfitters+Auto+%26+Truck+Accessories/@39.051219,-77.108649,20z/data=!4m6!3m5!1s0x89b7cc2ec94dd327:0x4a6cc2fbd0961fb1!8m2!3d39.0512397!4d-77.1087077!16s%2Fg%2F11cmybdfrz?hl=en-US&entry=ttu"
               >
-                2131 9th St, Sacramento, CA 95818, USA
+                12019 Nebel St, Rockville, MD 20852
               </a>
             </div>
             <div className=" border-white border-b-[1px] w-full"></div>
