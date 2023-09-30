@@ -5,23 +5,14 @@ import BackgroundImage from "@/components/slider/BackgroundImage";
 import SlideInfo from "@/components/slider/SlideInfo";
 import Slides from "@/components/slider/Slides";
 import Controls from "@/components/slider/Controls";
+import {CurrentSlideData, DataSlider, sliderData} from "@/data/sliderDataHome";
 
 
-export type Data = {
-    img: string;
-    title: string;
-    description: string;
-    location: string;
-};
 
-export type CurrentSlideData = {
-    data: Data;
-    index: number;
-};
 
 export default function Home() {
-    const [data, setData] = React.useState<Data[]>(sliderData.slice(1));
-    const [transitionData, setTransitionData] = React.useState<Data>(
+    const [data, setData] = React.useState<DataSlider[]>(sliderData.slice(1));
+    const [transitionData, setTransitionData] = React.useState<DataSlider>(
         sliderData[0]
     );
     const [currentSlideData, setCurrentSlideData] =
@@ -69,29 +60,6 @@ export default function Home() {
   );
 }
 
-const sliderData = [
-    {
-        img: "/Slider/Slider1.png",
-        location: "Patriot Liner",
-        description:
-            "Patriot Liner",
-        title: "Patriot Liner",
-    },
-    {
-        img: "/Slider/Slider2.png",
-        location: "Patriot Liner",
-        description:
-            "We are thrilled to present PATRIOT LINER , our innovative new protective coating brand. Crafted by veterans and proudly made in America, Patriot Liner carries more than 30 years of industry experience.",
-        title: "Patriot Liner",
-    },
-    {
-        img: "/Slider/Slider3.png",
-        location: "ABOUT US",
-        description:
-            "Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. ",
-        title: "ABOUT US",
-    },
 
-];
 
 const initData = sliderData[0];

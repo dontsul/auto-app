@@ -1,9 +1,9 @@
 import React from "react";
 import SliderCard from "./SliderCard";
-import {Data} from "@/components/slider/Sliders";
+import {DataSlider} from "@/data/sliderDataHome";
 
 type Props = {
-  data: Data[];
+  data: DataSlider[];
 };
 
 function Slides({ data }: Props) {

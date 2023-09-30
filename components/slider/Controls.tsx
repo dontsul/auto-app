@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from "react";
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
 import Progress from "./Progress";
-import {CurrentSlideData, Data} from "@/components/slider/Sliders";
+import {CurrentSlideData, DataSlider} from "@/data/sliderDataHome";
 
 type Props = {
     currentSlideData: CurrentSlideData;
-    sliderData: Data[];
-    data: Data[];
-    transitionData: Data;
-    handleData: React.Dispatch<React.SetStateAction<Data[]>>;
-    handleTransitionData: React.Dispatch<React.SetStateAction<Data>>;
+    sliderData: DataSlider[];
+    data: DataSlider[];
+    transitionData: DataSlider;
+    handleData: React.Dispatch<React.SetStateAction<DataSlider[]>>;
+    handleTransitionData: React.Dispatch<React.SetStateAction<DataSlider>>;
     handleCurrentSlideData: React.Dispatch<
         React.SetStateAction<CurrentSlideData>
     >;
-    initData: Data;
+    initData: DataSlider;
 };
 
 function Controls({
@@ -53,7 +53,7 @@ function Controls({
                 ...newData,
                 transitionData ? transitionData : initData,
             ]);
-        }, 500); // Set the delay to 500 milliseconds (0.5 seconds) or more
+        }, 500);
     };
 
 

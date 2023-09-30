@@ -58,7 +58,7 @@ export function PaintProtectionFilmPages() {
               handleButtonClick("FULL BODY", "path-to-prime-cs-image.jpg")
             }
           >
-            Fusion Lite
+            DYNOshield Front
           </button>
           <button
             type="button"
@@ -71,7 +71,7 @@ export function PaintProtectionFilmPages() {
               handleButtonClick("FULL FRONT", "path-to-prime-xr-image.jpg")
             }
           >
-            Fusion Plus
+            DYNOshield Track Pack
           </button>
           <button
             type="button"
@@ -84,7 +84,7 @@ export function PaintProtectionFilmPages() {
               handleButtonClick("TRACK PACK", "path-to-prime-xr-image.jpg")
             }
           >
-            Fusion Satin
+            DYNOshield Full Body
           </button>
           <button
             type="button"
@@ -97,7 +97,9 @@ export function PaintProtectionFilmPages() {
               handleButtonClick("FORT KNOX", "path-to-prime-cs-image.jpg")
             }
           >
-            Fusion Premium
+            Fashion Film /
+            DYNOmight /
+            DYNOmatte
           </button>
         </div>
         <div className=" ">
