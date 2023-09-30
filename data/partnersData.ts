@@ -1,12 +1,12 @@
-import adbe from "@/public/partners/ADBE.svg";
-import amzn from "@/public/partners/AMZN.svg";
-import ba from "@/public/partners/BA.svg";
-import brkb from "@/public/partners/BRK-B.svg";
-import cat from "@/public/partners/CAT.svg";
-import dis from "@/public/partners/DIS.svg";
-import msft from "@/public/partners/MSFT.svg";
-import nvda from "@/public/partners/NVDA.svg";
-import pg from "@/public/partners/PG.svg";
+import adbe from "@/public/images/partners/ADBE.svg";
+import amzn from "@/public/images/partners/AMZN.svg";
+import ba from "@/public/images/partners/BA.svg";
+import brkb from "@/public/images/partners/BRK-B.svg";
+import cat from "@/public/images/partners/CAT.svg";
+import dis from "@/public/images/partners/DIS.svg";
+import msft from "@/public/images/partners/MSFT.svg";
+import nvda from "@/public/images/partners/NVDA.svg";
+import pg from "@/public/images/partners/PG.svg";
 import { IPartner } from "@/interfaces/partners";
 export const partners: IPartner[] = [
   {

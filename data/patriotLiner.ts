@@ -43,6 +43,11 @@ import pl43 from "@/public/portfolio/patriot-liner/ENTIRE-VEHICLE/pl43.jpg";
 import pl44 from "@/public/portfolio/patriot-liner/ENTIRE-VEHICLE/pl44.jpg";
 import pl45 from "@/public/portfolio/patriot-liner/ENTIRE-VEHICLE/pl45.jpg";
 
+import plSlide from "@/public/images/patriotLiner/Patriot-Liner.png";
+import plUvSlide from "@/public/images/patriotLiner/Patriot-Liner-UV+.png";
+import plSolutionsSlide from "@/public/images/patriotLiner/Patriot-Liner-FLEET-Solutions.png";
+import plApexSlide from "@/public/images/patriotLiner/Patriot-Liner-APEX-Shield-UV+.png";
+
 export const portfolioList: IPortfolioList[] = [
   {
     image: pl1,
@@ -226,5 +231,52 @@ export const portfolioList: IPortfolioList[] = [
   {
     image: pl45,
     title: "Patriot Liner example",
+  },
+];
+
+export const patriotLinerSlider = [
+  {
+    image: plSlide,
+    title: "Patriot Liner benefits:",
+    list: [
+      "Protection: It shields your truck bed from scratches, dents, and rust, extending the bed's lifespan.",
+      "Resale Value: A bedliner can help maintain your truck's value when you sell or trade it.",
+      "Corrosion Prevention: Protects against corrosion from moisture and chemicals.",
+      "Improved Traction: Some models offer a textured surface for better grip when loading and unloading.",
+      "Enhanced Appearance: Makes your truck bed look more polished and well-maintained. Easy to clean, saving you time and effort.",
+    ],
+  },
+  {
+    image: plUvSlide,
+    title: "Patriot Liner benefits:",
+    list: [
+      "Protection: It shields your truck bed from scratches, dents, and rust, extending the bed's lifespan.",
+      "Resale Value: A bedliner can help maintain your truck's value when you sell or trade it.",
+      "Corrosion Prevention: Protects against corrosion from moisture and chemicals.",
+      "Improved Traction: Some models offer a textured surface for better grip when loading and unloading.",
+      "Enhanced Appearance: Makes your truck bed look more polished and well-maintained. Easy to clean, saving you time and effort.",
+    ],
+  },
+  {
+    image: plSolutionsSlide,
+    title: "Patriot Liner benefits:",
+    list: [
+      "Protection: It shields your truck bed from scratches, dents, and rust, extending the bed's lifespan.",
+      "Resale Value: A bedliner can help maintain your truck's value when you sell or trade it.",
+      "Corrosion Prevention: Protects against corrosion from moisture and chemicals.",
+      "Improved Traction: Some models offer a textured surface for better grip when loading and unloading.",
+      "Enhanced Appearance: Makes your truck bed look more polished and well-maintained. Easy to clean, saving you time and effort.",
+    ],
+  },
+  {
+    image: plApexSlide,
+    title: "Patriot Liner benefits:",
+    list: [
+      "Protection: It shields your truck bed from scratches, dents, and rust, extending the bed's lifespan.",
+      "Resale Value: A bedliner can help maintain your truck's value when you sell or trade it.",
+      "Corrosion Prevention: Protects against corrosion from moisture and chemicals.",
+      "Improved Traction: Some models offer a textured surface for better grip when loading and unloading.",
+      "Enhanced Appearance: Makes your truck bed look more polished and well-maintained. Easy to clean, saving you time and effort.",
+    ],
   },
 ];

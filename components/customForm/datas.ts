@@ -5,93 +5,109 @@ export const services: IService[] = [
     value: "trailerHitch",
     text: "Trailer Hitch",
     info: {
-      titleInfo: "Title info",
+      titleInfo: "Trailer Hitch",
       textInfo:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        "Preferred Brand: Stealth Hitch; ECO-Hitch; Hidden Hitch; Curt; Draw-Tite etc. Electrical Wire: 4 pin / 7 pin Electrical is required for towing a trailer. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "bedCover",
     text: "Bed Cover",
     info: {
-      titleInfo: "Title info",
+      titleInfo: "Bed Cover",
       textInfo:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "Preferred Brand/Model: RETRAX; BAKFLIP; UNDERCOVER; EXTANG; TRUXEDO etc. Preferred Style: HARD/SOFT; TRIFOLD; RETRACTIBLE; ROLL-UP etc. Preferred Budget: Below $500; $500-$1500 etc. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "patriotLiner",
     text: "Patriot Liner",
     info: {
-      titleInfo: "Title info",
-      textInfo: "text info ",
+      titleInfo: "Patriot Liner",
+      textInfo:
+        "Preferred Tier: Standard Black, UV+ Platinum Liner, Colored Bedliner etc. Type of Spray: Truck Bed, Accessories, Complete Vehicle Spray etc. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "suspension",
     text: "Suspension",
     info: {
-      titleInfo: "Title info",
+      titleInfo: "Suspension ",
       textInfo:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "Type: Truck Performance Suspension Upgrade; Coilovers; Lift Kits; Shock Upgrade; Spring Upgrade etc. Brand: Ohlins; King Shocks; FOX Shocks; Bilstein; BDS; Ready Lift; Rough Country etc. Preferred Budget: Below $1000; $2000-$4000 etc. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "rustPrevention",
     text: "Rust Prevention",
     info: {
-      titleInfo: "Title info",
-      textInfo: "text info ",
+      titleInfo: "Rust Prevention",
+      textInfo:
+        "Coating Type: Our ECO CLEAR 10 Year Coating; Waxoyl; Woolwax; Cavity Wax etc. Underbody Condition: Clean; Some Rust; Heavy Rust etc. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "ceramicCoating",
     text: "Ceramic Coating",
     info: {
-      titleInfo: "Title info",
+      titleInfo: "Ceramic Coating",
       textInfo:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "Coating Type: Automotive; Aircraft; Marine; Commercial etc. Coating Tier: SystemX MAX; SystemX PRO; Interior; Wheel etc. Paint Condition: Brand New Vehicle; Need Some Care; Needs Restoration etc. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "ppf",
     text: "PPF (Clear Bra)",
     info: {
-      titleInfo: "Title info",
-      textInfo: "text info ",
+      titleInfo: "PPF (Clear Bra)",
+      textInfo:
+        "Film Tier: Bumper Only; Full Front; Track Pack; Full Body; Fashion Films etc. Film Type: DYNOmight; DYNOmatte; DYNOshield; DYNO prims; DYNOwhite etc. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "detailing",
     text: "Detailing",
     info: {
-      titleInfo: "Title info",
+      titleInfo: "Detailing",
       textInfo:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "Detail Type: Paint Correction; Exterior Detailing; Interior Detailing, Engine Bay Detailing; etc. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "vanPackages",
     text: "Van Packages",
     info: {
-      titleInfo: "Title info",
-      textInfo: "text info ",
+      titleInfo: "Van Packages",
+      textInfo:
+        "Upfit Type: Complete Package, Partition Only, Ladder Rack, Slick Locks etc. Preferred Brand/Package: Kargo Master, Weather Guards, Masterack etc. Package Type: General Trade; Electrician, HVAC, Base Package etc. Please refer to KargoMaster.com for more info. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "fleetManagement",
     text: "Fleet Management",
     info: {
-      titleInfo: "Title info",
-      textInfo: "text info ",
+      titleInfo: "Fleet Management",
+      textInfo:
+        "Vehicle Types: Pickup Truck; SUV; Vav; Sedan; Fleet Size: 1-5; 5-10; 10-50; 50+ Service Needed: Rust Prevention; Upfits; Protective Coatings etc. Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
   {
     value: "otherService",
     text: "Other Service",
     info: {
-      titleInfo: "Title info",
-      textInfo: "text info ",
+      titleInfo: "Other Service",
+      textInfo: " Pictures and files can be attached below.",
+      textProvide: "Please provided detailed information about the service requested.",
     },
   },
 ];

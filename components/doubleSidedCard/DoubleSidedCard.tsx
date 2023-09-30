@@ -14,7 +14,7 @@ export const DoubleSidedCard: FC<IDoubleSidedCardProps> = ({ list, title }) => {
       <Title tag="h4" cn="mb-10">
         {title}
       </Title>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-1 justify-center">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 justify-center">
         {list.map((item) => {
           return <DoubleSidedCardItem key={uuidv4()} item={item} />;
         })}

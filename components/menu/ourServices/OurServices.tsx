@@ -1,8 +1,8 @@
-import { FC, useRef } from "react";
+"use client";
+import { FC } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { Preservation } from "./preservation/Preservation";
 import { Fleet } from "./fleet/Fleet";
 import { Styling } from "./styling/Styling";
 import { usePathname } from "next/navigation";
@@ -24,7 +24,6 @@ export const OurServices: FC<IOurServicesProps> = ({
   handleMenu,
   openServices,
   handleServices,
-  openPreservation,
   handlePreservation,
   openFleet,
   handleFleet,
@@ -95,14 +94,12 @@ export const OurServices: FC<IOurServicesProps> = ({
             }
             exit={!isDesktop ? { height: 0 } : { opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className={`overflow-hidden lg:overflow-visible pl-2 lg:absolute lg:bg-[#111827] top-9 lg:shadow-xl lg:px-4 lg:py-4 space-y-0 lg:space-y-2`}
+            className={`lg:w-[215px] overflow-hidden lg:overflow-visible pl-2 lg:absolute lg:bg-[#111827] top-9 lg:shadow-xl lg:px-4 lg:py-4 space-y-0 lg:space-y-2`}
           >
             <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
               <Link
                 className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/hitches"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/hitches" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/hitches`}
                 onClick={() => {
@@ -115,9 +112,7 @@ export const OurServices: FC<IOurServicesProps> = ({
             <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
               <Link
                 className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/rust-prevention"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/rust-prevention" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/rust-prevention`}
                 onClick={() => {
@@ -130,9 +125,7 @@ export const OurServices: FC<IOurServicesProps> = ({
             <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
               <Link
                 className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/patriot-liner"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/patriot-liner" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/patriot-liner`}
                 onClick={() => {
@@ -145,9 +138,7 @@ export const OurServices: FC<IOurServicesProps> = ({
             <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
               <Link
                 className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/ppf"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/ppf" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/ppf`}
                 onClick={() => {
@@ -160,9 +151,7 @@ export const OurServices: FC<IOurServicesProps> = ({
             <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
               <Link
                 className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/ceramic-coatings"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/ceramic-coatings" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/ceramic-coatings`}
                 onClick={() => {
@@ -175,9 +164,7 @@ export const OurServices: FC<IOurServicesProps> = ({
             <li className="mt-0 pt-2 w-auto pl-4 py-1 lg:pt-0">
               <Link
                 className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/accessories"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/accessories" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/accessories`}
                 onClick={() => {
@@ -188,18 +175,8 @@ export const OurServices: FC<IOurServicesProps> = ({
               </Link>
             </li>
 
-            <Styling
-              handleMenu={handleMenu}
-              openStyling={openStyling}
-              handleStyling={handleStyling}
-              isDesktop={isDesktop}
-            />
-            <Fleet
-              handleMenu={handleMenu}
-              openFleet={openFleet}
-              handleFleet={handleFleet}
-              isDesktop={isDesktop}
-            />
+            <Styling handleMenu={handleMenu} openStyling={openStyling} handleStyling={handleStyling} isDesktop={isDesktop} />
+            <Fleet handleMenu={handleMenu} openFleet={openFleet} handleFleet={handleFleet} isDesktop={isDesktop} />
           </motion.ul>
         )}
       </AnimatePresence>

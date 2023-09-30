@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,12 +11,7 @@ interface IFleetProps {
   isDesktop: boolean;
 }
 
-export const Fleet: FC<IFleetProps> = ({
-  handleMenu,
-  openFleet,
-  handleFleet,
-  isDesktop,
-}) => {
+export const Fleet: FC<IFleetProps> = ({ handleMenu, openFleet, handleFleet, isDesktop }) => {
   const pathname = usePathname();
   return (
     <li
@@ -36,9 +32,7 @@ export const Fleet: FC<IFleetProps> = ({
       <div className="flex items-center justify-between  w-full">
         <Link
           className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-            pathname === "/our-services/fleet-management"
-              ? "text-yellow-500 active-line"
-              : ""
+            pathname === "/our-services/fleet-management" ? "text-yellow-500 active-line" : ""
           }`}
           href={`/our-services/fleet-management`}
           onClick={() => {
@@ -81,9 +75,7 @@ export const Fleet: FC<IFleetProps> = ({
             <li className="mt-0 pt-2  w-auto px-4 py-1 lg:mt-4">
               <Link
                 className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/fleet-management/goverment"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/fleet-management/goverment" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/fleet-management/goverment`}
                 onClick={() => {
@@ -96,9 +88,7 @@ export const Fleet: FC<IFleetProps> = ({
             <li className="inline px-4 py-1">
               <Link
                 className={`text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/fleet-management/commercial"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/fleet-management/commercial" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/fleet-management/commercial`}
                 onClick={() => {
@@ -111,9 +101,7 @@ export const Fleet: FC<IFleetProps> = ({
             <li className="px-4 py-1 mb-0 lg:mb-4">
               <Link
                 className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/fleet-management/dealerships"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/fleet-management/dealerships" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/fleet-management/dealerships`}
                 onClick={() => {

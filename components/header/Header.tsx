@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Logo } from "../logo/Logo";
 import { BurgerMenu } from "../burgerMenu/BurgerMenu";
-import { ButtonSearch } from "../buttonSearch/ButtonSearch";
 import { Menu } from "../menu/Menu";
 import { ContactInfo } from "../contactInfo/ContactInfo";
 import { ContactInfoBtn } from "../contactInfoBtn/ContactInfoBtn";
@@ -11,7 +10,6 @@ import Link from "next/link";
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [openContactInfo, setOpenContactInfo] = useState<boolean>(false);
-  const [windowWidth, setWindowWidth] = useState<number>(0);
   const [openServices, setOpenServices] = useState<boolean>(false);
   const [openPreservation, setOpenPreservation] = useState<boolean>(false);
   const [openFleet, setOpenFleet] = useState<boolean>(false);
@@ -44,7 +42,6 @@ export const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
       const isDesktop = window.innerWidth > 1023;
       setIsDesktop(isDesktop);
     };
@@ -78,12 +75,8 @@ export const Header = () => {
         handleStyling={handleStyling}
         isDesktop={isDesktop}
       />
-      {/* <ButtonSearch isDesktop={isDesktop} /> */}
       <ContactInfoBtn handleContactInfo={handleContactInfo} />
-      <ContactInfo
-        openContactInfo={openContactInfo}
-        handleContactInfo={handleContactInfo}
-      />
+      <ContactInfo openContactInfo={openContactInfo} handleContactInfo={handleContactInfo} />
     </header>
   );
 };

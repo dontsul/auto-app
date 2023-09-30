@@ -2,37 +2,41 @@ import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
 import Image from "next/image";
 import imageAuto from "@/public/1.png";
+import rangeRoverGif from "@/public/images/hitches/Range-Rover.gif";
 import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
-import { listXpel } from "@/data/xpelData";
-
+import { listHitches } from "@/data/hitches";
+import { TextPage } from "@/components/textPage/TextPage";
+import { textPrimaryHitches, stealthHitchHitches, ecoHitchHitches } from "@/data/hitches";
 export default function Hitches() {
   return (
     <div className="py-16 container">
       <Title tag="h2" cn="mb-16">
         Vinyl <span className="text-yellow-500">Wraps</span>
       </Title>
-      <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 mb-16">
+      <TextPage cn="text-xl mb-12">{textPrimaryHitches}</TextPage>
+
+      <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2  items-start">
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            molestias facilis praesentium vitae consectetur nemo dolorum facere
-            quas qui ducimus eius earum similique tempore fuga, recusandae
-            aliquid accusamus id quisquam.
-          </p>
+          <h5 className="mb-2 text-lg font-semibold text-gray-900 ">{stealthHitchHitches.title}</h5>
+          <ul className="space-y-1 text-gray-500 list-disc list-inside mb-12">
+            {stealthHitchHitches.list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </div>
         <div className="rounded-md flex justify-center items-center lg:justify-end">
-          <Image
-            src={imageAuto}
-            width={700}
-            height={500}
-            alt="Our Services"
-            className="rounded-md"
-          />
+          <Image src={rangeRoverGif} width={700} height={500} alt="Our Services" className="rounded-md" />
         </div>
       </div>
-      <DoubleSidedCard title="title" list={listXpel} />
+      <h5 className="mb-2 text-lg font-semibold text-gray-900 ">{ecoHitchHitches.title}</h5>
+      <ul className="space-y-1 text-gray-500 list-disc list-inside mb-16">
+        {ecoHitchHitches.list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+      <DoubleSidedCard title="Hitches" list={listHitches} />
       <Title tag="h4" cn="mb-10">
-        Form
+        CONTACT US
       </Title>
       <CustomForm />
     </div>

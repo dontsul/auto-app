@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+/* @layer components {
   .line {
     @apply relative
             after:bg-yellow-500
@@ -28,7 +28,7 @@
             after:w-full
             after:content-[''];
   }
-}
+} */
 
 body {
   background-color: #e2e8f0;

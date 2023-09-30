@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,12 +11,7 @@ interface IStylingProps {
   isDesktop: boolean;
 }
 
-export const Styling: FC<IStylingProps> = ({
-  handleMenu,
-  openStyling,
-  handleStyling,
-  isDesktop,
-}) => {
+export const Styling: FC<IStylingProps> = ({ handleMenu, openStyling, handleStyling, isDesktop }) => {
   const pathname = usePathname();
   return (
     <li
@@ -36,9 +32,7 @@ export const Styling: FC<IStylingProps> = ({
       <div className="flex items-center justify-between  w-full">
         <Link
           className={`inline h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-            pathname === "/our-services/styling"
-              ? "text-yellow-500 active-line"
-              : ""
+            pathname === "/our-services/styling" ? "text-yellow-500 active-line" : ""
           }`}
           href={`/our-services/styling`}
           onClick={() => {
@@ -81,9 +75,7 @@ export const Styling: FC<IStylingProps> = ({
             <li className="mt-0 pt-2 w-auto px-4 py-1 lg:mt-4">
               <Link
                 className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/styling/wheels-tires"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/styling/wheels-tires" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/styling/wheels-tires`}
                 onClick={() => {
@@ -96,9 +88,7 @@ export const Styling: FC<IStylingProps> = ({
             <li className="inline px-4 py-1 transition">
               <Link
                 className={`text-sm w-auto h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/styling/suspension"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/styling/suspension" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/styling/suspension`}
                 onClick={() => {
@@ -111,9 +101,7 @@ export const Styling: FC<IStylingProps> = ({
             <li className="w-auto px-4 py-1 transition">
               <Link
                 className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/styling/exhaust"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/styling/exhaust" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/styling/exhaust`}
                 onClick={() => {
@@ -127,9 +115,7 @@ export const Styling: FC<IStylingProps> = ({
             <li className="w-auto px-4 py-1 mb-0 lg:mb-4">
               <Link
                 className={`text-sm inline h-full text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/our-services/styling/window-tint"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                  pathname === "/our-services/styling/window-tint" ? "text-yellow-500 active-line" : ""
                 }`}
                 href={`/our-services/styling/window-tint`}
                 onClick={() => {

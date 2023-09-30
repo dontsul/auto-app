@@ -49,7 +49,6 @@ export const models: ICarModels = {
     { value: "159", text: "159" },
     { value: "166", text: "166" },
     { value: "brera", text: "Brera" },
-    { value: "giulietta", text: "Giulietta" },
     { value: "gtv", text: "GTV" },
     { value: "mito", text: "MiTo" },
   ],
