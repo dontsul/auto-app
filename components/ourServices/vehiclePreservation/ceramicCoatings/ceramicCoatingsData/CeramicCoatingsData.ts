@@ -2,7 +2,7 @@ import {IPortfolioList} from "@/interfaces/portfolio";
 import images from "@/public/ceramicCoatingsImgs/1.png";
 import images2 from "@/public/ceramicCoatingsImgs/2.png";
 import images3 from "@/public/ceramicCoatingsImgs/3.png";
-import images4 from "@/public/ceramicCoatingsImgs/4.png";
+import images4 from '@/public/ceramicCoatingsImgs/4.png';
 import {ITitleTintPagesProps} from "@/interfaces/ourServicesPages";
 
 

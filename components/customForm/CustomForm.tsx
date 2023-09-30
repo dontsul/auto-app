@@ -22,11 +22,9 @@ import { CustomSelect } from "../customSelect/CustomSelect";
 import metadata from "libphonenumber-js/metadata.min.json";
 import "react-phone-number-input/style.css";
 import toast from "react-hot-toast";
-import { InfoServices } from "./infoServices/InfoServices";
-import { TbInfoSquareFilled } from "react-icons/tb";
 import { CustomService } from "./customService/CustomService";
+import {submitFormToTelegram, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID} from "@/utils/onSubmitTelegram";
 
-const URL_SERVER = "http://localhost:4000/";
 const FILE_SIZE = 5 * 1024 * 1024;
 
 const schema = yup.object({
@@ -36,29 +34,32 @@ const schema = yup.object({
   email: yup.string().email().required("Email is a required field"),
   comment: yup.string().required("Comments is a required field"),
   file: yup
-    .mixed()
-    .test("fileSize", "File size is too large", (value: any) => {
-      if (value?.length === 0) return true;
-      const v = Object.values(value as File);
-      return v && v[0]?.size <= FILE_SIZE;
-    })
-    .test("fileCount", "Maximum 5 files allowed", (value) => {
-      if (!value) return true;
-      const fileCount = Object.values(value) ? Object.values(value).length : 0;
-      return fileCount <= 5;
-    }),
+      .mixed()
+      .test("fileSize", "File size is too large", (value: any) => {
+        if (value?.length === 0) return true;
+        const v = Object.values(value as File);
+        return v && v[0]?.size <= FILE_SIZE;
+      })
+      .test("fileCount", "Maximum 5 files allowed", (value) => {
+        if (!value) return true;
+        const fileCount = Object.values(value) ? Object.values(value).length : 0;
+        return fileCount <= 5;
+      }),
   year: yup.string().required("Year is a required field"),
   make: yup.string().required("Make is a required field"),
   model: yup.string().required("Model is a required field"),
   licensePlate: yup.string(),
   state: yup.string(),
   services: yup
-    .array()
-    .required("At least one service must be selected")
-    .min(1, "At least one service must be selected"),
+      .array()
+      .required("At least one service must be selected")
+      .min(1, "At least one service must be selected"),
 });
-
 export const CustomForm = () => {
+  const botToken = TELEGRAM_BOT_TOKEN;
+  const chatId = TELEGRAM_CHAT_ID
+  const [charCount, setCharCount] = useState(0);
+
   const formAnimation = {
     hidden: {
       y: -100,
@@ -99,63 +100,40 @@ export const CustomForm = () => {
       services: [],
     },
   });
-  const [arrayImages, setArrayImages] = useState<File[]>([] as File[]);
-  const [statusInfo, setStatusInfo] = useState<boolean>(false);
-  const onSubmit = handleSubmit((data: any) => {
-    const formData = new FormData();
-    formData.append("firstName", data.firstName);
-    formData.append("lastName", data.lastName);
-    formData.append("phone", data.phone);
-    formData.append("email", data.email);
-    formData.append("comment", data.comment);
-    formData.append("year", data.year);
-    formData.append("make", data.make);
-    formData.append("model", data.model);
-    formData.append("licensePlate", data.licensePlate);
-    formData.append("state", data.state);
-    data.services.forEach((service: string) =>
-      formData.append("services", service)
-    );
+  const [arrayImages, setArrayImages] = useState<File[]>([]);
 
-    Object.values(data.file).forEach((f, i) => {
-      formData.append(`file`, data.file[i]);
-    });
-    console.log(data);
+  const onSubmit = handleSubmit(async (data: any) => {
+    try {
+      const response = await submitFormToTelegram(data, chatId, botToken);
 
-    fetch(`${URL_SERVER}api/form`, {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
+      if (response.success) {
+        setArrayImages([]);
+        setValue('file', []);
         reset();
-        toast.success(data.message, {
-          duration: 3000,
-        });
-      })
-      .catch((e) => {
-        toast.error("This didn't work.");
-      });
+        toast.success("Form successfully submitted");
+      } else {
+        console.error(`Error submitting the form: ${response.error}`);
+        toast.error("Error submitting the form");
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+      toast.error("Error submitting the form");
+    }
   });
+
+
+
   const selectedPhotos = watch("file") as File[];
-
-  // const handleStatusInfo = () => {
-  //   setStatusInfo(!statusInfo);
-  // };
-
   const handleDeletePhoto = (photo: File) => {
     const updatedPhotos = arrayImages.filter((item) => item !== photo);
     setArrayImages(updatedPhotos);
-    setValue("file", updatedPhotos);
+    setValue('file', updatedPhotos);
   };
 
   useEffect(() => {
-    if (selectedPhotos !== undefined) {
-      if (selectedPhotos.length === 0) return;
+    if (selectedPhotos !== undefined && selectedPhotos.length > 0) {
+      setArrayImages([...selectedPhotos]);
     }
-    setArrayImages([...selectedPhotos]);
   }, [selectedPhotos]);
 
   return (
@@ -420,23 +398,40 @@ export const CustomForm = () => {
           {/* -------------------------------services------------------------- */}
           {/* -------------------------------comment-------------------------- */}
           <motion.div
-            viewport={{ once: true }}
-            className="mb-4 col-span-1 md:col-span-3"
-            variants={formAnimation}
+              viewport={{ once: true }}
+              className="mb-4 col-span-1 md:col-span-3"
+              variants={formAnimation}
           >
             <label className="block text-sm font-medium text-gray-900">
               Your message
               <Controller
-                name="comment"
-                control={control}
-                render={({ field }) => (
-                  <CustomTextArea {...field} placeholder="Write your comment" />
-                )}
+                  name="comment"
+                  control={control}
+                  render={({ field }) => (
+                      <>
+                        <CustomTextArea
+                            {...field}
+                            placeholder="Write your comment"
+                            maxLength={700}
+                            onChange={(e) => {
+                              const inputValue = e.target.value;
+                              if (inputValue.length <= 700) {
+                                field.onChange(inputValue);
+                              }
+                            }}
+                        />
+                        <p className="text-sm text-gray-500">
+                          {field.value.length}/700
+                        </p>
+                      </>
+                  )}
               />
             </label>
 
             <p className="text-sm text-red-600">{errors.comment?.message}</p>
           </motion.div>
+
+
           {/* -------------------------------comment-------------------------- */}
           {/* --------------images----------------- */}
           <motion.div
@@ -472,30 +467,31 @@ export const CustomForm = () => {
             </label>
 
             {arrayImages !== undefined && arrayImages.length > 0 && (
-              <div className="flex items-center gap-2 flex-wrap mt-2">
-                {arrayImages.map((photo: File, index: number) => (
-                  <div
-                    className="relative h-[80px] w-[80px] rounded-md"
-                    key={uuidv4()}
-                  >
-                    <Image
-                      key={index}
-                      src={URL.createObjectURL(photo)}
-                      alt={`Фото ${index}`}
-                      width={80}
-                      height={80}
-                      className="h-[80px] w-[80px] rounded-md shadow-md"
-                    />
-                    <div
-                      className="absolute top-1 right-1 p-1 backdrop-blur-[4px] rounded-md cursor-pointer"
-                      onClick={() => handleDeletePhoto(photo)}
-                    >
-                      <AiOutlineClose color="white" />
-                    </div>
-                  </div>
-                ))}
-              </div>
+                <div className="flex items-center gap-2 flex-wrap mt-2">
+                  {arrayImages.map((photo: File, index: number) => (
+                      <div
+                          className="relative h-[80px] w-[80px] rounded-md"
+                          key={uuidv4()}
+                      >
+                        <Image
+                            key={index}
+                            src={URL.createObjectURL(photo)}
+                            alt={`Фото ${index}`}
+                            width={80}
+                            height={80}
+                            className="h-[80px] w-[80px] rounded-md shadow-md"
+                        />
+                        <div
+                            className="absolute top-1 right-1 p-1 backdrop-blur-[4px] rounded-md cursor-pointer"
+                            onClick={() => handleDeletePhoto(photo)}
+                        >
+                          <AiOutlineClose color="white" />
+                        </div>
+                      </div>
+                  ))}
+                </div>
             )}
+
             <p className="text-sm text-red-600">{errors.file?.message}</p>
           </motion.div>
           {/* --------------images----------------- */}
