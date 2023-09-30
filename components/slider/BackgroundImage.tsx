@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {CurrentSlideData, DataSlider} from "@/data/sliderDataHome";
+import {CurrentSlideData, DataSlider} from "@/data/dataSliderHome/DataTepe";
 
 type Props = {
   transitionData: DataSlider;
