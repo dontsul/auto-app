@@ -1,6 +1,4 @@
-import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
 import OtherInfo from "@/components/slider/OtherInfo";
 import {CurrentSlideDataC, DataSliderC} from "@/data/dataSliderCommercial/DataTepe";
@@ -34,5 +32,4 @@ function SlideInfoCommercial({ transitionData, currentSlideData }: Props) {
         </>
     );
 }
-
 export default SlideInfoCommercial;

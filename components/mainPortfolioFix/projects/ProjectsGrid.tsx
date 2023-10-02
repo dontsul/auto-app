@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import ProjectsFilter from './ProjectsFilter';
-import {projectsData} from "@/components/mainPortfolioFix/data/projectsData";
+import {projectsData} from "@/data/dataMainPortfolioEdit/projectsData";
 
 function ProjectsGrid() {
     const [searchProject, setSearchProject] = useState<string>('');
