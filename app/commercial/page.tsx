@@ -6,7 +6,7 @@ import CommercialSlider from "@/components/commercialPages/CommercialSlider";
 export default function Financing() {
   return (
       <div>
-          <CommercialSlider />
+          {/*<CommercialSlider />*/}
           <AboutSection />
           <Contact />
       </div>
