@@ -11,15 +11,4 @@ const MyMapPage: React.FC = () => {
   );
 };
 
-
-// const MyMapPage: React.FC = () => {
-//     const center = { lat: 39.051248882550475, lng: -77.1087061282229 };
-//
-//     return (
-//         <div>
-//             <GoogleMapComponent center={center} />
-//         </div>
-//     );
-// };
-//
 export default MyMapPage;

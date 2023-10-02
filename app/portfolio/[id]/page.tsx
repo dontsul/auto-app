@@ -1,4 +1,3 @@
-import {projectsData} from "@/components/mainPortfolioFix/data/projectsData";
 import React from "react";
 import ProjectSingleId from "@/components/mainPortfolioFix/ProjectSingleID";
 interface IProjectSingleID {
@@ -9,7 +8,6 @@ interface IProjectSingleID {
 export default function ProjectSingle ({ params: { id }}: IProjectSingleID) {
     return (
         <div>
-
                <ProjectSingleId idProject={id} />
         </div>
     );

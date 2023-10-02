@@ -1,7 +1,7 @@
 import {FC} from 'react';
 import { FiTag } from 'react-icons/fi';
 import Image from 'next/image';
-import {projectsData} from "@/components/mainPortfolioFix/data/projectsData";
+import {projectsData} from "@/data/dataMainPortfolioEdit/projectsData";
 
 
 
