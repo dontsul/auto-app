@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
 import OtherInfo from "@/components/slider/OtherInfo";
 import {CurrentSlideDataC, DataSliderC} from "@/data/dataSliderCommercial/DataTepe";
@@ -24,9 +23,7 @@ function SlideInfoCommercial({ transitionData, currentSlideData }: Props) {
                     offset={-70}
                     duration={500}
                 >
-                    <button
-                        className="w-full md:w-auto rounded-full border-[1px] border-[#ffffff8f] px-8 py-4 text-[14px] font-thin transition duration-300 ease-in-out hover:bg-white hover:text-black"
-                    >
+                    <button className="w-full md:w-auto rounded-full border-[1px] border-[#ffffff8f] px-8 py-4 text-[14px] font-thin transition duration-300 ease-in-out hover:bg-white hover:text-black">
                         Contact us
                     </button>
                 </LinkScroll>
