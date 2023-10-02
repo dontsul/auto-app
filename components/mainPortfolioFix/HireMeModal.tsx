@@ -25,10 +25,7 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
 			exit={{ opacity: 0 }}
 			className="font-general-medium fixed inset-0 z-30 transition-all duration-500"
 		>
-			{/* Modal Backdrop */}
 			<div className="bg-filter bg-black bg-opacity-50 fixed inset-0 w-full h-full z-20"></div>
-
-			{/* Modal Content */}
 			<main className="flex flex-col items-center justify-center h-full w-full">
 				<div className="modal-wrapper flex items-center z-30">
 					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">

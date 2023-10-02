@@ -8,7 +8,6 @@ interface IProjectSingleID {
 export default function ProjectSingle ({ params: { id }}: IProjectSingleID) {
     return (
         <div>
-
                <ProjectSingleId idProject={id} />
         </div>
     );

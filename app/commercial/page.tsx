@@ -1,6 +1,5 @@
 import {AboutSection} from "@/components/aboutSection/AboutSection";
 import {Contact} from "@/components/contact/Contact";
-import {Reviews} from "@/components/reviews/Reviews";
 import React from "react";
 import CommercialSlider from "@/components/commercialPages/CommercialSlider";
 

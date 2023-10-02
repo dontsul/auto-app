@@ -1,29 +1,22 @@
-
 export const sliderDataC = [
     {
-        img: "/Slider/SliderPatriot.jpg",
+        img: "/SliderCommercial/Slider1.png",
         description:"Commercial",
         title: "Commercial",
         link: ""
     },
     {
-        img: "/Slider/SliderCaramic.jpg",
+        img: "/SliderCommercial/Slider2.png",
         description:"Commercial",
         title: "Commercial",
         link: ""
 
     },
     {
-        img: "/Slider/SliderWheelsTires.jpg",
+        img: "/SliderCommercial/Slider3.png",
         description:"Commercial",
         title: "Commercial",
         link: ""
 
-    },
-    {
-        img: "/Slider/SliderHitches.jpg",
-        description:"Commercial",
-        title: "Commercial",
-        link: ""
     },
 ];
