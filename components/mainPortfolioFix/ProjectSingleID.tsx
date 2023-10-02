@@ -2,7 +2,7 @@
 import {FC, useCallback, useEffect, useState} from 'react';
 import {FiChevronLeft, FiChevronRight, FiTag, FiX} from 'react-icons/fi';
 import Image from 'next/image';
-import {projectsData} from "@/components/mainPortfolioFix/data/projectsData";
+import {projectsData} from "@/data/dataMainPortfolioEdit/projectsData";
 
 interface IProjectSingleIdProps {
     idProject: number;
