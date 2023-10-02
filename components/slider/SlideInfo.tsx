@@ -13,7 +13,7 @@ type Props = {
 function SlideInfo({ transitionData, currentSlideData }: Props) {
     return (
         <>
-            {/*<motion.span layout className="mb-2 h-1 w-5 rounded-full bg-white" />*/}
+            <motion.span layout className="mb-2 h-1 w-5 rounded-full bg-white" />
             <OtherInfo data={transitionData ? transitionData : currentSlideData.data} />
             <motion.div layout className="mt-5 flex items-center gap-3">
                 <Link href={transitionData.link} passHref>
