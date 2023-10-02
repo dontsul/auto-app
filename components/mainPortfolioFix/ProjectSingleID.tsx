@@ -1,9 +1,8 @@
-import {FC, useState} from 'react';
-import { FiClock, FiTag } from 'react-icons/fi';
+import {FC} from 'react';
+import { FiTag } from 'react-icons/fi';
 import Image from 'next/image';
 import {projectsData} from "@/components/mainPortfolioFix/data/projectsData";
-import RelatedProjects from "@/components/mainPortfolioFix/projects/RelatedProjects";
-import Link from "next/link";
+
 
 
 interface IProjectSingleIdProps{
