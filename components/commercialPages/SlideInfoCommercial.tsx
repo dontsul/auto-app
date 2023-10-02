@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import OtherInfo from "@/components/slider/OtherInfo";
 import {CurrentSlideDataC, DataSliderC} from "@/data/dataSliderCommercial/DataTepe";
+import {Link as LinkScroll} from "react-scroll/modules";
 
 type Props = {
     transitionData: DataSliderC;
