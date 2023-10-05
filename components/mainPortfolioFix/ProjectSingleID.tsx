@@ -3,13 +3,14 @@ import {FC, useCallback, useEffect, useState} from 'react';
 import {FiChevronLeft, FiChevronRight, FiTag, FiX} from 'react-icons/fi';
 import Image from 'next/image';
 import { projectsData } from '@/data/dataMainPortfolioEdit/projectsData';
+import {carDataEdit} from "@/data/dataMainPortfolioEdit/carDataEdit";
 
 interface IProjectSingleIdProps {
     idProject: number;
 }
 
 const ProjectSingleId: FC<IProjectSingleIdProps> = ({ idProject }) => {
-    const project = projectsData.find((project) => project.id === Number(idProject));
+    const project = carDataEdit.find((project) => project.id === Number(idProject));
     const [modalOpen, setModalOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 

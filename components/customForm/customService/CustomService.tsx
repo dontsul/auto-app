@@ -30,7 +30,7 @@ export const CustomService: FC<CustomServiceProps> = forwardRef<
       />
       <label
         htmlFor={service.value}
-        className="inline-flex items-center justify-between w-full p-2.5 shadow-lg text-gray-500 bg-slate-50 border-2 border-gray-200 rounded-lg cursor-pointer   peer-checked:border-[#111827] peer-checked:text-[#111827] peer-checked:bg-slate-400 hover:text-gray-600 hover:bg-gray-50 "
+        className="inline-flex items-center justify-between w-full p-2.5 shadow-lg text-gray-900 bg-slate-50 border-2 border-gray-200 rounded-lg cursor-pointer   peer-checked:border-[#111827] peer-checked:text-[#111827] peer-checked:bg-slate-400 hover:text-gray-600 hover:bg-gray-50 "
       >
         <div className="block p-1">
           <div className="w-full font-semibold text-sm">{service.text}</div>

@@ -1,23 +1,30 @@
 'use client'
-import React, {useState} from 'react';
-import {FiSearch} from 'react-icons/fi';
-import ProjectSingle from './ProjectSingle';
-import ProjectsFilter from './ProjectsFilter';
-import {projectsData} from "@/data/dataMainPortfolioEdit/projectsData";
+import React, { FC, useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { projectsData } from '@/data/dataMainPortfolioEdit/projectsData';
+import FolderGallery from '@/components/mainPortfolioFix/projects/FolderGallery';
+import {FiSearch} from "react-icons/fi";
+import ProjectsFilter from "@/components/mainPortfolioFix/projects/ProjectsFilter";
+import ProjectSingle from "@/components/mainPortfolioFix/projects/ProjectSingle";
+import ProjectsFilterCar from "@/components/mainPortfolioFix/projects/ProjectsFilterCar";
 
-function ProjectsGrid() {
+interface CarCardProps {
+    projectId: string | undefined;
+}
+
+const CarCard: FC<CarCardProps> = ({ projectId }) => {
     const [searchProject, setSearchProject] = useState<string>('');
     const [selectProject, setSelectProject] = useState<string>('');
+    const [currentProject, setCurrentProject] = useState<any | undefined>(undefined);
 
-    const searchProjectsById = projectsData.filter((item) =>
-        item.id.toString().includes(searchProject.toLowerCase())
-    );
+    useEffect(() => {
+        // Знайти відповідний проект за projectId
+        const project = projectsData.find(item => item.id.toString() === projectId);
+        setCurrentProject(project);
+    }, [projectId]);
 
-    const selectProjectsByCategory = projectsData.filter((item) => {
-        let category = item.category.charAt(0).toUpperCase() + item.category.slice(1);
-        return category.includes(selectProject);
-    });
-
+    const searchProjectsById = currentProject ? [currentProject] : [];
+    const selectProjectsByCategory = currentProject ? [currentProject] : [];
 
     const filteredProjects =
         selectProject !== '' ? selectProjectsByCategory : searchProjectsById;
@@ -53,17 +60,18 @@ function ProjectsGrid() {
                         />
                     </div>
 
-                    <ProjectsFilter setSelectProject={setSelectProject} />
+                    <ProjectsFilterCar setSelectProject={setSelectProject} />
                 </div>
             </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
-                    {filteredProjects.map((project, index) => (
-                        <ProjectSingle  key={index} {...project} img={project.img.src} />
-                    ))}
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
+                {filteredProjects.map((project) => (
+                    <FolderGallery key={project.id} {...project} img={project.cars} />
+                ))}
+            </div>
         </section>
-    );
-}
 
-export default ProjectsGrid;
+    );
+};
+
+export default CarCard;
