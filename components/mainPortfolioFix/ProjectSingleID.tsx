@@ -10,7 +10,7 @@ interface IProjectSingleIdProps {
 }
 
 const ProjectSingleId: FC<IProjectSingleIdProps> = ({ idProject }) => {
-    const project = carDataEdit.find((project) => project.id === Number(idProject));
+    const project = projectsData.find((project) => project.id === Number(idProject));
     const [modalOpen, setModalOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -25,11 +25,11 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = ({ idProject }) => {
 
     const goToNext = useCallback(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % (project?.ProjectImages.length || 1));
-    }, [project?.ProjectImages.length]);
+    }, [project?.cars.length]);
 
     const goToPrev = useCallback(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex - 1 + (project?.ProjectImages.length || 1)) % (project?.ProjectImages.length || 1));
-    }, [project?.ProjectImages.length]);
+    }, [project?.cars.length]);
 
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
         if (modalOpen) {
@@ -91,12 +91,12 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = ({ idProject }) => {
                 </div>
                 {/* Gallery */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-                    {project?.ProjectImages.map((image, index) => (
+                    {project?.cars.map((image, index) => (
                         <div className="mb-10 sm:mb-0" key={image.id} onClick={() => openModal(index)}>
                             <Image
                                 src={image.img}
                                 className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
-                                alt={image.title}
+                                alt={image.gallery}
                                 layout="responsive"
                                 width={100}
                                 height={90}

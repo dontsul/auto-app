@@ -10,7 +10,7 @@ interface IProjectSingleProps {
 export default function ProjectSingle({ params: { id } }: IProjectSingleProps) {
     return (
         <div>
-            <ProjectSingleCarID idProject={1} />
+            <ProjectSingleCarID idProject={id} />
         </div>
     );
 }

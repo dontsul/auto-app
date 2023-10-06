@@ -1,16 +1,17 @@
-'use client'
 import React, { FC } from 'react';
-import Link from 'next/link';
 import CarCard from "@/components/mainPortfolioFix/projects/CarCard";
-import { carDataEdit } from "@/data/dataMainPortfolioEdit/carDataEdit";
+import { projectsData } from "@/data/dataMainPortfolioEdit/projectsData";
 
 interface IProjectSingleIdProps {
     idProject: number;
 }
 
 const ProjectSingleCarID: FC<IProjectSingleIdProps> = ({ idProject }) => {
-    const project = carDataEdit.find((project) => project.id === Number(idProject));
-    return <CarCard  projectId={idProject}/>;
+    const project = projectsData.find((project) => project.id === Number(idProject));
+
+    // Assuming that `project` contains the necessary details for CarCard
+    // If not, adjust this accordingly based on your data structure
+    return <CarCard projectId={project?.id} />;
 };
 
 export default ProjectSingleCarID;
