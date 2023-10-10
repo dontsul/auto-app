@@ -1,5 +1,7 @@
 import React from "react";
 import ProjectSingleCarID from "@/components/mainPortfolioFix/ProjectSingleCarID";
+import ProjectSingleID from "@/components/mainPortfolioFix/ProjectSingleID";
+import ProjectSingleId from "@/components/mainPortfolioFix/ProjectSingleID";
 
 
 interface IProjectSingleProps {
@@ -10,7 +12,7 @@ interface IProjectSingleProps {
 export default function ProjectSingle({ params: { id } }: IProjectSingleProps) {
     return (
         <div>
-            <ProjectSingleCarID idProject={id} />
+            <ProjectSingleId idProject={id} />
         </div>
     );
 }

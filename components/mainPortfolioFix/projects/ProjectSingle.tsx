@@ -23,7 +23,7 @@ const ProjectSingle: FC<ProjectProps> = (props) => {
 				delay: 0.15,
 			}}
 		>
-			<Link href={`portfolio/car/${props.id}`} passHref>
+			<Link href={`/portfolio/${props.id}`} passHref>
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
 					<div>
 						<Image

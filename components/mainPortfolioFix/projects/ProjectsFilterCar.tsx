@@ -2,6 +2,7 @@ import React, { ChangeEvent } from 'react';
 
 const selectOptions: string[] = [
     'BMW',
+    'AUDO'
 ];
 
 interface ProjectsFilterProps {
