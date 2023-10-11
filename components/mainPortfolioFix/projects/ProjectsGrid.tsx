@@ -1,6 +1,6 @@
 'use client'
-import React, { useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
+import React, {useState} from 'react';
+import {FiSearch} from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import ProjectsFilter from './ProjectsFilter';
 import {projectsData} from "@/data/dataMainPortfolioEdit/projectsData";
@@ -9,8 +9,8 @@ function ProjectsGrid() {
     const [searchProject, setSearchProject] = useState<string>('');
     const [selectProject, setSelectProject] = useState<string>('');
 
-    const searchProjectsByTitle = projectsData.filter((item) =>
-        item.title.toLowerCase().includes(searchProject.toLowerCase())
+    const searchProjectsById = projectsData.filter((item) =>
+        item.id.toString().includes(searchProject.toLowerCase())
     );
 
     const selectProjectsByCategory = projectsData.filter((item) => {
@@ -18,8 +18,9 @@ function ProjectsGrid() {
         return category.includes(selectProject);
     });
 
+
     const filteredProjects =
-        selectProject !== '' ? selectProjectsByCategory : searchProjectsByTitle;
+        selectProject !== '' ? selectProjectsByCategory : searchProjectsById;
 
     return (
         <section className=" container py-5 sm:py-10 mt-5 sm:mt-10">
@@ -58,7 +59,7 @@ function ProjectsGrid() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
                     {filteredProjects.map((project, index) => (
-                        <ProjectSingle  key={index} {...project} img={project.img.src} />
+                        <ProjectSingle key={index} {...project} img={project.img.src} />
                     ))}
                 </div>
         </section>

@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
-import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
+import React, { useEffect, useCallback } from "react";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Progress from "./Progress";
-import {CurrentSlideData, DataSlider} from "@/data/dataSliderHome/DataTepe";
+import { CurrentSlideData, DataSlider } from "@/data/dataSliderHome/DataTepe";
 
 type Props = {
     currentSlideData: CurrentSlideData;
@@ -40,8 +40,7 @@ function Controls({
         handleTransitionData(data[data.length - 1]);
     };
 
-
-    const handleNext = () => {
+    const handleNext = useCallback(() => {
         handleData((prev) => prev.slice(1));
         handleCurrentSlideData({
             data: transitionData ? transitionData : initData,
@@ -54,9 +53,17 @@ function Controls({
                 transitionData ? transitionData : initData,
             ]);
         }, 500);
-    };
+    }, [handleData, handleCurrentSlideData, handleTransitionData, initData, transitionData, sliderData, data]);
 
+    // Automatic slide transition every 10 seconds
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            handleNext();
+        }, 4000);
 
+        // Clean up the interval on component unmount
+        return () => clearInterval(intervalId);
+    }, [handleNext]);
 
     return (
         <div className="flex items-center gap-3 px-0 py-3 md:px-1 md:py-5" style={{bottom: 0}}>
@@ -73,13 +80,13 @@ function Controls({
 
 export default Controls;
 
-const SliderButton = ({children, handleClick,}: {
+const SliderButton = ({children, handleClick}: {
     children: React.ReactNode;
     handleClick: () => void;
 }) => {
     return (
         <button
-            className=" flex h-14 w-14 items-center justify-center rounded-full border-[1px] border-[#fdfdfd5f] transition duration-300
+            className="flex h-14 w-14 items-center justify-center rounded-full border-[1px] border-[#fdfdfd5f] transition duration-300
 ease-in-out hover:bg-white hover:text-black"
             onClick={handleClick}
         >

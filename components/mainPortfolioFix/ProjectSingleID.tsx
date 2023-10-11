@@ -1,66 +1,90 @@
 'use client'
-import {FC, useCallback, useEffect, useState} from 'react';
-import {FiChevronLeft, FiChevronRight, FiTag, FiX} from 'react-icons/fi';
-import Image from 'next/image';
-import { projectsData } from '@/data/dataMainPortfolioEdit/projectsData';
+import { FC, useState, useCallback, useEffect } from 'react';
+import { FiX, FiChevronLeft, FiChevronRight, FiTag } from 'react-icons/fi';
+import Image, { StaticImageData } from 'next/image';
 
-interface IProjectSingleIdProps {
-    idProject: number;
+interface ProjectSingleCar {
+    brand: string;
+    gallery: Array<{ id: string; title: string; img: StaticImageData }>;
+    ProjectInfo: {
+        CompanyInfo: Array<{ id: string; title: string; details: string }>;
+        ObjectivesHeading: string;
+        ObjectivesDetails: string;
+        Technologies: Array<{ title: string; techs: string[] }>;
+    };
 }
 
-const ProjectSingleId: FC<IProjectSingleIdProps> = ({ idProject }) => {
-    const project = projectsData.find((project) => project.id === Number(idProject));
+interface ProjectSingleIdProps {
+    project: {
+        id: number;
+        title: string;
+        ProjectHeader: {
+            tags: string;
+        };
+        cars: ProjectSingleCar[];
+    };
+    carIndex: number; // Added prop to determine which car to display
+}
+
+interface ProjectSingleCarGalleryProps {
+    gallery: Array<{ id: string; title: string; img: StaticImageData }>;
+}
+
+const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> = ({ project, gallery, carIndex }) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    const openModal = (index: number) => {
-        setCurrentImageIndex(index);
-        setModalOpen(true);
-    };
+    const [currentCarIndex, setCurrentCarIndex] = useState(carIndex);
 
     const closeModal = useCallback(() => {
         setModalOpen(false);
     }, []);
 
+    const openModal = (imageIndex: number) => {
+        setCurrentImageIndex(imageIndex);
+        setModalOpen(true);
+    };
+
     const goToNext = useCallback(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % (project?.ProjectImages.length || 1));
-    }, [project?.ProjectImages.length]);
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1 < gallery.length ? prevIndex + 1 : prevIndex));
+    }, [gallery]);
 
     const goToPrev = useCallback(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + (project?.ProjectImages.length || 1)) % (project?.ProjectImages.length || 1));
-    }, [project?.ProjectImages.length]);
+        setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
+    }, []);
 
-    const handleKeyDown = useCallback((e: KeyboardEvent) => {
-        if (modalOpen) {
-            // Close modal on Escape key press
-            if (e.key === 'Escape') {
+    const handleKeyDown = useCallback(
+        (e: KeyboardEvent) => {
+            if (modalOpen) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+                if (e.key === 'ArrowRight') {
+                    goToNext();
+                }
+                if (e.key === 'ArrowLeft') {
+                    goToPrev();
+                }
+            }
+        },
+        [modalOpen, closeModal, goToNext, goToPrev]
+    );
+
+    const handleClickOutside = useCallback(
+        (e: MouseEvent) => {
+            const modal = document.getElementById('modal');
+            if (modal && !modal.contains(e.target as Node)) {
                 closeModal();
             }
-            // Navigate images with arrow keys
-            if (e.key === 'ArrowRight') {
-                goToNext();
-            }
-            if (e.key === 'ArrowLeft') {
-                goToPrev();
-            }
-        }
-    }, [modalOpen, closeModal, goToNext, goToPrev]);
-
-    const handleClickOutside = useCallback((e: MouseEvent) => {
-        const modal = document.getElementById('modal'); // Replace with your actual modal ID
-        if (modal && !modal.contains(e.target as Node)) {
-            closeModal();
-        }
-    }, [closeModal]);
+        },
+        [closeModal]
+    );
 
     useEffect(() => {
-        // Attach event listeners when modal is open
         if (modalOpen) {
             window.addEventListener('keydown', handleKeyDown);
             window.addEventListener('click', handleClickOutside);
         }
 
-        // Detach event listeners when modal is closed
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
             window.removeEventListener('click', handleClickOutside);
@@ -71,27 +95,20 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = ({ idProject }) => {
         <div className="container mx-auto">
             <div key={project?.id}>
                 <p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
-                    {project?.title}
+                    {project?.title}: {project?.cars[currentCarIndex]?.brand}
+
                 </p>
                 <div className="flex">
                     <div className="flex items-center mr-10">
-                        {/*<FiClock className="text-xl text-ternary-dark dark:text-ternary-light" />*/}
-                        {/*<span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">*/}
-                        {/*    {project.ProjectInfo.ProjectDetails}*/}
-                        {/*</span>*/}
-                    </div>
-                    <div className="flex items-center">
                         <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
                         <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-                                {project?.ProjectHeader.tags}
-                            </span>
+             {project?.cars[currentCarIndex]?.brand}
+            </span>
                     </div>
-
                 </div>
-                {/* Gallery */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-                    {project?.ProjectImages.map((image, index) => (
-                        <div className="mb-10 sm:mb-0" key={image.id} onClick={() => openModal(index)}>
+                    {gallery.map((image, imageIndex) => (
+                        <div className="mb-10 sm:mb-0" key={image.id}>
                             <Image
                                 src={image.img}
                                 className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
@@ -99,122 +116,103 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = ({ idProject }) => {
                                 layout="responsive"
                                 width={100}
                                 height={90}
+                                onClick={() => openModal(imageIndex)}
                             />
                         </div>
                     ))}
                 </div>
+
                 {modalOpen && (
                     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-40">
-
                         <div className="absolute z-20 max-w-screen-lg">
-                            <button
-                                className="absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md"
-                                onClick={closeModal}
-                            >
+                            <button className="absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md" onClick={closeModal}>
                                 <FiX className="w-4 h-4" />
                             </button>
-                            <div className="  rounded-xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer shadow-lg sm:shadow-none">
+                            <div className="rounded-xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer shadow-lg sm:shadow-none">
                                 <Image
-                                    src={project?.ProjectImages[currentImageIndex].img || ''}
+                                    src={gallery[currentImageIndex]?.img || ''}
                                     className="object-cover w-full h-full"
-                                    alt={project?.ProjectImages[currentImageIndex].title || ''}
+                                    alt={gallery[currentImageIndex]?.title || ''}
                                     layout="responsive"
                                     placeholder="empty"
                                     width={800}
                                     height={600}
                                 />
                             </div>
-
                         </div>
                         <button
                             className="absolute z-50 top-1/2 left-4 transform -translate-y-1/2 text-white bg-black px-4 py-2 rounded-md flex items-center"
                             onClick={goToPrev}
                         >
-                            <FiChevronLeft className="w-4 h-4" /> {/* Use the left arrow icon */}
+                            <FiChevronLeft className="w-4 h-4" />
                         </button>
-
                         <button
                             className="absolute z-50 top-1/2 right-4 transform -translate-y-1/2 text-white bg-black px-4 py-2 rounded-md flex items-center"
                             onClick={goToNext}
                         >
-                            <FiChevronRight className="w-4 h-4" /> {/* Use the right arrow icon */}
+                            <FiChevronRight className="w-4 h-4" />
                         </button>
                     </div>
                 )}
-
             </div>
             <div className="block sm:flex gap-0 sm:gap-10 mt-14">
                 <div className="w-full sm:w-1/3 text-left">
-                    {/* Single project client details */}
                     <div className="mb-7">
                         <p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
-                            {project?.ProjectInfo.ClientHeading}
+                            {project?.cars[currentCarIndex]?.brand}
                         </p>
                         <ul className="leading-loose">
-                            {project?.ProjectInfo.CompanyInfo.map(
-                                (info) => {
-                                    return (
-                                        <li
-                                            className="font-general-regular text-ternary-dark dark:text-ternary-light"
-                                            key={info.id}
+                            {project?.cars[currentCarIndex]?.ProjectInfo.CompanyInfo.map((company) => (
+                                <li className="font-general-regular text-ternary-dark dark:text-ternary-light" key={company.id}>
+                                    <span>{company.title}: </span>
+                                    {company.title === 'Phone' ? (
+                                        <a
+                                            className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
+                                            href={`tel:${company.details}`}
+                                            aria-label={company.title}
                                         >
-                                            <span>{info.title}: </span>
-                                            <a
-
-                                                className={
-                                                    info.title === 'Website' ||
-                                                    info.title === 'Phone'
-                                                        ? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-                                                        : ''
-                                                }
-                                                aria-label="Project Website and Phone"
-                                            >
-                                                {info.details}
-                                            </a>
-                                        </li>
-                                    );
-                                }
-                            )}
+                                            {company.details}
+                                        </a>
+                                    ) : (
+                                        <span>{company.details}</span>
+                                    )}
+                                </li>
+                            ))}
                         </ul>
                     </div>
-                    {/* Single project objectives */}
+                    <div>
+                        <p className="text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
+                            Technologies
+                        </p>
+                        {project?.cars[currentCarIndex]?.ProjectInfo.Technologies.map((techItem, techIndex) => (
+                            <div key={techIndex}>
+                                <p className="font-general-regular text-primary-dark dark:text-ternary-light">{techItem.title}:</p>
+                                {techItem.techs.map((tech, subTechIndex) => (
+                                    <p className="font-general-regular text-primary-dark dark:text-ternary-light" key={subTechIndex}>
+                                        {tech}
+                                    </p>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
                     <div className="mb-7">
                         <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-                            {project?.ProjectInfo.ObjectivesHeading}
+                            {/*{project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesHeading}*/}
+                            {/*{project?.cars[currentCarIndex]?.brand}*/}
+                            {/*{project?.title}: {project?.cars[currentCarIndex]?.brand}*/}
+                            info: {project?.cars[currentCarIndex]?.brand}
+
+
                         </p>
                         <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-                            {project?.ProjectInfo.ObjectivesDetails}
+                            {project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesDetails}
                         </p>
                     </div>
 
-                    {/* Single project technologies */}
-                    <div className="mb-7">
-                        <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-                            {project?.ProjectInfo.Technologies[0].title}
-                        </p>
-                        <p className=" font-general-regular text-primary-dark dark:text-ternary-light">
-                            {project?.ProjectInfo.Technologies[0].techs.join(
-                                '  '
-                            )}
-                        </p>
-                    </div>
                 </div>
-                {/*  Single project right section details */}
-                <div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-                    <p className="text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
-                        {project?.ProjectInfo.ProjectDetailsHeading}
-                    </p>
-                    {project?.ProjectInfo.ProjectDetails.map((details) => {
-                        return (
-                            <p
-                                key={details.id}
-                                className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
-                            >
-                                {details.details}
-                            </p>
-                        );
-                    })}
-                </div>
+
             </div>
         </div>
     );
