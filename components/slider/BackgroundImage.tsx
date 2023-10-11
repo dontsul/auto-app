@@ -27,6 +27,7 @@ function BackgroundImage({ transitionData, currentSlideData }: Props) {
         alt="Current Image"
         key={currentSlideData.data.img + "transition"}
         src={currentSlideData.data.img}
+
         className=" absolute left-0 top-0 h-full w-full object-cover brightness-50"
       />
     </>

@@ -82,7 +82,7 @@ export const Menu: FC<IMenuProps> = ({
                   handleMenu(false);
                 }}
               >
-                Home
+                HOME
               </Link>
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
@@ -96,7 +96,7 @@ export const Menu: FC<IMenuProps> = ({
                   handleMenu(false);
                 }}
               >
-                About
+                ABOUT
               </Link>
             </li>
 
@@ -123,7 +123,7 @@ export const Menu: FC<IMenuProps> = ({
                   handleMenu(false);
                 }}
               >
-                Commercial
+                FLEET
               </Link>
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
@@ -138,7 +138,7 @@ export const Menu: FC<IMenuProps> = ({
                   handleMenu(false);
                 }}
               >
-                Quote Request
+                QUOTE REQUEST
               </Link>
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
@@ -151,7 +151,7 @@ export const Menu: FC<IMenuProps> = ({
                   handleMenu(false);
                 }}
               >
-                Portfolio
+                PORTFOLIO
               </Link>
             </li>
           </ul>

@@ -58,7 +58,7 @@ export const OurServices: FC<IOurServicesProps> = ({
             handleMenu(false);
           }}
         >
-          Our Services
+          OUR SERVICES
         </Link>
         <motion.div
           animate={{ rotate: openServices ? 180 : 0 }}
