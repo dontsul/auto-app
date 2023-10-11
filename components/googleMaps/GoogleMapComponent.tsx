@@ -7,13 +7,13 @@ interface MapProps {
 
 const CustomInfoWindowContent: React.FC = () => {
     const openGoogleMaps = () => {
-        const googleMapsLink = 'https://www.google.com/maps?q=12019+Nebel+St,+Rockville,+MD+20852';
+        const googleMapsLink = 'https://maps.app.goo.gl/L5rdi5QHfnZkwRzx6?g_st=iv';
         window.open(googleMapsLink, '_blank');
     };
 
     return (
         <div style={{ color: '#333', fontSize: '14px' }}>
-            <h1 style={{fontWeight:600, marginBottom: '8px' }}>Capital Upfitters Auto & Truck Accessories</h1>
+            <h1 style={{fontWeight:600, marginBottom: '8px' }}>Capital Auto Upfitters & Protective Coatings</h1>
             <p style={{fontWeight:300, color: "grey", marginBottom: '4px' }}>12019 Nebel St, Rockville, MD 20852</p>
             <a style={{cursor: 'pointer', color: "blue", fontWeight:400}} onClick={openGoogleMaps}>View on Google Maps</a>
         </div>
