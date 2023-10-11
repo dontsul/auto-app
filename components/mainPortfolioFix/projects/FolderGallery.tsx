@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image, {StaticImageData} from 'next/image';
 
 interface ProjectProps {
-    idCar: number;
     img: StaticImageData;
     brand: string;
 }
@@ -23,10 +22,9 @@ const ProjectSingleCard: FC<ProjectProps> = (props) => {
             }}
         >
                 <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
-                    <div key={props.idCar}>
-                        <Image
-                            src={props.img}
-                            className="rounded-t-xl border-none"
+                    <Image
+                        src={props.img}
+                        className="rounded-t-xl border-none"
                             alt={props.brand}
                             layout="responsive"
                             width={100}
@@ -37,7 +35,6 @@ const ProjectSingleCard: FC<ProjectProps> = (props) => {
                                 {props.brand}
                             </p>
                         </div>
-                    </div>
                 </div>
         </motion.div>
     );

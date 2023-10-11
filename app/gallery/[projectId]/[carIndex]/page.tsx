@@ -18,8 +18,8 @@ export default function GalleryPage({ params }: GalleryPageProps) {
     }
 
     return (
-        <div>
-            <ProjectSingleId project={project} gallery={car.gallery || []} />
+        <div className="py-16 containe">
+            <ProjectSingleId project={project} gallery={car.gallery || []} carIndex={Number(carIndex)} />
         </div>
     );
 }

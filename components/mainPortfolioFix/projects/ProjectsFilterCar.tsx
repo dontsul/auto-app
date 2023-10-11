@@ -1,8 +1,9 @@
 import React, { ChangeEvent } from 'react';
 
 const selectOptions: string[] = [
-    'BMW',
-    'AUDO'
+    'TEST CAR',
+    'AUDO',
+    // Add other models as needed
 ];
 
 interface ProjectsFilterProps {
@@ -36,9 +37,8 @@ const ProjectsFilterCar: React.FC<ProjectsFilterProps> = ({ setSelectProject }) 
             <option value="" className="text-sm sm:text-md">
                 All Projects
             </option>
-
             {selectOptions.map((option) => (
-                <option className="text-normal sm:text-md" key={option}>
+                <option value={option} className="text-normal sm:text-md" key={option}>
                     {option}
                 </option>
             ))}
