@@ -10,8 +10,7 @@ interface IProjectSingleProps {
 export default function ProjectSingle({ params: { id } }: IProjectSingleProps) {
     return (
         <div className="py-16 containe">
-
-        <ProjectSingleCarID  projectId={id}/>
+            <ProjectSingleCarID  projectId={id}/>
         </div>
     );
 };

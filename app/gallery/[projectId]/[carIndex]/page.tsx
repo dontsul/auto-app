@@ -1,5 +1,6 @@
 import ProjectSingleId from "@/components/mainPortfolioFix/ProjectSingleID";
 import { projectsData } from '@/data/dataMainPortfolioEdit/projectsData';
+import NotFoundPage from "@/components/404/NotFoundPage";
 
 interface GalleryPageProps {
     params: {
@@ -14,7 +15,7 @@ export default function GalleryPage({ params }: GalleryPageProps) {
     const car = project?.cars[Number(carIndex)];
 
     if (!project || !car) {
-        return <div>Error: Project or Car not found</div>;
+        return <NotFoundPage />;
     }
 
     return (
