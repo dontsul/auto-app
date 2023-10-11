@@ -1,26 +1,42 @@
 'use client'
-import {FC, useCallback, useEffect, useState} from 'react';
-import {FiChevronLeft, FiChevronRight, FiTag, FiX} from 'react-icons/fi';
-import Image from 'next/image';
-import { projectsData } from '@/data/dataMainPortfolioEdit/projectsData';
+import { FC, useState, useCallback, useEffect } from 'react';
+import { FiX, FiChevronLeft, FiChevronRight, FiTag } from 'react-icons/fi';
+import Image, { StaticImageData } from 'next/image';
 
-interface IProjectSingleIdProps {
-    idProject: number;
+interface ProjectSingleCar {
+    idCar: number;
+    brand: string;
+    gallery: Array<{ id: string; title: string; img: StaticImageData }>;
+    ProjectInfo: {
+        CompanyInfo: Array<{ id: string; title: string; details: string }>;
+        ObjectivesHeading: string;
+        ObjectivesDetails: string;
+        Technologies: Array<{ title: string; techs: string[] }>;
+    };
 }
 
-const ProjectSingleId: FC<IProjectSingleIdProps> = (props) => {
-    const project = projectsData.find((project) => project.id === Number(props.idProject));
+interface ProjectSingleIdProps {
+    project: {
+        id: number;
+        title: string;
+        ProjectHeader: {
+            tags: string;
+        };
+        cars: ProjectSingleCar[];
+    };
+}
 
+interface ProjectSingleCarGalleryProps {
+    gallery: Array<{ id: string; title: string; img: StaticImageData }>;
+}
+const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> = ({ project, gallery }) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+    const [currentCarIndex, setCurrentCarIndex] = useState(0);
 
     const closeModal = useCallback(() => {
         setModalOpen(false);
     }, []);
-
-    const [currentCarIndex, setCurrentCarIndex] = useState(0);
-
 
     const openModal = (carIndex: number, imageIndex: number) => {
         setCurrentCarIndex(carIndex);
@@ -30,72 +46,58 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = (props) => {
 
     const goToNext = useCallback(() => {
         setCurrentImageIndex((prevIndex) => {
-            const currentCarGalleryLength = project?.cars[currentCarIndex]?.gallery.length || 1;
+            const currentCarGallery = gallery || [];
+            const currentCarGalleryLength = currentCarGallery.length;
 
             if (prevIndex + 1 < currentCarGalleryLength) {
                 return prevIndex + 1;
             } else {
-                // Check if there is a next car
-                if (currentCarIndex + 1 < (project?.cars.length || 1)) {
-                    setCurrentCarIndex((prevCarIndex) => prevCarIndex + 1);
-                    return 0; // Start from the first image of the next car
-                } else {
-                    // Stay on the last image if there is no next car or current car gallery is at the end
-                    setCurrentCarIndex(0); // Reset car index to the first car
-                    return 0;
-                }
+                return prevIndex;
             }
         });
-    }, [project?.cars, currentCarIndex]);
+    }, [gallery]);
 
     const goToPrev = useCallback(() => {
         setCurrentImageIndex((prevIndex) => {
             if (prevIndex > 0) {
                 return prevIndex - 1;
             } else {
-                // Check if there is a previous car
-                if (currentCarIndex - 1 >= 0) {
-                    setCurrentCarIndex((prevCarIndex) => prevCarIndex - 1);
-                    const lastCarGalleryLength = project?.cars[currentCarIndex - 1]?.gallery.length || 1;
-                    return lastCarGalleryLength - 1; // Start from the last image of the previous car
-                } else {
-                    // Stay on the first image if there is no previous car or current car gallery is at the beginning
-                    setCurrentCarIndex((project?.cars.length || 1) - 1); // Set car index to the last car
-                    const lastCarGalleryLength = project?.cars[(project?.cars.length || 1) - 1]?.gallery.length || 1;
-                    return lastCarGalleryLength - 1; // Start from the last image of the last car
-                }
+                return prevIndex;
             }
         });
-    }, [project?.cars, currentCarIndex]);
+    }, []);
 
+    const handleKeyDown = useCallback(
+        (e: KeyboardEvent) => {
+            if (modalOpen) {
+                // Close modal on Escape key press
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+                // Navigate images with arrow keys
+                if (e.key === 'ArrowRight') {
+                    goToNext();
+                }
+                if (e.key === 'ArrowLeft') {
+                    goToPrev();
+                }
+            }
+        },
+        [modalOpen, closeModal, goToNext, goToPrev]
+    );
 
-
-    const handleKeyDown = useCallback((e: KeyboardEvent) => {
-        if (modalOpen) {
-            // Close modal on Escape key press
-            if (e.key === 'Escape') {
+    const handleClickOutside = useCallback(
+        (e: MouseEvent) => {
+            const modal = document.getElementById('modal'); // Replace with your actual modal ID
+            if (modal && !modal.contains(e.target as Node)) {
                 closeModal();
             }
-            // Navigate images with arrow keys
-            if (e.key === 'ArrowRight') {
-                goToNext();
-            }
-            if (e.key === 'ArrowLeft') {
-                goToPrev();
-            }
-        }
-    }, [modalOpen, closeModal, goToNext, goToPrev]);
-
-    const handleClickOutside = useCallback((e: MouseEvent) => {
-        const modal = document.getElementById('modal'); // Replace with your actual modal ID
-        if (modal && !modal.contains(e.target as Node)) {
-            closeModal();
-        }
-    }, [closeModal]);
+        },
+        [closeModal]
+    );
 
     useEffect(() => {
         console.log('Attaching event listeners...');
-        // Attach event listeners when modal is open
         if (modalOpen) {
             window.addEventListener('keydown', handleKeyDown);
             window.addEventListener('click', handleClickOutside);
@@ -117,22 +119,14 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = (props) => {
                 </p>
                 <div className="flex">
                     <div className="flex items-center mr-10">
-                        {/*<FiClock className="text-xl text-ternary-dark dark:text-ternary-light" />*/}
-                        {/*<span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">*/}
-                        {/*    {project.ProjectInfo.ProjectDetails}*/}
-                        {/*</span>*/}
-                    </div>
-                    <div className="flex items-center">
                         <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
                         <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-                                {project?.ProjectHeader.tags}
-                            </span>
+              {project?.ProjectHeader.tags}
+            </span>
                     </div>
-
                 </div>
-                {/* Gallery */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-                    {project?.cars[currentCarIndex]?.gallery.map((image, imageIndex) => (
+                    {gallery.map((image, imageIndex) => (
                         <div className="mb-10 sm:mb-0" key={image.id}>
                             <Image
                                 src={image.img}
@@ -147,10 +141,8 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = (props) => {
                     ))}
                 </div>
 
-
                 {modalOpen && (
                     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-40">
-
                         <div className="absolute z-20 max-w-screen-lg">
                             <button
                                 className="absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md"
@@ -158,33 +150,29 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = (props) => {
                             >
                                 <FiX className="w-4 h-4" />
                             </button>
-                            <div className="  rounded-xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer shadow-lg sm:shadow-none">
+                            <div className="rounded-xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer shadow-lg sm:shadow-none">
                                 <Image
-                                    src={project?.cars[currentCarIndex]?.gallery[currentImageIndex]?.img || ''}
+                                    src={gallery[currentImageIndex]?.img || ''}
                                     className="object-cover w-full h-full"
-                                    alt={project?.cars[currentCarIndex]?.gallery[currentImageIndex]?.title || ''}
+                                    alt={gallery[currentImageIndex]?.title || ''}
                                     layout="responsive"
                                     placeholder="empty"
                                     width={800}
                                     height={600}
                                 />
-
-
                             </div>
-
                         </div>
                         <button
                             className="absolute z-50 top-1/2 left-4 transform -translate-y-1/2 text-white bg-black px-4 py-2 rounded-md flex items-center"
                             onClick={goToPrev}
                         >
-                            <FiChevronLeft className="w-4 h-4" /> {/* Use the left arrow icon */}
+                            <FiChevronLeft className="w-4 h-4" />
                         </button>
-
                         <button
                             className="absolute z-50 top-1/2 right-4 transform -translate-y-1/2 text-white bg-black px-4 py-2 rounded-md flex items-center"
                             onClick={goToNext}
                         >
-                            <FiChevronRight className="w-4 h-4" /> {/* Use the right arrow icon */}
+                            <FiChevronRight className="w-4 h-4" />
                         </button>
                     </div>
                 )}
@@ -192,67 +180,59 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = (props) => {
             </div>
             <div className="block sm:flex gap-0 sm:gap-10 mt-14">
                 <div className="w-full sm:w-1/3 text-left">
-                    {/* Single project client details */}
                     <div className="mb-7">
                         <p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
-                            {project?.cars[currentCarIndex]?.brand} {/* Виведіть бренд конкретного авто */}
+                            {project?.cars[currentCarIndex]?.brand}
                         </p>
                         <ul className="leading-loose">
-                            {project?.cars[currentCarIndex]?.ProjectInfo.CompanyInfo.map(
-                                (company, index) => {
-                                    return (
-                                        <li
-                                            className="font-general-regular text-ternary-dark dark:text-ternary-light"
-                                            key={company.id}
+                            {project?.cars[currentCarIndex]?.ProjectInfo.CompanyInfo.map((company) => (
+                                <li
+                                    className="font-general-regular text-ternary-dark dark:text-ternary-light"
+                                    key={company.id}
+                                >
+                                    <span>{company.title}: </span>
+                                    {company.title === 'Phone' ? (
+                                        <a
+                                            className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
+                                            href={`tel:${company.details}`}
+                                            aria-label={company.title}
                                         >
-                                            <span>{company.title}: </span>
-                                            {company.title === 'Phone' ? (
-                                                <a
-                                                    className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
-                                                    href={`tel:${company.details}`}
-                                                    aria-label={company.title}
-                                                >
-                                                    {company.details}
-                                                </a>
-                                            ) : (
-                                                <span>{company.details}</span>
-                                            )}
-                                        </li>
-                                    );
-                                }
-                            )}
+                                            {company.details}
+                                        </a>
+                                    ) : (
+                                        <span>{company.details}</span>
+                                    )}
+                                </li>
+                            ))}
                         </ul>
                     </div>
-                    {/* Single project objectives */}
                     <div className="mb-7">
                         <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-                            {project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesHeading} {/* Виведіть заголовок цілей конкретного авто */}
+                            {project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesHeading}
                         </p>
                         <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-                            {project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesDetails} {/* Виведіть опис цілей конкретного авто */}
+                            {project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesDetails}
                         </p>
                     </div>
-
-                    {/* Single project technologies */}
                     <div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
                         <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
                             Technologies
                         </p>
-                        {project?.cars[currentCarIndex]?.ProjectInfo.Technologies.map(
-                            (techItem, techIndex) => {
-                                return (
-                                    <p className=" font-general-regular text-primary-dark dark:text-ternary-light"
-                                    key={techIndex}>
-                                        {techItem.title}:
-
-                                            {techItem.techs.map((tech, subTechIndex) => (
-                                                <p className=" font-general-regular text-primary-dark dark:text-ternary-light" key={subTechIndex}>{tech}</p>
-                                            ))}
-
+                        {project?.cars[currentCarIndex]?.ProjectInfo.Technologies.map((techItem, techIndex) => (
+                            <div key={techIndex}>
+                                <p className="font-general-regular text-primary-dark dark:text-ternary-light">
+                                    {techItem.title}:
+                                </p>
+                                {techItem.techs.map((tech, subTechIndex) => (
+                                    <p
+                                        className="font-general-regular text-primary-dark dark:text-ternary-light"
+                                        key={subTechIndex}
+                                    >
+                                        {tech}
                                     </p>
-                                );
-                            }
-                        )}
+                                ))}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -261,3 +241,4 @@ const ProjectSingleId: FC<IProjectSingleIdProps> = (props) => {
 };
 
 export default ProjectSingleId;
+

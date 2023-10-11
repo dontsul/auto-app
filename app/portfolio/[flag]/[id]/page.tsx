@@ -11,7 +11,6 @@ export default function ProjectSingle({ params: { id } }: IProjectSingleProps) {
     return (
         <div>
             <ProjectSingleCarID  projectId={id}/>
-
         </div>
     );
 };

@@ -1,12 +1,10 @@
 import React, { FC } from 'react';
-import Image, {StaticImageData} from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-
+import Image, {StaticImageData} from 'next/image';
 
 interface ProjectProps {
-    projectId: number,
-    id: string;
+    idCar: number;
     img: StaticImageData;
     brand: string;
 }
@@ -14,7 +12,6 @@ interface ProjectProps {
 const imageStyle = { maxWidth: '100%', height: 'auto' };
 
 const ProjectSingleCard: FC<ProjectProps> = (props) => {
-    console.log(props.projectId);
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -25,9 +22,8 @@ const ProjectSingleCard: FC<ProjectProps> = (props) => {
                 delay: 0.15,
             }}
         >
-            <Link href={`/portfolio/car/${props.projectId}`} passHref>
                 <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
-                    <div key={props.projectId}>
+                    <div key={props.idCar}>
                         <Image
                             src={props.img}
                             className="rounded-t-xl border-none"
@@ -43,7 +39,6 @@ const ProjectSingleCard: FC<ProjectProps> = (props) => {
                         </div>
                     </div>
                 </div>
-            </Link>
         </motion.div>
     );
 };
