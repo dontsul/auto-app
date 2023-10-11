@@ -94,14 +94,14 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
     return (
         <div className="container mx-auto">
             <div key={project?.id}>
-                <p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
+                <p className=" text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
                     {project?.title}: {project?.cars[currentCarIndex]?.brand}
 
                 </p>
                 <div className="flex">
                     <div className="flex items-center mr-10">
                         <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
-                        <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
+                        <span className=" ml-2 leading-none text-primary-dark dark:text-primary-light">
              {project?.cars[currentCarIndex]?.brand}
             </span>
                     </div>
@@ -158,8 +158,8 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
             <div className="block sm:flex gap-0 sm:gap-10 mt-14">
                 <div className="w-full sm:w-1/3 text-left">
                     <div className="mb-7">
-                        <p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
-                            {project?.cars[currentCarIndex]?.brand}
+                        <p className=" text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
+                            {project?.title}: {project?.cars[currentCarIndex]?.brand}
                         </p>
                         <ul className="leading-loose">
                             {project?.cars[currentCarIndex]?.ProjectInfo.CompanyInfo.map((company) => (
@@ -188,7 +188,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                             <div key={techIndex}>
                                 <p className="font-general-regular text-primary-dark dark:text-ternary-light">{techItem.title}:</p>
                                 {techItem.techs.map((tech, subTechIndex) => (
-                                    <p className="font-general-regular text-primary-dark dark:text-ternary-light" key={subTechIndex}>
+                                    <p className=" text-primary-dark dark:text-ternary-light" key={subTechIndex}>
                                         {tech}
                                     </p>
                                 ))}
@@ -198,7 +198,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                 </div>
                 <div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
                     <div className="mb-7">
-                        <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+                        <p className=" text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
                             {/*{project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesHeading}*/}
                             {/*{project?.cars[currentCarIndex]?.brand}*/}
                             {/*{project?.title}: {project?.cars[currentCarIndex]?.brand}*/}
@@ -206,7 +206,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
 
 
                         </p>
-                        <p className="font-general-regular text-primary-dark dark:text-ternary-light">
+                        <p className=" text-primary-dark dark:text-ternary-light">
                             {project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesDetails}
                         </p>
                     </div>
