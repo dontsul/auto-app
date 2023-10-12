@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Image from 'next/image';  // Add this import
+import Image from 'next/image';
 import React, { FC } from 'react';
 
 interface ProjectProps {
@@ -28,11 +28,12 @@ const ProjectSingle: FC<ProjectProps> = (props) => {
 					<div>
 						<Image
 							src={props.img}
-							className="rounded-t-xl border-none"
 							alt="Single Project"
 							layout="responsive"
 							width={100}
-							height={90}
+							height={100}
+							objectFit="cover"  // Add this line
+							objectPosition="center center"  // Add this line
 						/>
 					</div>
 					<div className="text-center px-4 py-6">
@@ -40,10 +41,8 @@ const ProjectSingle: FC<ProjectProps> = (props) => {
 							{props.title}
 						</p>
 						<span className="text-lg text-ternary-dark dark:text-ternary-light">
-
-							{props.category}
-						</span>
-
+                            {props.category}
+                        </span>
 					</div>
 				</div>
 			</Link>

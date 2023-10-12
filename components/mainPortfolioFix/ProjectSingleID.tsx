@@ -3,6 +3,8 @@ import { FC, useState, useCallback, useEffect } from 'react';
 import { FiX, FiChevronLeft, FiChevronRight, FiTag } from 'react-icons/fi';
 import Image, { StaticImageData } from 'next/image';
 
+
+
 interface ProjectSingleCar {
     brand: string;
     gallery: Array<{ id: string; title: string; img: StaticImageData }>;
@@ -39,10 +41,10 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
         setModalOpen(false);
     }, []);
 
-    const openModal = (imageIndex: number) => {
+    const openModal = useCallback((imageIndex: number) => {
         setCurrentImageIndex(imageIndex);
         setModalOpen(true);
-    };
+    }, []);
 
     const goToNext = useCallback(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1 < gallery.length ? prevIndex + 1 : prevIndex));
@@ -52,32 +54,26 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
         setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
     }, []);
 
-    const handleKeyDown = useCallback(
-        (e: KeyboardEvent) => {
-            if (modalOpen) {
-                if (e.key === 'Escape') {
-                    closeModal();
-                }
-                if (e.key === 'ArrowRight') {
-                    goToNext();
-                }
-                if (e.key === 'ArrowLeft') {
-                    goToPrev();
-                }
-            }
-        },
-        [modalOpen, closeModal, goToNext, goToPrev]
-    );
-
-    const handleClickOutside = useCallback(
-        (e: MouseEvent) => {
-            const modal = document.getElementById('modal');
-            if (modal && !modal.contains(e.target as Node)) {
+    const handleKeyDown = useCallback((e: KeyboardEvent) => {
+        if (modalOpen) {
+            if (e.key === 'Escape') {
                 closeModal();
             }
-        },
-        [closeModal]
-    );
+            if (e.key === 'ArrowRight') {
+                goToNext();
+            }
+            if (e.key === 'ArrowLeft') {
+                goToPrev();
+            }
+        }
+    }, [modalOpen, closeModal, goToNext, goToPrev]);
+
+    const handleClickOutside = useCallback((e: MouseEvent) => {
+        const modal = document.getElementById('modal');
+        if (modal && !modal.contains(e.target as Node)) {
+            closeModal();
+        }
+    }, [closeModal]);
 
     useEffect(() => {
         if (modalOpen) {
@@ -90,6 +86,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
             window.removeEventListener('click', handleClickOutside);
         };
     }, [modalOpen, handleKeyDown, handleClickOutside]);
+
 
     return (
         <div className="container mx-auto">
@@ -115,7 +112,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                                 alt={image.title}
                                 layout="responsive"
                                 width={100}
-                                height={90}
+                                height={100}
                                 onClick={() => openModal(imageIndex)}
                             />
                         </div>
@@ -123,7 +120,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                 </div>
 
                 {modalOpen && (
-                    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-40">
+                    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-40 safari-center">
                         <div className="absolute z-20 max-w-screen-lg">
                             <button className="absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md" onClick={closeModal}>
                                 <FiX className="w-4 h-4" />
@@ -174,7 +171,12 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                                             {company.details}
                                         </a>
                                     ) : (
+                                        // <Link
+                                        //     className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
+                                        //     href={`/about`}
+                                        // >
                                         <span>{company.details}</span>
+                                        // </Link>
                                     )}
                                 </li>
                             ))}
@@ -182,10 +184,11 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                     </div>
                     <div>
                         <p className="text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
-                            Technologies
+                            Methods & Techniques
                         </p>
                         {project?.cars[currentCarIndex]?.ProjectInfo.Technologies.map((techItem, techIndex) => (
                             <div key={techIndex}>
+
                                 <p className="font-general-regular text-primary-dark dark:text-ternary-light">{techItem.title}:</p>
                                 {techItem.techs.map((tech, subTechIndex) => (
                                     <p className=" text-primary-dark dark:text-ternary-light" key={subTechIndex}>

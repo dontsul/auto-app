@@ -26,9 +26,9 @@ export default function Home() {
     <div
       className={`relative min-h-screen select-none overflow-hidden text-white`}
     >
-      <AnimatePresence mode="wait">
+        <AnimatePresence initial={false} mode="popLayout">
         <BackgroundImage
-          key="background-image"
+          key="background-images"
           transitionData={transitionData}
           currentSlideData={currentSlideData}
         />
