@@ -41,7 +41,7 @@ import pl41 from "@/public/portfolio/patriot-liner/pl41.jpg";
 import pl42 from "@/public/portfolio/patriot-liner/pl42.jpg";
 import pl43 from "@/public/portfolio/patriot-liner/pl43.jpg";
 import pl44 from "@/public/portfolio/patriot-liner/pl44.jpg";
-import pl45 from "@/public/portfolio/patriot-liner/pl45.jpg";
+// import pl45 from "@/public/portfolio/patriot-liner/pl45.jpg";
 
 import plSlide from "@/public/images/patriotLiner/Patriot-Liner.png";
 import plUvSlide from "@/public/images/patriotLiner/Patriot-Liner-UV+.png";
@@ -228,10 +228,10 @@ export const portfolioList: IPortfolioList[] = [
     image: pl44,
     title: "Patriot Liner example",
   },
-  {
-    image: pl45,
-    title: "Patriot Liner example",
-  },
+  // {
+  //   image: pl45,
+  //   title: "Patriot Liner example",
+  // },
 ];
 
 export const patriotLinerSlider = [

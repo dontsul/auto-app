@@ -56,7 +56,7 @@ import patriotLiner22 from "@/public/portfolio/patriot-liner/pl22.jpg";
 import patriotLiner23 from "@/public/portfolio/patriot-liner/pl23.jpg";
 import patriotLiner24 from "@/public/portfolio/patriot-liner/pl24.jpg";
 import patriotLiner25 from "@/public/portfolio/patriot-liner/pl25.jpg";
-import patriotLiner26 from "@/public/portfolio/patriot-liner/pl26.jpg";
+import patriotLiner26 from "@/public/portfolio/patriot-liner/pl27 (1).jpg";
 import patriotLiner27 from "@/public/portfolio/patriot-liner/pl27.jpg";
 import patriotLiner28 from "@/public/portfolio/patriot-liner/pl28.jpg";
 import patriotLiner29 from "@/public/portfolio/patriot-liner/pl29.jpg";
@@ -75,7 +75,6 @@ import patriotLiner41 from "@/public/portfolio/patriot-liner/pl41.jpg";
 import patriotLiner42 from "@/public/portfolio/patriot-liner/pl42.jpg";
 import patriotLiner43 from "@/public/portfolio/patriot-liner/pl43.jpg";
 import patriotLiner44 from "@/public/portfolio/patriot-liner/pl44.jpg";
-import patriotLiner45 from "@/public/portfolio/patriot-liner/pl45.jpg";
 
 
 
@@ -91,6 +90,66 @@ import wheelsTires3 from "@/public/portfolio/wheels-tires/wt4.jpg";
 import wheelsTires4 from "@/public/portfolio/wheels-tires/wt5.jpg";
 import wheelsTires5 from "@/public/portfolio/wheels-tires/wt6.jpg";
 import wheelsTires6 from "@/public/portfolio/wheels-tires/wt7.jpg";
+import wheelsTires7 from "@/public/portfolio/wheels-tires/wt8.jpg";
+import wheelsTires8 from "@/public/portfolio/wheels-tires/wt9.jpg";
+import wheelsTires9 from "@/public/portfolio/wheels-tires/wt10.jpg";
+import wheelsTires10 from "@/public/portfolio/wheels-tires/wt11.jpg";
+import wheelsTires11 from "@/public/portfolio/wheels-tires/wt12.jpg";
+import wheelsTires12 from "@/public/portfolio/wheels-tires/wt13.jpg";
+import wheelsTires13 from "@/public/portfolio/wheels-tires/wt14.jpg";
+import wheelsTires14 from "@/public/portfolio/wheels-tires/wt15.jpg";
+import wheelsTires15 from "@/public/portfolio/wheels-tires/wt16.jpg";
+import wheelsTires16 from "@/public/portfolio/wheels-tires/wt17.jpg";
+import wheelsTires17 from "@/public/portfolio/wheels-tires/wt18.jpg";
+import wheelsTires18 from "@/public/portfolio/wheels-tires/wt19.jpg";
+import wheelsTires19 from "@/public/portfolio/wheels-tires/wt20.jpg";
+import wheelsTires21 from "@/public/portfolio/wheels-tires/wt22.jpg";
+import wheelsTires22 from "@/public/portfolio/wheels-tires/wt23.jpg";
+import wheelsTires23 from "@/public/portfolio/wheels-tires/wt24.jpg";
+import wheelsTires24 from "@/public/portfolio/wheels-tires/wt25.jpg";
+import wheelsTires25 from "@/public/portfolio/wheels-tires/wt26.jpg";
+import wheelsTires26 from "@/public/portfolio/wheels-tires/wt27.jpg";
+import wheelsTires27 from "@/public/portfolio/wheels-tires/wt28.jpg";
+import wheelsTires28 from "@/public/portfolio/wheels-tires/wt29.jpg";
+import wheelsTires29 from "@/public/portfolio/wheels-tires/wt30.jpg";
+import wheelsTires30 from "@/public/portfolio/wheels-tires/wt31.jpg";
+import wheelsTires31 from "@/public/portfolio/wheels-tires/wt32.jpg";
+import wheelsTires32 from "@/public/portfolio/wheels-tires/wt33.jpg";
+import wheelsTires33 from "@/public/portfolio/wheels-tires/wt34.jpg";
+import wheelsTires34 from "@/public/portfolio/wheels-tires/wt35.jpg";
+import wheelsTires35 from "@/public/portfolio/wheels-tires/wt36.jpg";
+import wheelsTires36 from "@/public/portfolio/wheels-tires/wt37.jpg";
+import wheelsTires37 from "@/public/portfolio/wheels-tires/wt38.jpg";
+import wheelsTires38 from "@/public/portfolio/wheels-tires/wt39.jpg";
+import wheelsTires39 from "@/public/portfolio/wheels-tires/wt40.jpg";
+import wheelsTires40 from "@/public/portfolio/wheels-tires/wt41.jpg";
+import wheelsTires41 from "@/public/portfolio/wheels-tires/wt42.jpg";
+import wheelsTires42 from "@/public/portfolio/wheels-tires/wt43.jpg";
+import wheelsTires43 from "@/public/portfolio/wheels-tires/wt44.jpg";
+import wheelsTires44 from "@/public/portfolio/wheels-tires/wt45.jpg";
+import wheelsTires45 from "@/public/portfolio/wheels-tires/wt46.jpg";
+import wheelsTires46 from "@/public/portfolio/wheels-tires/wt47.jpg";
+import wheelsTires47 from "@/public/portfolio/wheels-tires/wt48.jpg";
+import wheelsTires48 from "@/public/portfolio/wheels-tires/wt49.jpg";
+import wheelsTires49 from "@/public/portfolio/wheels-tires/wt50.jpg";
+import wheelsTires50 from "@/public/portfolio/wheels-tires/wt51.jpg";
+import wheelsTires51 from "@/public/portfolio/wheels-tires/wt52.jpg";
+import wheelsTires52 from "@/public/portfolio/wheels-tires/wt53.jpg";
+import wheelsTires53 from "@/public/portfolio/wheels-tires/wt54.jpg";
+import wheelsTires54 from "@/public/portfolio/wheels-tires/wt55.jpg";
+import wheelsTires55 from "@/public/portfolio/wheels-tires/wt56.jpg";
+import wheelsTires56 from "@/public/portfolio/wheels-tires/wt57.jpg";
+import wheelsTires57 from "@/public/portfolio/wheels-tires/wt58.jpg";
+import wheelsTires58 from "@/public/portfolio/wheels-tires/wt59.jpg";
+import wheelsTires59 from "@/public/portfolio/wheels-tires/wt60.jpg";
+import wheelsTires60 from "@/public/portfolio/wheels-tires/wt61.jpg";
+import wheelsTires61 from "@/public/portfolio/wheels-tires/wt62.jpg";
+import wheelsTires62 from "@/public/portfolio/wheels-tires/wt63.jpg";
+import wheelsTires63 from "@/public/portfolio/wheels-tires/wt64.jpg";
+import wheelsTires64 from "@/public/portfolio/wheels-tires/wt65.jpg";
+import wheelsTires66 from "@/public/portfolio/wheels-tires/wt66.jpg";
+import wheelsTires67 from "@/public/portfolio/wheels-tires/wt67.jpg";
+import wheelsTires68 from "@/public/portfolio/wheels-tires/wt68.jpg";
 
 
 export const projectsData = [
@@ -660,429 +719,13 @@ export const projectsData = [
 		id: 4,
 		title: 'Patriot Liner',
 		category: 'PATRIOT LINER',
-		img: patriotLiner27,
+		img: patriotLiner4,
 		ProjectHeader: {
 			title: 'test',
 			tags: 'test',
 		},
 		cars: [
-			{
-				id: uuidv4(),
-				brand: 'Jeep Wrangler',
-				img: patriotLiner27,
-				gallery: [
-					{
-						id: uuidv4(),
-						title: 'Jeep',
-						img: patriotLiner27,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner28,
-					},
-					{
-						id: uuidv4(),
-						title: 'Jeep',
-						img: patriotLiner29,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner30,
-					},
-					{
-						id: uuidv4(),
-						title: 'Jeep',
-						img: patriotLiner31,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner32,
-					},
-					{
-						id: uuidv4(),
-						title: 'Jeep',
-						img: patriotLiner33,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner34,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner35,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner36,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner37,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner38,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner39,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner40,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner41,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner42,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner43,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner44,
-					},
-					{
-						id: uuidv4(),
-						title:'Jeep',
-						img: patriotLiner45,
-					},
 
-
-				],
-				ProjectInfo: {
-					ClientHeading: 'sdf',
-					CompanyInfo: [
-						{
-							id: uuidv4(),
-							title: 'Company',
-							details: 'CAPITAL UPFITTERS',
-						},
-						{
-							id: uuidv4(),
-							title: 'Services',
-							details: 'Ceramic Coatings',
-						},
-						{
-							id: uuidv4(),
-							title: 'Phone',
-							details: '301-304-1419',
-						},
-					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
-					Technologies: [
-						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
-							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
-							],
-						},
-					],
-					ProjectDetailsHeading: 'Why us',
-					ProjectDetails: [
-						{
-							id: uuidv4(),
-							details:
-								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
-						},
-						{
-							id: uuidv4(),
-							details:
-								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
-						}
-					],
-
-				},
-
-			},
-			// {
-			// 	id: uuidv4(),
-			// 	brand: 'Ford',
-			// 	img: patriotLiner1,
-			// 	gallery: [
-			// 		{
-			// 			id: uuidv4(),
-			// 			title: 'Ford',
-			// 			img: patriotLiner1,
-			// 		},
-			// 		{
-			// 			id: uuidv4(),
-			// 			title:'Ford',
-			// 			img: patriotLiner2,
-			// 		},
-			// 	],
-			// 	ProjectInfo: {
-			// 		ClientHeading: 'Ford',
-			// 		CompanyInfo: [
-			// 			{
-			// 				id: uuidv4(),
-			// 				title: 'Company',
-			// 				details: 'CAPITAL UPFITTERS',
-			// 			},
-			// 			{
-			// 				id: uuidv4(),
-			// 				title: 'Services',
-			// 				details: 'Ceramic Coatings',
-			// 			},
-			// 			{
-			// 				id: uuidv4(),
-			// 				title: 'Phone',
-			// 				details: '301-304-1419',
-			// 			},
-			// 		],
-			// 		ObjectivesHeading:'sdf',
-			// 		ObjectivesDetails:
-			// 			'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
-			// 		Technologies: [
-			// 			{
-			// 				title: 'With its exceptional hydrophobic properties, System X® offers:',
-			// 				techs: [
-			// 					'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-			//
-			// 					'•Effective prevention of car body corrosion.',
-			//
-			// 					'•Impressive protection against external elements, unaffected by washing or detailing.',
-			//
-			// 					'•A noticeable reduction in the frequency of washing and detailing required.',
-			// 				],
-			// 			},
-			// 		],
-			// 		ProjectDetailsHeading: 'Why us',
-			// 		ProjectDetails: [
-			// 			{
-			// 				id: uuidv4(),
-			// 				details:
-			// 					'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
-			// 			},
-			// 			{
-			// 				id: uuidv4(),
-			// 				details:
-			// 					'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
-			// 			}
-			// 		],
-			//
-			// 	},
-			//
-			// },
-			// {
-			// 	id: uuidv4(),
-			// 	brand: 'Ford',
-			// 	img: patriotLiner3,
-			// 	gallery: [
-			// 		{
-			// 			id: uuidv4(),
-			// 			title: 'Ford',
-			// 			img: patriotLiner3,
-			// 		},
-			// 	],
-			// 	ProjectInfo: {
-			// 		ClientHeading: 'Ford',
-			// 		CompanyInfo: [
-			// 			{
-			// 				id: uuidv4(),
-			// 				title: 'Company',
-			// 				details: 'CAPITAL UPFITTERS',
-			// 			},
-			// 			{
-			// 				id: uuidv4(),
-			// 				title: 'Services',
-			// 				details: 'Ceramic Coatings',
-			// 			},
-			// 			{
-			// 				id: uuidv4(),
-			// 				title: 'Phone',
-			// 				details: '301-304-1419',
-			// 			},
-			// 		],
-			// 		ObjectivesHeading:'sdf',
-			// 		ObjectivesDetails:
-			// 			'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
-			// 		Technologies: [
-			// 			{
-			// 				title: 'With its exceptional hydrophobic properties, System X® offers:',
-			// 				techs: [
-			// 					'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-			//
-			// 					'•Effective prevention of car body corrosion.',
-			//
-			// 					'•Impressive protection against external elements, unaffected by washing or detailing.',
-			//
-			// 					'•A noticeable reduction in the frequency of washing and detailing required.',
-			// 				],
-			// 			},
-			// 		],
-			// 		ProjectDetailsHeading: 'Why us',
-			// 		ProjectDetails: [
-			// 			{
-			// 				id: uuidv4(),
-			// 				details:
-			// 					'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
-			// 			},
-			// 			{
-			// 				id: uuidv4(),
-			// 				details:
-			// 					'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
-			// 			}
-			// 		],
-			//
-			// 	},
-			//
-			// },
-			{
-				id: uuidv4(),
-				brand: 'Ford',
-				img: patriotLiner4,
-				gallery: [
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner4,
-					},
-
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner6,
-					},
-
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner8,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner9,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner10,
-					},
-
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner12,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner13,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner14,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner15,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner16,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner21,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner22,
-					},
-					{
-						id: uuidv4(),
-						title: 'Ford',
-						img: patriotLiner23,
-					},
-
-				],
-				ProjectInfo: {
-					ClientHeading: 'Ford',
-					CompanyInfo: [
-						{
-							id: uuidv4(),
-							title: 'Company',
-							details: 'CAPITAL UPFITTERS',
-						},
-						{
-							id: uuidv4(),
-							title: 'Services',
-							details: 'Ceramic Coatings',
-						},
-						{
-							id: uuidv4(),
-							title: 'Phone',
-							details: '301-304-1419',
-						},
-					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
-					Technologies: [
-						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
-							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
-							],
-						},
-					],
-					ProjectDetailsHeading: 'Why us',
-					ProjectDetails: [
-						{
-							id: uuidv4(),
-							details:
-								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
-						},
-						{
-							id: uuidv4(),
-							details:
-								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
-						}
-					],
-
-				},
-
-			},
 			{
 				id: uuidv4(),
 				brand: 'Ford',
@@ -1298,6 +941,155 @@ export const projectsData = [
 				},
 
 			},
+			{
+				id: uuidv4(),
+				brand: 'Jeep Wrangler',
+				img: patriotLiner26,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Jeep',
+						img: patriotLiner27,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner28,
+					},
+					{
+						id: uuidv4(),
+						title: 'Jeep',
+						img: patriotLiner29,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner30,
+					},
+					{
+						id: uuidv4(),
+						title: 'Jeep',
+						img: patriotLiner31,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner32,
+					},
+					{
+						id: uuidv4(),
+						title: 'Jeep',
+						img: patriotLiner33,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner34,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner35,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner36,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner37,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner38,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner39,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner40,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner41,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner42,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner43,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: patriotLiner44,
+					},
+				],
+				ProjectInfo: {
+					ClientHeading: 'sdf',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Ceramic Coatings',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
 			// Додайте інші авто для Ceramic Coatings
 		],
 	},
@@ -1307,27 +1099,35 @@ export const projectsData = [
 		category: 'UNDERCOATING',
 		img: undercoating3,
 		ProjectHeader: {
-			title: 'test',
-			tags: 'test',
+			title: 'Undercoating',
+			tags: 'Undercoating',
 		},
 		cars: [
 			{
 				id: uuidv4(),
-				brand: 'BMW',
-				img: fleet1,
+				brand: 'Ford',
+				img: undercoating3,
 				gallery: [
 					{
 						id: uuidv4(),
 						title: 'fsd',
-						img: fleet1,
+						img: undercoating1,
 					},
 					{
 						id: uuidv4(),
 						title:'fsd',
-						img: fleet4,
+						img: undercoating2,
 					},
-
-
+					{
+						id: uuidv4(),
+						title:'fsd',
+						img: undercoating3,
+					},
+					{
+						id: uuidv4(),
+						title:'fsd',
+						img: undercoating4,
+					},
 				],
 				ProjectInfo: {
 					ClientHeading: 'sdf',
@@ -1391,25 +1191,26 @@ export const projectsData = [
 		category: 'WHEELS TIRES',
 		img: wheelsTires1,
 		ProjectHeader: {
-			title: 'test',
-			tags: 'test',
+			title: 'WHEELS TIRES',
+			tags: 'WHEELS TIRES',
 		},
 		cars: [
 			{
 				id: uuidv4(),
-				brand: 'BMW',
-				img: fleet1,
+				brand: 'GMC',
+				img: wheelsTires1,
 				gallery: [
 					{
 						id: uuidv4(),
-						title: 'fsd',
-						img: fleet1,
+						title: 'GMC',
+						img: wheelsTires1,
 					},
 					{
 						id: uuidv4(),
-						title:'fsd',
-						img: fleet4,
+						title:'GMC',
+						img: wheelsTires2,
 					},
+
 
 
 				],
@@ -1425,6 +1226,812 @@ export const projectsData = [
 							id: uuidv4(),
 							title: 'Services',
 							details: 'Ceramic Coatings',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Volkswagen',
+				img: wheelsTires4,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Volkswagen',
+						img: wheelsTires4,
+					},
+				],
+				ProjectInfo: {
+					ClientHeading: 'sdf',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Jeep',
+				img: wheelsTires15,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Jeep',
+						img: wheelsTires16,
+					},
+					{
+						id: uuidv4(),
+						title:'Jeep',
+						img: wheelsTires17,
+					},
+					{
+						id: uuidv4(),
+						title: 'Jeep',
+						img: wheelsTires24,
+					},
+
+				],
+				ProjectInfo: {
+					ClientHeading: 'Ford',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Ford',
+				img: wheelsTires5,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires5,
+					},
+					{
+						id: uuidv4(),
+						title:'Ford',
+						img: wheelsTires6,
+					},
+					{
+						id: uuidv4(),
+						title:'Ford',
+						img: wheelsTires13,
+					},
+					{
+						id: uuidv4(),
+						title:'Ford',
+						img: wheelsTires14,
+					},
+					{
+						id: uuidv4(),
+						title:'Ford',
+						img: wheelsTires18,
+					},
+					{
+						id: uuidv4(),
+						title:'Ford',
+						img: wheelsTires19,
+					},
+
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires35,
+					},
+
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires37,
+					},
+					{
+						id: uuidv4(),
+						title:'Ford',
+						img: wheelsTires23,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires68,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires49,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires50,
+					},
+
+
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires62,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires64,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ford',
+						img: wheelsTires67,
+					},
+
+
+				],
+				ProjectInfo: {
+					ClientHeading: 'Ford',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Toyota',
+				img: wheelsTires7,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Toyota',
+						img: wheelsTires7,
+					},
+					{
+						id: uuidv4(),
+						title:'Toyota',
+						img: wheelsTires8,
+					},
+					{
+						id: uuidv4(),
+						title:'Toyota',
+						img: wheelsTires9,
+					},
+
+
+				],
+				ProjectInfo: {
+					ClientHeading: 'Ford',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Chevrolet',
+				img: wheelsTires3,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Chevrolet',
+						img: wheelsTires3,
+					},
+
+				],
+				ProjectInfo: {
+					ClientHeading: 'Chevrolet',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Nisan',
+				img: wheelsTires21,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Nisan',
+						img: wheelsTires22,
+					},
+				],
+				ProjectInfo: {
+					ClientHeading: 'Nisan',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Bronco',
+				img: wheelsTires29,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires26,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires29,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires28,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires29,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires30,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires31,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires32,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires34,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires39,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires46,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires47,
+					},
+					{
+						id: uuidv4(),
+						title: 'Bronco',
+						img: wheelsTires48,
+					},
+				],
+				ProjectInfo: {
+					ClientHeading: 'Bronco',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Ram',
+				img: wheelsTires42,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'RAM',
+						img: wheelsTires42,
+					},
+					{
+						id: uuidv4(),
+						title: 'RAM',
+						img: wheelsTires43,
+					},
+					{
+						id: uuidv4(),
+						title: 'RAM',
+						img: wheelsTires44,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires54,
+					},
+					{
+						id: uuidv4(),
+						title: 'RAM',
+						img: wheelsTires40,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires55,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires56,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires57,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires58,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires63,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires61,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires66,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires59,
+					},
+					{
+						id: uuidv4(),
+						title: 'Ram',
+						img: wheelsTires60,
+					},
+				],
+				ProjectInfo: {
+					ClientHeading: 'Ram',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'sdf',
+					ObjectivesDetails:
+						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					Technologies: [
+						{
+							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							techs: [
+								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+
+								'•Effective prevention of car body corrosion.',
+
+								'•Impressive protection against external elements, unaffected by washing or detailing.',
+
+								'•A noticeable reduction in the frequency of washing and detailing required.',
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
+
+				},
+
+			},
+			{
+				id: uuidv4(),
+				brand: 'Volvo',
+				img: wheelsTires51,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Volvo',
+						img: wheelsTires51,
+					},
+					{
+						id: uuidv4(),
+						title: 'Volvo',
+						img: wheelsTires52,
+					},
+					{
+						id: uuidv4(),
+						title: 'Volvo',
+						img: wheelsTires53,
+					},
+				],
+				ProjectInfo: {
+					ClientHeading: 'Volvo',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Wheels Tires',
 						},
 						{
 							id: uuidv4(),
