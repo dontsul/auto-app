@@ -10,7 +10,7 @@ interface IImagePage {
 
 export const ImagePage: FC<IImagePage> = ({ children, cn, img }) => {
   return (
-    <div className="h-[450px] flex max-h-full rounded-md w-auto justify-center lg:justify-end rounded-tl-[100px] rounded-tr-[100px] rounded-br-[100px] rounded-bl-[220px] overflow-hidden shadow-lg shadow-slate-700 hover:shadow-lg hover:shadow-yellow-500 transition duration-300">
+    <div className="h-[450px] flex max-h-full rounded-md w-auto justify-center lg:justify-end rounded-tl-[100px] rounded-tr-[100px] rounded-br-[100px] rounded-bl-[220px] overflow-hidden shadow-lg shadow-slate-700 hover:shadow-lg hover:shadow-[#203055] transition duration-300">
       <Image
         src={img}
         width={700}

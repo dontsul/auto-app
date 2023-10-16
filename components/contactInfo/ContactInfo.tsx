@@ -2,12 +2,7 @@ import React, { FC, useEffect } from "react";
 import { Logo } from "../logo/Logo";
 import { CloseButton } from "../closeButton/CloseButton";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  BsInstagram,
-  BsFacebook,
-  BsTwitter,
-  BsFillTelephoneFill,
-} from "react-icons/bs";
+import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from "react-icons/bs";
 import { SiGooglemaps } from "react-icons/si";
 import { TbMailFilled } from "react-icons/tb";
 import MyMapPage from "@/components/googleMaps/MyMap";
@@ -17,10 +12,7 @@ interface IContactInfo {
   handleContactInfo: (status: boolean) => void;
 }
 
-export const ContactInfo: FC<IContactInfo> = ({
-  handleContactInfo,
-  openContactInfo,
-}) => {
+export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactInfo }) => {
   useEffect(() => {
     if (openContactInfo) {
       document.body.style.overflowY = "hidden";

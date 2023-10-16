@@ -1,12 +1,7 @@
 "use client";
 import React from "react";
 import { IconType } from "react-icons";
-import {
-  FaFacebookSquare,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import MyMapPage from "@/components/googleMaps/MyMap";
 
@@ -71,9 +66,8 @@ export const Footer: React.FC = () => {
               CAPITAL UPFITTERS
             </h6>
             <p className="text-sm">
-              Based in Leander, Texas, our team of skilled technicians are
-              dedicated to providing amazing service for all your truck
-              customization needs
+              Based in Leander, Texas, our team of skilled technicians are dedicated to providing
+              amazing service for all your truck customization needs
             </p>
           </div>
           <div>
@@ -91,7 +85,7 @@ export const Footer: React.FC = () => {
                 <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
+                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
                 href="https://www.google.com/maps?ll=39.051219,-77.108649&z=20&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=5362875643083497393"
               >
                 12019 Nebel St, Rockville, MD 20852
@@ -108,7 +102,7 @@ export const Footer: React.FC = () => {
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
+                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
                 href="mailto:CapitalUpfitters@gmail.com"
               >
                 CapitalUpfitters@gmail.com
@@ -127,7 +121,7 @@ export const Footer: React.FC = () => {
                 />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
+                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
                 href="tel:301-304-141"
               >
                 301-304-1419
@@ -146,7 +140,7 @@ export const Footer: React.FC = () => {
                 />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line"
+                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
                 href="tel:301-304-1419"
               >
                 301-304-1419
@@ -158,22 +152,34 @@ export const Footer: React.FC = () => {
               Location
             </h6>
             <p className="mb-4">
-              <Link      href={`/`} className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
+              <Link
+                href={`/`}
+                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+              >
                 Home
               </Link>
             </p>
             <p className="mb-4">
-              <Link href={`/about`} className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line" >
+              <Link
+                href={`/about`}
+                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+              >
                 About
               </Link>
             </p>
             <p className="mb-4">
-              <Link  href={`/our-services/patriot-liner`} className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
+              <Link
+                href={`/our-services/patriot-liner`}
+                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+              >
                 Our Services
               </Link>
             </p>
             <p>
-              <Link href={`/portfolio`} className="w-auto h-full text-base  hover:text-yellow-500 cursor-pointer line">
+              <Link
+                href={`/portfolio`}
+                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+              >
                 Portfolio
               </Link>
             </p>
@@ -190,10 +196,7 @@ export const Footer: React.FC = () => {
 
       <div className="bg-[#111827] p-6 text-center dark:bg-neutral-700">
         <span>© {new Date().getFullYear()} Copyright: </span>
-        <a
-          className="font-semibold text-neutral-600 dark:text-neutral-400"
-          href="/"
-        >
+        <a className="font-semibold text-neutral-600 dark:text-neutral-400" href="/">
           All rights reserved
         </a>
       </div>

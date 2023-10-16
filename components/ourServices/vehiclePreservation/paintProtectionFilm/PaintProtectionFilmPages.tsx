@@ -12,7 +12,10 @@ import {
   text4,
 } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/ceramicCoatingsData/CeramicCoatingsData";
 import {
-  PaintProtectionFilm, PaintProtectionFilm2, PaintProtectionFilm3, PaintProtectionFilm4,
+  PaintProtectionFilm,
+  PaintProtectionFilm2,
+  PaintProtectionFilm3,
+  PaintProtectionFilm4,
   paintProtectionFilmData,
   paintProtectionFilmText,
 } from "@/components/ourServices/vehiclePreservation/paintProtectionFilm/paintProtectionFilmData/PaintProtectionFilmDatas";
@@ -43,7 +46,7 @@ export function PaintProtectionFilmPages() {
   return (
     <div className="py-10">
       <Title tag="h4" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
-        PAINT PROTECTION<span className="text-yellow-500"> FILM PACKAGES</span>
+        PAINT PROTECTION<span className="text-[#203055]"> FILM PACKAGES</span>
       </Title>
       <div className=" pb-20 grid lg:grid-cols-[240px_auto_340px] gap-12  justify-center">
         <div className="m-5 rounded-md" role="group">
@@ -54,9 +57,7 @@ export function PaintProtectionFilmPages() {
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
             }`}
-            onClick={() =>
-              handleButtonClick("FULL BODY", "path-to-prime-cs-image.jpg")
-            }
+            onClick={() => handleButtonClick("FULL BODY", "path-to-prime-cs-image.jpg")}
           >
             DYNOshield Front
           </button>
@@ -67,9 +68,7 @@ export function PaintProtectionFilmPages() {
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
             }`}
-            onClick={() =>
-              handleButtonClick("FULL FRONT", "path-to-prime-xr-image.jpg")
-            }
+            onClick={() => handleButtonClick("FULL FRONT", "path-to-prime-xr-image.jpg")}
           >
             DYNOshield Track Pack
           </button>
@@ -80,9 +79,7 @@ export function PaintProtectionFilmPages() {
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
             }`}
-            onClick={() =>
-              handleButtonClick("TRACK PACK", "path-to-prime-xr-image.jpg")
-            }
+            onClick={() => handleButtonClick("TRACK PACK", "path-to-prime-xr-image.jpg")}
           >
             DYNOshield Full Body
           </button>
@@ -93,13 +90,9 @@ export function PaintProtectionFilmPages() {
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
             }`}
-            onClick={() =>
-              handleButtonClick("FORT KNOX", "path-to-prime-cs-image.jpg")
-            }
+            onClick={() => handleButtonClick("FORT KNOX", "path-to-prime-cs-image.jpg")}
           >
-            Fashion Film /
-            DYNOmight /
-            DYNOmatte
+            Fashion Film / DYNOmight / DYNOmatte
           </button>
         </div>
         <div className=" ">
@@ -133,23 +126,18 @@ export function PaintProtectionFilmPages() {
               return (
                 <React.Fragment key={uuidv4()}>
                   {currentText === item.value && (
-
-                    <h1 className="text-[13px] text-yellow-500 font-semibold">
-                      {item.title}
-                    </h1>
+                    <h1 className="text-[13px] text-[#203055] font-semibold">{item.title}</h1>
                   )}
                 </React.Fragment>
               );
             })}
 
             <div>
-
               <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                 {currentText === "FULL BODY" && (
                   <React.Fragment key={uuidv4()}>
                     <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                       FULL FRONT
-
+                      FULL FRONT
                     </h2>
 
                     <ListTintPages text={PaintProtectionFilm} />

@@ -62,11 +62,11 @@ export const Menu: FC<IMenuProps> = ({
       <div
         className={`overflow-y-auto lg:overflow-visible ease-in-out ${
           openMenu ? "translate-x-0 duration-[800ms]" : "translate-x-[-100%]"
-        } lg:opacity-100  fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 left-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0 lg:transition-none`}
+        } lg:opacity-100 fixed min-w-[80px] max-w-[400px] w-full min-h-full top-0 left-0 z-20 lg:static lg:h-auto lg:max-w-[100%] lg:min-w-auto lg:top-auto lg:left-auto lg:translate-x-0 lg:transition-none flex items-center`}
       >
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={`overflow-y-auto lg:overflow-visible bg-[#111827] w-full z-20 h-screen py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:min-h-full lg:py-0 lg:px-4`}
+          className={`overflow-y-auto lg:overflow-visible bg-[#111827] w-full z-20 h-[100dvh] py-4  border-r-[3px]  border-white lg:border-none lg:h-auto lg:min-h-full lg:py-0 lg:px-4`}
         >
           <div className="block lg:hidden">
             <Logo />
@@ -74,8 +74,8 @@ export const Menu: FC<IMenuProps> = ({
           <ul className="py-8 lg:flex lg:items-center lg:justify-center lg:gap-4 lg:py-0">
             <li className=" w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/" ? "text-yellow-500 active-line" : ""
+                className={`w-full h-full text-sm text-slate-100 hover:text-white cursor-pointer line ${
+                  pathname === "/" ? "text-white active-line" : ""
                 }`}
                 href={`/`}
                 onClick={() => {
@@ -87,8 +87,8 @@ export const Menu: FC<IMenuProps> = ({
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className={`w-auto h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/about" ? "text-yellow-500 active-line" : ""
+                className={`w-auto h-full text-sm text-slate-100 hover:text-white cursor-pointer line ${
+                  pathname === "/about" ? "text-white] active-line" : ""
                 }
                 `}
                 href={`/about`}
@@ -115,8 +115,8 @@ export const Menu: FC<IMenuProps> = ({
 
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line  ${
-                  pathname === "/commercial" ? "text-yellow-500 active-line" : ""
+                className={`w-full h-full text-sm text-slate-100 hover:text-white cursor-pointer line  ${
+                  pathname === "/commercial" ? "text-white active-line" : ""
                 }`}
                 href={`/commercial`}
                 onClick={() => {
@@ -128,10 +128,8 @@ export const Menu: FC<IMenuProps> = ({
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/quote-equest"
-                    ? "text-yellow-500 active-line"
-                    : ""
+                className={`w-full h-full text-sm text-slate-100 hover:text-white cursor-pointer line ${
+                  pathname === "/quote-equest" ? "text-white active-line" : ""
                 }`}
                 href={`/quote-equest`}
                 onClick={() => {
@@ -143,8 +141,8 @@ export const Menu: FC<IMenuProps> = ({
             </li>
             <li className="w-auto px-4 py-1 lg:flex lg:justify-center">
               <Link
-                className={`w-full h-full text-sm text-slate-100 hover:text-yellow-500 cursor-pointer line ${
-                  pathname === "/portfolio" ? "text-yellow-500 active-line" : ""
+                className={`w-full h-full text-sm text-slate-100 hover:text-white cursor-pointer line ${
+                  pathname === "/portfolio" ? "text-white active-line" : ""
                 }`}
                 href={`/portfolio`}
                 onClick={() => {

@@ -5,12 +5,7 @@ import { CustomForm } from "@/components/customForm/CustomForm";
 
 import { Reviews } from "@/components/reviews/Reviews";
 import { WindowTintItem } from "@/components/ourServices/windowTintPages/WindowTintItem";
-export const textList = [
-  "UV Protection",
-  "Improved Privacy",
-  "Reduced Glare",
-  "Added Style",
-];
+export const textList = ["UV Protection", "Improved Privacy", "Reduced Glare", "Added Style"];
 export const textList2 = [
   "70% Heat Rejection",
   "UV Protection",
@@ -55,7 +50,7 @@ export function WindowTintPages() {
   return (
     <div className="container">
       <Title tag="h2" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
-        Window <span className="text-yellow-500">Tinting</span>
+        Window <span className="text-[#203055]">Tinting</span>
       </Title>
       <div>
         <WindowTintItem />

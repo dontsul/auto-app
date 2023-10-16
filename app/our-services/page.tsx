@@ -9,21 +9,19 @@ export default function Services() {
   return (
     <div className="py-16 container">
       <Title tag="h2" cn="mb-16">
-        Our <span className="text-yellow-500">Services</span>
+        Our <span className="text-text-[#203055]">Services</span>
       </Title>
       <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 mb-16">
         <div>
           <p className="text-[#111827] text-base leading-8 mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            molestias facilis praesentium vitae consectetur nemo dolorum facere
-            quas qui ducimus eius earum similique tempore fuga, recusandae
-            aliquid accusamus id quisquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt molestias facilis
+            praesentium vitae consectetur nemo dolorum facere quas qui ducimus eius earum similique
+            tempore fuga, recusandae aliquid accusamus id quisquam.
           </p>
           <p className="text-[#111827] text-base leading-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            molestias facilis praesentium vitae consectetur nemo dolorum facere
-            quas qui ducimus eius earum similique tempore fuga, recusandae
-            aliquid accusamus id quisquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt molestias facilis
+            praesentium vitae consectetur nemo dolorum facere quas qui ducimus eius earum similique
+            tempore fuga, recusandae aliquid accusamus id quisquam.
           </p>
         </div>
         <div className="rounded-md flex justify-center items-center lg:justify-end">

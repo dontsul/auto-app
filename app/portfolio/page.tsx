@@ -6,9 +6,9 @@ export default function Portfolio() {
   return (
     <main className="py-16 container">
       <Title tag="h2" cn="mb-16">
-        Our <span className="text-yellow-500">Portfolio</span>
+        Our <span className="text-[#203055]">Portfolio</span>
       </Title>
-        <ProjectsGrid />
+      <ProjectsGrid />
 
       <Title tag="h4" cn="mb-10 mt-16">
         CONTACT US

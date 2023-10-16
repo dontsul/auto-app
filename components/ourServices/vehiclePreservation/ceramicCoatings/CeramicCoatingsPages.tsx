@@ -40,7 +40,7 @@ export function CeramicCoatingsPages() {
   return (
     <div className="py-10">
       <Title tag="h4" cn="mt-24 sm:mt-[6px] md:mt-[20px] lg:mt-[28px] mb-14">
-        CERAMIC COATING <span className="text-yellow-500">PACKAGES</span>
+        CERAMIC COATING <span className="text-[#203055]">PACKAGES</span>
       </Title>
       <div className="grid lg:grid-cols-[240px_auto_340px] gap-12  justify-center">
         <div className="m-5 rounded-md" role="group">
@@ -51,9 +51,7 @@ export function CeramicCoatingsPages() {
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
             }`}
-            onClick={() =>
-              handleButtonClick("FULL FRONT", "path-to-prime-cs-image.jpg")
-            }
+            onClick={() => handleButtonClick("FULL FRONT", "path-to-prime-cs-image.jpg")}
           >
             Fusion Lite
           </button>
@@ -64,9 +62,7 @@ export function CeramicCoatingsPages() {
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
             }`}
-            onClick={() =>
-              handleButtonClick("TRACK PACK", "path-to-prime-xr-image.jpg")
-            }
+            onClick={() => handleButtonClick("TRACK PACK", "path-to-prime-xr-image.jpg")}
           >
             Fusion Plus
           </button>
@@ -77,9 +73,7 @@ export function CeramicCoatingsPages() {
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
             }`}
-            onClick={() =>
-              handleButtonClick("FULL BODY", "path-to-prime-xr-image.jpg")
-            }
+            onClick={() => handleButtonClick("FULL BODY", "path-to-prime-xr-image.jpg")}
           >
             Fusion Satin
           </button>
@@ -90,9 +84,7 @@ export function CeramicCoatingsPages() {
                 ? "text-white bg-gray-900"
                 : "text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white"
             }`}
-            onClick={() =>
-              handleButtonClick("FORT KNOX", "path-to-prime-cs-image.jpg")
-            }
+            onClick={() => handleButtonClick("FORT KNOX", "path-to-prime-cs-image.jpg")}
           >
             Fusion Premium
           </button>
@@ -128,9 +120,7 @@ export function CeramicCoatingsPages() {
               return (
                 <React.Fragment key={uuidv4()}>
                   {currentText === item.value && (
-                    <h1 className="text-[13px] text-yellow-500 font-semibold">
-                      {item.title}
-                    </h1>
+                    <h1 className="text-[13px] text-[#203055] font-semibold">{item.title}</h1>
                   )}
                 </React.Fragment>
               );
@@ -145,7 +135,6 @@ export function CeramicCoatingsPages() {
                     </h2>
 
                     <ListTintPages text={text1} />
-
                   </>
                 )}
                 {currentText === "TRACK PACK" && (

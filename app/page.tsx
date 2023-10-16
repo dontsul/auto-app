@@ -5,10 +5,8 @@ import { Contact } from "@/components/contact/Contact";
 import { Reviews } from "@/components/reviews/Reviews";
 
 export default function Home() {
-
-
   return (
-    <div>
+    <div className="overflow-hidden">
       <Sliders />
       <AboutSection />
       <Contact />
