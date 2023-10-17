@@ -36,6 +36,18 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
     const [modalOpen, setModalOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [currentCarIndex, setCurrentCarIndex] = useState(carIndex);
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
+
+    // Додайте обробник onLoad для Image
+    const handleImageLoad = () => {
+        setImageLoaded(true);
+    }
+
+    // Додайте обробник onError для Image
+    const handleImageError = () => {
+        setImageError(true);
+    }
 
     const closeModal = useCallback(() => {
         setModalOpen(false);
@@ -118,11 +130,10 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                         </div>
                     ))}
                 </div>
-
                 {modalOpen && (
                     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-40 safari-center">
-                        <button className="absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md" onClick={closeModal}>
-                            <FiX className="w-10 h-10" />
+                        <button className=" z-50 absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md" onClick={closeModal}>
+                            <FiX className="w-6 h-6" />
                         </button>
                         <div className="absolute z-20 max-w-screen-lg">
 
@@ -135,23 +146,21 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                                     placeholder="empty"
                                     width={800}
                                     height={600}
+                                    onLoad={handleImageLoad}
+                                    onError={handleImageError}
                                 />
                             </div>
                         </div>
-                        <button
-                            className="absolute z-50 top-1/2 left-4 transform -translate-y-1/2 text-white bg-black px-4 py-2 rounded-md flex items-center"
-                            onClick={goToPrev}
-                        >
-                            <FiChevronLeft className="w-10 h-10" />
+                        <button className="absolute z-50 top-1/2 left-4 transform -translate-y-1/2 text-white bg-black px-4 py-2 rounded-md flex items-center" onClick={goToPrev}>
+                            <FiChevronLeft className="w-6 h-6" />
                         </button>
-                        <button
-                            className="absolute z-50 top-1/2 right-4 transform -translate-y-1/2 text-white bg-black px-4 py-2 rounded-md flex items-center"
-                            onClick={goToNext}
-                        >
-                            <FiChevronRight className="w-10 h-10" />
+                        <button className="absolute z-50 top-1/2 right-4 transform -translate-y-1/2 text-white bg-black px-4 py-2 rounded-md flex items-center" onClick={goToNext}>
+                            <FiChevronRight className="w-6 h-6" />
                         </button>
                     </div>
                 )}
+                );
+
             </div>
             <div className="block sm:flex gap-0 sm:gap-10 mt-14">
                 <div className="w-full sm:w-1/3 text-left">
@@ -172,12 +181,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                                             {company.details}
                                         </a>
                                     ) : (
-                                        // <Link
-                                        //     className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
-                                        //     href={`/about`}
-                                        // >
                                         <span> {company.details}</span>
-                                        // </Link>
                                     )}
                                 </li>
                             ))}
