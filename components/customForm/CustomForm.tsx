@@ -108,8 +108,7 @@ export const CustomForm = () => {
         setArrayImages([]);
         setValue("file", []);
         reset();
-        toast.success("Form successfully submitted");
-        console.log("успех");
+        toast.success("The form has been sent successfully, we will contact you");
       } else {
         console.error(`Error submitting the form: ${telegramResponse.error}`);
         toast.error("Error submitting the form");
