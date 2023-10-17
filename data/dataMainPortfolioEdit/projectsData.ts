@@ -559,28 +559,33 @@ export const projectsData = [
 			},
 			{
 				id: uuidv4(),
-				brand: 'Audi',
-				img: hitches4,
+				brand: 'Tesla',
+				img: hitches7,
 				gallery: [
 					{
 						id: uuidv4(),
-						title: 'Audi',
-						img: hitches4,
+						title: 'Tesla',
+						img: hitches7,
 					},
 					{
 						id: uuidv4(),
-						title:'Audi',
-						img: hitches5,
+						title:'Tesla',
+						img: hitches8,
 					},
 					{
 						id: uuidv4(),
-						title:'Audi',
-						img: hitches6,
+						title:'Tesla',
+						img: hitches11,
+					},
+					{
+						id: uuidv4(),
+						title:'Tesla',
+						img: hitches12,
 					},
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Tesla',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -634,33 +639,28 @@ export const projectsData = [
 			},
 			{
 				id: uuidv4(),
-				brand: 'Tesla',
-				img: hitches7,
+				brand: 'Audi',
+				img: hitches4,
 				gallery: [
 					{
 						id: uuidv4(),
-						title: 'Tesla',
-						img: hitches7,
+						title: 'Audi',
+						img: hitches4,
 					},
 					{
 						id: uuidv4(),
-						title:'Tesla',
-						img: hitches8,
+						title:'Audi',
+						img: hitches5,
 					},
 					{
 						id: uuidv4(),
-						title:'Tesla',
-						img: hitches11,
-					},
-					{
-						id: uuidv4(),
-						title:'Tesla',
-						img: hitches12,
+						title:'Audi',
+						img: hitches6,
 					},
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'Tesla',
+					ClientHeading: 'sdf',
 					CompanyInfo: [
 						{
 							id: uuidv4(),

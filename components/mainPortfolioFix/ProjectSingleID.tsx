@@ -135,7 +135,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                         <button className=" z-50 absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md" onClick={closeModal}>
                             <FiX className="w-6 h-6" />
                         </button>
-                        <div className="absolute z-20 max-w-screen-lg">
+                        <div className="z-20 max-w-screen-lg">
 
                             <div className="rounded-xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer shadow-lg sm:shadow-none">
                                 <Image
@@ -159,7 +159,6 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                         </button>
                     </div>
                 )}
-                );
 
             </div>
             <div className="block sm:flex gap-0 sm:gap-10 mt-14">
