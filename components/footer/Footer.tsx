@@ -15,9 +15,6 @@ const socialList = [
   {
     icon: FaTwitter,
   },
-  {
-    icon: FaLinkedinIn,
-  },
 ];
 
 export const Footer: React.FC = () => {
@@ -42,7 +39,7 @@ export const Footer: React.FC = () => {
       <div className="mx-6 py-10 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="">
-            <h6 className=" text-[#B3B3B3] dark:text-neutral-200 mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+            <h6 className=" text-[#B3B3B3] dark:text-neutral-200 mb-4 flex items-center justify-center  uppercase md:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -71,7 +68,7 @@ export const Footer: React.FC = () => {
             </p>
           </div>
           <div>
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+            <h6 className="mb-4 flex justify-center  uppercase md:justify-start">
               Contact Info
             </h6>
             <p className="mb-4 flex items-center justify-center md:justify-start">
@@ -148,7 +145,7 @@ export const Footer: React.FC = () => {
             </p>
           </div>
           <div className="text-[#B3B3B3]">
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+            <h6 className="mb-4 flex justify-center  uppercase md:justify-start">
               Location
             </h6>
             <p className="mb-4">
@@ -186,7 +183,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="text-[#B3B3B3]">
-            <h6 className=" mb-4 flex justify-center font-semibold uppercase md:justify-start">
+            <h6 className=" mb-4 flex justify-center  uppercase md:justify-start">
               Location Navigation
             </h6>
             <MyMapPage />
@@ -196,7 +193,7 @@ export const Footer: React.FC = () => {
 
       <div className="bg-[#111827] p-6 text-center dark:bg-neutral-700">
         <span>© {new Date().getFullYear()} Copyright: </span>
-        <a className="font-semibold text-neutral-600 dark:text-neutral-400" href="/">
+        <a className=" text-neutral-600 dark:text-neutral-400" href="/">
           All rights reserved
         </a>
       </div>
