@@ -46,7 +46,7 @@ export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactIn
           </div>
           <div className="py-8 px-8">
             {" "}
-            <h4 className="uppercase text-[24px] text-start font-extrabold text-slate-300 mb-8">
+            <h4 className="uppercase text-[24px] text-start  text-slate-300 mb-8">
               Contact Info
             </h4>
             <div className="py-4">
