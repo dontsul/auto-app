@@ -24,11 +24,11 @@ const ProjectSingleCard: FC<ProjectProps> = (props) => {
                 <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
                     <Image
                         src={props.img}
-                        className="rounded-t-xl border-none"
+                        className="rounded-xl w-full h-[290px]  object-cover cursor-pointer shadow-lg sm:shadow-none"
                             alt={props.brand}
-                            layout="responsive"
-                            width={100}
-                            height={100}
+                        layout="fixed"
+                        width={800}
+                        height={600}
                         />
                         <div className="text-center px-4 py-6">
                             <p className="font-general-medium text-xl md:text-2xl text-ternary-dark dark:text-ternary-light mb-2">

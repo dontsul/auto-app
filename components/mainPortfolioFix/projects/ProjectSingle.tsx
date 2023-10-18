@@ -28,12 +28,13 @@ const ProjectSingle: FC<ProjectProps> = (props) => {
 					<div>
 						<Image
 							src={props.img}
+							className="rounded-xl w-full h-[290px]  object-cover cursor-pointer shadow-lg sm:shadow-none"
 							alt="Single Project"
 							layout="responsive"
-							width={100}
-							height={100}
-							objectFit="cover"  // Add this line
-							objectPosition="center center"  // Add this line
+							width={800}
+							height={600}
+							objectFit="cover"
+							objectPosition="center center"
 						/>
 					</div>
 					<div className="text-center px-4 py-6">

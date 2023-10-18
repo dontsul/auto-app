@@ -117,14 +117,14 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
                     {gallery.map((image, imageIndex) => (
-                        <div className="mb-10 sm:mb-0" key={image.id}>
+                        <div className=" overflow-hidden mb-10 sm:mb-0" key={image.id}>
                             <Image
                                 src={image.img}
-                                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+                                className="rounded-xl w-full h-[350px]  object-cover cursor-pointer shadow-lg sm:shadow-none"
                                 alt={image.title}
-                                layout="responsive"
-                                width={100}
-                                height={100}
+                                layout="fixed"
+                                width={800}
+                                height={600}
                                 onClick={() => openModal(imageIndex)}
                             />
                         </div>
@@ -142,7 +142,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                                     src={gallery[currentImageIndex]?.img || ''}
                                     className="object-cover w-full h-full"
                                     alt={gallery[currentImageIndex]?.title || ''}
-                                    layout="responsive"
+                                    layout="fixed"
                                     placeholder="empty"
                                     width={800}
                                     height={600}
