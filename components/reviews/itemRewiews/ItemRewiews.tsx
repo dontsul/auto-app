@@ -31,7 +31,7 @@ export const ItemRewiews: FC<IItemRewiewsProps> = ({ review }) => {
 
   return (
     <div className="mx-auto my-2 py-2 px-4 min-w-[100px] max-w-[260px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px]">
-      <h6 className="font-bold text-lg text-center text-black">
+      <h6 className=" text-lg text-center text-black">
         {author_title}
       </h6>
       <p className="text-center text-xs text-slate-600 mb-2">

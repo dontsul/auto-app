@@ -33,7 +33,7 @@ export function TextAbout() {
         className="leading-6 text-[16px] mb-6 w-full"
       >
         <TextPage>
-          Welcome to <strong>Capital Upfitters</strong>, the family-owned
+          Welcome to <span>Capital Upfitters</span>, the family-owned
           epicenter of top-tier auto customization, vehicle preservation, and
           performance enhancements. With a heritage of over 35 years in the
           industry, we proudly deliver unparalleled fleet customization services

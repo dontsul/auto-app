@@ -14,7 +14,7 @@ export default function About() {
       <AboutImage />
       <div className="grid grid-cols-1 gap-14 md:gap-32 justify-between lg:justify-center lg:grid-cols-2 auto-rows-auto mb-16 pt-24">
         <TextPage>
-          Welcome to <strong className="text-[#203055]">Capital Upfitters</strong>, the family-owned
+          Welcome to <span className="text-[#203055]">Capital Upfitters</span>, the family-owned
           epicenter of top-tier auto customization, vehicle preservation, and performance
           enhancements. With a heritage of over 35 years in the industry, we proudly deliver
           unparalleled fleet customization services and robust protection coatings to a diverse
