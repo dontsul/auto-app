@@ -56,9 +56,10 @@ export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactIn
               />
               <a
                 className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
-                href="tel:123-456-7891"
+                href="tel:301-304-1419"
+
               >
-                123-456-7891
+                301-304-1419
               </a>
             </div>
             <div className="py-4">
@@ -68,9 +69,10 @@ export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactIn
               />
               <a
                 className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
-                href="mailto:info@mailauto.com"
+                href="mailto:CapitalUpfitters@gmail.com"
+                target="_blank"
               >
-                info@mailauto.com
+                CapitalUpfitters@gmail.com
               </a>
             </div>
             <div className="py-4">
@@ -88,23 +90,18 @@ export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactIn
             <div className=" border-white border-b-[1px] w-full"></div>
             <MyMapPage />
             <div className="flex items-center gap-4 py-4">
-              <a href="https://www.instagram.com/">
+              <a href="https://www.instagram.com/capitalupfitters/?igshid=MzRlODBiNWFlZA%3D%3D">
                 <BsInstagram
                   size={17}
                   className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
+                  target="_blank"
                 />
               </a>
-              <a href="https://www.facebook.com/">
+              <a href="https://www.facebook.com/CapitalUpfitters">
                 <BsFacebook
                   size={17}
                   className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
-                />
-              </a>
-              <a href="https://twitter.com/">
-                {" "}
-                <BsTwitter
-                  size={17}
-                  className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
+                  target="_blank"
                 />
               </a>
             </div>

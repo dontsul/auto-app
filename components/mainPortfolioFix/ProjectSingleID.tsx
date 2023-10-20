@@ -3,15 +3,14 @@ import { FC, useState, useCallback, useEffect } from 'react';
 import { FiX, FiChevronLeft, FiChevronRight, FiTag } from 'react-icons/fi';
 import Image, { StaticImageData } from 'next/image';
 
-
-
 interface ProjectSingleCar {
     brand: string;
     gallery: Array<{ id: string; title: string; img: StaticImageData }>;
     ProjectInfo: {
+        titleHead: string,
         CompanyInfo: Array<{ id: string; title: string; details: string }>;
         ObjectivesHeading: string;
-        ObjectivesDetails: string;
+        ObjectivesDetails: Array<{ title: string; techs: string[] }>;
         Technologies: Array<{ title: string; techs: string[] }>;
     };
 }
@@ -39,12 +38,10 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
 
-    // Додайте обробник onLoad для Image
     const handleImageLoad = () => {
         setImageLoaded(true);
     }
 
-    // Додайте обробник onError для Image
     const handleImageError = () => {
         setImageError(true);
     }
@@ -64,7 +61,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
 
     const goToPrev = useCallback(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
-    }, []);
+    }, [gallery]);
 
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
         if (modalOpen) {
@@ -99,28 +96,26 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
         };
     }, [modalOpen, handleKeyDown, handleClickOutside]);
 
-
     return (
         <div className="container mx-auto">
             <div key={project?.id}>
-                <p className=" text-left text-3xl sm:text-4xl  text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
+                <p className="text-left text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
                     {project?.title}: {project?.cars[currentCarIndex]?.brand}
-
                 </p>
                 <div className="flex">
                     <div className="flex items-center mr-10">
                         <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
-                        <span className=" ml-2 leading-none text-primary-dark dark:text-primary-light">
-             {project?.cars[currentCarIndex]?.brand}
-            </span>
+                        <span className="ml-2 leading-none text-primary-dark dark:text-primary-light">
+                        {project?.cars[currentCarIndex]?.brand}
+                    </span>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
                     {gallery.map((image, imageIndex) => (
-                        <div className=" overflow-hidden mb-10 sm:mb-0" key={image.id}>
+                        <div className="overflow-hidden mb-10 sm:mb-0" key={image.id}>
                             <Image
                                 src={image.img}
-                                className="rounded-xl w-full h-[350px]  object-cover cursor-pointer shadow-lg sm:shadow-none"
+                                className="rounded-xl w-full h-[350px] object-cover cursor-pointer shadow-lg sm:shadow-none"
                                 alt={image.title}
                                 layout="fixed"
                                 width={800}
@@ -132,11 +127,10 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                 </div>
                 {modalOpen && (
                     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-40 safari-center">
-                        <button className=" z-50 absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md" onClick={closeModal}>
+                        <button className="z-50 absolute top-4 right-4 text-white bg-black px-4 py-2 rounded-md" onClick={closeModal}>
                             <FiX className="w-6 h-6" />
                         </button>
                         <div className="z-20 max-w-screen-lg">
-
                             <div className="rounded-xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer shadow-lg sm:shadow-none">
                                 <Image
                                     src={gallery[currentImageIndex]?.img || ''}
@@ -159,21 +153,20 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                         </button>
                     </div>
                 )}
-
             </div>
             <div className="block sm:flex gap-0 sm:gap-10 mt-14">
                 <div className="w-full sm:w-1/3 text-left">
                     <div className="mb-7">
-                        <p className=" text-2xl  text-secondary-dark dark:text-secondary-light mb-2">
+                        <p className="text-2xl text-secondary-dark dark:text-secondary-light mb-2">
                             {project?.title}: {project?.cars[currentCarIndex]?.brand}
                         </p>
                         <ul className="leading-loose">
                             {project?.cars[currentCarIndex]?.ProjectInfo.CompanyInfo.map((company) => (
                                 <li className="font-general-regular text-ternary-dark dark:text-ternary-light" key={company.id}>
-                                    <span>{company.title}:   </span>
+                                    <span>{company.title}: </span>
                                     {company.title === 'Phone' ? (
                                         <a
-                                            className=" hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
+                                            className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
                                             href={`tel:${company.details}`}
                                             aria-label={company.title}
                                         >
@@ -187,15 +180,14 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                         </ul>
                     </div>
                     <div>
-                        <p className="text-primary-dark dark:text-primary-light text-2xl  mb-7">
+                        <p className="text-primary-dark dark:text-primary-light text-2xl mb-7">
                             Methods & Techniques
                         </p>
                         {project?.cars[currentCarIndex]?.ProjectInfo.Technologies.map((techItem, techIndex) => (
                             <div key={techIndex}>
-
-                                <p className=" p-1 font-general-regular text-primary-dark dark:text-ternary-light">{techItem.title}:</p>
+                                <p className="p-1 font-general-regular text-primary-dark dark:text-ternary-light">{techItem.title}:</p>
                                 {techItem.techs.map((tech, subTechIndex) => (
-                                    <p className=" p-1 font-normal	text-gray-600" key={subTechIndex}>
+                                    <p className="p-1 font-normal text-gray-600" key={subTechIndex}>
                                         {tech}
                                     </p>
                                 ))}
@@ -205,24 +197,27 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
                 </div>
                 <div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
                     <div className="mb-7">
-                        <p className=" text-2xl  text-ternary-dark dark:text-ternary-light mb-2">
-                            {/*{project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesHeading}*/}
-                            {/*{project?.cars[currentCarIndex]?.brand}*/}
-                            {/*{project?.title}: {project?.cars[currentCarIndex]?.brand}*/}
-                            info: {project?.cars[currentCarIndex]?.brand}
-
-
+                        <p className="text-2xl text-ternary-dark dark:text-ternary-light mb-2">
+                            info: {project?.cars[currentCarIndex]?.ProjectInfo.titleHead}
                         </p>
-                        <p className=" text-primary-dark dark:text-ternary-light">
-                            {project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesDetails}
-                        </p>
+                        <div className="text-primary-dark dark:text-ternary-light">
+                            {project?.cars[currentCarIndex]?.ProjectInfo.ObjectivesDetails.map((techItem, techIndex) => (
+                                <div key={techIndex}>
+                                    <p className="p-1 font-general-regular text-primary-dark dark:text-ternary-light">{techItem.title}:</p>
+                                    {techItem.techs.map((tech, subTechIndex) => (
+                                        <p className="p-1 font-normal text-gray-600" key={subTechIndex}>
+                                            {tech}
+                                        </p>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     );
+
 };
 
 export default ProjectSingleId;

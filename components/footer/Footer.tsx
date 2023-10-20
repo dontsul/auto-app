@@ -4,6 +4,7 @@ import { IconType } from "react-icons";
 import { FaFacebookSquare, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import MyMapPage from "@/components/googleMaps/MyMap";
+import {BsFacebook, BsInstagram} from "react-icons/bs";
 
 const socialList = [
   {
@@ -22,17 +23,38 @@ export const Footer: React.FC = () => {
     <footer className="relative text-[#B3B3B3] bg-[#111827] text-center  dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="flex justify-center">
-          {socialList.map(({ icon: Item }: { icon: IconType }, i) => {
-            return (
-              <a
-                key={i}
-                href="#!"
-                className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
-              >
-                <Item />
-              </a>
-            );
-          })}
+          {/*{socialList.map(({ icon: Item }: { icon: IconType }, i) => {*/}
+          {/*  return (*/}
+          {/*    <a*/}
+          {/*      key={i}*/}
+          {/*      href=""*/}
+          {/*      className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"*/}
+          {/*    >*/}
+          {/*      <Item />*/}
+          {/*    </a>*/}
+          {/*  );*/}
+          {/*})}*/}
+          <a
+              className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
+              href="https://www.instagram.com/capitalupfitters/?igshid=MzRlODBiNWFlZA%3D%3D"
+              target="_blank"
+          >
+            <BsInstagram
+                size={17}
+                className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
+            />
+          </a>
+          <a
+              className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
+              href="https://www.facebook.com/CapitalUpfitters"
+              target="_blank"
+          >
+            <BsFacebook
+                size={17}
+                className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
+            />
+          </a>
+
         </div>
       </div>
 
@@ -82,7 +104,7 @@ export const Footer: React.FC = () => {
                 <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+                className="w-auto h-full text-base  cursor-pointer line"
                 href="https://www.google.com/maps?ll=39.051219,-77.108649&z=20&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=5362875643083497393"
               >
                 12019 Nebel St, Rockville, MD 20852
@@ -99,7 +121,7 @@ export const Footer: React.FC = () => {
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+                className="w-auto h-full text-base  cursor-pointer line"
                 href="mailto:CapitalUpfitters@gmail.com"
               >
                 CapitalUpfitters@gmail.com
@@ -118,27 +140,8 @@ export const Footer: React.FC = () => {
                 />
               </svg>
               <a
-                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+                className="w-auto h-full text-base   cursor-pointer line"
                 href="tel:301-304-141"
-              >
-                301-304-1419
-              </a>
-            </p>
-            <p className="flex items-center justify-center md:justify-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="mr-3 h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
-                />
-              </svg>
-              <a
-                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
-                href="tel:301-304-1419"
               >
                 301-304-1419
               </a>
@@ -146,12 +149,12 @@ export const Footer: React.FC = () => {
           </div>
           <div className="text-[#B3B3B3]">
             <h6 className="mb-4 flex justify-center  uppercase md:justify-start">
-              Location
+              OUR SERVICES
             </h6>
             <p className="mb-4">
               <Link
                 href={`/`}
-                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+                className="w-auto h-full text-base   cursor-pointer line"
               >
                 Home
               </Link>
@@ -159,7 +162,7 @@ export const Footer: React.FC = () => {
             <p className="mb-4">
               <Link
                 href={`/about`}
-                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+                className="w-auto h-full text-base   cursor-pointer line"
               >
                 About
               </Link>
@@ -167,7 +170,7 @@ export const Footer: React.FC = () => {
             <p className="mb-4">
               <Link
                 href={`/our-services/patriot-liner`}
-                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+                className="w-auto h-full text-base  cursor-pointer line"
               >
                 Our Services
               </Link>
@@ -175,7 +178,7 @@ export const Footer: React.FC = () => {
             <p>
               <Link
                 href={`/portfolio`}
-                className="w-auto h-full text-base  hover:text-[#203055] cursor-pointer line"
+                className="w-auto h-full text-base  cursor-pointer line"
               >
                 Portfolio
               </Link>

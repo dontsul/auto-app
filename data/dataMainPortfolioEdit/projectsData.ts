@@ -30,6 +30,24 @@ import hitches10 from "@/public/portfolio/hitches/h10.jpg";
 import hitches11 from "@/public/portfolio/hitches/h11.jpg";
 import hitches12 from "@/public/portfolio/hitches/h12.jpg";
 import hitches13 from "@/public/portfolio/hitches/h13.jpg";
+import hitches14 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi1.jpg";
+import hitches15 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi2.jpg";
+import hitches17 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi3.jpg";
+import hitches16 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi4.jpg";
+import hitches18 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi5.jpg";
+import hitches19 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi6.jpg";
+import hitches20 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi7.jpg";
+import hitches21 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi8.jpg";
+import hitches22 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi9.jpg";
+import hitches23 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi10.jpg";
+import hitches24 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi11.jpg";
+import hitches25 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi12.jpg";
+import hitches26 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi13.jpg";
+import hitches27 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi14.jpg";
+import hitches28 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi15.jpg";
+import hitches29 from "@/public/portfolio/hitches/2023 Audi Allroad/hitchesAudi16.jpg";
+
+
 
 import patriotLiner1 from "@/public/portfolio/patriot-liner/pl1.jpg";
 import patriotLiner2 from "@/public/portfolio/patriot-liner/pl2.jpg";
@@ -180,7 +198,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'TEST CAR TEST',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -198,20 +216,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'TEST CAR TEST',
-					ObjectivesDetails:
-						'TEST',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad: Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'GDFHFJFJ',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'TEST',
-
-								'TEST',
-
-								'TEST',
-
-								'TEST',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -220,16 +295,17 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							details:
-								'TEST',
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
 						},
 						{
 							id: uuidv4(),
 							details:
-								'TEST',
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
 						}
 					],
 
 				},
+
 
 			},
 			{
@@ -250,7 +326,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -268,20 +344,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad: Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -300,6 +433,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -324,7 +458,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -342,20 +476,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad: Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -374,6 +565,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 		],
@@ -416,7 +608,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -434,20 +626,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -466,6 +715,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			// Додайте інші авто для Ceramic Coatings
@@ -505,7 +755,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -523,20 +773,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -555,6 +862,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -585,7 +893,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'Tesla',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -603,20 +911,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -635,6 +1000,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -660,7 +1026,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -678,20 +1044,275 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
+							],
+						},
+					],
+					ProjectDetailsHeading: 'Why us',
+					ProjectDetails: [
+						{
+							id: uuidv4(),
+							details:
+								'Welcome to Capital Upfitters, the family-owned epicenter of top-tier auto customization, vehicle preservation, and performance enhancements. With a heritage of over 35 years in the industry, we proudly deliver unparalleled fleet customization services and robust protection coatings to a diverse range of clients, from municipal to retail sectors. Our reputation as a trailblazer stems from our continuous commitment to superior craftsmanship, delivering innovative auto customization and performance solutions that truly redefine automotive excellence.',
+						},
+						{
+							id: uuidv4(),
+							details:
+								'We\'re not just about personal vehicles, our commitment to deliver exceptional service spans across government, commercial, and residential projects. Every vehicle that rolls into our shop receives the same degree of attention and commitment to quality. For additional information about our services at Capital Upfitters or to discuss your specific customization and performance enhancement needs, we welcome you to reach us at 301-304-1419 or explore our webpage. Choose Capital Upfitters for an automotive experience that goes beyond service to deliver a transformation, redefining your ride.',
+						}
+					],
 
-								'•Effective prevention of car body corrosion.',
+				},
 
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
 
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+			},
+			{
+				id: uuidv4(),
+				brand: '2023 Audi A4 Allroad',
+				img: hitches27,
+				gallery: [
+					{
+						id: uuidv4(),
+						title: 'Audi',
+						img: hitches14,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches15,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches16,
+					},
+					{
+						id: uuidv4(),
+						title: 'Audi',
+						img: hitches17,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches18,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches19,
+					},
+					{
+						id: uuidv4(),
+						title: 'Audi',
+						img: hitches20,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches21,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches22,
+					},
+					{
+						id: uuidv4(),
+						title: 'Audi',
+						img: hitches23,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches24,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches25,
+					},
+					{
+						id: uuidv4(),
+						title: 'Audi',
+						img: hitches26,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches27,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches28,
+					},
+					{
+						id: uuidv4(),
+						title:'Audi',
+						img: hitches29,
+					},
+
+				],
+				ProjectInfo: {
+					ClientHeading: 'Audi',
+					CompanyInfo: [
+						{
+							id: uuidv4(),
+							title: 'Company',
+							details: 'CAPITAL UPFITTERS',
+						},
+						{
+							id: uuidv4(),
+							title: 'Services',
+							details: 'Ceramic Coatings',
+						},
+						{
+							id: uuidv4(),
+							title: 'Phone',
+							details: '301-304-1419',
+						},
+					],
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
+					Technologies: [
+						{
+							title: '2023 Audi Allroad Stealth Hitch Integration',
+							techs: [
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -802,7 +1423,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'Ford',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -820,20 +1441,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -852,6 +1530,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -889,7 +1568,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'Ford',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -907,20 +1586,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -939,6 +1675,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1038,7 +1775,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1056,20 +1793,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1088,6 +1882,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			// Додайте інші авто для Ceramic Coatings
@@ -1130,7 +1925,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1148,20 +1943,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad: Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1180,6 +2032,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			// Додайте інші авто для Ceramic Coatings
@@ -1215,7 +2068,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1233,20 +2086,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad: Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1265,6 +2175,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1279,7 +2190,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'sdf',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1289,7 +2200,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -1297,20 +2208,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1329,6 +2297,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1354,7 +2323,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'Ford',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1364,7 +2333,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -1372,20 +2341,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1404,6 +2430,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1494,7 +2521,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'Ford',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1504,7 +2531,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -1512,20 +2539,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1544,6 +2628,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1570,7 +2655,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'Ford',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1580,7 +2665,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -1588,20 +2673,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1620,6 +2762,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1635,7 +2778,7 @@ export const projectsData = [
 
 				],
 				ProjectInfo: {
-					ClientHeading: 'Chevrolet',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1645,7 +2788,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -1653,20 +2796,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1685,6 +2885,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1699,7 +2900,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'Nisan',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1709,7 +2910,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -1717,20 +2918,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1749,6 +3007,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1818,7 +3077,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'Bronco',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1828,7 +3087,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -1836,20 +3095,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1868,6 +3184,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -1947,7 +3264,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'Ram',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -1957,7 +3274,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -1965,20 +3282,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -1997,6 +3371,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			{
@@ -2021,7 +3396,7 @@ export const projectsData = [
 					},
 				],
 				ProjectInfo: {
-					ClientHeading: 'Volvo',
+					ClientHeading: 'Audi',
 					CompanyInfo: [
 						{
 							id: uuidv4(),
@@ -2031,7 +3406,7 @@ export const projectsData = [
 						{
 							id: uuidv4(),
 							title: 'Services',
-							details: 'Wheels Tires',
+							details: 'Ceramic Coatings',
 						},
 						{
 							id: uuidv4(),
@@ -2039,20 +3414,77 @@ export const projectsData = [
 							details: '301-304-1419',
 						},
 					],
-					ObjectivesHeading:'sdf',
-					ObjectivesDetails:
-						'Discover the ultimate car body protection with System X®, one of the finest and most durable ceramic coatings originally designed for the aviation industry, trusted by renowned names like Sikorsky, Bombardier, and leading international airlines. This revolutionary nano-ceramic breakthrough has paved the way for a comprehensive line of products.',
+					ObjectivesHeading:'Audi',
+					titleHead: 'Stealth Hitch Installation for 2023 Audi Allroad - Quick Overview',
+					ObjectivesDetails: [
+						{
+							title: '1. Preparation',
+							techs: [
+								'Vehicle and work area prepped to protect against damage.' +
+								'Brief customer consultation for personalized service.',
+							],
+
+						},
+						{
+							title: '2. Installation ',
+							techs: [
+								'Step 1: Careful removal of the rear bumper.',
+								'Step 2: Precise installation of the Stealth Hitch, with all hardware secured to factory standards.',
+								'Step 3: Trimming of lower fascia and application of edge guard for safety and aesthetics.',
+								'Step 4: Relocation and recalibration of the kick sensor per OEM guidelines.',
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '3. Finalizing',
+							techs: [
+								'Bumper carefully reattached and alignment checked.\n' +
+								'Thorough cleaning of the vehicle post-installation.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '4. Customer Orientation',
+							techs: [
+								'Practical demonstration on hitch use and maintenance provided during handover.'
+							],
+							info: {
+
+							},
+						},
+						{
+							title: '5. Aftercare',
+							techs: [
+								'Continuous support and follow-up services available as needed.'
+							],
+							info: {
+
+							},
+						},
+
+						{
+							title: 'End-Note ',
+							techs: [
+								'Capital Upfitters guarantees a streamlined, high-quality installation process, ensuring your 2023 Audi Allroad\'s Stealth Hitch is perfectly fitted with attention to detail, functionality, and aesthetic preservation.'
+							],
+							info: {
+
+							},
+						},
+
+					],
+
+
+
 					Technologies: [
 						{
-							title: 'With its exceptional hydrophobic properties, System X® offers:',
+							title: '2023 Audi Allroad Stealth Hitch Integration',
 							techs: [
-								'•The ability to repel dirt, water, dust, and debris, keeping the surface immaculate.',
-
-								'•Effective prevention of car body corrosion.',
-
-								'•Impressive protection against external elements, unaffected by washing or detailing.',
-
-								'•A noticeable reduction in the frequency of washing and detailing required.',
+								'Our process for the 2023 Audi Allroad Stealth Hitch installation (Rack Only with 2" receiver) is meticulously designed to ensure functionality, safety, and seamless integration with your vehicle\'s original design. At Capital Upfitters, we specialize in customized, high-quality installations that prioritize your vehicle\'s integrity and aesthetics.'
 							],
 						},
 					],
@@ -2071,6 +3503,7 @@ export const projectsData = [
 					],
 
 				},
+
 
 			},
 			// Додайте інші авто для Ceramic Coatings
