@@ -7,12 +7,10 @@ interface IItemPartnersSliderProps {
   partner: IPartner;
 }
 
-export const ItemPartnersSlider: FC<IItemPartnersSliderProps> = ({
-  partner,
-}) => {
+export const ItemPartnersSlider: FC<IItemPartnersSliderProps> = ({ partner }) => {
   const [statusHover, setStatusHover] = useState<boolean>(false);
   return (
-    <div className="mx-auto my-4  min-w-[100px] max-w-[220px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px] h-[220px]">
+    <div className="mx-auto my-4  min-w-[100px] max-w-[220px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px] p-0 h-full">
       <a
         href={partner.link}
         className="flex items-center justify-center h-full w-full"
@@ -27,11 +25,11 @@ export const ItemPartnersSlider: FC<IItemPartnersSliderProps> = ({
         <Image
           src={partner.image}
           alt={partner.title}
-          width={300}
-          height={300}
-          className={`w-full max-w-[150px] h-full max-h-[150px] ${
-            statusHover ? "grayscale-0" : "grayscale"
-          } transition duration-500`}
+          width={500}
+          height={700}
+          className={`w-ful h-full  
+       
+          transition duration-500`}
         />
       </a>
     </div>

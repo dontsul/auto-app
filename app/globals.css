@@ -5,7 +5,7 @@
 @layer components {
   .line {
     @apply relative
-            /* after:bg-text-[#203055] */
+            after:bg-white
             after:h-[1px]
             after:w-[0%]
             after:rounded-xl
@@ -18,7 +18,7 @@
   }
   .active-line {
     @apply relative
-            /* after:bg-text-[#203055] */
+            after:bg-white
             after:h-[1px]
             after:rounded-xl
             after:left-0

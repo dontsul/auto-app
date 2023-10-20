@@ -1,57 +1,51 @@
-import adbe from "@/public/images/partners/ADBE.svg";
-import amzn from "@/public/images/partners/AMZN.svg";
-import ba from "@/public/images/partners/BA.svg";
-import brkb from "@/public/images/partners/BRK-B.svg";
-import cat from "@/public/images/partners/CAT.svg";
-import dis from "@/public/images/partners/DIS.svg";
-import msft from "@/public/images/partners/MSFT.svg";
-import nvda from "@/public/images/partners/NVDA.svg";
-import pg from "@/public/images/partners/PG.svg";
+import bronco from "@/public/images/partners/catalog-2023-bronco.jpg";
+import commercial from "@/public/images/partners/catalog-2023-commercial.jpg";
+import dodge from "@/public/images/partners/catalog-2023-dodge.jpg";
+import ford from "@/public/images/partners/catalog-2023-dodge.jpg";
+import imports from "@/public/images/partners/catalog-2023-imports.jpg";
+import jeep from "@/public/images/partners/catalog-2023-jeep.jpg";
+import wheeltire from "@/public/images/partners/catalog-2023-wheeltire.jpg";
+import chevy from "@/public/images/partners/catalog-2023-chevy.jpg";
 import { IPartner } from "@/interfaces/partners";
 export const partners: IPartner[] = [
   {
-    image: adbe,
-    link: "https://www.google.com/",
-    title: "partner",
+    image: ford,
+    link: "https://www.meyerdistributing.com/marketing/Email/Interactive/VSC/Ford/2023/Ford23.html",
+    title: "ford",
   },
   {
-    image: amzn,
-    link: "https://www.google.com/",
-    title: "partner",
+    image: bronco,
+    link: "https://www.meyerdistributing.com/marketing/Email/Interactive/VSC/Bronco/2023/index.html",
+    title: "bronco",
   },
   {
-    image: ba,
-    link: "https://www.google.com/",
-    title: "partner",
+    image: dodge,
+    link: "https://www.meyerdistributing.com/marketing/Email/Interactive/VSC/Dodge/2023/Dodge23.html",
+    title: "dodge",
   },
   {
-    image: brkb,
-    link: "https://www.google.com/",
-    title: "partner",
+    image: chevy,
+    link: "https://www.meyerdistributing.com/marketing/Email/Interactive/VSC/GM/2023/GM23.html",
+    title: "chevy",
   },
   {
-    image: cat,
-    link: "https://www.google.com/",
-    title: "partner",
+    image: imports,
+    link: "https://www.meyerdistributing.com/marketing/Email/Interactive/VSC/Toyota/2023/Imports23.html",
+    title: "imports",
   },
   {
-    image: dis,
-    link: "https://www.google.com/",
-    title: "partner",
+    image: wheeltire,
+    link: "https://www.meyerdistributing.com/marketing/Email/Interactive/PSC/Wheel-Tire/2023/WheelTire23.html",
+    title: "wheeltire",
   },
   {
-    image: msft,
-    link: "https://www.google.com/",
-    title: "partner",
+    image: jeep,
+    link: "https://www.meyerdistributing.com/marketing/Email/Interactive/VSC/Jeep/2023/2023JeepCatalog.html",
+    title: "jeep",
   },
   {
-    image: nvda,
-    link: "https://www.google.com/",
-    title: "partner",
-  },
-  {
-    image: pg,
-    link: "https://www.google.com/",
-    title: "partner",
+    image: commercial,
+    link: "https://www.meyerdistributing.com/marketing/Email/Interactive/PSC/Commercial/2023/Commercial23.html",
+    title: "commercial",
   },
 ];
