@@ -23,7 +23,7 @@ function SlideInfo({ transitionData, currentSlideData }: Props) {
                         {transitionData.title}
                     </button>
                 </Link> */}
-        <LinkScroll
+        {/* <LinkScroll
           activeClass="active"
           to="form"
           spy={true}
@@ -34,7 +34,7 @@ function SlideInfo({ transitionData, currentSlideData }: Props) {
           <button className="w-full md:w-auto rounded-full border-[1px] border-[#ffffff8f] px-8 py-4 text-[14px] font-thin transition duration-300 ease-in-out hover:bg-white hover:text-black">
             Contact us
           </button>
-        </LinkScroll>
+        </LinkScroll> */}
       </motion.div>
     </>
   );
