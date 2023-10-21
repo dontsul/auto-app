@@ -62,6 +62,7 @@ export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
     slidesToShow: 4,
     speed: 500,
     dots: false,
+
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
@@ -82,6 +83,7 @@ export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+          dots: false,
         },
       },
       {
@@ -89,6 +91,7 @@ export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
@@ -102,11 +105,9 @@ export const ReviewsList: FC<IReviewsListProps> = ({ reviews }) => {
       viewport={{ once: true }}
       className="py-4 z-30 sm:px-8 lg:px-0"
     >
-      <Slider className="py-6" {...settings}>
+      <Slider className="py-6 sl-btn" {...settings}>
         {reviews !== undefined
-          ? reviews.map((review) => (
-              <ItemRewiews review={review} key={uuidv4()} />
-            ))
+          ? reviews.map((review) => <ItemRewiews review={review} key={uuidv4()} />)
           : null}
       </Slider>
     </motion.div>

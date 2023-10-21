@@ -7,11 +7,11 @@ import MyChat from "@/components/chatGpt/MyChat";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <Sliders />
       <AboutSection />
       <Contact />
-        <MyChat />
+      <MyChat />
       <Reviews />
     </div>
   );

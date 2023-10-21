@@ -5,8 +5,10 @@ import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import smmax from "@/public/SX-Max.png";
 import { CeramicCoatingsPages } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/CeramicCoatingsPages";
-import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
-import { listXpel } from "@/data/xpelData";
+import porsche from "@/public/images/ceramicCoatings/porsche-Ceremic-Coatings.webp";
+import banner_cc from "@/public/images/ceramicCoatings/banner-cc.jpeg";
+import Image from "next/image";
+
 export const metadata: Metadata = {
   title: "Ceramic Coatings",
   description:
@@ -52,10 +54,24 @@ export default function CeramicCoatings() {
           </div>
         </div>
 
-        <ImagePage img={smmax} />
+        <ImagePage img={banner_cc} />
       </div>
       <CeramicCoatingsPages />
-      <DoubleSidedCard title="title" list={listXpel} />
+
+      <div className="w-full py-2">
+        <Title tag="h4" cn="pb-10">
+          Ceremic Coatings
+        </Title>
+
+        <Image
+          src={porsche}
+          alt="porsche"
+          width={2000}
+          height={1500}
+          className="w-full h-full object-cover rounded-md "
+        />
+      </div>
+
       <div className="flex items-center justify-center ">
         <iframe
           width="1000"
