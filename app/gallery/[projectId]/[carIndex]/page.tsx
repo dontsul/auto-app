@@ -17,7 +17,6 @@ export default function GalleryPage({ params }: GalleryPageProps) {
     if (!project || !car) {
         return <NotFoundPage />;
     }
-
     return (
         <div className="py-16 containe">
             <ProjectSingleId project={project} gallery={car.gallery || []} carIndex={Number(carIndex)} />
