@@ -4,7 +4,7 @@ export const sliderData = [
     {
         img: "/Slider/SliderPatriot.jpg",
         description:
-            "Patriot Liner",
+            "Patriot Liner isn't just an average spray-on bed liner—it stands for unparalleled quality, robustness, and endurance. Patriot Liner embodies over 30 years of industry wisdom, expertly-designed by professionals, and proudly manufactured in the USA.",
         title: "Patriot Liner",
         link: "/our-services/patriot-liner"
 

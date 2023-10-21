@@ -40,10 +40,17 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
 
     const handleImageLoad = () => {
         setImageLoaded(true);
+        return(
+            <div>loading: {imageLoaded}</div>
+        );
     }
+
 
     const handleImageError = () => {
         setImageError(true);
+        return(
+            <div>error:{imageError}</div>
+        );
     }
 
     const closeModal = useCallback(() => {
@@ -61,7 +68,7 @@ const ProjectSingleId: FC<ProjectSingleIdProps & ProjectSingleCarGalleryProps> =
 
     const goToPrev = useCallback(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
-    }, [gallery]);
+    }, []);
 
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
         if (modalOpen) {
