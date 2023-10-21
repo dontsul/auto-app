@@ -4,11 +4,11 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
 import { TextPage } from "@/components/textPage/TextPage";
-import rp from "@/public/images/rust-prevention/rp.png";
+import rp from "../../../public/images/rust-prevention/rp.png";
 import { rustPreventionContent, rustPreventionSlider } from "@/data/rustPrevention";
 import Line from "@/components/linePages/Line";
 import { ecoHitchHitches, stealthHitchHitches } from "@/data/hitches";
-import rangeRoverGif from "@/public/images/hitches/Range-Rover.gif";
+import rangeRoverGif from "../../../public/images/hitches/Range-Rover.gif";
 
 export const metadata: Metadata = {
   title: "RUST PREVENTION",

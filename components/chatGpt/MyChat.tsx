@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import MessagesList from './MessageList';
 import MessageForm from './MessageForm';
-import { MessagesProvider } from "@/utils/useMessages";
+import { MessagesProvider } from "../../utils/useMessages";
 import { Button } from "../button/Button";
 const MyChat = () => {
     const [isChatOpen, setChatOpen] = useState(false);

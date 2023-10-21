@@ -11,7 +11,7 @@ export default function Home() {
       <Sliders />
       <AboutSection />
       <Contact />
-        <MyChat />
+      <MyChat />
       <Reviews />
     </div>
   );

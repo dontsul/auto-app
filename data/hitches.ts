@@ -1,7 +1,7 @@
-import stealth from "@/public/images/hitches/1Stealth-Hitch.png";
-import hidden from "@/public/images/hitches/2HiddenHitch.png";
-import eco from "@/public/images/hitches/3Eco-Hitch.png";
-import standard from "@/public/images/hitches/4Standard.png";
+import stealth from "../public/images/hitches/1Stealth-Hitch.png";
+import hidden from "../public/images/hitches/2HiddenHitch.png";
+import eco from "../public/images/hitches/3Eco-Hitch.png";
+import standard from "../public/images/hitches/4Standard.png";
 
 export const listHitches = [
   {

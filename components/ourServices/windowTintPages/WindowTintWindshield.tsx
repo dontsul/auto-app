@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {motion} from "framer-motion";
 import Image from "next/image";
-import imagesTest from "@/public/Ceramic/Carbon-Windshield-1.webp";
-import imagesTest2 from "@/public/Ceramic/Ceramic-Windshield.webp";
-import imagesTest3 from "@/public/Ceramic/Ceramic-Plus-Windshield-1.webp";
+import imagesTest from "../../../public/Ceramic/Carbon-Windshield-1.webp";
+import imagesTest2 from "../../../public/Ceramic/Ceramic-Windshield.webp";
+import imagesTest3 from "../../../public/Ceramic/Ceramic-Plus-Windshield-1.webp";
 import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
 import {textList, textList2, textList3} from "@/components/ourServices/windowTintPages/WindowTintPages";
 

@@ -14,7 +14,7 @@ import { services, states } from "./datas";
 import { models } from "./models";
 import { makes } from "./makes";
 import { years } from "./years";
-import { IService } from "@/interfaces/form";
+import { IService } from "../../interfaces/form";
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
 import { isPossiblePhoneNumber } from "react-phone-number-input";
 import { CustomTextArea } from "../customTextArea/CustomTextArea";
@@ -23,8 +23,8 @@ import metadata from "libphonenumber-js/metadata.min.json";
 import "react-phone-number-input/style.css";
 import toast from "react-hot-toast";
 import { CustomService } from "./customService/CustomService";
-import { submitFormToTelegram, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "@/utils/onSubmitTelegram";
-import { onSubmitServer } from "@/utils/onSubmitServer";
+import { submitFormToTelegram, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "../../utils/onSubmitTelegram";
+import { onSubmitServer } from "../../utils/onSubmitServer";
 
 const FILE_SIZE = 5 * 1024 * 1024;
 

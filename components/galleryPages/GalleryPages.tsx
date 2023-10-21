@@ -1,5 +1,5 @@
 import Image from "next/image";
-import images from "@/public/PAINT_PROTECTION/test1.png";
+import images from "../../public/PAINT_PROTECTION/test1.png";
 import React from "react";
 
 export function GalleryPages() {

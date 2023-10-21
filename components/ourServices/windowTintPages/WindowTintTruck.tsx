@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {motion} from "framer-motion";
 import Image from "next/image";
-import imagesTest2 from "@/public/Ceramic/CERAMIC-Truck.webp";
-import imagesTest from "@/public/Ceramic/CARBON-Truck.webp";
-import imagesTest3 from "@/public/Ceramic/CERAMIC-Plus-Truck.webp";
+import imagesTest2 from "../../../public/Ceramic/CERAMIC-Truck.webp";
+import imagesTest from "../../../public/Ceramic/CARBON-Truck.webp";
+import imagesTest3 from "../../../public/Ceramic/CERAMIC-Plus-Truck.webp";
 import {ListTintPages} from "@/components/ourServices/windowTintPages/ListTintPages";
 import {
     textList,

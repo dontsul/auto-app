@@ -1,4 +1,4 @@
-import { ICarModels, IService } from "@/interfaces/form";
+import { ICarModels, IService } from "../../interfaces/form";
 
 export const models: ICarModels = {
   default: [

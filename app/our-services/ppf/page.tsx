@@ -4,7 +4,7 @@ import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import { PaintProtectionFilmPages } from "@/components/ourServices/vehiclePreservation/paintProtectionFilm/PaintProtectionFilmPages";
 import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
-import ppfMain from "@/public/images/ppf/dynomiami-blue_PPF_MAIN_PAGE.jpg";
+import ppfMain from "../../../public/images/ppf/dynomiami-blue_PPF_MAIN_PAGE.jpg";
 import { ppfData } from "@/data/ppf";
 
 export const metadata = {

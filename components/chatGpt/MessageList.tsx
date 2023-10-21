@@ -1,4 +1,4 @@
-import {useMessages} from "@/utils/useMessages";
+import {useMessages} from "../../utils/useMessages";
 import {Button} from "@/components/button/Button";
 
 const MessagesList = () => {

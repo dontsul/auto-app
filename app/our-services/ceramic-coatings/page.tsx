@@ -3,7 +3,7 @@ import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
-import smmax from "@/public/SX-Max.png";
+import smmax from "../../../public/SX-Max.png";
 import { CeramicCoatingsPages } from "@/components/ourServices/vehiclePreservation/ceramicCoatings/CeramicCoatingsPages";
 import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
 import { listXpel } from "@/data/xpelData";

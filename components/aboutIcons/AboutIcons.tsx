@@ -1,7 +1,7 @@
-import efficiency from "@/public/aboutIcons/efficiency.png";
-import good from "@/public/aboutIcons/good.png";
-import innovation from "@/public/aboutIcons/Innovation.png";
-import warranty from "@/public/aboutIcons/warranty.png";
+import efficiency from "../../public/aboutIcons/efficiency.png";
+import good from "../../public/aboutIcons/good.png";
+import innovation from "../../public/aboutIcons/Innovation.png";
+import warranty from "../../public/aboutIcons/warranty.png";
 import Image from "next/image";
 import { Title } from "../title/Title";
 

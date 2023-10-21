@@ -1,12 +1,12 @@
-import bronco from "@/public/images/partners/catalog-2023-bronco.jpg";
-import commercial from "@/public/images/partners/catalog-2023-commercial.jpg";
-import dodge from "@/public/images/partners/catalog-2023-dodge.jpg";
-import ford from "@/public/images/partners/catalog-2023-dodge.jpg";
-import imports from "@/public/images/partners/catalog-2023-imports.jpg";
-import jeep from "@/public/images/partners/catalog-2023-jeep.jpg";
-import wheeltire from "@/public/images/partners/catalog-2023-wheeltire.jpg";
-import chevy from "@/public/images/partners/catalog-2023-chevy.jpg";
-import { IPartner } from "@/interfaces/partners";
+import bronco from "../public/images/partners/catalog-2023-bronco.jpg";
+import commercial from "../public/images/partners/catalog-2023-commercial.jpg";
+import dodge from "../public/images/partners/catalog-2023-dodge.jpg";
+import ford from "../public/images/partners/catalog-2023-dodge.jpg";
+import imports from "../public/images/partners/catalog-2023-imports.jpg";
+import jeep from "../public/images/partners/catalog-2023-jeep.jpg";
+import wheeltire from "../public/images/partners/catalog-2023-wheeltire.jpg";
+import chevy from "../public/images/partners/catalog-2023-chevy.jpg";
+import { IPartner } from "../interfaces/partners";
 export const partners: IPartner[] = [
   {
     image: ford,

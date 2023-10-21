@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import { v4 as uuidv4 } from "uuid";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { IPartner } from "@/interfaces/partners";
+import { IPartner } from "../../../interfaces/partners";
 
 interface IPartnersListProps {
   partners: IPartner[];
