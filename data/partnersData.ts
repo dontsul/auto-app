@@ -7,6 +7,7 @@ import jeep from "../public/images/partners/catalog-2023-jeep.jpg";
 import wheeltire from "../public/images/partners/catalog-2023-wheeltire.jpg";
 import chevy from "../public/images/partners/catalog-2023-chevy.jpg";
 import { IPartner } from "../interfaces/partners";
+
 export const partners: IPartner[] = [
   {
     image: ford,
