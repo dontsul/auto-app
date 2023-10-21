@@ -1,10 +1,10 @@
-import { IPortfolioList } from "@/interfaces/portfolio";
-import f1 from "@/public/portfolio/fleet/f1.jpg";
-import f2 from "@/public/portfolio/fleet/f2.jpg";
-import f3 from "@/public/portfolio/fleet/f3.jpg";
-import f4 from "@/public/portfolio/fleet/f4.jpg";
-import f5 from "@/public/portfolio/fleet/f5.jpg";
-import f6 from "@/public/portfolio/fleet/f6.jpg";
+import { IPortfolioList } from "../interfaces/portfolio";
+import f1 from "../public/portfolio/fleet/f1.jpg";
+import f2 from "../public/portfolio/fleet/f2.jpg";
+import f3 from "../public/portfolio/fleet/f3.jpg";
+import f4 from "../public/portfolio/fleet/f4.jpg";
+import f5 from "../public/portfolio/fleet/f5.jpg";
+import f6 from "../public/portfolio/fleet/f6.jpg";
 
 export const portfolioList: IPortfolioList[] = [
   {

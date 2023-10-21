@@ -1,7 +1,7 @@
 import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
-import imageAuto from "@/public/TestLi.jpeg";
-import mainImagePatriotLiner from "@/public/images/patriotLiner/Patriot-Liner-Main-Photo.jpg";
+import imageAuto from "../../../public/TestLi.jpeg";
+import mainImagePatriotLiner from "../../../public/images/patriotLiner/Patriot-Liner-Main-Photo.jpg";
 import { TextPage } from "@/components/textPage/TextPage";
 import { ImagePage } from "@/components/imagePage/ImagePage";
 import { Metadata } from "next";

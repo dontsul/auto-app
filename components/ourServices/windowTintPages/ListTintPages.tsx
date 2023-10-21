@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import {IListTintPagesProps} from "@/interfaces/ourServicesPages";
+import {IListTintPagesProps} from "../../../interfaces/ourServicesPages";
 import {v4 as uuidv4} from "uuid";
 
 

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ImagePage } from "../imagePage/ImagePage";
-import aboutSection from "@/public/images/aboutSection.png";
+import aboutSection from "../../public/images/aboutSection.png";
 
 export const ImageAboutSection = () => {
   const imageAbout = {

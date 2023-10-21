@@ -1,7 +1,7 @@
-import dynoMight from "@/public/images/ppf/DYNOmight1.png";
-import dynoShield from "@/public/images/ppf/DYNOshield2.png";
-import dynoMatte from "@/public/images/ppf/DYNOmatte3.png";
-import dynoPrism from "@/public/images/ppf/DYNOprism4.png";
+import dynoMight from "../public/images/ppf/DYNOmight1.png";
+import dynoShield from "../public/images/ppf/DYNOshield2.png";
+import dynoMatte from "../public/images/ppf/DYNOmatte3.png";
+import dynoPrism from "../public/images/ppf/DYNOprism4.png";
 
 export const ppfData = [
   {

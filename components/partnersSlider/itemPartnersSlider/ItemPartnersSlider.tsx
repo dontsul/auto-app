@@ -1,6 +1,6 @@
 "use client";
 import { FC, useState } from "react";
-import { IPartner } from "@/interfaces/partners";
+import { IPartner } from "../../../interfaces/partners";
 import Image from "next/image";
 
 interface IItemPartnersSliderProps {

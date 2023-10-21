@@ -1,6 +1,6 @@
 "use client";
 import { FC, useState, InputHTMLAttributes, forwardRef } from "react";
-import { IService } from "@/interfaces/form";
+import { IService } from "../../../interfaces/form";
 import { InfoServices } from "../infoServices/InfoServices";
 import { TbInfoSquareFilled } from "react-icons/tb";
 import { AnimatePresence } from "framer-motion";

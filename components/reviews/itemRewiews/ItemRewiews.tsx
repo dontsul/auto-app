@@ -6,7 +6,7 @@ import { AiFillStar } from "react-icons/ai";
 import { Google } from "../google/Google";
 
 import { IReview } from "../reviewsList/ReviewsList";
-import { convertUnixTimestampToDate } from "@/utils/dateFormat";
+import { convertUnixTimestampToDate } from "../../../utils/dateFormat";
 
 interface IItemRewiewsProps {
   review: IReview;

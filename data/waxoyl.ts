@@ -1,7 +1,7 @@
-import w1 from "@/public/images/waxoyl/Waxoyl1 .png";
-import w2 from "@/public/images/waxoyl/Waxoyl2.png";
-import w3 from "@/public/images/waxoyl/Waxoyl3.png";
-import w4 from "@/public/images/waxoyl/Woolwax4.png";
+import w1 from "../fsdfsd/public/images/waxoyl/Waxoyl1 .png";
+import w2 from "../fsdfsd/public/images/waxoyl/Waxoyl2.png";
+import w3 from "../fsdfsd/public/images/waxoyl/Waxoyl3.png";
+import w4 from "../fsdfsd/public/images/waxoyl/Woolwax4.png";
 
 export const listWaxol = [
   {

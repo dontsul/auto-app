@@ -1,7 +1,7 @@
-import ecoClear from "@/public/images/rust-prevention/Eco-Clear.png";
-import waxoylUndercoating from "@/public/images/rust-prevention/WAXOYL-Undercoating.png";
-import waxoylCavity from "@/public/images/rust-prevention/WAXOYL-Cavity-Wax.png";
-import woolwax from "@/public/images/rust-prevention/WOOLWAX-Undercoating.png";
+import ecoClear from "../public/images/rust-prevention/Eco-Clear.png";
+import waxoylUndercoating from "../public/images/rust-prevention/WAXOYL-Undercoating.png";
+import waxoylCavity from "../public/images/rust-prevention/WAXOYL-Cavity-Wax.png";
+import woolwax from "../public/images/rust-prevention/WOOLWAX-Undercoating.png";
 
 export const rustPreventionContent = {
   ecoClear: {

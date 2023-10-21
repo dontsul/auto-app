@@ -1,9 +1,9 @@
-import {IPortfolioList} from "@/interfaces/portfolio";
-import images from "@/public/PAINT_PROTECTION/test1.png";
-import images2 from "@/public/PAINT_PROTECTION/test2.png";
-import images3 from "@/public/PAINT_PROTECTION/test3.png";
-import images4 from "@/public/PAINT_PROTECTION/test4.png";
-import {ITitleTintPagesProps} from "@/interfaces/ourServicesPages";
+import {IPortfolioList} from "../../../../../interfaces/portfolio";
+import images from "../../../../../public/PAINT_PROTECTION/test1.png";
+import images2 from "../../../../../public/PAINT_PROTECTION/test2.png";
+import images3 from "../../../../../public/PAINT_PROTECTION/test3.png";
+import images4 from "../../../../../public/PAINT_PROTECTION/test4.png";
+import {ITitleTintPagesProps} from "../../../../../interfaces/ourServicesPages";
 
 export const paintProtectionFilmData: IPortfolioList[] = [
     {

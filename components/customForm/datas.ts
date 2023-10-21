@@ -1,4 +1,4 @@
-import { IService } from "@/interfaces/form";
+import { IService } from "../../interfaces/form";
 
 export const services: IService[] = [
   {

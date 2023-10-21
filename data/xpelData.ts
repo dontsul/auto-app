@@ -1,7 +1,7 @@
-import lite from "@/public/xpel/fusion_plus_lite1.png";
-import paint from "@/public/xpel/fusion_plus_paint_ppf2.png";
-import premium from "@/public/xpel/fusion_plus_premium3.png";
-import satin from "@/public/xpel/fusion_plus_satin4.png";
+import lite from "../public/xpel/fusion_plus_lite1.png";
+import paint from "../public/xpel/fusion_plus_paint_ppf2.png";
+import premium from "../public/xpel/fusion_plus_premium3.png";
+import satin from "../public/xpel/fusion_plus_satin4.png";
 
 export const listXpel = [
   {

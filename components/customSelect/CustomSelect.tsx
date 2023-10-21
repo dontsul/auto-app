@@ -1,6 +1,6 @@
 "use client";
 import { FC, forwardRef, SelectHTMLAttributes } from "react";
-import { ISelectProps } from "@/interfaces/form";
+import { ISelectProps } from "../../interfaces/form";
 
 interface CustomSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   datas: ISelectProps[];

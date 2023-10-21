@@ -1,7 +1,7 @@
 import { Title } from "@/components/title/Title";
 import { CustomForm } from "@/components/customForm/CustomForm";
 import Image from "next/image";
-import rangeRoverGif from "@/public/images/hitches/Range-Rover.gif";
+import rangeRoverGif from "../../../public/images/hitches/Range-Rover.gif";
 import { DoubleSidedCard } from "@/components/doubleSidedCard/DoubleSidedCard";
 import { listHitches } from "@/data/hitches";
 import { TextPage } from "@/components/textPage/TextPage";

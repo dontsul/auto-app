@@ -1,6 +1,6 @@
 import { Button, TextArea } from '@apideck/components'
 import { useState } from 'react'
-import { useMessages } from "@/utils/useMessages";
+import { useMessages } from "../../utils/useMessages";
 
 const MessageForm = () => {
   const [content, setContent] = useState('')
