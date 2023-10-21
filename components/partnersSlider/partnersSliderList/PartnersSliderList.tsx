@@ -76,9 +76,11 @@ export const PartnersSliderList: FC<IPartnersListProps> = ({ partners }) => {
       className="py-4 z-30 sm:px-8 lg:px-0"
     >
       <Slider className="py-6 sl-btn" {...settings}>
-        {partners.length > 0
-          ? partners?.map((partner) => <ItemPartnersSlider partner={partner} key={uuidv4()} />)
-          : null}
+        {partners.length > 0 ? (
+          partners.map((partner) => <ItemPartnersSlider partner={partner} key={uuidv4()} />)
+        ) : (
+          <div>Empty slide</div>
+        )}
       </Slider>
     </motion.div>
   );
