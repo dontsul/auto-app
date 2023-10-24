@@ -7,7 +7,7 @@ import MyChat from "@/components/chatGpt/MyChat";
 
 export default function Home() {
   return (
-    <div className="">
+    <div >
       <Sliders />
       <AboutSection />
       <Contact />
