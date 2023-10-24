@@ -26,7 +26,6 @@ export interface IService {
   text: string;
   info: {
     titleInfo: string;
-    textProvide: string;
-    textInfo: string;
+    list: string[];
   };
 }

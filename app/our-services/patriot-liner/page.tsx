@@ -23,7 +23,7 @@ export default function PatriotLiner() {
       <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 mb-32">
         <div>
           <TextPage cn="mb-8">
-            Here, at <strong className="text-[#203055] font-extrabold ">Capital Upfitters</strong>{" "}
+            Here, at <strong className="text-[#203055] font-semibold ">Capital Upfitters</strong>{" "}
             Auto & Truck Accessories, our dedication to superior quality and customer satisfaction
             has been our guiding principle. For many years, we have been recognized for our
             impeccable installations of the Bullet Liner brand in the DMV Area. Yet, since 2022, we

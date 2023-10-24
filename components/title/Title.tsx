@@ -33,7 +33,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           whileInView="visible"
           variants={titleAnimation}
           viewport={{ once: true }}
-          className={`font-extrabold text-[#111827] uppercase text-3xl lg:text-7xl text-center  ${
+          className={`font-semibold text-[#111827] uppercase text-3xl lg:text-7xl text-center  ${
             cn ? cn : ""
           }`}
         >
@@ -47,7 +47,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           whileInView="visible"
           variants={titleAnimation}
           viewport={{ once: true }}
-          className={`font-extrabold text-[#111827] uppercase text-3xl lg:text-7xl text-center  ${
+          className={`font-semibold text-[#111827] uppercase text-3xl lg:text-7xl text-center  ${
             cn ? cn : ""
           }`}
         >
@@ -61,7 +61,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           whileInView="visible"
           variants={titleAnimation}
           viewport={{ once: true }}
-          className={`font-extrabold text-[#111827] uppercase text-xl lg:text-5xl text-center  ${
+          className={`font-semibold text-[#111827] uppercase text-xl lg:text-5xl text-center  ${
             cn ? cn : ""
           }`}
         >
@@ -75,7 +75,7 @@ export const Title: FC<ITitleProps> = ({ tag, cn, children }) => {
           whileInView="visible"
           variants={titleAnimation}
           viewport={{ once: true }}
-          className={`font-extrabold text-[#111827] uppercase text-xl lg:text-2xl text-center  ${
+          className={`font-semibold text-[#111827] uppercase text-xl lg:text-2xl text-center  ${
             cn ? cn : ""
           }`}
         >

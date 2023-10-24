@@ -27,7 +27,7 @@ export default function RustPrevention() {
 
       <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 items-start mt-2 mb-2">
         <div className="">
-          <h5 className="mb-2 text-lg font-semibold text-gray-900 ">
+          <h5 className="mb-2 text-lg font-normal text-gray-900 ">
             {rustPreventionContent.ecoClear.title}
           </h5>
           <ul className="space-y-1 text-gray-500 list-disc list-inside mb-12">
@@ -50,7 +50,7 @@ export default function RustPrevention() {
       <Line />
       <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 items-start mt-2 mb-2">
         <div className="lg:mt-0 mt-4 lg:order-2">
-          <h5 className="mb-2 text-lg font-semibold text-gray-900 ">
+          <h5 className="mb-2 text-lg font-normal text-gray-900 ">
             {rustPreventionContent.waxoylHardwax.title}
           </h5>
           <ul className="space-y-1 text-gray-500 list-disc list-inside mb-12">
@@ -73,7 +73,7 @@ export default function RustPrevention() {
       <Line />
       <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 items-start mt-2 mb-2">
         <div className="lg:mt-0 mt-4 ">
-          <h5 className="mb-2 text-lg font-semibold text-gray-900 ">
+          <h5 className="mb-2 text-lg font-normal text-gray-900 ">
             {rustPreventionContent.waxoylHardwax.title}
           </h5>
           <ul className="space-y-1 text-gray-500 list-disc list-inside mb-12">

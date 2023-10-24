@@ -21,7 +21,7 @@ export default function Ppf() {
       </Title>
       <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 mb-16 auto-rows-auto">
         <div>
-          <h6 className="text-start text-[#111827] leading-7 mb-4 font-semibold">
+          <h6 className="text-start text-[#111827] leading-7 mb-4 font-normal">
             PRESERVE YOUR CAR WITH THE FINEST PROTECTION FILM AROUND
           </h6>
           <TextPage cn="mb-8">
@@ -46,7 +46,7 @@ export default function Ppf() {
         <ImagePage img={ppfMain} />
       </div>
       <TextPage cn="mb-32">
-        At <strong className="text-[#203055] font-extrabold ">Capital Upfitters&apos;</strong> , we
+        At <strong className="text-[#203055] font-semibold ">Capital Upfitters&apos;</strong> , we
         are recognized experts in paint protection with over a decade of experience in applying
         protection film. Our staff doesn&apos;t compromise quality for a lower price. When you
         decide to remove our paint protection film, your car&apos;s factory paint will still be

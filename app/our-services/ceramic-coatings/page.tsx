@@ -23,7 +23,7 @@ export default function CeramicCoatings() {
       </Title>
       <div className="grid grid-cols-1 gap-10 justify-between lg:justify-center lg:grid-cols-2 mb-16 auto-rows-min">
         <div>
-          <h6 className="text-start text-[#111827] font-semibold leading-7 mb-4">
+          <h6 className="text-start text-[#111827] font-normal leading-7 mb-4">
             HAVE A GREAT RIDE, RAIN OR SHINE !{" "}
           </h6>
           <TextPage cn="mb-8">
@@ -88,7 +88,7 @@ export default function CeramicCoatings() {
         lasting performance. Its remarkable shine adds to the protective qualities, leaving your car
         looking stunning. Rest assured, the ceramic coating has no adverse impact on your car, and
         it seamlessly complements PPF protection. When you choose{" "}
-        <strong className="text-[#203055] font-extrabold ">Capital Upfitters&apos;</strong> ceramic
+        <strong className="text-[#203055] font-semibold ">Capital Upfitters&apos;</strong> ceramic
         car coating, you can trust that your car&apos;s surface will remain safe while exuding
         remarkable aesthetics and providing effective protection for your vehicle. We offer a range
         of packages for all types of vehicles, starting from 1-year options to 5-year and even

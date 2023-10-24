@@ -23,7 +23,11 @@ import metadata from "libphonenumber-js/metadata.min.json";
 import "react-phone-number-input/style.css";
 import toast from "react-hot-toast";
 import { CustomService } from "./customService/CustomService";
-import { submitFormToTelegram, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "../../utils/onSubmitTelegram";
+import {
+  submitFormToTelegram,
+  TELEGRAM_BOT_TOKEN,
+  TELEGRAM_CHAT_ID,
+} from "../../utils/onSubmitTelegram";
 import { onSubmitServer } from "../../utils/onSubmitServer";
 
 const FILE_SIZE = 5 * 1024 * 1024;
@@ -51,7 +55,10 @@ const schema = yup.object({
   model: yup.string().required("Model is a required field"),
   licensePlate: yup.string(),
   state: yup.string(),
-  services: yup.array().required("At least one service must be selected").min(1, "At least one service must be selected"),
+  services: yup
+    .array()
+    .required("At least one service must be selected")
+    .min(1, "At least one service must be selected"),
 });
 export const CustomForm = () => {
   const botToken = TELEGRAM_BOT_TOKEN;
@@ -102,7 +109,10 @@ export const CustomForm = () => {
 
   const onSubmit = handleSubmit(async (data: any) => {
     try {
-      const [telegramResponse, serverResponse] = await Promise.all([submitFormToTelegram(data, chatId, botToken), onSubmitServer(data)]);
+      const [telegramResponse, serverResponse] = await Promise.all([
+        submitFormToTelegram(data, chatId, botToken),
+        onSubmitServer(data),
+      ]);
 
       if (telegramResponse.success || serverResponse.ok) {
         setArrayImages([]);
@@ -203,7 +213,11 @@ export const CustomForm = () => {
           <motion.div viewport={{ once: true }} className="" variants={formAnimation}>
             <label className="block text-sm font-medium text-gray-900">
               Email*
-              <Controller name="email" control={control} render={({ field }) => <Input {...field} placeholder="Write your email" />} />
+              <Controller
+                name="email"
+                control={control}
+                render={({ field }) => <Input {...field} placeholder="Write your email" />}
+              />
             </label>
             <p className="text-sm text-red-600">{errors.email?.message}</p>
           </motion.div>
@@ -213,7 +227,9 @@ export const CustomForm = () => {
         {/* ------------------------------- */}
         {/* -------auto data----------------- */}
         <div className="">
-          <p className="border-b-[3px] border-[#111827] py-1 mb-4 text-2xl uppercase text-[#111827]">STEP 2. YOUR VEHICLE INFORMATION</p>
+          <p className="border-b-[3px] border-[#111827] py-1 mb-4 text-2xl uppercase text-[#111827]">
+            STEP 2. YOUR VEHICLE INFORMATION
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10  overflow-y-hidden">
           {/* year */}
@@ -223,7 +239,9 @@ export const CustomForm = () => {
               <Controller
                 name="year"
                 control={control}
-                render={({ field }) => <CustomSelect datas={years} {...field} placeholder="Write your first name" />}
+                render={({ field }) => (
+                  <CustomSelect datas={years} {...field} placeholder="Write your first name" />
+                )}
               />
             </label>
             <p className="text-sm text-red-600">{errors.year?.message}</p>
@@ -241,7 +259,9 @@ export const CustomForm = () => {
               <Controller
                 name="make"
                 control={control}
-                render={({ field }) => <CustomSelect datas={makes} {...field} placeholder="Choose your make" />}
+                render={({ field }) => (
+                  <CustomSelect datas={makes} {...field} placeholder="Choose your make" />
+                )}
               />
             </label>
             <p className="text-sm text-red-600">{errors.make?.message}</p>
@@ -259,7 +279,11 @@ export const CustomForm = () => {
                 name="model"
                 control={control}
                 render={({ field }) => (
-                  <CustomSelect datas={watch("make") ? models[watch("make")] : models.default} {...field} placeholder="Choose your make" />
+                  <CustomSelect
+                    datas={watch("make") ? models[watch("make")] : models.default}
+                    {...field}
+                    placeholder="Choose your make"
+                  />
                 )}
               />
             </label>
@@ -291,7 +315,9 @@ export const CustomForm = () => {
               <Controller
                 name="state"
                 control={control}
-                render={({ field }) => <CustomSelect datas={states} {...field} placeholder="Choose your make" />}
+                render={({ field }) => (
+                  <CustomSelect datas={states} {...field} placeholder="Choose your make" />
+                )}
               />
             </label>
             <p className="text-sm text-red-600">{errors.state?.message}</p>
@@ -302,10 +328,16 @@ export const CustomForm = () => {
 
         {/* -------------------------------services------------------------- */}
         <div className="">
-          <p className="border-b-[3px] border-[#111827] py-1 mb-4 text-2xl uppercase text-[#111827]">STEP 3. SELECT YOUR SERVICES</p>
+          <p className="border-b-[3px] border-[#111827] py-1 mb-4 text-2xl uppercase text-[#111827]">
+            STEP 3. SELECT YOUR SERVICES
+          </p>
         </div>
         <div className=" overflow-y-hidden grid grid-cols-1 md:grid-cols-3">
-          <motion.div viewport={{ once: true }} variants={formAnimation} className=" col-span-1 md:col-span-3  mb-6">
+          <motion.div
+            viewport={{ once: true }}
+            variants={formAnimation}
+            className=" col-span-1 md:col-span-3  mb-6"
+          >
             <div className="block text-sm font-medium text-gray-900">
               Services*
               <ul className="grid w-full gap-6 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
@@ -315,7 +347,9 @@ export const CustomForm = () => {
                       key={service.value}
                       name="services"
                       control={control}
-                      render={({ field }) => <CustomService {...field} service={service} register={register} />}
+                      render={({ field }) => (
+                        <CustomService {...field} service={service} register={register} />
+                      )}
                     />
                   );
                 })}
@@ -325,7 +359,11 @@ export const CustomForm = () => {
           </motion.div>
           {/* -------------------------------services------------------------- */}
           {/* -------------------------------comment-------------------------- */}
-          <motion.div viewport={{ once: true }} className="mb-4 col-span-1 md:col-span-3" variants={formAnimation}>
+          <motion.div
+            viewport={{ once: true }}
+            className="mb-4 col-span-1 md:col-span-3"
+            variants={formAnimation}
+          >
             <label className="block text-sm font-medium text-gray-900">
               Your message
               <Controller
@@ -355,11 +393,20 @@ export const CustomForm = () => {
 
           {/* -------------------------------comment-------------------------- */}
           {/* --------------images----------------- */}
-          <motion.div viewport={{ once: true }} className="block col-span-1 md:col-span-1 mb-16" variants={formAnimation}>
+          <motion.div
+            viewport={{ once: true }}
+            className="block col-span-1 md:col-span-1 mb-16"
+            variants={formAnimation}
+          >
             <label className="block text-sm font-medium text-gray-900">
               Upload File
               <div className="overflow-hidden flex focus:outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-zinc-800 focus:border-zinc-800 w-full">
-                <input type="file" {...register("file")} className="absolute opacity-0 w-[164px] left-0" multiple></input>
+                <input
+                  type="file"
+                  {...register("file")}
+                  className="absolute opacity-0 w-[164px] left-0"
+                  multiple
+                ></input>
                 <div className="cursor-pointer relative box-border h-full font-normal text-sm text-center border-r-[1px] border-[#111827] text-slate-50 bg-[#111827] w-[240px] p-2.5 mr-4">
                   Upload File{" "}
                 </div>

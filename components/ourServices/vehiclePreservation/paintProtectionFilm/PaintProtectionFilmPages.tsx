@@ -126,7 +126,7 @@ export function PaintProtectionFilmPages() {
               return (
                 <React.Fragment key={uuidv4()}>
                   {currentText === item.value && (
-                    <h1 className="text-[13px] text-[#203055] font-semibold">{item.title}</h1>
+                    <h1 className="text-[13px] text-[#203055] font-normal">{item.title}</h1>
                   )}
                 </React.Fragment>
               );
@@ -136,7 +136,7 @@ export function PaintProtectionFilmPages() {
               <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                 {currentText === "FULL BODY" && (
                   <React.Fragment key={uuidv4()}>
-                    <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    <h2 className="mb-2 text-lg font-normal text-gray-900 dark:text-white">
                       FULL FRONT
                     </h2>
 
@@ -145,7 +145,7 @@ export function PaintProtectionFilmPages() {
                 )}
                 {currentText === "FULL FRONT" && (
                   <React.Fragment key={uuidv4()}>
-                    <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    <h2 className="mb-2 text-lg font-normal text-gray-900 dark:text-white">
                       TRACK PACK
                     </h2>
 
@@ -154,7 +154,7 @@ export function PaintProtectionFilmPages() {
                 )}
                 {currentText === "TRACK PACK" && (
                   <React.Fragment key={uuidv4()}>
-                    <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    <h2 className="mb-2 text-lg font-normal text-gray-900 dark:text-white">
                       FULL BODY
                     </h2>
 
@@ -163,7 +163,7 @@ export function PaintProtectionFilmPages() {
                 )}
                 {currentText === "FORT KNOX" && (
                   <React.Fragment key={uuidv4()}>
-                    <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    <h2 className="mb-2 text-lg font-normal text-gray-900 dark:text-white">
                       FORT KNOX
                     </h2>
                     <ListTintPages text={PaintProtectionFilm4} />

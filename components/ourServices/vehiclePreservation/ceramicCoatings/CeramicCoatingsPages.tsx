@@ -120,7 +120,7 @@ export function CeramicCoatingsPages() {
               return (
                 <React.Fragment key={uuidv4()}>
                   {currentText === item.value && (
-                    <h1 className="text-[13px] text-[#203055] font-semibold">{item.title}</h1>
+                    <h1 className="text-[13px] text-[#203055] font-normal">{item.title}</h1>
                   )}
                 </React.Fragment>
               );
@@ -130,7 +130,7 @@ export function CeramicCoatingsPages() {
               <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                 {currentText === "FULL FRONT" && (
                   <>
-                    <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    <h2 className="mb-2 text-lg font-normal text-gray-900 dark:text-white">
                       1-YEAR
                     </h2>
 
@@ -139,7 +139,7 @@ export function CeramicCoatingsPages() {
                 )}
                 {currentText === "TRACK PACK" && (
                   <>
-                    <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    <h2 className="mb-2 text-lg font-normal text-gray-900 dark:text-white">
                       4-YEAR
                     </h2>
 
@@ -148,7 +148,7 @@ export function CeramicCoatingsPages() {
                 )}
                 {currentText === "FULL BODY" && (
                   <>
-                    <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    <h2 className="mb-2 text-lg font-normal text-gray-900 dark:text-white">
                       4-YEAR
                     </h2>
 
@@ -157,7 +157,7 @@ export function CeramicCoatingsPages() {
                 )}
                 {currentText === "FORT KNOX" && (
                   <>
-                    <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    <h2 className="mb-2 text-lg font-normal text-gray-900 dark:text-white">
                       8-YEAR
                     </h2>
                     <ListTintPages text={text4} />

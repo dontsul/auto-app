@@ -43,9 +43,7 @@ export const AboutIcons = () => {
                 height={60}
                 className="mr-0 md:mr-4"
               />
-              <span className="text-[#111827] font-bold text-[16px]">
-                {item.text}
-              </span>{" "}
+              <span className="text-[#111827] font-semibold text-[16px]">{item.text}</span>{" "}
             </li>
           );
         })}

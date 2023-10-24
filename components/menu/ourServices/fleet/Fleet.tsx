@@ -70,9 +70,9 @@ export const Fleet: FC<IFleetProps> = ({ handleMenu, openFleet, handleFleet, isD
             }
             exit={!isDesktop ? { height: 0 } : { opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className={`overflow-hidden pl-4 lg:px-4 static lg:shadow-xl lg:absolute lg:left-[212px] lg:bg-[#111827] lg:w-full min-w-auto lg:min-w-[220px] lg:overflow-visible`}
+            className={`overflow-hidden pl-4 lg:px-4 static lg:shadow-xl lg:absolute lg:left-[212px] lg:bg-[#111827] lg:w-full min-w-auto lg:min-w-[220px] lg:overflow-visible lg:flex lg:flex-col lg:gap-2`}
           >
-            <li className="mt-0 pt-2  w-auto px-4 py-1 lg:mt-4">
+            <li className="w-auto px-4 lg:mt-4">
               <Link
                 className={`text-sm inline h-full text-slate-100 hover:text-white cursor-pointer line ${
                   pathname === "/our-services/fleet-management/goverment"
@@ -87,7 +87,7 @@ export const Fleet: FC<IFleetProps> = ({ handleMenu, openFleet, handleFleet, isD
                 Goverment
               </Link>
             </li>
-            <li className="inline px-4 py-1">
+            <li className="inline px-4 ">
               <Link
                 className={`text-sm w-auto h-full text-slate-100 hover:text-white cursor-pointer line ${
                   pathname === "/our-services/fleet-management/commercial"
@@ -102,7 +102,7 @@ export const Fleet: FC<IFleetProps> = ({ handleMenu, openFleet, handleFleet, isD
                 Commercial
               </Link>
             </li>
-            <li className="px-4 py-1 mb-0 lg:mb-4">
+            <li className="px-4 mb-0 lg:mb-4">
               <Link
                 className={`text-sm inline h-full text-slate-100 hover:text-white cursor-pointer line ${
                   pathname === "/our-services/fleet-management/dealerships"
