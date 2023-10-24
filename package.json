@@ -51,7 +51,7 @@
   "devDependencies": {
     "@apideck/components": "^0.12.14",
     "@types/node-telegram-bot-api": "^0.61.8",
-    "@types/react-slick": "^0.23.10",
+    "@types/react-slick": "^0.23.11",
     "@types/string-hash": "^1.1.1",
     "@types/string-similarity": "^4.0.1",
     "autoprefixer": "^10.4.14",
