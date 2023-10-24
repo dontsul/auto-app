@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { IconType } from "react-icons";
 import { FaFacebookSquare, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import MyMapPage from "@/components/googleMaps/MyMap";
