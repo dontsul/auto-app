@@ -55,7 +55,7 @@ export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactIn
                 className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
               />
               <a
-                className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className="w-auto h-full text-base text-slate-100  cursor-pointer line"
                 href="tel:301-304-1419"
 
               >
@@ -68,7 +68,7 @@ export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactIn
                 className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
               />
               <a
-                className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className="w-auto h-full text-base text-slate-100  cursor-pointer line"
                 href="mailto:CapitalUpfitters@gmail.com"
                 target="_blank"
               >
@@ -81,8 +81,10 @@ export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactIn
                 className="w-auto h-full  text-slate-100  cursor-pointer mb-2"
               />
               <a
-                className="w-auto h-full text-base text-slate-100 hover:text-yellow-500 cursor-pointer line"
+                className="w-auto h-full text-base text-slate-100 cursor-pointer line"
                 href="https://www.google.com/maps/place/Capital+Upfitters+Auto+%26+Truck+Accessories/@39.051219,-77.108649,20z/data=!4m6!3m5!1s0x89b7cc2ec94dd327:0x4a6cc2fbd0961fb1!8m2!3d39.0512397!4d-77.1087077!16s%2Fg%2F11cmybdfrz?hl=en-US&entry=ttu"
+                target="_blank"
+
               >
                 12019 Nebel St, Rockville, MD 20852
               </a>
@@ -93,7 +95,7 @@ export const ContactInfo: FC<IContactInfo> = ({ handleContactInfo, openContactIn
               <a href="https://www.instagram.com/capitalupfitters/?igshid=MzRlODBiNWFlZA%3D%3D">
                 <BsInstagram
                   size={17}
-                  className="text-slate-100 cursor-pointer hover:text-yellow-500 transition"
+                  className="text-slate-100 cursor-pointer  transition"
                   target="_blank"
                 />
               </a>
