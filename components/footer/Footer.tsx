@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { IconType } from "react-icons";
 import { FaFacebookSquare, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import MyMapPage from "@/components/googleMaps/MyMap";
 import {BsFacebook, BsInstagram} from "react-icons/bs";
+import {CustomInfoWindowContent} from "@/components/googleMaps/GoogleMapComponent";
 
 const socialList = [
   {
@@ -23,17 +23,7 @@ export const Footer: React.FC = () => {
     <footer className="relative text-[#B3B3B3] bg-[#111827] text-center  dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="flex justify-center">
-          {/*{socialList.map(({ icon: Item }: { icon: IconType }, i) => {*/}
-          {/*  return (*/}
-          {/*    <a*/}
-          {/*      key={i}*/}
-          {/*      href=""*/}
-          {/*      className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"*/}
-          {/*    >*/}
-          {/*      <Item />*/}
-          {/*    </a>*/}
-          {/*  );*/}
-          {/*})}*/}
+
           <a
               className="mr-6 hover:text-slate-100 text-neutral-600 dark:text-neutral-200 transition"
               href="https://www.instagram.com/capitalupfitters/?igshid=MzRlODBiNWFlZA%3D%3D"
@@ -147,7 +137,7 @@ export const Footer: React.FC = () => {
               </a>
             </p>
           </div>
-          <div className="text-[#B3B3B3]">
+          <div className="">
             <h6 className="mb-4 flex justify-center  uppercase md:justify-start">
               OUR SERVICES
             </h6>
@@ -187,7 +177,8 @@ export const Footer: React.FC = () => {
 
           <div className="text-[#B3B3B3]">
             <h6 className=" mb-4 flex justify-center  uppercase md:justify-start">
-              Location Navigation
+              <CustomInfoWindowContent />
+
             </h6>
             <MyMapPage />
           </div>
