@@ -1,5 +1,5 @@
-import {useMessages} from "../../utils/useMessages";
 import {Button} from "@/components/button/Button";
+import {useMessages} from "@/utils/useMessages";
 
 const MessagesList = () => {
     const { messages, isLoadingAnswer, addMessage } = useMessages();
@@ -9,6 +9,7 @@ const MessagesList = () => {
 
     return (
       <div className="max-w-3xl mx-auto pt-8">
+
         {messages?.map((message, i) => {
           const isUser = message.role === 'user';
           if (message.role === 'system') return null;
