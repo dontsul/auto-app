@@ -9,7 +9,7 @@ interface IItemPartnersSliderProps {
 
 export const ItemPartnersSlider: FC<IItemPartnersSliderProps> = ({ partner }) => {
   return (
-    <div className="mx-auto my-4  min-w-[100px] max-w-[220px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px] p-0 h-full">
+    <div className="mx-auto my-4  min-w-[100px] max-w-[220px] w-full bg-slate-50 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.10)] rounded-[10px] p-0 h-full rounded-md overflow-hidden shadow-md">
       <a
         href={partner.link}
         className="flex items-center justify-center h-full w-full"

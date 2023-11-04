@@ -114,7 +114,7 @@ export const CustomForm = () => {
         onSubmitServer(data),
       ]);
 
-      if (telegramResponse.success || serverResponse.ok) {
+      if (telegramResponse.success) {
         setArrayImages([]);
         setValue("file", []);
         reset();
@@ -143,7 +143,6 @@ export const CustomForm = () => {
   }, [selectedPhotos]);
 
   return (
-    // <div className="bg-slate-300 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg hover:shadow-2xl transition duration-200 shadow-slate-600 hover:shadow-[#111827] bg-gradient-to-r from-slate-300 to-slate-400">
     <div className="bg-slate-50 p-10  lg:p-14 border-[#111827] rounded-md shadow-lg hover:shadow-2xl transition duration-200  ">
       <motion.form
         initial="hidden"
