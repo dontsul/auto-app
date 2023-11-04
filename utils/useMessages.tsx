@@ -3,7 +3,8 @@ import { ChatCompletionRequestMessage } from 'openai';
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react';
 import stringSimilarity from 'string-similarity';
 import sendMessage from './sendMessage';
-import {FAQDatabase} from "@/data/chatEdid/messagesData";
+import {FAQDatabase, MessageCategory} from "@/data/chatEdid/messagesData";
+
 
 interface ContextProps {
   messages: ChatCompletionRequestMessage[];
@@ -13,43 +14,13 @@ interface ContextProps {
 
 const ChatsContext = createContext<ContextProps | undefined>(undefined);
 
-const generateFreeTextResponse = async (content: string) => {
-  try {
-    // Пошук в базі даних питань і відповідей
-    const userQuestion = content.toLowerCase();
-    const matchingFAQ = FAQDatabase.find(entry => entry.question.toLowerCase() === userQuestion);
-
-    if (matchingFAQ) {
-      // Якщо є точний відповідник в базі даних, повернути його
-      return matchingFAQ.answer;
-    } else {
-      // Якщо немає точного відповідника, використовуйте AI для генерації відповіді
-      const response = await sendMessage([{ role: 'user', content }]);
-
-      // Отримання відповіді від AI
-      const botResponse = response.data?.choices[0]?.message;
-
-      if (botResponse) {
-        return botResponse;
-      } else {
-        // Забезпечення загальної відповіді в разі відсутності інших варіантів
-        return "Sorry, I couldn't provide an answer at the moment.";
-      }
-    }
-  } catch (error) {
-    // Обробка помилки та надання загальної відповіді
-    return "Sorry, I couldn't provide an answer at the moment.";
-  }
-};
-
-
-
 export function MessagesProvider({ children }: { children: ReactNode }) {
   const { addToast } = useToast();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
   const [isLoadingAnswer, setIsLoadingAnswer] = useState(false);
 
   useEffect(() => {
+    // Ініціалізація чату
     const initializeChat = () => {
       const systemMessage: ChatCompletionRequestMessage = {
         role: 'system',
@@ -62,8 +33,6 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
       setMessages([systemMessage, welcomeMessage]);
     }
 
-    // When no messages are present, we initialize the chat with the system message and the welcome message
-    // We hide the system message from the user in the UI
     if (!messages.length) {
       initializeChat();
     }
@@ -78,13 +47,10 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
       };
       const newMessages = [...messages, newMessage];
 
-      // Add the user message to the state so we can see it immediately
       setMessages(newMessages);
 
-      // Search for the best answer in the database
       const userQuestion = content.toLowerCase();
 
-      // Create an array to store potential answers
       const potentialAnswers: ChatCompletionRequestMessage[] = [];
 
       for (const faqEntry of FAQDatabase) {
@@ -92,7 +58,6 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
         const similarity = stringSimilarity.compareTwoStrings(userQuestion, question);
 
         if (similarity > 0.4) {
-          // Create a ChatCompletionRequestMessage from FAQ data
           const faqMessage: ChatCompletionRequestMessage = {
             role: 'assistant',
             content: faqEntry.answer
@@ -102,21 +67,84 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
       }
 
       if (potentialAnswers.length > 0) {
-        // If there are potential answers, send one of them
+        // Виберіть випадкову відповідь зі списку
         const replyMessage = potentialAnswers[Math.floor(Math.random() * potentialAnswers.length)];
         setMessages([...newMessages, replyMessage]);
       } else {
-        // If no answer is found in the database, send a request to generate a free-text response
-        const freeTextResponse = await generateFreeTextResponse(content);
-        setMessages([...newMessages, freeTextResponse]);
+        // Перевірте, до якої категорії відноситься питання користувача
+        const userCategory = determineCategory(userQuestion);
+
+        if (userCategory) {
+          // Відповідь відповідно до категорії
+          const categoryAnswer = getCategoryAnswer(userCategory);
+          if (categoryAnswer) {
+            setMessages([...newMessages, categoryAnswer]);
+          } else {
+            // Отримайте відповідь від AI в контексті, якщо немає визначеної категорії
+            const botResponse = await sendMessage([{ role: 'user', content }]);
+            const botMessage = botResponse.data?.choices[0]?.message;
+
+            if (botMessage) {
+              setMessages([...newMessages, botMessage]);
+            } else {
+              const defaultResponse: ChatCompletionRequestMessage = {
+                role: 'assistant',
+                content: "Sorry, I couldn't provide an answer at the moment. Please fill out the form below, and an operator will contact you shortly."
+              };
+              setMessages([...newMessages, defaultResponse]);
+            }
+          }
+        } else {
+          // Отримайте відповідь від AI в контексті, якщо не вдалося визначити категорію
+          const botResponse = await sendMessage([{ role: 'user', content }]);
+          const botMessage = botResponse.data?.choices[0]?.message;
+
+          if (botMessage) {
+            setMessages([...newMessages, botMessage]);
+          } else {
+            const defaultResponse: ChatCompletionRequestMessage = {
+              role: 'assistant',
+              content: "Sorry, I couldn't provide an answer at the moment. Please fill out the form below, and an operator will contact you shortly."
+            };
+            setMessages([...newMessages, defaultResponse]);
+          }
+        }
       }
     } catch (error) {
-      // Show an error in case of issues
+      // Показати помилку в разі проблем
       addToast({ title: 'An error occurred', type: 'error' });
     } finally {
       setIsLoadingAnswer(false);
     }
   }
+
+  function determineCategory(userQuestion: string): string | null {
+    userQuestion = userQuestion.toLowerCase();
+    for (const category of messageCategories) {
+      for (const variation of category.variations) {
+        if (userQuestion.includes(variation)) {
+          return category.category;
+        }
+      }
+    }
+    return null;
+  }
+
+
+  function getCategoryAnswer(category: string): ChatCompletionRequestMessage | null {
+    for (const faqEntry of FAQDatabase) {
+      if (faqEntry.question.toLowerCase().includes(category.toLowerCase())) {
+        const categoryAnswer: ChatCompletionRequestMessage = {
+          role: 'assistant',
+          content: faqEntry.answer
+        };
+        return categoryAnswer;
+      }
+    }
+    return null;
+  }
+
+
 
   return (
       <ChatsContext.Provider value={{ messages, addMessage, isLoadingAnswer }}>
@@ -132,3 +160,17 @@ export const useMessages = () => {
   }
   return context;
 }
+const messageCategories: MessageCategory[] = [
+  {
+    category: "ppf",
+    variations: ["ppf", "paint protection film", "clear bra"]
+  },
+  {
+    category: "hitches",
+    variations: ["hitches", "towing"]
+  },
+  {
+    category: "rust prevention",
+    variations: ["rust prevention", "eco clear coating", "waxoyl hardwax"]
+  },
+];

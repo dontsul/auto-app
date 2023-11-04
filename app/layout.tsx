@@ -12,6 +12,7 @@ import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import { Toaster } from "react-hot-toast";
 import { ButtonUpScroll } from "@/components/buttonUpScroll/ButtonUpScroll";
+import MyChat from "@/components/chatGpt/MyChat";
 
 const jok = Jockey_One({ weight: "400", subsets: ["latin"] });
 // const bun = Bungee_Inline({ weight: "400", subsets: ["latin"] });
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Toaster position="top-center" reverseOrder={false} />
-        <ButtonUpScroll />
+        <MyChat />
         <Footer />
       </body>
     </html>
