@@ -1,5 +1,3 @@
-// const URL_SERVER = "http://localhost:4000/";
-// const URL_SERVER = "http://localhost:4000/";
 const URL_SERVER = "https://server-app.capitalupfitters.com/";
 export const onSubmitServer = async (data: any): Promise<any> => {
   const formData = new FormData();
