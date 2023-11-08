@@ -1,5 +1,5 @@
-export const TELEGRAM_BOT_TOKEN = "6325976760:AAGBh9bAHF1Ee5kM3dKgaOCSbeagHJFNCRM";
-export const TELEGRAM_CHAT_ID = "-1001806613572";
+export const TELEGRAM_BOT_TOKEN = "6652666730:AAGEJi2jbmttBxkrc-f5jItmu4XJhqCQhm4";
+export const TELEGRAM_CHAT_ID = "-1002128482422";
 export const submitFormToTelegram = async (data: any, chatId: string, botToken: string) => {
     try {
         const message = `
