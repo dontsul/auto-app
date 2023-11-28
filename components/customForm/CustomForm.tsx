@@ -31,7 +31,6 @@ import {
 import { onSubmitServer } from "@/utils/onSubmitServer";
 import {CountryCode} from "libphonenumber-js/types";
 const FILE_SIZE = 5 * 1024 * 1024;
-import { isValidNumber } from 'libphonenumber-js';
 
 
 const schema = yup.object({
