@@ -20,7 +20,6 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
   const [isLoadingAnswer, setIsLoadingAnswer] = useState(false);
 
   useEffect(() => {
-    // Ініціалізація чату
     const initializeChat = () => {
       const systemMessage: ChatCompletionRequestMessage = {
         role: 'system',
@@ -67,20 +66,16 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
       }
 
       if (potentialAnswers.length > 0) {
-        // Виберіть випадкову відповідь зі списку
         const replyMessage = potentialAnswers[Math.floor(Math.random() * potentialAnswers.length)];
         setMessages([...newMessages, replyMessage]);
       } else {
-        // Перевірте, до якої категорії відноситься питання користувача
         const userCategory = determineCategory(userQuestion);
 
         if (userCategory) {
-          // Відповідь відповідно до категорії
           const categoryAnswer = getCategoryAnswer(userCategory);
           if (categoryAnswer) {
             setMessages([...newMessages, categoryAnswer]);
           } else {
-            // Отримайте відповідь від AI в контексті, якщо немає визначеної категорії
             const botResponse = await sendMessage([{ role: 'user', content }]);
             const botMessage = botResponse.data?.choices[0]?.message;
 
@@ -95,7 +90,6 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
             }
           }
         } else {
-          // Отримайте відповідь від AI в контексті, якщо не вдалося визначити категорію
           const botResponse = await sendMessage([{ role: 'user', content }]);
           const botMessage = botResponse.data?.choices[0]?.message;
 
@@ -111,7 +105,6 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
         }
       }
     } catch (error) {
-      // Показати помилку в разі проблем
       addToast({ title: 'An error occurred', type: 'error' });
     } finally {
       setIsLoadingAnswer(false);

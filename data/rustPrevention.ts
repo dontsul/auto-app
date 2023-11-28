@@ -47,6 +47,7 @@ export const rustPreventionContent = {
   text: [
     "Here at Capital Upfitters we specialized in preventative methods against Rust and Corrosion. We always strive to provide our client with the best and most innovative solutions for their needs.",
   ],
+
 };
 
 export const rustPreventionSlider = [
