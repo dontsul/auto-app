@@ -32,4 +32,11 @@ export const sliderData = [
         title: "Hitches",
         link: "/our-services/hitches"
     },
+    {
+        img: "/Slider/Slider2.png",
+        description:
+            "Wheels / Tires / Suspension",
+        title: "Wheels / Tires / Suspension",
+        link: "/our-services/styling/wheels-tires"
+    },
 ];

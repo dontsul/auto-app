@@ -52,16 +52,15 @@ function Controls({
                 ...newData,
                 transitionData ? transitionData : initData,
             ]);
-        }, 500);
+        }, 8000);
     }, [handleData, handleCurrentSlideData, handleTransitionData, initData, transitionData, sliderData, data]);
 
     // Automatic slide transition every 10 seconds
     useEffect(() => {
         const intervalId = setInterval(() => {
             handleNext();
-        }, 4000);
+        }, 8000);
 
-        // Clean up the interval on component unmount
         return () => clearInterval(intervalId);
     }, [handleNext]);
 

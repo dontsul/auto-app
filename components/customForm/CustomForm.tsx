@@ -14,7 +14,7 @@ import { services, states } from "./datas";
 import { models } from "./models";
 import { makes } from "./makes";
 import { years } from "./years";
-import { IService } from "../../interfaces/form";
+import { IService } from "@/interfaces/form";
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
 import { isPossiblePhoneNumber } from "react-phone-number-input";
 import { CustomTextArea } from "../customTextArea/CustomTextArea";
@@ -27,15 +27,17 @@ import {
   submitFormToTelegram,
   TELEGRAM_BOT_TOKEN,
   TELEGRAM_CHAT_ID,
-} from "../../utils/onSubmitTelegram";
-import { onSubmitServer } from "../../utils/onSubmitServer";
-
+} from "@/utils/onSubmitTelegram";
+import { onSubmitServer } from "@/utils/onSubmitServer";
+import {CountryCode} from "libphonenumber-js/types";
 const FILE_SIZE = 5 * 1024 * 1024;
+import { isValidNumber } from 'libphonenumber-js';
+
 
 const schema = yup.object({
   firstName: yup.string().required("Name is a required field"),
   lastName: yup.string().required("Name is a required field"),
-  phone: yup.string().required("Phone is a required field"),
+  phone: yup.string().required("Phone is a required field").min(10, 'The number is too short, please enter the correct number').max(13, 'The number is too short, please enter the correct number'),
   email: yup.string().email().required("Email is a required field"),
   comment: yup.string().required("Comments is a required field"),
   file: yup
@@ -106,6 +108,7 @@ export const CustomForm = () => {
     },
   });
   const [arrayImages, setArrayImages] = useState<File[]>([]);
+  const allowedCountries: CountryCode[] = ['US', 'MX', 'CA'];
 
   const onSubmit = handleSubmit(async (data: any) => {
     try {
@@ -192,17 +195,18 @@ export const CustomForm = () => {
             <label className="block text-sm font-medium text-gray-900">
               Phone*
               <PhoneInputWithCountry
-                className="phoneInputCustom focus:outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-zinc-800 focus:border-zinc-800 block w-full p-2.5 "
-                control={control}
-                rules={{ required: true, validate: isPossiblePhoneNumber }}
-                defaultCountry="US"
-                autoComplete="tel"
-                displayInitialValueAsLocalNumber
-                defaultValue=""
-                international
-                withCountryCallingCode
-                name="phone"
-                metadata={metadata}
+                  className="phoneInputCustom focus:outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-zinc-800 focus:border-zinc-800 block w-full p-2.5 "
+                  control={control}
+                  rules={{ required: true, validate: isPossiblePhoneNumber }}
+                  defaultCountry="US"
+                  autoComplete="tel"
+                  displayInitialValueAsLocalNumber
+                  defaultValue=""
+                  international
+                  withCountryCallingCode
+                  name="phone"
+                  metadata={metadata}
+                  countries={allowedCountries}
               />
             </label>
             <p className="text-sm text-red-600">{errors.phone?.message}</p>
