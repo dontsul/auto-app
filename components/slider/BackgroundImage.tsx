@@ -1,5 +1,5 @@
-import React, { forwardRef } from "react";
-import { motion, MotionProps } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { CurrentSlideData, DataSlider } from "@/data/dataSliderHome/DataTepe";
 
 type Props = {
@@ -8,9 +8,8 @@ type Props = {
 };
 
 const BackgroundImage: React.ForwardRefRenderFunction<HTMLImageElement, Props> = (
-    { transitionData, currentSlideData },
-    ref
-) => {
+    { transitionData, currentSlideData }, ref) => {
+
     return (
         <>
             {transitionData && (

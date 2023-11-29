@@ -52,14 +52,13 @@ function Controls({
                 ...newData,
                 transitionData ? transitionData : initData,
             ]);
-        }, 8000);
+        }, 100);
     }, [handleData, handleCurrentSlideData, handleTransitionData, initData, transitionData, sliderData, data]);
 
-    // Automatic slide transition every 10 seconds
     useEffect(() => {
         const intervalId = setInterval(() => {
             handleNext();
-        }, 8000);
+        }, 5000);
 
         return () => clearInterval(intervalId);
     }, [handleNext]);

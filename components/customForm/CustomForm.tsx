@@ -36,7 +36,7 @@ const FILE_SIZE = 5 * 1024 * 1024;
 const schema = yup.object({
   firstName: yup.string().required("Name is a required field"),
   lastName: yup.string().required("Name is a required field"),
-  phone: yup.string().required("Phone is a required field").min(10, 'The number is too short, please enter the correct number').max(13, 'The number is too short, please enter the correct number'),
+  phone: yup.string().required("Phone is a required field").min(12, 'The number is too short, please enter the correct number').max(13, 'The number is too short, please enter the correct number'),
   email: yup.string().email().required("Email is a required field"),
   comment: yup.string().required("Comments is a required field"),
   file: yup
